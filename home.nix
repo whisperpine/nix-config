@@ -21,6 +21,8 @@
     kubectl
     zellij
     just
+    tree
+    yazi
   ];
 
   programs.bash = {
