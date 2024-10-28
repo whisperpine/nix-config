@@ -19,7 +19,9 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nixos-wsl, home-manager, ... }: {
+  outputs = inputs@{
+    self, nixpkgs, nixpkgs-stable, nixos-wsl, home-manager, ... 
+  }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
@@ -32,9 +34,9 @@
       };
 
       modules = [
-	./system.nix
+        ./system.nix
         
-	# WSL (Windows Subsystem for Linux).
+	      # WSL (Windows Subsystem for Linux).
         nixos-wsl.nixosModules.default
         {
           system.stateVersion = "24.05";
@@ -42,13 +44,13 @@
           wsl.defaultUser = "yusong";
         }
 
-	# Home Manager as a module.
+        # Home Manager as a module.
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.yusong = import ./home;
-	  #home-manager.extraSpecialArgs = inputs;
+	        #home-manager.extraSpecialArgs = inputs;
         }
       ];
     };

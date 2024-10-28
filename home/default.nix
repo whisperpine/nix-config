@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./neovim
+
     ./git.nix
     ./btop.nix
     ./zellij.nix
