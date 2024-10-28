@@ -25,6 +25,7 @@
   home.packages = with pkgs; [
     neofetch
     kubectl
+    lazygit
     just
     tree
     yazi
@@ -35,6 +36,7 @@
     enableCompletion = true;
     shellAliases = {
       kc = "kubectl";
+      lg = "lazygit";
       vim = "nvim";
     };
     # .bashrc
