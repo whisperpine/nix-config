@@ -3,7 +3,7 @@
 {
   imports = [
     ./btop.nix
-    ./starship
+    ./starship.nix
   ];
 
   # Let Home Manager install and manage itself.
