@@ -73,3 +73,25 @@ set backspace=indent,eol,start
 " Share system clipboard
 set clipboard+=unnamedplus
 
+"====================== configs of plugins ======================"
+
+" Configure lightline plugin
+" \ 'separator': { 'left': '', 'right': '' },
+" \ 'separator': { 'left': '', 'right': '' },
+" \ 'separator': { 'left': '', 'right': '' },
+" \ 'subseparator': { 'left': '\\', 'right': '/' },
+let g:lightline = {
+\ 'colorscheme': 'jellybeans',
+\ }
+
+" Configure indentLine plugin
+let g:indentLine_color_term = 239   " Set color
+let g:vim_json_conceal = 0          " Avoid char hidden in json
+let g:markdown_syntax_conceal = 0   " Avoid char hidden in markdown
+
+" Configure vim-better-whitespace plugin
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 1
+let g:strip_whitespace_confirm = 0
+let g:better_whitespace_guicolor = '#ea6962'
+

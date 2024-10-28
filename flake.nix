@@ -20,7 +20,7 @@
   };
 
   outputs = inputs@{
-    self, nixpkgs, nixpkgs-stable, nixos-wsl, home-manager, ... 
+    self, nixpkgs, nixpkgs-stable, nixos-wsl, home-manager, ...
   }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
@@ -35,7 +35,7 @@
 
       modules = [
         ./system.nix
-        
+
 	      # WSL (Windows Subsystem for Linux).
         nixos-wsl.nixosModules.default
         {
