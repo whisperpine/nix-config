@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./git.nix
     ./btop.nix
     ./starship.nix
   ];
@@ -40,18 +41,6 @@
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
     '';
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "Yusong";
-    userEmail = "yusong.lai@icloud.com";
-    aliases = {
-      lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
-      pushff = "push --force-with-lease --force-if-includes";
-      sc = "sparse-checkout";
-      sm = "submodule";
-    };
   };
 
   # This value determines the Home Manager release that your
