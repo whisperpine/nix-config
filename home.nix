@@ -17,7 +17,6 @@
 
   home.packages = with pkgs; [
     neofetch
-    btop
     kubectl
     zellij
     just
@@ -47,6 +46,13 @@
       pushff = "push --force-with-lease --force-if-includes";
       sc = "sparse-checkout";
       sm = "submodule";
+    };
+  };
+
+  programs.btop = {
+    enable = true;
+    settings = {
+      theme_background = false;
     };
   };
 
