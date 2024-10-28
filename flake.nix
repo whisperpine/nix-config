@@ -20,19 +20,19 @@
   };
 
   outputs = inputs@{ self, nixpkgs, nixpkgs-stable, nixos-wsl, home-manager, ... }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
 
       # Pass non-defualt args to modules.
       specialArgs = {
         pkgs-stable = import nixpkgs-stable {
-          #inherit system;
+          inherit system;
           config.allowUnfree = true;
         };
       };
 
       modules = [
-	./configuration.nix
+	./system.nix
         
 	# WSL (Windows Subsystem for Linux).
         nixos-wsl.nixosModules.default
@@ -47,7 +47,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.yusong = import ./home.nix;
+          home-manager.users.yusong = import ./home;
 	  #home-manager.extraSpecialArgs = inputs;
         }
       ];

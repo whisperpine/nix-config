@@ -1,6 +1,11 @@
 { config, pkgs, pkgs-stable, ... }:
 
 {
+  imports = [
+    ./btop.nix
+    ./starship
+  ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -46,38 +51,6 @@
       pushff = "push --force-with-lease --force-if-includes";
       sc = "sparse-checkout";
       sm = "submodule";
-    };
-  };
-
-  programs.btop = {
-    enable = true;
-    settings = {
-      theme_background = false;
-      vim_keys = true;
-      update_ms = 500;
-      proc_tree = true;
-    };
-  };
-
-  programs.starship = {
-    enable = true;
-    settings = {
-      add_newline = false;
-      line_break.disabled = true;
-      cmd_duration.disabled = true;
-      battery.disabled = true;
-      character = {
-        success_symbol = "[##](default)";
-        error_symbol = "[##](red)";
-        vimcmd_symbol = "[##](default)";
-      };
-      git_status = {
-        ahead = ">";
-        behind = "<";
-        diverged = "<>";
-        renamed = "r";
-        deleted = "x";
-      };
     };
   };
 
