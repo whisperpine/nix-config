@@ -4,6 +4,7 @@
   imports = [
     ./git.nix
     ./btop.nix
+    ./zellij.nix
     ./starship.nix
   ];
 
@@ -24,7 +25,6 @@
   home.packages = with pkgs; [
     neofetch
     kubectl
-    zellij
     just
     tree
     yazi
