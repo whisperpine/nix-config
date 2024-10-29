@@ -1,1 +1,6 @@
 * text=auto eol=lf
+
+*.yaml linguist-detectable=true
+*.toml linguist-detectable=true
+*.json linguist-detectable=true
+
