@@ -27,9 +27,7 @@ filetype plugin on      " Enable filetype-specific plugin
 filetype indent off     " Disable filetype-specific indent
 
 " Configure colorscheme
-"if $TERM_PROGRAM != 'Apple_Terminal'
-"    set termguicolors
-"endif
+set termguicolors
 
 " Vim native way to remove background color
 " highlight Normal guibg=NONE ctermbg=NONE
@@ -80,8 +78,9 @@ set clipboard+=unnamedplus
 " \ 'separator': { 'left': '', 'right': '' },
 " \ 'separator': { 'left': '', 'right': '' },
 " \ 'subseparator': { 'left': '\\', 'right': '/' },
+" \ 'colorscheme': 'jellybeans',
 let g:lightline = {
-\ 'colorscheme': 'jellybeans',
+\ 'colorscheme': 'gruvbox_material',
 \ }
 
 " Configure indentLine plugin
@@ -95,3 +94,31 @@ let g:strip_whitespace_on_save = 1
 let g:strip_whitespace_confirm = 0
 let g:better_whitespace_guicolor = '#ea6962'
 
+" Available values: 'material', 'mix', 'original'
+let g:gruvbox_material_foreground = 'material'
+" Remove background color
+let g:gruvbox_material_transparent_background = 1
+" Disable italic in comment
+let g:gruvbox_material_disable_italic_comment = 1
+" Disable this option to be compatible with NixOS
+let g:gruvbox_material_better_performance = 0
+" Override scheme color
+let g:gruvbox_material_colors_override = {
+\ 'fg0':    ['#bdbdbd', '223'],
+\ 'fg1':    ['#bdbdbd', '223'],
+\ 'grey1':  ['#838383', '245'],
+\ 'grey2':  ['#838383', '245'],
+\ 'bg_dim': ['#252525', '233'],
+\ 'bg0':    ['#323232', '236'],
+\ 'bg1':    ['#3c3c3c', '237'],
+\ 'bg2':    ['#3c3c3c', '237'],
+\ 'bg3':    ['#505050', '239'],
+\ 'bg4':    ['#505050', '239'],
+\ 'bg5':    ['#666666', '241'],
+\ 'bg_statusline1': ['#3c3c3c',   '237'],
+\ 'bg_statusline2': ['#464646',   '237'],
+\ 'bg_statusline3': ['#5b5b5b',   '241'],
+\ }
+
+" Set colorscheme
+colorscheme gruvbox-material
