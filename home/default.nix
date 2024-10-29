@@ -3,6 +3,7 @@
 {
   imports = [
     ./neovim
+    ./erdtree
 
     ./git.nix
     ./btop.nix
@@ -28,7 +29,6 @@
     helm
     kubectl
     lazygit
-    erdtree
     tokei
     tree
     yazi
