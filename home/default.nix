@@ -35,6 +35,7 @@
     tokei
     tree
     just
+    file
   ];
 
   # This value determines the Home Manager release that your
