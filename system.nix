@@ -8,8 +8,6 @@
     wget
     curl
     neovim
-    nil
-    nixpkgs-fmt
   ];
 
   # It doesn't need to keep too much generations.
