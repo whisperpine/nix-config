@@ -40,6 +40,7 @@
       kc = "kubectl";
       lg = "lazygit";
       vim = "nvim";
+      z = "zellij attach";
     };
     # .bashrc
     bashrcExtra = ''
