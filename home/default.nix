@@ -25,12 +25,14 @@
   };
 
   home.packages = with pkgs; [
-    neofetch
+    helm
     kubectl
     lazygit
-    just
+    erdtree
+    tokei
     tree
     yazi
+    just
   ];
 
   programs.bash = {
