@@ -875,16 +875,3 @@ $env.config = {
     ]
 }
 
-# ----------------------------------------
-# aliases
-# ----------------------------------------
-
-# nvim
-alias vim = nvim
-alias vi = nvim
-
-# kubectl
-alias kc = kubectl
-
-# lazygit
-alias lg = lazygit
