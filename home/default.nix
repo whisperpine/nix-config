@@ -7,6 +7,7 @@
     ./nushell
 
     ./git.nix
+    ./yazi.nix
     ./bash.nix
     ./btop.nix
     ./zellij.nix
@@ -33,7 +34,6 @@
     lazygit
     tokei
     tree
-    yazi
     just
   ];
 
