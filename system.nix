@@ -8,7 +8,11 @@
     wget
     curl
     neovim
+    nushell
   ];
+
+  # Set nushell as the default shell for all users.
+  users.defaultUserShell = pkgs.nushell;
 
   # It doesn't need to keep too much generations.
   boot.loader.systemd-boot.configurationLimit = 10;
