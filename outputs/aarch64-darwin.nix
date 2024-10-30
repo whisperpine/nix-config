@@ -22,7 +22,20 @@
     environment.variables.EDITOR = "nvim";
     # This is important to find command path (e.g. nix, darwin-rebuild).
     programs.zsh.enable = true;
-
+    # Allow unfree software to be installed.
+    nixpkgs.config.allowUnfree = true;
+    # Install packages in operating system.
+    environment.systemPackages = with pkgs; [
+      alacritty
+      mkalias
+      neovim
+      git
+    ];
+    # Install fonts.
+    fonts.packages = with pkgs; [
+      (nerdfonts.override { fonts = [ "CascadiaMono" ]; })
+      noto-fonts-cjk-sans
+    ];
     # Fix macOS Spotlight indexing issue.
     system.activationScripts.applications.text = let
       env = pkgs.buildEnv {
@@ -43,22 +56,22 @@
           ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
         done
       '';
-
-    # Install packages in operating system.
-    environment.systemPackages = with pkgs; [
-      alacritty
-      mkalias
-      neovim
-    ];
-    # Install fonts.
-    fonts.packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "CascadiaMono" ]; })
-      noto-fonts-cjk-sans
-    ];
+    users.users.yusong = {
+      name = "yusong";
+      home = "/Users/yusong";
+    };
   };
 in
 nix-darwin.lib.darwinSystem {
   modules = [
     configuration
+
+    home-manager.darwinModules.home-manager
+    {
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.yusong = import ../home/darwin.nix;
+      # home-manager.extraSpecialArgs = extraSpecialArgs;
+    }
   ];
 }

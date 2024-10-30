@@ -1,5 +1,4 @@
 { config, pkgs, pkgs-stable, ... }:
-
 {
   imports = [
     ./neovim
@@ -20,8 +19,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.username = "yusong";
-  home.homeDirectory = "/home/yusong";
   home.enableNixpkgsReleaseCheck = false;
 
   xresources.properties = {
@@ -32,7 +29,6 @@
   };
 
   home.packages = with pkgs; [
-    helm
     kubectl
     lazygit
     tokei
