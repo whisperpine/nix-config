@@ -1,38 +1,12 @@
 {
   self, nixpkgs, nixpkgs-stable, nixos-wsl, home-manager, ...
-}@inputs: let
-  system = "x86_64-linux";
-  # Pass non-defualt args to modules.
-  extraSpecialArgs = {
-    pkgs-stable = import nixpkgs-stable {
-      inherit system;
-      config.allowUnfree = true;
-    };
-  };
-in {
-  nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
-    system = system;
-
-    modules = [
-      ./system.nix
-
-      # WSL (Windows Subsystem for Linux).
-      nixos-wsl.nixosModules.default
-      {
-        system.stateVersion = "24.05";
-        wsl.enable = true;
-        wsl.defaultUser = "yusong";
-      }
-
-      # Home Manager as a module.
-      home-manager.nixosModules.home-manager
-      {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.yusong = import ../home;
-        home-manager.extraSpecialArgs = extraSpecialArgs;
-      }
-    ];
+}@inputs:
+{
+  nixosConfigurations = {
+    # windows wsl
+    nixos = import ./x86_64-linux-wsl.nix inputs;
+    # mac mini
+    creator = import ./aarch64-darwin.nix inputs;
   };
 }
 
