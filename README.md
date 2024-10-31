@@ -66,3 +66,6 @@ nix --extra-experimental-features "nix-command flakes" \
 # now darwin-rebuild is available
 darwin-rebuild switch --flake ~/nix-config
 ```
+
+Tip: `darwin-help` will open a HTML version of the manpage in the default browser.\
+`man 5 configuration.nix` will open the manual of nix-darwin right in the terminal.

@@ -75,16 +75,26 @@
           ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
         done
       '';
+    # System user settings.
     users.users.yusong = {
       name = "yusong";
       home = "/Users/yusong";
+    };
+    # System preference.
+    system.defaults = {
+      dock.autohide = true;
+      finder.FXPreferredViewStyle = "clmv";
+      NSGlobalDomain.AppleInterfaceStyle = "Dark";
+      NSGlobalDomain.KeyRepeat = 2;
     };
   };
 in
 nix-darwin.lib.darwinSystem {
   modules = [
+    # This modules id defined above in "let" expression.
     configuration
 
+    # Home Manager settings.
     home-manager.darwinModules.home-manager {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
@@ -92,6 +102,7 @@ nix-darwin.lib.darwinSystem {
       # home-manager.extraSpecialArgs = extraSpecialArgs;
     }
 
+    # nix-homebrew settings.
     nix-homebrew.darwinModules.nix-homebrew {
       nix-homebrew = {
         # Install Homebrew under the default prefix.
