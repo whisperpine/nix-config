@@ -19,7 +19,10 @@
     # Optimise storage.
     nix.settings.auto-optimise-store = true;
     # Set system-wide environment variables.
-    environment.variables.EDITOR = "nvim";
+    environment.variables = {
+      EDITOR = "nvim";
+      SHELL = "/etc/profiles/per-user/yusong/bin/nu";
+    };
     # This is important to find command path (e.g. nix, darwin-rebuild).
     programs.zsh.enable = true;
     # Allow unfree software to be installed.
@@ -28,8 +31,6 @@
     environment.systemPackages = with pkgs; [
       alacritty
       mkalias
-      neovim
-      git
     ];
     # Install fonts.
     fonts.packages = with pkgs; [

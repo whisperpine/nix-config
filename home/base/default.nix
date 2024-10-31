@@ -6,6 +6,7 @@
     ./nushell
 
     ./git.nix
+    ./zsh.nix
     ./yazi.nix
     ./bash.nix
     ./btop.nix
