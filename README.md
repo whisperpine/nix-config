@@ -51,7 +51,7 @@ sudo nixos-rebuild switch
 ### Nix-Darwin
 
 ```sh
-# Install nix.
+# install nix
 curl -L https://nixos.org/nix/install | sh
 # generate ssh key pairs, add pubkey to github user settings...
 
@@ -59,15 +59,10 @@ curl -L https://nixos.org/nix/install | sh
 mkdir -p ~/.config && cd ~/.config
 git clone git@github.com:whisperpine/nix-config.git
 
-nix --extra-experimental-features "nix-command flakes" flake init -t nix-darwin
-
+# tada
 nix --extra-experimental-features "nix-command flakes" \
   run nix-darwin -- switch --flake ~/nix-config
 
-nix --extra-experimental-features "nix-command flakes" \
-  run nix-darwin -- switch --flake .
-
-nix run nix-darwin -- switch --flake .
-
-darwin-rebuild switch --flake .
+# now darwin-rebuild is available
+darwin-rebuild switch --flake ~/nix-config
 ```
