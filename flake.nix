@@ -17,6 +17,8 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Learn more: https://github.com/zhaofengli/nix-homebrew
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
     # Home Manager used for managing user configuration.
     home-manager = {

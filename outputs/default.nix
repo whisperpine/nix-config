@@ -1,5 +1,5 @@
 {
-  self, nixpkgs, nixpkgs-stable, nixos-wsl, home-manager, nix-darwin, ...
+  self, ...
 }@inputs:
 {
   nixosConfigurations = {
