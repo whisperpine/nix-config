@@ -31,6 +31,7 @@
 
   home.packages = with pkgs; [
     kubectl
+    ripgrep
     lazygit
     tokei
     tree
