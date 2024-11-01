@@ -1,17 +1,17 @@
 { config, pkgs, pkgs-stable, ... }:
 {
   imports = [
+    ./yazi
     ./neovim
     ./erdtree
     ./nushell
-    ./yazi
+    ./starship
 
     ./git.nix
     ./zsh.nix
     ./bash.nix
     ./btop.nix
     ./zellij.nix
-    ./starship.nix
   ];
 
   # Allow unfree software to by installed.
