@@ -2,7 +2,7 @@
 {
   programs.neovim = {
     enable = true;
-    extraConfig = builtins.readFile ./init.vim;
+    # extraConfig = builtins.readFile ./init.vim;
     plugins = with pkgs.vimPlugins; [
       vim-better-whitespace
       gruvbox-material
@@ -12,5 +12,10 @@
       indentLine
       targets-vim
     ];
+  };
+  xdg.configFile.nvim = {
+    enable = true;
+    recursive = true;
+    source = ./nvim;
   };
 }
