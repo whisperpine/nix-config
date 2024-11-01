@@ -1,9 +1,17 @@
 {
   self, nixpkgs, nixpkgs-stable, home-manager, nix-darwin, nix-homebrew, ...
 }@inputs: let
+  system = "aarch64-darwin";
+  # Pass non-defualt args to modules.
+  extraSpecialArgs = {
+    pkgs-stable = import nixpkgs-stable {
+      inherit system;
+      config.allowUnfree = true;
+    };
+  };
   configuration = { pkgs, config, ... }: {
     # The platform the configuration will be used on.
-    nixpkgs.hostPlatform = "aarch64-darwin";
+    nixpkgs.hostPlatform = system;
     # Auto upgrade nix package and the daemon service.
     services.nix-daemon.enable = true;
     # System configurations.
@@ -99,7 +107,7 @@ nix-darwin.lib.darwinSystem {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.yusong = import ../home/darwin.nix;
-      # home-manager.extraSpecialArgs = extraSpecialArgs;
+      home-manager.extraSpecialArgs = extraSpecialArgs;
     }
 
     # nix-homebrew settings.
