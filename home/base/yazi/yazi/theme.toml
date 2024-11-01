@@ -1,0 +1,13 @@
+[manager]
+border_symbol = "│"
+border_style = { fg = "#161616"} # black
+
+[status]
+separator_open  = ""
+separator_close = ""
+
+# default bg
+mode_normal = { fg = "#161616", bg = "#4c90a8" } # blue
+mode_select = { fg = "#161616", bg = "#d95f5f" } # red
+mode_unset  = { fg = "#161616", bg = "#cc8b00" } # yellow
+

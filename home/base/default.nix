@@ -4,10 +4,10 @@
     ./neovim
     ./erdtree
     ./nushell
+    ./yazi
 
     ./git.nix
     ./zsh.nix
-    ./yazi.nix
     ./bash.nix
     ./btop.nix
     ./zellij.nix
