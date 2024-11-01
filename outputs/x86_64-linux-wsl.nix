@@ -40,8 +40,10 @@
       git
       wget
       curl
+      clang
       neovim
       nushell
+      unzip
     ];
   };
 in
