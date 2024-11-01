@@ -81,8 +81,6 @@ set clipboard+=unnamedplus
 " \ 'colorscheme': 'jellybeans',
 let g:lightline = {
 \ 'colorscheme': 'gruvbox_material',
-\ 'separator': { 'left': '', 'right': '' },
-\ 'subseparator': { 'left': '\\', 'right': '/' },
 \ }
 
 " Configure indentLine plugin
