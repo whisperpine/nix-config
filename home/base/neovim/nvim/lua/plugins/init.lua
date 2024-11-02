@@ -6,9 +6,16 @@ return {
   },
 
   -- disable nvchad default plugins
-  { "windwp/nvim-autopairs", enabled = false },
-  { "neovim/nvim-lspconfig", enabled = false },
+  { "windwp/nvim-autopairs",   enabled = false },
   { "williamboman/mason.nvim", enabled = false },
+
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
 
   -- make it not lazy but instant
   { "folke/which-key.nvim", lazy = false },
@@ -19,7 +26,7 @@ return {
       ensure_installed = {
         "vim", "vimdoc", "nix", "bash", "ssh_config", "ini", "editorconfig",
         "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
-        "nginx",  "just", "dockerfile", "sql", "terraform", "proto", "mermaid",
+        "nginx", "just", "dockerfile", "sql", "terraform", "proto", "mermaid",
         "c", "cpp", "c_sharp", "python", "rust", "wgsl", "wgsl_bevy", "lua",
         "html", "css", "javascript", "typescript", "yaml", "toml", "json",
       },

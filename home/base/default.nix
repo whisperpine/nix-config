@@ -1,4 +1,9 @@
-{ config, pkgs, pkgs-stable, ... }:
+{
+  config,
+  pkgs,
+  pkgs-stable,
+  ...
+}:
 {
   imports = [
     ./yazi
@@ -28,6 +33,7 @@
   };
 
   home.packages = with pkgs; [
+    # cli tools
     translate-shell
     kubectl
     ripgrep
@@ -36,6 +42,25 @@
     tree
     just
     file
+
+    # linters and formatters
+    shfmt # shell formatter
+    shellcheck # shell linter
+    nixfmt-rfc-style # nix formatter
+
+    # language servers
+    # find all language servers here:
+    # https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
+    vscode-langservers-extracted # html, cssls, json, eslint (e.g. js, ts)
+    bash-language-server # bash shell
+    yaml-language-server # yaml
+    lua-language-server # lua
+    rust-analyzer # rust
+    lemminx # xml, svg
+    helm-ls # helm
+    ruff # python
+    taplo # toml
+    nil # nix
   ];
 
   # This value determines the Home Manager release that your

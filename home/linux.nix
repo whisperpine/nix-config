@@ -4,6 +4,7 @@ let
     home.username = "yusong";
     home.homeDirectory = "/home/yusong";
     home.packages = with pkgs; [
+      lua-language-server
       helm
     ];
   };
