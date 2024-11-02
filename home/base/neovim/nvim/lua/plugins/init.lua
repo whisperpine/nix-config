@@ -17,11 +17,11 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "vim",  "vimdoc", "nix", "bash", "ssh_config", "ini",
-        "html", "css", "javascript", "typescript", "nginx",
-        "c", "cpp", "c_sharp", "python", "rust", "wgsl", "wgsl_bevy",
-        "yaml", "toml", "json", "just", "dockerfile", "sql",
-        "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore"
+        "vim", "vimdoc", "nix", "bash", "ssh_config", "ini", "editorconfig",
+        "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
+        "nginx",  "just", "dockerfile", "sql", "terraform", "proto", "mermaid",
+        "c", "cpp", "c_sharp", "python", "rust", "wgsl", "wgsl_bevy", "lua",
+        "html", "css", "javascript", "typescript", "yaml", "toml", "json",
       },
     },
   },
