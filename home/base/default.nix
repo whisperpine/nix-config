@@ -28,6 +28,7 @@
   };
 
   home.packages = with pkgs; [
+    translate-shell
     kubectl
     ripgrep
     lazygit
