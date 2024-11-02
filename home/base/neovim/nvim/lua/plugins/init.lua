@@ -16,15 +16,30 @@ return {
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim",  "vimdoc", "nix", "bash", "ssh_config", "ini",
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",  "vimdoc", "nix", "bash", "ssh_config", "ini",
         "html", "css", "javascript", "typescript", "nginx",
         "c", "cpp", "c_sharp", "python", "rust", "wgsl", "wgsl_bevy",
         "yaml", "toml", "json", "just", "dockerfile", "sql",
         "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore"
-  		},
-  	},
+      },
+    },
+  },
+
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configration here, or leave empty to use defaults
+      })
+    end
+  },
+
+  {
+    "wellle/targets.vim",
+    event = "VeryLazy",
   },
 }
