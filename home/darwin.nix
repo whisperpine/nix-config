@@ -1,8 +1,10 @@
-{ config, pkgs, pkgs-stable, ... }:
+{ ... }:
 let
-  configuration = { pkgs, ... }: {
-    home.packages = with pkgs; [ ];
-  };
+  configuration =
+    { pkgs, ... }:
+    {
+      home.packages = with pkgs; [ ];
+    };
 in
 {
   imports = [

@@ -6,7 +6,7 @@
       theme = "custom";
       ui = {
         pane_frames = {
-           rounded_corners = false;
+          rounded_corners = false;
         };
       };
       themes.custom = {

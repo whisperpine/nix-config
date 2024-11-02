@@ -1,4 +1,7 @@
-{ lib, pkgs ? import <nixpkgs> {}, ... }:
+{
+  pkgs ? import <nixpkgs> { },
+  ...
+}:
 {
   home.packages = with pkgs; [
     erdtree

@@ -1,8 +1,8 @@
 {
-    "files.associations": {
-        "LICENSE": "plaintext",
-    },
-    "files.readonlyInclude": {
-        "LICENSE": true
-    }
+  "files.associations": {
+    "LICENSE": "plaintext"
+  },
+  "files.readonlyInclude": {
+    "LICENSE": true
+  }
 }

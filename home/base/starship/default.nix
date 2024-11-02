@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs.starship = {
     enable = true;
@@ -9,4 +9,3 @@
     target = "./starship.toml";
   };
 }
-

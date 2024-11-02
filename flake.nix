@@ -8,10 +8,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # The latest stable branch which can be used as a fallback.
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
-
     # WSL (Windows Subsystem for Linux).
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-
     # Nix-Darwin.
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -19,7 +17,6 @@
     };
     # Learn more: https://github.com/zhaofengli/nix-homebrew
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-
     # Home Manager used for managing user configuration.
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
@@ -30,5 +27,4 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
 }

@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  pkgs-stable,
-  ...
-}:
+{ pkgs, ... }:
 {
   imports = [
     ./yazi
