@@ -38,15 +38,23 @@
     just
     file
 
-    # linters and formatters
-    shfmt # shell formatter
+    # linters
     shellcheck # shell linter
+
+    # formatters
+    # find all formatters here:
+    # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
     nixfmt-rfc-style # nix formatter
+    superhtml # html
+    shfmt # shell formatter
+    deno # javascript, typescript, json
 
     # language servers
     # find all language servers here:
     # https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
-    vscode-langservers-extracted # html, cssls, json, eslint (e.g. js, ts)
+    vscode-langservers-extracted # json, css
+    typescript-language-server # typescript, javascript
+    tailwindcss-language-server # tailwind css
     bash-language-server # bash shell
     yaml-language-server # yaml
     lua-language-server # lua

@@ -5,6 +5,7 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 -- press ";" in normal mode to enter command
-map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
+
 -- press ctrl-s to save current buffer.
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

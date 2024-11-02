@@ -1,9 +1,14 @@
 local options = {
   formatters_by_ft = {
+    javascript = { "deno fmt" },
+    typescript = { "deno fmt" },
+    json = { "deno fmt" },
+    css = { "deno fmt" },
+    python = { "ruff format" },
+    html = { "superhtml" },
     lua = { "stylua" },
-    python = { "ruff" },
     bash = { "shfmt" },
-    nix = { "nixfmt" },
+    nix = { "nixfmt", "-s" },
   },
 
   format_on_save = {
