@@ -1,19 +1,17 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- format on save
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
+  -- disable nvchad default plugins
+  { "windwp/nvim-autopairs", enabled = false },
   { "neovim/nvim-lspconfig", enabled = false },
-
   { "williamboman/mason.nvim", enabled = false },
 
-  {
-    "folke/which-key.nvim",
-    lazy = false
-  },
+  -- make it not lazy but instant
+  { "folke/which-key.nvim", lazy = false },
 
   {
     "nvim-treesitter/nvim-treesitter",

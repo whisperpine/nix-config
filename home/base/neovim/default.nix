@@ -8,8 +8,8 @@
       # gruvbox-material
       # vim-commentary
       # lightline-vim
-      # vim-surround
       # indentLine
+      # vim-surround
       # targets-vim
     ];
   };
