@@ -1,6 +1,4 @@
-{
-  self, ...
-}@inputs:
+{ self, ... }@inputs:
 {
   nixosConfigurations = {
     # windows wsl

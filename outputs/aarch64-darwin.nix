@@ -1,6 +1,7 @@
 {
   self, nixpkgs, nixpkgs-stable, home-manager, nix-darwin, nix-homebrew, ...
-}@inputs: let
+}@inputs:
+let
   system = "aarch64-darwin";
   # Pass non-defualt args to modules.
   extraSpecialArgs = {

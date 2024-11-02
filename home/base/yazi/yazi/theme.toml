@@ -1,6 +1,6 @@
 [manager]
 border_symbol = "│"
-border_style = { fg = "#161616"} # black
+border_style = { fg = "#121212"} # black
 
 [status]
 separator_open  = ""

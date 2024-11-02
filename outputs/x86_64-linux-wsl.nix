@@ -1,6 +1,7 @@
 {
   self, nixpkgs, nixpkgs-stable, home-manager, nixos-wsl, ...
-}@inputs: let
+}@inputs:
+let
   system = "x86_64-linux";
   # Pass non-defualt args to modules.
   extraSpecialArgs = {

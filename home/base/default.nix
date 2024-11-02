@@ -20,8 +20,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.enableNixpkgsReleaseCheck = false;
-
   xresources.properties = {
     # Set mouse cursor size.
     "Xcursor.size" = 16;
@@ -48,4 +46,5 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "24.05";
+  home.enableNixpkgsReleaseCheck = false;
 }

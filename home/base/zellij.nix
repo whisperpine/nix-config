@@ -10,7 +10,6 @@
         };
       };
       themes.custom = {
-        #fg = "#bdbdbd";
         fg = "#aaaaaa";
         bg = "#202020";
         black = "#161616";
