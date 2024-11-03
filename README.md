@@ -34,7 +34,7 @@ to change username.
 ```sh
 # generate ssh key pairs
 cd ~ && ssh-keygen -t rsa -b 2048
-# add pubkey to github user settings...
+# add pub key to github user settings...
 
 # enter a shell environment with git command included
 nix shell --extra-experimental-features "nix-command flakes" nixpkgs#git
@@ -53,7 +53,7 @@ sudo nixos-rebuild switch
 ```sh
 # install nix
 curl -L https://nixos.org/nix/install | sh
-# generate ssh key pairs, add pubkey to github user settings...
+# generate ssh key pairs, add pub key to github user settings...
 
 # clone this repo under ~/.config
 mkdir -p ~/.config && cd ~/.config
@@ -67,5 +67,5 @@ nix --extra-experimental-features "nix-command flakes" \
 darwin-rebuild switch --flake ~/nix-config
 ```
 
-Tip: `darwin-help` will open a HTML version of the manpage in the default browser.\
+Tip: `darwin-help` will open a HTML version of the man-page in the default browser.\
 `man 5 configuration.nix` will open the manual of nix-darwin right in the terminal.

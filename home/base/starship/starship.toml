@@ -283,3 +283,7 @@ format = "[$symbol]($style)"
 symbol = "erlang "
 format = "[$symbol]($style)"
 
+[jobs]
+symbol = "+"
+format = "[$symbol$number]($style) "
+number_threshold = 1
