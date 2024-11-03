@@ -4,6 +4,9 @@ require "nvchad.options"
 
 local o = vim.o
 
+local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+
 -- to enable cursorline!
 o.cursorlineopt = "both"
 -- enables 24-bit RGB color
@@ -21,8 +24,17 @@ o.spell = true
 o.spelllang = "en_us"
 -- -- show column line
 -- o.colorcolumn = 80
-
--- -- indenting
--- o.tabstop=4
--- o.shiftwidth=4
--- o.softtabstop=4
+-- indenting
+o.tabstop = 4
+o.shiftwidth = 4
+o.softtabstop = 4
+-- set indent size by filetype
+augroup('setIndent', { clear = true })
+autocmd('Filetype', {
+  group = 'setIndent',
+  pattern = {
+    'xml', 'html', 'xhtml', 'css', 'scss', 'nix',
+    'javascript', 'typescript', 'yaml', 'lua'
+  },
+  command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2'
+})

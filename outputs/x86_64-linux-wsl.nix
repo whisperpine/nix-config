@@ -7,7 +7,7 @@
 }:
 let
   system = "x86_64-linux";
-  # Pass non-defualt args to modules.
+  # Pass non-default args to modules.
   extraSpecialArgs = {
     pkgs-stable = import nixpkgs-stable {
       inherit system;
@@ -37,7 +37,7 @@ let
       users.defaultUserShell = pkgs.nushell;
       # Set system-wide environment variables.
       environment.variables.EDITOR = "nvim";
-      # Optimise storage.
+      # Optimize storage.
       nix.settings.auto-optimise-store = true;
       # Do garbage collection weekly to keep disk usage low.
       nix.gc = {
