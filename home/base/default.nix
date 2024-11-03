@@ -45,6 +45,7 @@
     # find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
     nixfmt-rfc-style # nix formatter
+    markdownlint-cli # markdown
     superhtml # html
     shfmt # shell formatter
     deno # javascript, typescript, json
@@ -58,6 +59,7 @@
     bash-language-server # bash shell
     yaml-language-server # yaml
     lua-language-server # lua
+    markdown-oxide # markdown
     rust-analyzer # rust
     lemminx # xml, svg
     helm-ls # helm

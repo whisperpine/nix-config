@@ -3,10 +3,10 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
 local servers = {
+  "markdown_oxide",
   "superhtml", "cssls", "jsonls", "helm_ls", "taplo", "yamlls", "nil_ls",
-  "bashls", "rust_analyzer", "ts_ls", "lemminx", "ruff", "tailwindcss"
+  "bashls", "rust_analyzer", "ts_ls", "lemminx", "ruff", "tailwindcss",
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 

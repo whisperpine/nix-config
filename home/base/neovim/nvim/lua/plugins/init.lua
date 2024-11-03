@@ -29,6 +29,7 @@ return {
         "nginx", "just", "dockerfile", "sql", "terraform", "proto", "mermaid",
         "c", "cpp", "c_sharp", "python", "rust", "wgsl", "wgsl_bevy", "lua",
         "html", "css", "javascript", "typescript", "yaml", "toml", "json",
+        "markdown", "markdown_inline",
       },
     },
   },

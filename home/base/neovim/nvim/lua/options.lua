@@ -19,6 +19,8 @@ o.fileformat = "unix"
 -- enable spell checking
 o.spell = true
 o.spelllang = "en_us"
+-- -- show column line
+-- o.colorcolumn = 80
 
 -- -- indenting
 -- o.tabstop=4
