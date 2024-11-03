@@ -9,3 +9,5 @@ local map = vim.keymap.set
 
 -- press ctrl-s to save current buffer.
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- toggle outline (provided by outline.vim)
+map("n", "<leader>o", "<cmd>Outline<cr>", { desc = "Toggle outline" })
