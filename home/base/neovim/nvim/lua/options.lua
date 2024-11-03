@@ -24,6 +24,10 @@ o.spell = true
 o.spelllang = "en_us"
 -- -- show column line
 -- o.colorcolumn = 80
+-- fold by treesitter
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldlevelstart = 99
 -- indenting
 o.tabstop = 4
 o.shiftwidth = 4
