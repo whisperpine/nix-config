@@ -9,18 +9,17 @@
     source = ./nvim;
   };
   home.packages = with pkgs; [
-    # linters
-    shellcheck # shell linter
-
-    # formatters
+    # formatters and linters
     # find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
     nixfmt-rfc-style # nix formatter
     markdownlint-cli # markdown
-    superhtml # html
+    shellcheck # shell linter
     rustfmt # rust
-    shfmt # shell formatter
-    deno # javascript, typescript, json
+    stylua # lua
+    shfmt # shell
+    ruff # python
+    deno # typescript, javascript, json
 
     # language servers
     # find all language servers here:
@@ -28,14 +27,14 @@
     vscode-langservers-extracted # json, css
     typescript-language-server # typescript, javascript
     tailwindcss-language-server # tailwind css
-    bash-language-server # bash shell
+    bash-language-server # bash sh shell
     yaml-language-server # yaml
     lua-language-server # lua
     markdown-oxide # markdown
     rust-analyzer # rust
+    basedpyright # python
     lemminx # xml, svg
     helm-ls # helm
-    ruff # python
     taplo # toml
     nil # nix
   ];

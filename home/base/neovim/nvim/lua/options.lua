@@ -1,12 +1,13 @@
+-- use options from nvchad
 require "nvchad.options"
 
--- add yours here!
+-- enable inlay hints
+vim.lsp.inlay_hint.enable(true, { 0 })
 
 local o = vim.o
 
-local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
-local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
-
+-- -- show column line
+-- o.colorcolumn = 80
 -- to enable cursorline!
 o.cursorlineopt = "both"
 -- enables 24-bit RGB color
@@ -22,8 +23,6 @@ o.fileformat = "unix"
 -- enable spell checking
 o.spell = true
 o.spelllang = "en_us"
--- -- show column line
--- o.colorcolumn = 80
 -- fold by treesitter
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
@@ -32,15 +31,30 @@ o.foldlevelstart = 99
 o.tabstop = 4
 o.shiftwidth = 4
 o.softtabstop = 4
+
+-- autocmd --
+local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
+local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 -- set indent size by filetype
-augroup('setIndent', { clear = true })
-autocmd('Filetype', {
-  group = 'setIndent',
+augroup("setIndent", { clear = true })
+autocmd("Filetype", {
+  group = "setIndent",
   pattern = {
-    'xml', 'html', 'xhtml', 'css', 'scss', 'nix',
-    'javascript', 'typescript', 'yaml', 'lua'
+    "javascript",
+    "typescript",
+    "xhtml",
+    "html",
+    "scss",
+    "xml",
+    "css",
+    "nix",
+    "yaml",
+    "lua",
   },
-  command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2'
+  command = "setlocal shiftwidth=2 tabstop=2 softtabstop=2",
 })
--- enable inlay hints
-vim.lsp.inlay_hint.enable(true, { 0 })
+
+-- stevearc/conform.nvim --
+require("conform").formatters.nixfmt = {
+  prepend_args = { "-s" },
+}

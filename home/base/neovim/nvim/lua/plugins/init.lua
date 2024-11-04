@@ -1,12 +1,12 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- format on save
+    event = "BufWritePre", -- format on save
     opts = require "configs.conform",
   },
 
   -- disable nvchad default plugins
-  { "windwp/nvim-autopairs",   enabled = false },
+  { "windwp/nvim-autopairs", enabled = false },
   { "williamboman/mason.nvim", enabled = false },
 
   {
@@ -24,12 +24,42 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "vim", "vimdoc", "nix", "bash", "ssh_config", "ini", "editorconfig",
-        "git_config", "git_rebase", "gitattributes", "gitcommit", "gitignore",
-        "nginx", "just", "dockerfile", "sql", "terraform", "proto", "mermaid",
-        "c", "cpp", "c_sharp", "python", "rust", "wgsl", "wgsl_bevy", "lua",
-        "html", "css", "javascript", "typescript", "yaml", "toml", "json",
-        "markdown", "markdown_inline",
+        "vim",
+        "vimdoc",
+        "nix",
+        "bash",
+        "ssh_config",
+        "ini",
+        "editorconfig",
+        "git_config",
+        "git_rebase",
+        "gitattributes",
+        "gitcommit",
+        "gitignore",
+        "nginx",
+        "just",
+        "dockerfile",
+        "sql",
+        "terraform",
+        "proto",
+        "mermaid",
+        "c",
+        "cpp",
+        "c_sharp",
+        "python",
+        "rust",
+        "wgsl",
+        "wgsl_bevy",
+        "lua",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "yaml",
+        "toml",
+        "json",
+        "markdown",
+        "markdown_inline",
       },
     },
   },
@@ -38,10 +68,10 @@ return {
     "kylechui/nvim-surround",
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({
+      require("nvim-surround").setup {
         -- config here or leave empty to use defaults
-      })
-    end
+      }
+    end,
   },
 
   {

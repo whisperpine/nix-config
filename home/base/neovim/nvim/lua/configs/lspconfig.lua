@@ -5,8 +5,19 @@ local lspconfig = require "lspconfig"
 
 local servers = {
   "markdown_oxide",
-  "superhtml", "cssls", "jsonls", "helm_ls", "taplo", "yamlls", "nil_ls",
-  "bashls", "rust_analyzer", "ts_ls", "lemminx", "ruff", "tailwindcss",
+  "rust_analyzer",
+  "basedpyright",
+  "tailwindcss",
+  "helm_ls",
+  "lemminx",
+  "jsonls",
+  "cssls",
+  "yamlls",
+  "nil_ls",
+  "bashls",
+  "taplo",
+  "ts_ls",
+  "html",
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 
