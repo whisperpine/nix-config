@@ -1,13 +1,14 @@
 local options = {
   formatters_by_ft = {
+    markdown = { "markdownlint" },
     javascript = { "deno fmt" },
     typescript = { "deno fmt" },
-    markdown = { "markdownlint" },
     json = { "deno fmt" },
     css = { "deno fmt" },
     python = { "ruff format" },
     html = { "superhtml" },
     lua = { "stylua" },
+    rust = { "rustfmt" },
     bash = { "shfmt" },
     nix = { "nixfmt" },
   },
