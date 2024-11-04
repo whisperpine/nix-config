@@ -7,6 +7,7 @@ local M = {}
 
 M.base46 = {
   theme = "tomorrow_night",
+  hl_override = {},
 
   -- hl_override = {
   -- 	Comment = { italic = true },
@@ -25,7 +26,7 @@ M.ui = {
     separator_style = "block",
     -- order = nil,
     -- modules = nil,
-  }
+  },
 }
 
 return M

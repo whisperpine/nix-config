@@ -30,6 +30,7 @@
 
   home.packages = with pkgs; [
     translate-shell
+    tree-sitter
     kubectl
     ripgrep
     lazygit
@@ -37,6 +38,7 @@
     tree
     just
     file
+    fd
   ];
 
   # This value determines the Home Manager release that your
