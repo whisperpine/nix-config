@@ -6,6 +6,7 @@
     ./erdtree
     ./nushell
     ./starship
+    ./direnv
 
     ./git.nix
     ./zsh.nix

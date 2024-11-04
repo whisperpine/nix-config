@@ -1,0 +1,3 @@
+[global]
+# Disable stdin (redirected to /dev/null) during the .envrc evaluation.
+disable_stdin = true
