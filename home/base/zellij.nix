@@ -4,6 +4,7 @@
     enable = true;
     settings = {
       theme = "custom";
+      scroll_buffer_size = 1500;
       ui = {
         pane_frames = {
           rounded_corners = false;
