@@ -42,3 +42,5 @@ autocmd('Filetype', {
   },
   command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2'
 })
+-- enable inlay hints
+vim.lsp.inlay_hint.enable(true, { 0 })
