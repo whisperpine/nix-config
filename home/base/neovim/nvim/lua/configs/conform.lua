@@ -1,8 +1,9 @@
 local options = {
   formatters_by_ft = {
     markdown = { "markdownlint" },
-    rust = { "rustfmt" },
+    terraform = { "tofu_fmt" },
     python = { "ruff_format" },
+    rust = { "rustfmt" },
     lua = { "stylua" },
     bash = { "shfmt" },
     nix = { "nixfmt" },

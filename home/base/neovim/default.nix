@@ -3,11 +3,13 @@
   programs.neovim = {
     enable = true;
   };
+
   xdg.configFile.nvim = {
     enable = true;
     recursive = true;
     source = ./nvim;
   };
+
   home.packages = with pkgs; [
     # formatters and linters
     # find all formatters here:
@@ -15,6 +17,7 @@
     nixfmt-rfc-style # nix formatter
     markdownlint-cli # markdown
     shellcheck # shell linter
+    opentofu # terraform, opentofu
     rustfmt # rust
     stylua # lua
     shfmt # shell
@@ -32,6 +35,7 @@
     lua-language-server # lua
     markdown-oxide # markdown
     rust-analyzer # rust
+    terraform-ls # terraform
     basedpyright # python
     lemminx # xml, svg
     helm-ls # helm

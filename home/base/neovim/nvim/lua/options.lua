@@ -42,6 +42,7 @@ autocmd("Filetype", {
   pattern = {
     "javascript",
     "typescript",
+    "terraform",
     "xhtml",
     "html",
     "scss",

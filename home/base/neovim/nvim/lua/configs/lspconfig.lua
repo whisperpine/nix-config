@@ -8,6 +8,7 @@ local servers = {
   "rust_analyzer",
   "basedpyright",
   "tailwindcss",
+  "terraformls",
   "helm_ls",
   "lemminx",
   "jsonls",
