@@ -17,6 +17,7 @@
     nixfmt-rfc-style # nix formatter
     markdownlint-cli # markdown
     shellcheck # shell linter
+    xmlstarlet # xml
     opentofu # terraform, opentofu
     sqlfluff # sql
     rustfmt # rust

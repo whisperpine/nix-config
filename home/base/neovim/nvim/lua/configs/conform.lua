@@ -6,6 +6,7 @@ local options = {
     objc = { "clang-format" },
     cpp = { "clang-format" },
     c = { "clang-format" },
+    xml = { "xmlstarlet" },
     rust = { "rustfmt" },
     lua = { "stylua" },
     bash = { "shfmt" },
