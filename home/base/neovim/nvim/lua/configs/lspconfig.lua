@@ -19,6 +19,7 @@ local servers = {
   "taplo",
   "ts_ls",
   "html",
+  "sqls",
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 

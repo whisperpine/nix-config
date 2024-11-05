@@ -18,6 +18,7 @@
     markdownlint-cli # markdown
     shellcheck # shell linter
     opentofu # terraform, opentofu
+    sqlfluff # sql
     rustfmt # rust
     stylua # lua
     shfmt # shell
@@ -42,6 +43,7 @@
     lemminx # xml, svg
     helm-ls # helm
     taplo # toml
+    sqls # sql
     nil # nix
   ];
 }

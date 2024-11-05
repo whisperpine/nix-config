@@ -11,6 +11,7 @@ local options = {
     bash = { "shfmt" },
     nix = { "nixfmt" },
     proto = { "buf" },
+    sql = { "sqlfluff" },
 
     -- deno_fmt
     javascript = { "deno_fmt" },
