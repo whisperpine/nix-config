@@ -61,6 +61,7 @@ return {
         "yaml",
         "toml",
         "json",
+        "nu",
         "c",
       },
     },
