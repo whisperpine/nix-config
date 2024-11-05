@@ -23,6 +23,8 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
+      -- all the supported languages by tree-sitter:
+      -- https://github.com/nvim-treesitter/nvim-treesitter
       ensure_installed = {
         "markdown_inline",
         "markdown",

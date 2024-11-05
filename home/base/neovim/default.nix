@@ -23,6 +23,7 @@
     shfmt # shell
     ruff # python
     deno # typescript, javascript, json
+    buf # protobuf
 
     # language servers
     # find all language servers here:
@@ -37,6 +38,7 @@
     rust-analyzer # rust
     terraform-ls # terraform
     basedpyright # python
+    clang-tools # c, cpp, objc
     lemminx # xml, svg
     helm-ls # helm
     taplo # toml

@@ -3,10 +3,14 @@ local options = {
     markdown = { "markdownlint" },
     terraform = { "tofu_fmt" },
     python = { "ruff_format" },
+    objc = { "clang-format" },
+    cpp = { "clang-format" },
+    c = { "clang-format" },
     rust = { "rustfmt" },
     lua = { "stylua" },
     bash = { "shfmt" },
     nix = { "nixfmt" },
+    proto = { "buf" },
 
     -- deno_fmt
     javascript = { "deno_fmt" },
