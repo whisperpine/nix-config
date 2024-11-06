@@ -43,6 +43,7 @@
     clang-tools # c, cpp, objc
     lemminx # xml, svg
     helm-ls # helm
+    texlab # latex
     taplo # toml
     sqls # sql
     nil # nix

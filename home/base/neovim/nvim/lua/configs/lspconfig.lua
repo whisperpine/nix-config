@@ -16,6 +16,7 @@ local servers = {
   "yamlls",
   "nil_ls",
   "bashls",
+  "texlab",
   "taplo",
   "ts_ls",
   "html",

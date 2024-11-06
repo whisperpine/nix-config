@@ -45,6 +45,7 @@ return {
         "c_sharp",
         "python",
         "vimdoc",
+        "latex",
         "vim",
         "proto",
         "nix",
