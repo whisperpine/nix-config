@@ -1,4 +1,4 @@
--- MeanderingProgrammer/render-markdown.nvim --
+-- MeanderingProgrammer/render-markdown.nvim
 require("render-markdown").setup {
   -- Whether Markdown should be rendered by default or not
   enabled = true,
@@ -24,7 +24,6 @@ require("render-markdown").setup {
     --  dash, bullet, check_icon, check_scope, quote, table_border, callout, link, sign
     ignore = {
       head_icon = true,
-      code_language = true,
       code_background = true,
       sign = true,
     },

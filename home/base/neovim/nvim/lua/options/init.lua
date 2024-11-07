@@ -5,6 +5,8 @@ require "nvchad.options"
 require "options.conform"
 -- config MeanderingProgrammer/render-markdown.nvim
 require "options.render-markdown"
+-- config iamcco/markdown-preview.nvim
+require "options.markdown-preview"
 
 -- enable inlay hints
 vim.lsp.inlay_hint.enable(true, { 0 })

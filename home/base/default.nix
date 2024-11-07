@@ -31,6 +31,7 @@
   home.packages = with pkgs; [
     translate-shell
     tree-sitter
+    yarn-berry
     nodejs_22
     kubectl
     ripgrep
