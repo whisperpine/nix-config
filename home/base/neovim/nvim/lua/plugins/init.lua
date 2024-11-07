@@ -17,8 +17,11 @@ return {
     end,
   },
 
-  -- make it not lazy but instant
-  { "folke/which-key.nvim", lazy = false },
+  {
+    "folke/which-key.nvim",
+    lazy = false,
+    opts = { delay = 0 },
+  },
 
   {
     "kylechui/nvim-surround",

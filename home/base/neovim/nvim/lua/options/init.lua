@@ -27,8 +27,6 @@ o.wrap = false
 o.scrolloff = 3
 -- disable search highlighting
 o.hlsearch = false
--- set end of line style to LF
-o.fileformat = "unix"
 -- enable spell checking
 o.spell = true
 o.spelllang = "en_us,cjk"
