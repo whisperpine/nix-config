@@ -54,6 +54,8 @@ let
         neovim
         nushell
         unzip
+        # WSL specific.
+        xdg-utils
       ];
     };
 in

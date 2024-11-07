@@ -1,6 +1,11 @@
 -- use options from nvchad
 require "nvchad.options"
 
+-- config stevearc/conform.nvim
+require "options.conform"
+-- config MeanderingProgrammer/render-markdown.nvim
+require "options.render-markdown"
+
 -- enable inlay hints
 vim.lsp.inlay_hint.enable(true, { 0 })
 
@@ -18,6 +23,8 @@ o.encoding = "utf-8"
 o.wrap = false
 -- cursor will always be 3 lines above the window edge
 o.scrolloff = 3
+-- disable search highlighting
+o.hlsearch = false
 -- set end of line style to LF
 o.fileformat = "unix"
 -- enable spell checking
@@ -39,6 +46,7 @@ local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 augroup("setIndent", { clear = true })
 autocmd("Filetype", {
   group = "setIndent",
+  command = "setlocal shiftwidth=2 tabstop=2 softtabstop=2",
   pattern = {
     "javascript",
     "typescript",
@@ -52,10 +60,4 @@ autocmd("Filetype", {
     "yaml",
     "lua",
   },
-  command = "setlocal shiftwidth=2 tabstop=2 softtabstop=2",
 })
-
--- stevearc/conform.nvim --
-require("conform").formatters.nixfmt = {
-  prepend_args = { "-s" },
-}

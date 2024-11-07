@@ -21,54 +21,6 @@ return {
   { "folke/which-key.nvim", lazy = false },
 
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      -- all the supported languages by tree-sitter:
-      -- https://github.com/nvim-treesitter/nvim-treesitter
-      ensure_installed = {
-        "markdown_inline",
-        "markdown",
-        "javascript",
-        "typescript",
-        "git_config",
-        "git_rebase",
-        "gitattributes",
-        "gitcommit",
-        "gitignore",
-        "editorconfig",
-        "ssh_config",
-        "dockerfile",
-        "terraform",
-        "mermaid",
-        "wgsl_bevy",
-        "wgsl",
-        "c_sharp",
-        "python",
-        "vimdoc",
-        "latex",
-        "vim",
-        "proto",
-        "nix",
-        "bash",
-        "ini",
-        "nginx",
-        "just",
-        "sql",
-        "cpp",
-        "rust",
-        "lua",
-        "html",
-        "css",
-        "yaml",
-        "toml",
-        "json",
-        "nu",
-        "c",
-      },
-    },
-  },
-
-  {
     "kylechui/nvim-surround",
     event = "VeryLazy",
     config = function()
@@ -90,5 +42,11 @@ return {
     opts = {
       -- Your setup opts here
     },
+  },
+
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    lazy = true,
   },
 }
