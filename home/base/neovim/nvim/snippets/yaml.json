@@ -1,0 +1,9 @@
+{
+  "yaml file schema": {
+    "body": [
+      "# yaml-language-server: \\$schema=${1:URL}"
+    ],
+    "description": "schema for current yaml file",
+    "prefix": "schema"
+  }
+}

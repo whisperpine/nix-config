@@ -1,0 +1,11 @@
+{
+  "warning in doc": {
+    "prefix": "doc warning",
+    "description": "Show warning in doc html page",
+    "body": [
+      "/// <div class=\"warning\">",
+      "/// $0",
+      "/// </div>"
+    ]
+  }
+}

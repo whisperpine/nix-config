@@ -1,0 +1,68 @@
+{
+  "<br /> html tag": {
+    "prefix": "br",
+    "description": "<br /> html tag",
+    "body": [
+      "<br />"
+    ]
+  },
+  "<img /> html tag": {
+    "prefix": "img",
+    "description": "<img /> html tag",
+    "body": [
+      "<img src=\"${1}\" width=\"${2:50%}\" />"
+    ]
+  },
+  "two images aligned by width": {
+    "prefix": "equal width",
+    "description": "two images aligned by width",
+    "body": [
+      "<div style=\"display:flex;\">",
+      "\t<img src=\"\" style=\"object-fit: contain; max-width: 45%\" />",
+      "\t<p>&nbsp;&nbsp;</p>",
+      "\t<img src=\"\" style=\"object-fit: contain; max-width: 45%\" />",
+      "</div>"
+    ]
+  },
+  "two images aligned by height": {
+    "prefix": "equal height",
+    "description": "two images aligned by height",
+    "body": [
+      "<div style=\"display:flex;\">",
+      "\t<img src=\"\" style=\"object-fit: contain; max-height: 200px\" />",
+      "\t<p>&nbsp;&nbsp;</p>",
+      "\t<img src=\"\" style=\"object-fit: contain; max-height: 200px\" />",
+      "</div>"
+    ]
+  },
+  "<u></u> html tag": {
+    "prefix": "underline",
+    "description": "<u></u> html tag",
+    "body": [
+      "<u>$1</u>"
+    ]
+  },
+  "gitlab table of contents": {
+    "prefix": "toc",
+    "description": "gitlab table of contents",
+    "body": [
+      "[[_TOC_]]"
+    ]
+  },
+  "vitepress component <Badge />": {
+    "prefix": "badge",
+    "description": "<Badge />",
+    "body": [
+      "<Badge type=\"${1:warning}\" text=\"${2:todo}\" />"
+    ]
+  },
+  "details": {
+    "prefix": "details",
+    "description": "foldaway details",
+    "body": [
+      "<details><summary>${1:Click to expand}</summary>",
+      "$0",
+      "</details>"
+    ]
+  }
+}

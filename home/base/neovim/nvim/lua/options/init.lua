@@ -7,6 +7,10 @@ require "options.conform"
 require "options.render-markdown"
 -- config iamcco/markdown-preview.nvim
 require "options.markdown-preview"
+-- config L3MON4D3/LuaSnip
+require("luasnip.loaders.from_vscode").load {
+  paths = { "./snippets" },
+}
 
 -- enable inlay hints
 vim.lsp.inlay_hint.enable(true, { 0 })
@@ -52,6 +56,7 @@ autocmd("Filetype", {
     "typescript",
     "terraform",
     "xhtml",
+    "json",
     "html",
     "scss",
     "xml",

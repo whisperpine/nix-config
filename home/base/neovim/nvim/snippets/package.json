@@ -1,0 +1,27 @@
+{
+  "name": "my-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": ["all"],
+        "path": "./all.json"
+      },
+      {
+        "language": ["markdown"],
+        "path": "./markdown.json"
+      },
+      {
+        "language": ["rust"],
+        "path": "./rust.json"
+      },
+      {
+        "language": ["toml"],
+        "path": "./toml.json"
+      },
+      {
+        "language": ["yaml"],
+        "path": "./yaml.json"
+      }
+    ]
+  }
+}

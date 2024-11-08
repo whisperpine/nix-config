@@ -2,6 +2,7 @@ return {
   -- disable nvchad default plugins
   { "windwp/nvim-autopairs", enabled = false },
   { "williamboman/mason.nvim", enabled = false },
+  { "rafamadriz/friendly-snippets", enabled = false },
 
   {
     "stevearc/conform.nvim",
