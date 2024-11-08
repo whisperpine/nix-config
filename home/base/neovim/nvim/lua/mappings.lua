@@ -15,6 +15,10 @@ del("n", "<leader>h")
 del("n", "<leader>v")
 -- nvimtree focus window
 del("n", "<leader>e")
+-- telescope git status (by nvchad)
+del("n", "<leader>gt")
+-- telescope pick term (by nvchad)
+del("n", "<leader>pt")
 
 ---------------------
 -- add custom keymap.
@@ -32,3 +36,7 @@ map("n", "<leader>co", "<cmd>Outline<cr>", { desc = "toggle outline" })
 map("n", "<leader>mv", "<cmd>MarkdownPreviewToggle<cr>", { desc = "toggle markdown preview" })
 -- toggle markdown rendering ( provided by render-markdown.nvim)
 map("n", "<leader>mr", "<cmd>RenderMarkdown toggle<cr>", { desc = "toggle render markdown" })
+-- telescope git status
+map("n", "<leader>fg", "<cmd>Telescope git_status<CR>", { desc = "telescope git status" })
+-- reset the hunk around cursor
+map("n", "<leader>cr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "git reset hunk" })
