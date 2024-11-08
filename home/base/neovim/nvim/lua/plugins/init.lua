@@ -1,13 +1,23 @@
 return {
+  -- disable nvchad default plugins
+  { "windwp/nvim-autopairs", enabled = false },
+  { "williamboman/mason.nvim", enabled = false },
+
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- format on save
     opts = require "configs.conform",
   },
 
-  -- disable nvchad default plugins
-  { "windwp/nvim-autopairs", enabled = false },
-  { "williamboman/mason.nvim", enabled = false },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function(_, conf)
+      conf.defaults.mappings.i = {
+        ["<Esc>"] = require("telescope.actions").close,
+      }
+      return conf
+    end,
+  },
 
   {
     "neovim/nvim-lspconfig",
