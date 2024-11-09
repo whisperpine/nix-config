@@ -46,10 +46,18 @@ o.softtabstop = 4
 -- autocmd --
 local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+
+-- set no modifiable when the buffer is readonly
+augroup("NoModWhenReadOnly", { clear = true })
+autocmd("BufReadPost", {
+  group = "NoModWhenReadOnly",
+  command = "let &l:modifiable = !&readonly",
+})
+
 -- set indent size by filetype
-augroup("setIndent", { clear = true })
+augroup("SetIndent", { clear = true })
 autocmd("Filetype", {
-  group = "setIndent",
+  group = "SetIndent",
   command = "setlocal shiftwidth=2 tabstop=2 softtabstop=2",
   pattern = {
     "javascript",
