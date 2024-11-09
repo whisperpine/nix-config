@@ -15,10 +15,14 @@ del("n", "<leader>h")
 del("n", "<leader>v")
 -- nvimtree focus window
 del("n", "<leader>e")
--- telescope git status (by nvchad)
+-- telescope git status
 del("n", "<leader>gt")
--- telescope pick term (by nvchad)
+-- telescope pick term
 del("n", "<leader>pt")
+-- telescope git commits
+del("n", "<leader>cm")
+-- general format files
+del("n", "<leader>fm")
 
 ---------------------
 -- add custom keymap.
@@ -31,12 +35,16 @@ map("n", "<leader>cl", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { noremap = true, desc = "toggle inlay hints" })
 -- toggle outline (provided by outline.vim)
-map("n", "<leader>co", "<cmd>Outline<cr>", { desc = "toggle outline" })
+map("n", "<leader>co", "<cmd> Outline <cr>", { desc = "toggle outline" })
 -- toggle markdown preview ( provided by markdown-preview.nvim)
-map("n", "<leader>mv", "<cmd>MarkdownPreviewToggle<cr>", { desc = "toggle markdown preview" })
+map("n", "<leader>mv", "<cmd> MarkdownPreviewToggle <cr>", { desc = "toggle markdown preview" })
 -- toggle markdown rendering ( provided by render-markdown.nvim)
-map("n", "<leader>mr", "<cmd>RenderMarkdown toggle<cr>", { desc = "toggle render markdown" })
+map("n", "<leader>mr", "<cmd> RenderMarkdown toggle <cr>", { desc = "toggle render markdown" })
 -- telescope git status
-map("n", "<leader>fg", "<cmd>Telescope git_status<CR>", { desc = "telescope git status" })
+map("n", "<leader>fg", "<cmd> Telescope git_status <cr>", { desc = "telescope git status" })
+-- telescope git buffer commits
+map("n", "<leader>fm", "<cmd> Telescope git_bcommits <cr>", { desc = "telescope git buffer commits" })
 -- reset the hunk around cursor
-map("n", "<leader>cr", "<cmd>Gitsigns reset_hunk<cr>", { desc = "git reset hunk" })
+map("n", "<leader>cr", "<cmd> Gitsigns reset_hunk <cr>", { desc = "git reset hunk" })
+-- stage the hunk around cursor
+map("n", "<leader>cs", "<cmd> Gitsigns stage_hunk <cr>", { desc = "git stage hunk" })

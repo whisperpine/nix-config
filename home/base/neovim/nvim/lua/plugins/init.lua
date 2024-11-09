@@ -7,6 +7,7 @@ return {
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- format on save
+    ---@diagnostic disable-next-line: different-requires
     opts = require "configs.conform",
   },
 
