@@ -23,6 +23,8 @@ del("n", "<leader>pt")
 del("n", "<leader>cm")
 -- general format files
 del("n", "<leader>fm")
+-- buffer new
+del("n", "<leader>b")
 
 ---------------------
 -- add custom keymap.
@@ -34,8 +36,6 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "<leader>cl", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { noremap = true, desc = "toggle inlay hints" })
--- toggle outline (provided by outline.vim)
-map("n", "<leader>co", "<cmd> Outline <cr>", { desc = "toggle outline" })
 -- toggle markdown preview ( provided by markdown-preview.nvim)
 map("n", "<leader>mv", "<cmd> MarkdownPreviewToggle <cr>", { desc = "toggle markdown preview" })
 -- toggle markdown rendering ( provided by render-markdown.nvim)

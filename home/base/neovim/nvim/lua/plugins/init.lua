@@ -1,4 +1,5 @@
 return {
+
   -- disable nvchad default plugins
   { "windwp/nvim-autopairs", enabled = false },
   { "williamboman/mason.nvim", enabled = false },
@@ -48,15 +49,6 @@ return {
   {
     "wellle/targets.vim",
     event = "VeryLazy",
-  },
-
-  {
-    "hedyhli/outline.nvim",
-    lazy = true,
-    cmd = { "Outline", "OutlineOpen" },
-    opts = {
-      -- Your setup opts here
-    },
   },
 
   {
