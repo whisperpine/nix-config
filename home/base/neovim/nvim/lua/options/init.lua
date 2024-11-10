@@ -27,8 +27,8 @@ o.termguicolors = true
 o.encoding = "utf-8"
 -- don't wrap lines when it's longer than the window width
 o.wrap = false
--- cursor will always be 3 lines above the window edge
-o.scrolloff = 3
+-- -- cursor will always be 3 lines above the window edge
+-- o.scrolloff = 3
 -- disable search highlighting
 o.hlsearch = false
 -- enable spell checking
