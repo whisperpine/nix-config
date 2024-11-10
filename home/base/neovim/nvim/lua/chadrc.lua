@@ -21,6 +21,9 @@ M.ui = {
     -- round and block will work for minimal theme only
     separator_style = "block",
   },
+  tabufline = {
+    lazyload = false,
+  },
 }
 
 return M

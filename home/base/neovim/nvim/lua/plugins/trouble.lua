@@ -27,11 +27,11 @@ return {
         "<cmd> Trouble diagnostics toggle filter.buf=0 focus=true <cr>",
         desc = "trouble buffer diagnostics",
       },
-      {
-        "<leader>co",
-        "<cmd> Trouble symbols toggle focus=true win.position=right <cr>",
-        desc = "trouble document symbols",
-      },
+      -- {
+      --   "<leader>co",
+      --   "<cmd> Trouble symbols toggle focus=true win.position=right <cr>",
+      --   desc = "trouble document symbols",
+      -- },
       {
         "gr",
         "<cmd> Trouble lsp_references focus=true <cr>",
