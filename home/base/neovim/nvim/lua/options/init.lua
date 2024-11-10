@@ -83,3 +83,11 @@ autocmd("BufReadPost", {
     end
   end,
 })
+
+-- turn off spell checking in terminal mode
+autocmd("TermOpen", {
+  pattern = "*",
+  callback = function()
+    vim.o.spell = false
+  end,
+})
