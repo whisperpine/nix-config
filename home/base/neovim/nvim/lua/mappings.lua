@@ -22,10 +22,6 @@ map("n", "<leader>mr", "<cmd> RenderMarkdown toggle <cr>", { desc = "toggle rend
 map("n", "<leader>cr", "<cmd> Gitsigns reset_hunk <cr>", { desc = "git reset hunk" })
 -- stage the hunk around cursor
 map("n", "<leader>cs", "<cmd> Gitsigns stage_hunk <cr>", { desc = "git stage hunk" })
--- -- lspsaga diagnostic next
--- map("n", "]d", "<cmd> Lspsaga diagnostic_jump_next <cr>", { desc = "lspsaga diagnostic next" })
--- -- lspsaga diagnostic prev
--- map("n", "[d", "<cmd> Lspsaga diagnostic_jump_prev <cr>", { desc = "lspsaga diagnostic prev" })
 
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })

@@ -3,18 +3,26 @@ return {
     "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     dependencies = {
-      "nvim-treesitter/nvim-treesitter", -- optional
-      "nvim-tree/nvim-web-devicons", -- optional
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
     },
     config = function()
-      require("lspsaga").setup {}
+      require("lspsaga").setup {
+        lightbulb = {
+          virtual_text = false,
+        },
+        ui = {
+          code_action = "⚡",
+        },
+      }
     end,
     keys = {
-      {
-        "<leader>co",
-        "<cmd> Lspsaga outline <cr>",
-        desc = "lspsaga outline",
-      },
+      -- todo: enable after bug fix
+      -- {
+      --   "<leader>co",
+      --   "<cmd> Lspsaga outline <cr>",
+      --   desc = "lspsaga outline",
+      -- },
       {
         "]d",
         "<cmd> Lspsaga diagnostic_jump_next <cr>",
@@ -24,6 +32,20 @@ return {
         "[d",
         "<cmd> Lspsaga diagnostic_jump_prev <cr>",
         desc = "lspsaga diagnostic prev",
+      },
+      {
+        "]e",
+        function()
+          require("lspsaga.diagnostic"):goto_prev { severity = vim.diagnostic.severity.ERROR }
+        end,
+        desc = "lspsaga diagnostic next error",
+      },
+      {
+        "[e",
+        function()
+          require("lspsaga.diagnostic"):goto_prev { severity = vim.diagnostic.severity.ERROR }
+        end,
+        desc = "lspsaga diagnostic prev error",
       },
       {
         "gp",

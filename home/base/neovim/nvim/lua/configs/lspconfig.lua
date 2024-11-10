@@ -9,7 +9,8 @@ local on_attach = function(_, bufnr)
     return { buffer = bufnr, desc = "LSP " .. desc }
   end
   map("n", "<leader>ra", "<cmd> Lspsaga rename <cr>", opts "NvRenamer")
-  map("n", "<leader>ca", "<cmd> Lspsaga code_action <cr>", opts "code action")
+  map("n", "<leader>ca", vim.lsp.buf.code_action, opts "code action") -- todo: use lspsaga after bug fix
+  -- map("n", "<leader>ca", "<cmd> Lspsaga code_action <cr>", opts "code action")
   map("n", "<leader>sh", vim.lsp.buf.signature_help, opts "show signature help")
   map("n", "<leader>fs", "<cmd> Telescope lsp_document_symbols <cr>", { desc = "telescope document symbols" })
   map("n", "<leader>fS", "<cmd> Telescope lsp_dynamic_workspace_symbols <cr>", { desc = "telescope workspace symbols" })
