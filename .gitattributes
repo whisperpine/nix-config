@@ -4,4 +4,7 @@
 *.toml linguist-detectable=true
 *.json linguist-detectable=true
 
+env.nu linguist-detectable=false
+config.nu linguist-detectable=false
 themes.gitconfig linguist-detectable=false
+
