@@ -1,0 +1,56 @@
+[include]
+    path = ~/.config/git/themes.gitconfig
+
+[user]
+	name = Yusong
+	email = yusong.lai@icloud.com
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	pushff = push --force-with-lease --force-if-includes
+	sc = sparse-checkout
+	sm = submodule
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[core]
+	longpaths = true
+	autocrlf = false
+	quotepath = false
+	fsmonitor = false
+	symlinks = true
+    # https://github.com/dandavison/delta
+    pager = delta
+
+[rerere]
+	enable = true
+
+[fetch]
+	writeCommitGraph = true
+
+[submodule]
+	recurse = true
+
+[lfs]
+	locksverify = false
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = false
+    line-numbers = true
+    features = arctic-fox
+
+[merge]
+    conflictstyle = zdiff3

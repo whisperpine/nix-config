@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./git
     ./yazi
     ./neovim
     ./erdtree
@@ -8,7 +9,6 @@
     ./starship
     ./direnv
 
-    ./git.nix
     ./zsh.nix
     ./bash.nix
     ./btop.nix
@@ -36,6 +36,7 @@
     kubectl
     ripgrep
     lazygit
+    delta
     tokei
     tree
     just
