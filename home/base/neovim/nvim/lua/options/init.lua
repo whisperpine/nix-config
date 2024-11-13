@@ -19,7 +19,7 @@ local o = vim.o
 
 -- -- show column line
 -- o.colorcolumn = 80
--- to enable cursorline!
+-- to enable cursorline
 o.cursorlineopt = "both"
 -- enables 24-bit RGB color
 o.termguicolors = true
@@ -60,10 +60,10 @@ autocmd("Filetype", {
     "json",
     "html",
     "scss",
+    "yaml",
     "xml",
     "css",
     "nix",
-    "yaml",
     "lua",
   },
 })

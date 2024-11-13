@@ -7,7 +7,6 @@ local M = {}
 
 M.base46 = {
   theme = "tomorrow_night",
-  hl_override = {},
 }
 
 M.ui = {

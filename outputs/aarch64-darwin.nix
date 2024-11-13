@@ -59,12 +59,8 @@ let
       # HomeBrew.
       homebrew = {
         enable = true;
-        brews = [
-          "mas"
-        ];
-        casks = [
-          "the-unarchiver"
-        ];
+        brews = [ "mas" ];
+        casks = [ "the-unarchiver" ];
         masApps = {
           # "Pixelmator Pro" = 1289583905;
         };
