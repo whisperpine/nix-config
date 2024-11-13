@@ -36,7 +36,7 @@ let
         "flakes"
       ];
       # Optimise storage.
-      nix.settings.auto-optimise-store = true;
+      nix.optimise.automatic = true;
       # Set system-wide environment variables.
       environment.variables = {
         EDITOR = "nvim";
