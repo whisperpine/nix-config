@@ -1,4 +1,7 @@
 { ... }:
+let
+  home = builtins.getEnv "HOME";
+in
 {
   programs.git = {
     enable = true;
@@ -7,7 +10,7 @@
   xdg.configFile.gitconfig = {
     enable = true;
     source = ./.gitconfig;
-    target = "/home/yusong/.gitconfig";
+    target = "${home}/.gitconfig";
   };
 
   xdg.configFile.themes = {
