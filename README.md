@@ -61,7 +61,7 @@ git clone git@github.com:whisperpine/nix-config.git
 
 # tada
 nix --extra-experimental-features "nix-command flakes" \
-  run nix-darwin -- switch --flake ~/nix-config
+  run nix-darwin -- switch --flake ~/.config/nix-config
 
 # now darwin-rebuild is available
 darwin-rebuild switch --flake ~/nix-config
