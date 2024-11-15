@@ -11,8 +11,7 @@ Yusong's NixOS Config.
 
 ### NixOS-WSL
 
-Download `nixos-wsl.tar.gz` from the
-[latest release](https://github.com/nix-community/NixOS-WSL/releases).
+Download `nixos-wsl.tar.gz` from the [latest release](https://github.com/nix-community/NixOS-WSL/releases).
 
 ```sh
 # make sure wsl feature is enabled

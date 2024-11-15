@@ -31,7 +31,6 @@ local lspconfig = require "lspconfig"
 local servers = {
   "rust_analyzer",
   "basedpyright",
-  "tailwindcss",
   "terraformls",
   "helm_ls",
   "lemminx",
@@ -104,4 +103,25 @@ lspconfig.markdown_oxide.setup {
       },
     },
   }),
+}
+
+-- configuring single server: tailwindcss
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  filetypes = {
+    "vue",
+    "mdx",
+    "css",
+    "less",
+    "postcss",
+    "sass",
+    "scss",
+    "html",
+    "sugarss",
+    "javascript",
+    "typescript",
+    "svelte",
+  },
 }

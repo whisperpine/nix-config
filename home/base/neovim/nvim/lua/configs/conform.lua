@@ -1,6 +1,6 @@
 local options = {
   formatters_by_ft = {
-    markdown = { "markdownlint" },
+    markdown = { "markdownlint-cli2" },
     terraform = { "tofu_fmt" },
     python = { "ruff_format" },
     objc = { "clang-format" },

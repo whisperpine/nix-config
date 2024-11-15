@@ -1,8 +1,6 @@
 -- use options from nvchad
 require "nvchad.options"
 
--- config stevearc/conform.nvim
-require "options.conform"
 -- config MeanderingProgrammer/render-markdown.nvim
 require "options.render-markdown"
 -- config iamcco/markdown-preview.nvim
@@ -10,6 +8,11 @@ require "options.markdown-preview"
 -- config L3MON4D3/LuaSnip
 require("luasnip.loaders.from_vscode").load {
   paths = { "./snippets" },
+}
+-- stevearc/conform.nvim
+--- @diagnostic disable-next-line: different-requires
+require("conform").formatters.nixfmt = {
+  prepend_args = { "-s" },
 }
 
 -- enable inlay hints
@@ -58,9 +61,11 @@ autocmd("Filetype", {
     "terraform",
     "xhtml",
     "json",
+    "jsonc",
     "html",
     "scss",
     "yaml",
+    "yml",
     "xml",
     "css",
     "nix",
