@@ -56,6 +56,7 @@ let
         unzip
         # WSL specific.
         xdg-utils
+        wslu
       ];
     };
 in
