@@ -21,6 +21,10 @@
       {
         "language": ["yaml"],
         "path": "./yaml.json"
+      },
+      {
+        "language": ["html"],
+        "path": "./html.json"
       }
     ]
   }
