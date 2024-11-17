@@ -10,8 +10,6 @@ M.base46 = {
 }
 
 M.ui = {
-  telescope = { style = "borderless" }, -- borderless / bordered
-
   statusline = {
     enabled = true,
     -- default/vscode/vscode_colored/minimal
@@ -20,8 +18,22 @@ M.ui = {
     -- round and block will work for minimal theme only
     separator_style = "block",
   },
+
   tabufline = {
     lazyload = false,
+  },
+
+  cmp = {
+    -- only for non-atom styles!
+    icons_left = true,
+    lspkind_text = true,
+    -- default/flat_light/flat_dark/atom/atom_colored
+    style = "default",
+    format_colors = {
+      -- will work for css lsp too
+      tailwind = true,
+      icon = "󱓻",
+    },
   },
 }
 
