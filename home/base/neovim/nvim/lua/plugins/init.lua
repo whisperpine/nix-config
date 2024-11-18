@@ -6,6 +6,15 @@ return {
   { "rafamadriz/friendly-snippets", enabled = false },
 
   {
+    "nvim-tree/nvim-tree.lua",
+    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+    opts = function()
+      -- return require "configs.nvim-tree"
+      return vim.tbl_deep_extend("force", require "nvchad.configs.nvimtree", require "configs.nvim-tree")
+    end,
+  },
+
+  {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- format on save
     ---@diagnostic disable-next-line: different-requires
