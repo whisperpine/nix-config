@@ -89,11 +89,28 @@ require("render-markdown").setup {
     },
     checked = {
       -- Replaces '[x]' of 'task_list_marker_checked'
-      icon = "󰱒",
+      -- icon = "󰄲",
+      icon = "󰡖",
       -- Highlight for the checked icon
       highlight = "RenderMarkdownChecked",
       -- Highlight for item associated with checked checkbox
       scope_highlight = nil,
+    },
+    -- Define custom checkbox states, more involved as they are not part of the markdown grammar
+    -- As a result this requires neovim >= 0.10.0 since it relies on 'inline' extmarks
+    -- Can specify as many additional states as you like following the 'todo' pattern below
+    --   The key in this case 'todo' is for healthcheck and to allow users to change its values
+    --   'raw':             Matched against the raw text of a 'shortcut_link'
+    --   'rendered':        Replaces the 'raw' value when rendering
+    --   'highlight':       Highlight for the 'rendered' icon
+    --   'scope_highlight': Highlight for item associated with custom checkbox
+    custom = {
+      todo = {
+        raw = "[~]",
+        rendered = "󱋭 ",
+        highlight = "RenderMarkdownUnchecked",
+        scope_highlight = nil,
+      },
     },
   },
 
