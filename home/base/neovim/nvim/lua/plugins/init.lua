@@ -9,8 +9,18 @@ return {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     opts = function()
-      -- return require "configs.nvim-tree"
-      return vim.tbl_deep_extend("force", require "nvchad.configs.nvimtree", require "configs.nvim-tree")
+      local my_config = require "configs.nvim-tree"
+      local nvchad_config = require "nvchad.configs.nvimtree"
+      return vim.tbl_deep_extend("force", nvchad_config, my_config)
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function()
+      local my_config = require "configs.nvim-treesitter"
+      local nvchad_config = require "nvchad.configs.treesitter"
+      return vim.tbl_deep_extend("force", nvchad_config, my_config)
     end,
   },
 
