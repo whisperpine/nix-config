@@ -41,7 +41,6 @@ local servers = {
   "bashls",
   "texlab",
   "taplo",
-  "ts_ls",
   "html",
   "sqls",
 }
@@ -123,5 +122,38 @@ lspconfig.tailwindcss.setup {
     "javascript",
     "typescript",
     "svelte",
+  },
+}
+
+-- configuring single server: ts_ls
+lspconfig.ts_ls.setup {
+  on_attach = on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    typescript = {
+      inlayHints = {
+        includeInlayParameterNameHints = "literals", -- 'none' | 'literals' | 'all'
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
+        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayEnumMemberValueHints = true,
+      },
+    },
+    javascript = {
+      inlayHints = {
+        includeInlayParameterNameHints = "literals", -- 'none' | 'literals' | 'all'
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+        includeInlayVariableTypeHints = true,
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+        includeInlayEnumMemberValueHints = true,
+      },
+    },
   },
 }
