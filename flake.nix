@@ -7,7 +7,7 @@
     # Use the unstable branch by default.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # The latest stable branch which can be used as a fallback.
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
     # WSL (Windows Subsystem for Linux).
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     # Nix-Darwin.
@@ -19,7 +19,7 @@
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     # Home Manager used for managing user configuration.
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
       # The `follows` keyword in inputs is used for inheritance.
       # `inputs.nixpkgs` of home-manager is kept consistent with
       # the `inputs.nixpkgs` of the current flake,
