@@ -6,6 +6,7 @@ Yusong's NixOS Config.
 
 - [An unofficial book for beginners](https://nixos-and-flakes.thiscute.world/).
 - [Home Manager Option Search](https://home-manager-options.extranix.com/).
+- [the-nix-way/dev-templates](https://github.com/the-nix-way/dev-templates).
 
 ## Get Started
 
