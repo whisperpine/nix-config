@@ -1,3 +1,10 @@
+# See all the configurations on:
+# https://direnv.net/man/direnv.toml.1.html
+
 [global]
 # Disable stdin (redirected to /dev/null) during the .envrc evaluation.
 disable_stdin = true
+# This feature is disabled if the duration is lower or equal to zero.
+warn_timeout = "0s"
+# Set to "-" to disable normal logging.
+log_format = "-"
