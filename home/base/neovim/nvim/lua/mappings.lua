@@ -53,6 +53,7 @@ end, { desc = "buffer goto prev" })
 map("n", "<leader>x", function()
   require("nvchad.tabufline").close_buffer()
 end, { desc = "buffer close" })
+map("n", "<leader>b", "<cmd>%bd|e#<cr>", { desc = "buffer only" })
 
 -- nvimtree
 map("n", "<C-n>", "<cmd> NvimTreeToggle <cr>", { desc = "nvimtree toggle window" })
@@ -61,7 +62,6 @@ map("n", "<C-n>", "<cmd> NvimTreeToggle <cr>", { desc = "nvimtree toggle window"
 map("n", "<leader>fw", "<cmd> Telescope live_grep <cr>", { desc = "telescope live grep" })
 map("n", "<leader>fb", "<cmd> Telescope buffers <cr>", { desc = "telescope find buffers" })
 map("n", "<leader>fh", "<cmd> Telescope help_tags <cr>", { desc = "telescope help page" })
-map("n", "<leader>ma", "<cmd> Telescope marks <cr>", { desc = "telescope find marks" })
 map("n", "<leader>fo", "<cmd> Telescope oldfiles <cr>", { desc = "telescope find oldfiles" })
 map("n", "<leader>fz", "<cmd> Telescope current_buffer_fuzzy_find <cr>", { desc = "telescope find in current buffer" })
 map("n", "<leader>fm", "<cmd> Telescope git_bcommits <cr>", { desc = "telescope git buffer commits" })
