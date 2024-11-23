@@ -67,6 +67,7 @@ map("n", "<leader>fz", "<cmd> Telescope current_buffer_fuzzy_find <cr>", { desc 
 map("n", "<leader>fm", "<cmd> Telescope git_bcommits <cr>", { desc = "telescope git buffer commits" })
 map("n", "<leader>fg", "<cmd> Telescope git_status <cr>", { desc = "telescope git status" })
 map("n", "<leader>ft", "<cmd> Telescope terms <cr>", { desc = "telescope pick hidden term" })
+map("n", "<leader>fn", "<cmd> Telescope notify <cr>", { desc = "telescope notify" })
 
 map("n", "<leader>th", function()
   require("nvchad.themes").open()

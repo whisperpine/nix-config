@@ -27,6 +27,7 @@ return {
     "nix",
     "bash",
     "ini",
+    "regex",
     "nginx",
     "just",
     "sql",
