@@ -73,6 +73,12 @@ autocmd("Filetype", {
   },
 })
 
+-- set textwidth in markdown files.
+autocmd("Filetype", {
+  command = "setlocal textwidth=80",
+  pattern = { "markdown" },
+})
+
 -- restore cursor position on file open
 autocmd("BufReadPost", {
   pattern = "*",
