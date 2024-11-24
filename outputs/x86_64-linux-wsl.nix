@@ -1,6 +1,7 @@
 {
   nixpkgs,
   nixpkgs-stable,
+  neovim-nightly-overlay,
   home-manager,
   nixos-wsl,
   ...
@@ -13,6 +14,7 @@ let
       inherit system;
       config.allowUnfree = true;
     };
+    inherit neovim-nightly-overlay;
   };
   configuration =
     { pkgs, config, ... }:
