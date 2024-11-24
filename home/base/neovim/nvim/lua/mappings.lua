@@ -53,7 +53,9 @@ end, { desc = "buffer goto prev" })
 map("n", "<leader>x", function()
   require("nvchad.tabufline").close_buffer()
 end, { desc = "buffer close" })
-map("n", "<leader>b", "<cmd>%bd|e#<cr>", { desc = "buffer only" })
+map("n", "<leader>b", function()
+  require("nvchad.tabufline").closeAllBufs(false)
+end, { desc = "buffer only" })
 
 -- nvimtree
 map("n", "<C-n>", "<cmd> NvimTreeToggle <cr>", { desc = "nvimtree toggle window" })
