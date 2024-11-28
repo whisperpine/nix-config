@@ -57,6 +57,7 @@ let
       fonts.packages = with pkgs; [
         (nerdfonts.override { fonts = [ "CascadiaMono" ]; })
         noto-fonts-cjk-sans
+        # sarasa-gothic
       ];
       # HomeBrew.
       homebrew = {
