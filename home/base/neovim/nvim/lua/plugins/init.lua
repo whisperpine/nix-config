@@ -1,6 +1,6 @@
 return {
 
-  -- disable nvchad default plugins
+  -- disable plugins brought from nvchad
   { "windwp/nvim-autopairs", enabled = false },
   { "williamboman/mason.nvim", enabled = false },
   { "rafamadriz/friendly-snippets", enabled = false },
