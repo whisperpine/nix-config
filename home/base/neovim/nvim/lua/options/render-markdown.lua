@@ -69,7 +69,13 @@ require("render-markdown").setup {
 
   bullet = {
     -- Turn on / off list bullet rendering
-    enabled = false,
+    enabled = true,
+    -- Replaces '-'|'+'|'*' of 'list_item'
+    -- How deeply nested the list is determines the 'level' which is used to index into the list using a cycle
+    -- The item number in the list is used to index into the value using a clamp if the value is also a list
+    -- If the item is a 'checkbox' a conceal is used to hide the bullet instead
+    -- icons = { "", "", "󰨐", "󱓜" },
+    icons = { "󰨐", "󱓜", "󰨐", "󱓜" },
   },
 
   checkbox = {

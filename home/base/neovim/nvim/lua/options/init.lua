@@ -59,6 +59,7 @@ autocmd("Filetype", {
     "javascript",
     "typescript",
     "terraform",
+    "markdown",
     "xhtml",
     "json",
     "jsonc",
