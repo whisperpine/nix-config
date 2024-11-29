@@ -12,7 +12,7 @@ return {
           virtual_text = false,
         },
         ui = {
-          code_action = "⚡",
+          code_action = "",
         },
       }
     end,

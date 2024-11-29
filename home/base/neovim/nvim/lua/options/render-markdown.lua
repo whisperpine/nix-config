@@ -76,6 +76,7 @@ require("render-markdown").setup {
     -- If the item is a 'checkbox' a conceal is used to hide the bullet instead
     -- icons = { "", "", "󰨐", "󱓜" },
     icons = { "󰨐", "󱓜", "󰨐", "󱓜" },
+    -- icons = { "", "", "", "" },
   },
 
   checkbox = {

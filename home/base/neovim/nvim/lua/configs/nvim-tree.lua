@@ -55,10 +55,11 @@ return {
         modified = "●",
         hidden = "󰜌",
         folder = {
-          default = "",
-          open = "",
+          --     
+          default = "",
+          open = "",
           empty = "",
-          empty_open = "",
+          empty_open = "",
           arrow_closed = "",
           arrow_open = "",
           symlink = "",
@@ -71,7 +72,7 @@ return {
           -- renamed = "r",
           -- untracked = "?",
           -- deleted = "-",
-          -- ignored = "◌",
+          -- ignored = "i",
           unstaged = "󰜄",
           staged = "󰐖",
           unmerged = "󰰏",
