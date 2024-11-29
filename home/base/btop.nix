@@ -7,6 +7,7 @@
       vim_keys = true;
       update_ms = 500;
       proc_tree = true;
+      rounded_corners = false;
     };
   };
 }
