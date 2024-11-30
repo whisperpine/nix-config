@@ -1,9 +1,20 @@
 return {
-
   -- disable plugins brought from nvchad
   { "windwp/nvim-autopairs", enabled = false },
   { "williamboman/mason.nvim", enabled = false },
   { "rafamadriz/friendly-snippets", enabled = false },
+
+  {
+    "L3MON4D3/LuaSnip",
+    opts = { history = true, updateevents = "TextChanged,TextChangedI" },
+    config = function(_, opts)
+      require("luasnip").config.set_config(opts)
+      require "nvchad.configs.luasnip"
+      require("luasnip.loaders.from_vscode").load {
+        paths = { "./snippets" },
+      }
+    end,
+  },
 
   {
     "nvim-tree/nvim-tree.lua",
@@ -27,7 +38,6 @@ return {
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- format on save
-    ---@diagnostic disable-next-line: different-requires
     opts = require "configs.conform",
   },
 
@@ -57,38 +67,38 @@ return {
 
   {
     "kylechui/nvim-surround",
-    event = "VeryLazy",
-  },
-
-  {
-    "wellle/targets.vim",
-    event = "VeryLazy",
+    dependencies = { "wellle/targets.vim" },
+    event = "BufReadPost",
+    opts = {},
   },
 
   {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
-    event = "VeryLazy",
+    event = "BufReadPost",
+    opts = require "configs.render-markdown",
   },
 
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     build = "sh -c 'cd app && yarn install && git restore .'",
-    init = function()
+    init = function(_)
       vim.g.mkdp_filetypes = { "markdown" }
+      vim.api.nvim_set_var("mkdp_auto_close", 0)
+      vim.api.nvim_set_var("mkdp_combine_preview", 1)
     end,
     ft = { "markdown" },
   },
 
   {
     "mfussenegger/nvim-lint",
-    event = "VeryLazy",
+    event = "BufReadPost",
     config = function()
-      local lint_events = { "BufWritePost", "BufReadPost", "InsertLeave" }
       require("lint").linters_by_ft = {
         markdown = { "markdownlint-cli2" },
       }
+      local lint_events = { "BufWritePost", "BufReadPost", "InsertLeave" }
       vim.api.nvim_create_autocmd(lint_events, {
         callback = function()
           -- try_lint without arguments runs the linters defined
@@ -102,22 +112,20 @@ return {
   {
     "fei6409/log-highlight.nvim",
     event = "BufReadPost",
-    config = function()
-      require("log-highlight").setup {
-        -- The following options support either a string or a table of strings.
-        -- The file extensions.
-        extension = "log",
-        -- The file names or the full file paths.
-        filename = { "messages" },
-        -- The file path glob patterns, e.g. `.*%.lg`, `/var/log/.*`.
-        -- Note: `%.` is to match a literal dot (`.`) in a pattern in Lua, but most
-        -- of the time `.` and `%.` here make no observable difference.
-        pattern = {
-          "/var/log/.*",
-          "messages%..*",
-        },
-      }
-    end,
+    opts = {
+      -- The following options support either a string or a table of strings.
+      -- The file extensions.
+      extension = "log",
+      -- The file names or the full file paths.
+      filename = { "messages" },
+      -- The file path glob patterns, e.g. `.*%.lg`, `/var/log/.*`.
+      -- Note: `%.` is to match a literal dot (`.`) in a pattern in Lua, but most
+      -- of the time `.` and `%.` here make no observable difference.
+      pattern = {
+        "/var/log/.*",
+        "messages%..*",
+      },
+    },
   },
 
   {

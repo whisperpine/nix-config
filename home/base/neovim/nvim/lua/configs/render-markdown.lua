@@ -1,5 +1,5 @@
 -- MeanderingProgrammer/render-markdown.nvim
-require("render-markdown").setup {
+return {
   -- Whether Markdown should be rendered by default or not
   enabled = true,
 

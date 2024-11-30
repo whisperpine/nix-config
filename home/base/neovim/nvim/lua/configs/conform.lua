@@ -1,4 +1,10 @@
-local options = {
+return {
+  format_on_save = {
+    -- These options will be passed to conform.format()
+    timeout_ms = 500,
+    lsp_fallback = true,
+  },
+
   formatters_by_ft = {
     markdown = { "markdownlint-cli2" },
     terraform = { "tofu_fmt" },
@@ -29,11 +35,9 @@ local options = {
     html = { "deno_fmt" },
   },
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_fallback = true,
+  formatters = {
+    nixfmt = {
+      prepend_args = { "-s" },
+    },
   },
 }
-
-return options

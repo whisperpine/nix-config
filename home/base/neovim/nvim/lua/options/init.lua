@@ -1,27 +1,11 @@
 -- use options from nvchad
 require "nvchad.options"
 
--- config MeanderingProgrammer/render-markdown.nvim
-require "options.render-markdown"
--- config iamcco/markdown-preview.nvim
-require "options.markdown-preview"
--- config L3MON4D3/LuaSnip
-require("luasnip.loaders.from_vscode").load {
-  paths = { "./snippets" },
-}
--- stevearc/conform.nvim
---- @diagnostic disable-next-line: different-requires
-require("conform").formatters.nixfmt = {
-  prepend_args = { "-s" },
-}
-
 -- enable inlay hints
 vim.lsp.inlay_hint.enable(true, { 0 })
 
 local o = vim.o
 
--- -- show column line
--- o.colorcolumn = 80
 -- to enable cursorline
 o.cursorlineopt = "both"
 -- enables 24-bit RGB color

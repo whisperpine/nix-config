@@ -6,16 +6,14 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons",
     },
-    config = function()
-      require("lspsaga").setup {
-        lightbulb = {
-          virtual_text = false,
-        },
-        ui = {
-          code_action = "",
-        },
-      }
-    end,
+    opts = {
+      lightbulb = {
+        virtual_text = false,
+      },
+      ui = {
+        code_action = "",
+      },
+    },
     keys = {
       -- todo: enable after bug fix
       -- {
