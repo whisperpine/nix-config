@@ -51,6 +51,7 @@ let
       # Install packages in operating system.
       environment.systemPackages = with pkgs; [
         alacritty
+        wezterm
         mkalias
       ];
       # Install fonts.
