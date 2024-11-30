@@ -42,11 +42,12 @@ return {
       cmdline = { pattern = "^:", icon = ":", lang = "vim" },
       search_down = { kind = "search", pattern = "^/", icon = "/", lang = "regex" },
       search_up = { kind = "search", pattern = "^%?", icon = "?", lang = "regex" },
+      filter = { conceal = false, pattern = "^:%s*!", icon = "$", lang = "bash" },
       lua = { conceal = false, pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" }, icon = "", lang = "lua" },
       help = { conceal = false, pattern = "^:%s*he?l?p?%s+", icon = "󰈙" },
       map = { conceal = false, pattern = "^:%s*map%s+", icon = "󰥻" },
-      filter = false,
-      input = false,
+      input = { view = "cmdline_input", icon = "" }, -- Used by input()
+      -- lua = false, -- to disable a format, set to `false`
     },
   },
 }
