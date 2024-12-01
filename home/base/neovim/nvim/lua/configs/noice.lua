@@ -1,7 +1,7 @@
 return {
   lsp = {
     progress = {
-      enabled = false,
+      enabled = true,
     },
     hover = {
       enabled = false,
@@ -43,7 +43,12 @@ return {
       search_down = { kind = "search", pattern = "^/", icon = "/", lang = "regex" },
       search_up = { kind = "search", pattern = "^%?", icon = "?", lang = "regex" },
       filter = { conceal = false, pattern = "^:%s*!", icon = "$", lang = "bash" },
-      lua = { conceal = false, pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" }, icon = "", lang = "lua" },
+      lua = {
+        conceal = false,
+        pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" },
+        icon = "",
+        lang = "lua",
+      },
       help = { conceal = false, pattern = "^:%s*he?l?p?%s+", icon = "󰈙" },
       map = { conceal = false, pattern = "^:%s*map%s+", icon = "󰥻" },
       input = { view = "cmdline_input", icon = "" }, -- Used by input()
