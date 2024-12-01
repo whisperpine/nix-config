@@ -16,7 +16,7 @@
     # find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
     nixfmt-rfc-style # nix formatter
-    markdownlint-cli2 # markdown
+    markdownlint-cli # markdown
     shellcheck # shell linter
     xmlstarlet # xml
     opentofu # terraform, opentofu

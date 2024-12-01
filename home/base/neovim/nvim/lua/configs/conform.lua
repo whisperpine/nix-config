@@ -7,7 +7,16 @@ return {
 
   -- https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
   formatters_by_ft = {
-    markdown = { "markdownlint-cli2" },
+    -- Use the "_" filetype to run formatters on filetypes that don't
+    -- have other formatters configured.
+    ["_"] = { "trim_whitespace", "trim_newlines" },
+
+    -- -- Use the "*" filetype to run formatters on all filetypes.
+    -- ["*"] = {
+    --   "final_new_line", -- This formatter is defined below.
+    -- },
+
+    markdown = { "markdownlint" },
     terraform = { "tofu_fmt" },
     python = { "ruff_format" },
     objc = { "clang-format" },
@@ -39,6 +48,18 @@ return {
   formatters = {
     nixfmt = {
       prepend_args = { "-s" },
+    },
+
+    final_new_line = {
+      meta = { description = "Insert a new line at the end of the file." },
+      format = function(_, _, lines, callback)
+        local out_lines = vim.deepcopy(lines)
+        while #out_lines > 0 and out_lines[#out_lines] == "" do
+          table.remove(out_lines)
+        end
+        table.insert(out_lines, "")
+        callback(nil, out_lines)
+      end,
     },
   },
 }

@@ -37,7 +37,7 @@ return {
 
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre",
+    event = "BufReadPost",
     opts = require "configs.conform",
   },
 
@@ -74,7 +74,10 @@ return {
 
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
     event = "BufReadPost",
     opts = require "configs.render-markdown",
   },
@@ -96,9 +99,16 @@ return {
     event = "BufReadPost",
     config = function()
       require("lint").linters_by_ft = {
-        markdown = { "markdownlint-cli2" },
+        markdown = { "markdownlint" },
       }
-      local lint_events = { "BufWritePost", "BufReadPost", "InsertLeave" }
+      local lint_events = {
+        "BufWritePost",
+        "BufReadPost",
+        "InsertLeave",
+        -- "FocusGained",
+        -- "CmdlineLeave",
+        -- "TextChanged",
+      }
       vim.api.nvim_create_autocmd(lint_events, {
         callback = function()
           -- try_lint without arguments runs the linters defined
