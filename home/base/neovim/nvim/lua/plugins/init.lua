@@ -37,7 +37,7 @@ return {
 
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre", -- format on save
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
 

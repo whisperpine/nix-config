@@ -50,6 +50,7 @@ let
       # Install packages in operating system.
       environment.systemPackages = with pkgs; [
         git
+        git-lfs
         wget
         curl
         clang

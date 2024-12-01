@@ -31,7 +31,7 @@ o.shiftwidth = 4
 o.softtabstop = 4
 
 -- autocmd --
-local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
+local autocmd = vim.api.nvim_create_autocmd
 
 -- set no modifiable when the buffer is readonly
 autocmd("BufReadPost", { command = "let &l:modifiable = !&readonly" })

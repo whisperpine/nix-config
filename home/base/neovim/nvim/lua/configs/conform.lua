@@ -5,6 +5,7 @@ return {
     lsp_fallback = true,
   },
 
+  -- https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
   formatters_by_ft = {
     markdown = { "markdownlint-cli2" },
     terraform = { "tofu_fmt" },
