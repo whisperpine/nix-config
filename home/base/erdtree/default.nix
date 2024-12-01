@@ -3,9 +3,7 @@
   ...
 }:
 {
-  home.packages = with pkgs; [
-    erdtree
-  ];
+  home.packages = with pkgs; [ erdtree ];
 
   home.file.".config/erdtree/.erdtree.toml" = {
     source = ./.erdtree.toml;

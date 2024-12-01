@@ -5,9 +5,7 @@ let
     {
       home.username = "yusong";
       home.homeDirectory = "/home/yusong";
-      home.packages = with pkgs; [
-        helm
-      ];
+      home.packages = with pkgs; [ helm ];
     };
 in
 {

@@ -13,7 +13,6 @@
     ./bash.nix
     ./btop.nix
     ./zellij.nix
-    ./nodejs.nix
   ];
 
   # Allow unfree software to by installed.
@@ -34,6 +33,7 @@
     tree-sitter
     yarn-berry
     kubectl
+    nodejs_22
     ripgrep
     lazygit
     delta
