@@ -88,4 +88,4 @@ $env.NU_PLUGIN_DIRS = [
 
 ## To add entries to PATH
 use std "path add"
-path add /opt/homebrew/bin
+path add "/opt/homebrew/bin"

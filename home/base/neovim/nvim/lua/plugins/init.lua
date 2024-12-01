@@ -155,4 +155,19 @@ return {
       "rcarriga/nvim-notify",
     },
   },
+
+  {
+    "keaising/im-select.nvim",
+    event = "VeryLazy",
+    opts = function()
+      local os_info = vim.loop.os_uname()
+      if os_info.sysname == "Windows" then
+        -- be sure that im-select.exe has been added to env var "Path"
+        return { default_command = "im-select.exe" }
+      elseif os_info.sysname == "Linux" and vim.fn.has "wsl" == 1 then
+        -- todo: use environment variable to get the path of executable file
+        return { default_command = "/mnt/c/Users/yusong/external/bin/im-select.exe" }
+      end
+    end,
+  },
 }
