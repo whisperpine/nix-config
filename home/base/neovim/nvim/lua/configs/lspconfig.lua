@@ -12,10 +12,30 @@ local on_attach = function(_, bufnr)
   map("n", "<leader>ca", vim.lsp.buf.code_action, opts "code action") -- todo: use lspsaga after bug fix
   -- map("n", "<leader>ca", "<cmd> Lspsaga code_action <cr>", opts "code action")
   map("n", "<leader>sh", vim.lsp.buf.signature_help, opts "show signature help")
-  map("n", "<leader>fs", "<cmd> Telescope lsp_document_symbols <cr>", { desc = "telescope document symbols" })
-  map("n", "<leader>fS", "<cmd> Telescope lsp_dynamic_workspace_symbols <cr>", { desc = "telescope workspace symbols" })
-  map("n", "<leader>dd", "<cmd> Telescope diagnostics bufnr=0 <cr>", { desc = "telescope buffer diagnostics" })
-  map("n", "<leader>dD", "<cmd> Telescope diagnostics <cr>", { desc = "telescope workspace diagnostics" })
+  map(
+    "n",
+    "<leader>fs",
+    "<cmd> Telescope lsp_document_symbols <cr>",
+    { desc = "telescope document symbols" }
+  )
+  map(
+    "n",
+    "<leader>fS",
+    "<cmd> Telescope lsp_dynamic_workspace_symbols <cr>",
+    { desc = "telescope workspace symbols" }
+  )
+  map(
+    "n",
+    "<leader>dd",
+    "<cmd> Telescope diagnostics bufnr=0 <cr>",
+    { desc = "telescope buffer diagnostics" }
+  )
+  map(
+    "n",
+    "<leader>dD",
+    "<cmd> Telescope diagnostics <cr>",
+    { desc = "telescope workspace diagnostics" }
+  )
   -- map("n", "gr", vim.lsp.buf.references, opts "Show references")
   -- map("n", "gi", vim.lsp.buf.implementation, opts "Go to implementation")
   -- map("n", "gD", vim.lsp.buf.declaration, opts "Go to declaration")
@@ -29,7 +49,7 @@ local nvlsp = require "nvchad.configs.lspconfig"
 local lspconfig = require "lspconfig"
 
 local servers = {
-  "rust_analyzer",
+  -- "rust_analyzer",
   "basedpyright",
   "terraformls",
   "helm_ls",
@@ -104,27 +124,6 @@ lspconfig.markdown_oxide.setup {
   }),
 }
 
--- configuring single server: tailwindcss
-lspconfig.tailwindcss.setup {
-  on_attach = on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-  filetypes = {
-    "vue",
-    "mdx",
-    "css",
-    "less",
-    "postcss",
-    "sass",
-    "scss",
-    "html",
-    "sugarss",
-    "javascript",
-    "typescript",
-    "svelte",
-  },
-}
-
 -- configuring single server: ts_ls
 lspconfig.ts_ls.setup {
   on_attach = on_attach,
@@ -153,6 +152,49 @@ lspconfig.ts_ls.setup {
         includeInlayPropertyDeclarationTypeHints = true,
         includeInlayFunctionLikeReturnTypeHints = true,
         includeInlayEnumMemberValueHints = true,
+      },
+    },
+  },
+}
+
+-- configuring single server: tailwindcss
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  filetypes = {
+    "vue",
+    "mdx",
+    "css",
+    "less",
+    "postcss",
+    "sass",
+    "scss",
+    "html",
+    "sugarss",
+    "javascript",
+    "typescript",
+    "svelte",
+  },
+}
+
+-- configuring single server: rust_analyzer
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    ["rust-analyzer"] = {
+      check = { command = "clippy" },
+      completion = { callable = { snippets = "none" } },
+      inlayHints = { bindingModeHints = { enable = true } },
+      procMacro = {
+        ignored = {
+          leptos_macro = {
+            -- "component",
+            "server",
+          },
+        },
       },
     },
   },
