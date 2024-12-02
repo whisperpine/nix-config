@@ -20,7 +20,10 @@ o.wrap = false
 o.hlsearch = false
 -- enable spell checking
 o.spell = true
-o.spelllang = "en_us,cjk"
+-- "yusong" refers to nvim/spell/yusong.utf-8.spl
+-- every time after nvim/spell/yusong being modified,
+-- remember to run command (":mkspell") to generate .spl.
+o.spelllang = "en_us,cjk,yusong"
 -- fold by treesitter
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
