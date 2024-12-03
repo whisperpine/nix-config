@@ -36,8 +36,22 @@ o.softtabstop = 4
 -- autocmd --
 local autocmd = vim.api.nvim_create_autocmd
 
--- set no modifiable when the buffer is readonly
-autocmd("BufReadPost", { command = "let &l:modifiable = !&readonly" })
+-- make generated directories and files readonly
+autocmd({ "BufRead" }, {
+  pattern = { "**/node_modules/**", "**/.venv/**", "**/target/**" },
+  callback = function()
+    vim.bo.readonly = true
+  end,
+})
+
+-- when current buffer is readonly,
+-- set no modifiable and disable diagnostics
+autocmd("BufReadPost", {
+  callback = function()
+    vim.bo.modifiable = not vim.bo.readonly
+    vim.diagnostic.enable(not vim.bo.readonly, { bufnr = 0 })
+  end,
+})
 
 -- set indent size by filetype
 autocmd("Filetype", {
