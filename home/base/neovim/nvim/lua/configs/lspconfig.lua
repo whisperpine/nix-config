@@ -49,9 +49,9 @@ local nvlsp = require "nvchad.configs.lspconfig"
 local lspconfig = require "lspconfig"
 
 local servers = {
-  -- "rust_analyzer",
   "basedpyright",
   "terraformls",
+  "dockerls",
   "helm_ls",
   "lemminx",
   "jsonls",
