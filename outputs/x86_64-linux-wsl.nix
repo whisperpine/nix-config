@@ -39,6 +39,14 @@ let
       users.defaultUserShell = pkgs.nushell;
       # Set system-wide environment variables.
       environment.variables.EDITOR = "nvim";
+      # Enable docker.
+      users.extraGroups.docker.members = [ "yusong" ];
+      virtualisation.oci-containers.backend = "docker";
+      virtualisation.docker = {
+        enable = true;
+        rootless.enable = true;
+        daemon.settings.userland-proxy = false;
+      };
       # Optimize storage.
       nix.settings.auto-optimise-store = true;
       # Do garbage collection weekly to keep disk usage low.
@@ -57,6 +65,7 @@ let
         neovim
         nushell
         unzip
+        docker-compose
         # WSL specific.
         xdg-utils
         wslu
