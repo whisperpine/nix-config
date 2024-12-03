@@ -3,6 +3,8 @@ return {
     "folke/trouble.nvim",
     event = "VeryLazy",
     opts = {
+      warn_no_results = false, -- show a warning when there are no results
+      open_no_results = true, -- open the trouble window when there are no results
       modes = {
         -- The LSP base mode for:
         -- * lsp_definitions, lsp_references, lsp_implementations
