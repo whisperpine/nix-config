@@ -4,7 +4,6 @@
   neovim-nightly-overlay,
   home-manager,
   nix-darwin,
-  nix-homebrew,
   ...
 }:
 let
@@ -60,20 +59,6 @@ let
         sarasa-gothic
         cascadia-code
       ];
-      # HomeBrew.
-      homebrew = {
-        enable = true;
-        brews = [ "mas" ];
-        casks = [ "the-unarchiver" ];
-        masApps = {
-          # "Pixelmator Pro" = 1289583905;
-        };
-        # Only install apps declared in configurations,
-        # and uninstall apps that are no longer declared.
-        onActivation.cleanup = "zap";
-        onActivation.autoUpdate = true;
-        onActivation.upgrade = true;
-      };
       # Fix macOS Spotlight indexing issue.
       system.activationScripts.applications.text =
         let
@@ -121,19 +106,6 @@ nix-darwin.lib.darwinSystem {
       home-manager.useUserPackages = true;
       home-manager.users.yusong = import ../home/darwin.nix;
       home-manager.extraSpecialArgs = extraSpecialArgs;
-    }
-
-    # nix-homebrew settings.
-    nix-homebrew.darwinModules.nix-homebrew
-    {
-      nix-homebrew = {
-        # Install Homebrew under the default prefix.
-        enable = true;
-        # Also install Homebrew under the default Intel prefix for Rosetta 2.
-        enableRosetta = true;
-        # User owning the Homebrew prefix
-        user = "yusong";
-      };
     }
   ];
 }
