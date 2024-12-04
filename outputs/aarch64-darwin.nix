@@ -56,9 +56,9 @@ let
       ];
       # Install fonts.
       fonts.packages = with pkgs; [
-        (nerdfonts.override { fonts = [ "CascadiaMono" ]; })
-        noto-fonts-cjk-sans
-        # sarasa-gothic
+        nerd-fonts.symbols-only
+        sarasa-gothic
+        cascadia-code
       ];
       # HomeBrew.
       homebrew = {
