@@ -170,7 +170,12 @@ return {
     "keaising/im-select.nvim",
     event = "VeryLazy",
     opts = function()
-      local options = { disable_auto_restore = 1 }
+      local options = {
+        -- Restore the previous used input method state when the following events
+        -- are triggered. If you don't want to restore previous used im in Insert mode,
+        -- just let it empty as `set_previous_events = {}`.
+        set_previous_events = {},
+      }
       local os_info = vim.loop.os_uname()
       if os_info.sysname == "Windows" then
         -- be sure that im-select.exe has been added to env var "Path"
