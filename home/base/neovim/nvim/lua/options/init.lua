@@ -38,7 +38,15 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- make generated directories and files readonly
 autocmd({ "BufRead" }, {
-  pattern = { "**/node_modules/**", "**/.venv/**", "**/target/**" },
+  pattern = {
+    "**/node_modules/**",
+    "**/.venv/**",
+    "**/target/**",
+    "**/.direnv/**",
+    "flake.lock",
+    "Cargo.lock",
+    "uv.lock",
+  },
   callback = function()
     vim.bo.readonly = true
   end,
