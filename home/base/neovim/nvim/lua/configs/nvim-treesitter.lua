@@ -13,7 +13,6 @@ return {
     "gitignore",
     "editorconfig",
     "ssh_config",
-    "dockerfile",
     "terraform",
     "mermaid",
     "wgsl_bevy",
