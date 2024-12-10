@@ -158,10 +158,10 @@ return {
     event = "VeryLazy",
     opts = require "configs.noice",
     dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      -- If you lazy-load any plugin below, make sure to add proper `module="..."` entries.
       "MunifTanjim/nui.nvim",
       -- `nvim-notify` is only needed, if you want to use the notification view.
-      -- If not available, we use `mini` as the fallback
+      -- If not available, we use `mini` as the fallback.
       "rcarriga/nvim-notify",
     },
   },
@@ -186,5 +186,35 @@ return {
       end
       return options
     end,
+  },
+
+  {
+    "stevearc/oil.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      view_options = {
+        -- Show files and directories that start with "."
+        show_hidden = true,
+      },
+      -- Add additional keymaps.
+      keymaps = {
+        ["q"] = { "actions.close", mode = "n" },
+        ["h"] = { "actions.parent", mode = "n" },
+        ["l"] = "actions.select",
+      },
+      -- Configuration for the floating window in oil.open_float
+      float = {
+        border = "single",
+      },
+    },
+    keys = {
+      {
+        "<leader>ro",
+        function()
+          require("oil").open_float()
+        end,
+        desc = "oil open float",
+      },
+    },
   },
 }
