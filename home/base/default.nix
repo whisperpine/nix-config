@@ -32,8 +32,9 @@
     translate-shell
     tree-sitter
     yarn-berry
-    kubectl
     nodejs_22
+    onefetch
+    kubectl
     ripgrep
     lazygit
     delta
