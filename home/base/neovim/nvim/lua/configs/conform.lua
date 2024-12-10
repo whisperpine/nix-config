@@ -50,6 +50,10 @@ return {
       prepend_args = { "-s" },
     },
 
+    ["clang-format"] = {
+      prepend_args = { "--style", "{BasedOnStyle: llvm, IndentWidth: 4}" },
+    },
+
     final_new_line = {
       meta = { description = "Insert a new line at the end of the file." },
       format = function(_, _, lines, callback)
