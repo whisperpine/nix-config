@@ -60,6 +60,7 @@ local servers = {
   "nil_ls",
   "bashls",
   "texlab",
+  "graphql",
   "taplo",
   "html",
   "sqls",

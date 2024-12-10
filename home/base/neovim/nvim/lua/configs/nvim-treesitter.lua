@@ -15,6 +15,7 @@ return {
     "ssh_config",
     "terraform",
     "mermaid",
+    "graphql",
     "wgsl_bevy",
     "wgsl",
     "c_sharp",
