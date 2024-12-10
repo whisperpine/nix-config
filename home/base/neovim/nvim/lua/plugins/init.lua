@@ -5,6 +5,14 @@ return {
   { "rafamadriz/friendly-snippets", enabled = false },
 
   {
+    "gitsigns.nvim",
+    keys = {
+      { "<leader>cr", "<cmd> Gitsigns reset_hunk <cr>", { desc = "git reset hunk" } },
+      { "<leader>cs", "<cmd> Gitsigns stage_hunk <cr>", { desc = "git stage hunk" } },
+    },
+  },
+
+  {
     "L3MON4D3/LuaSnip",
     opts = { history = true, updateevents = "TextChanged,TextChangedI" },
     config = function(_, opts)
@@ -24,6 +32,9 @@ return {
       local nvchad_config = require "nvchad.configs.nvimtree"
       return vim.tbl_deep_extend("force", nvchad_config, my_config)
     end,
+    keys = {
+      { "<C-n>", "<cmd> NvimTreeToggle <cr>", { desc = "nvimtree toggle window" } },
+    },
   },
 
   {
@@ -39,16 +50,6 @@ return {
     "stevearc/conform.nvim",
     event = "BufReadPost",
     opts = require "configs.conform",
-  },
-
-  {
-    "nvim-telescope/telescope.nvim",
-    opts = function(_, conf)
-      conf.defaults.mappings.i = {
-        ["<Esc>"] = require("telescope.actions").close,
-      }
-      return conf
-    end,
   },
 
   {
@@ -80,6 +81,14 @@ return {
     },
     event = "BufReadPost",
     opts = require "configs.render-markdown",
+    keys = {
+      -- toggle markdown rendering ( provided by render-markdown.nvim)
+      {
+        "<leader>mr",
+        "<cmd> RenderMarkdown toggle <cr>",
+        { desc = "toggle render markdown" },
+      },
+    },
   },
 
   {
@@ -92,6 +101,14 @@ return {
       vim.api.nvim_set_var("mkdp_combine_preview", 1)
     end,
     ft = { "markdown" },
+    keys = {
+      -- toggle markdown preview ( provided by markdown-preview.nvim)
+      {
+        "<leader>mv",
+        "<cmd> MarkdownPreviewToggle <cr>",
+        { desc = "toggle markdown preview" },
+      },
+    },
   },
 
   {
@@ -163,6 +180,9 @@ return {
       -- `nvim-notify` is only needed, if you want to use the notification view.
       -- If not available, we use `mini` as the fallback.
       "rcarriga/nvim-notify",
+    },
+    keys = {
+      { "<leader>fn", "<cmd> Telescope notify <cr>", desc = "telescope notify" },
     },
   },
 
