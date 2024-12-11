@@ -12,6 +12,8 @@
   };
 
   home.packages = with pkgs; [
+    luajitPackages.luarocks
+
     # formatters and linters
     # find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters

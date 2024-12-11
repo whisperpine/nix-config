@@ -29,20 +29,25 @@
   };
 
   home.packages = with pkgs; [
-    translate-shell
+    # required by neovim
     tree-sitter
-    yarn-berry
-    nodejs_22
+    python312
+
+    # required by neovim plugins
+    yarn-berry # render-markdown.nvim
+    nodejs_22 # render-markdown.nvim
+    ripgrep # telescope.nvim
+    fd # telescope.nvim
+
+    # utilities
+    translate-shell
     onefetch
     kubectl
-    ripgrep
     lazygit
-    delta
     tokei
     tree
     just
     file
-    fd
   ];
 
   # This value determines the Home Manager release that your

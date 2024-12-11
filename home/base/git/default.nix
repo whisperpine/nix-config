@@ -1,11 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
 let
   home = builtins.getEnv "HOME";
 in
 {
-  programs.git = {
-    enable = true;
-  };
+  home.packages = with pkgs; [
+    git
+    delta
+  ];
 
   xdg.configFile.gitconfig = {
     enable = true;
