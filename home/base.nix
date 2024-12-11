@@ -2,17 +2,16 @@
 {
   imports = [
     ./git
+    ./zsh
+    ./bash
+    ./btop
     ./yazi
     ./nvim
     ./erdtree
     ./nushell
     ./starship
     ./direnv
-
-    ./zsh.nix
-    ./bash.nix
-    ./btop.nix
-    ./zellij.nix
+    ./zellij
   ];
 
   # Allow unfree software to by installed.

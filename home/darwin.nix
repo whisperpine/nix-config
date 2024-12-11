@@ -8,7 +8,7 @@ let
 in
 {
   imports = [
-    ./base
+    ./base.nix
     configuration
   ];
 }
