@@ -3,7 +3,7 @@
   imports = [
     ./git
     ./yazi
-    ./neovim
+    ./nvim
     ./erdtree
     ./nushell
     ./starship

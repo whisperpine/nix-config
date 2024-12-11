@@ -8,6 +8,6 @@
   xdg.configFile.yazi = {
     enable = true;
     recursive = true;
-    source = ./yazi;
+    source = ../yazi;
   };
 }

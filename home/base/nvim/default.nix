@@ -8,7 +8,7 @@
   xdg.configFile.nvim = {
     enable = true;
     recursive = true;
-    source = ./nvim;
+    source = ../nvim;
   };
 
   home.packages = with pkgs; [
