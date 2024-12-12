@@ -55,4 +55,16 @@ return {
       -- lua = false, -- to disable a format, set to `false`
     },
   },
+
+  routes = {
+    {
+      filter = {
+        event = "notify",
+        find = "No information available",
+      },
+      opts = {
+        skip = true,
+      },
+    },
+  },
 }
