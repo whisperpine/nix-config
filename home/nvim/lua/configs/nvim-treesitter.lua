@@ -16,6 +16,7 @@ return {
     "terraform",
     "mermaid",
     "graphql",
+    "svelte",
     "wgsl_bevy",
     "wgsl",
     "c_sharp",

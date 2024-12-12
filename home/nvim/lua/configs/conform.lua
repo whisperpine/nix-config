@@ -43,6 +43,7 @@ return {
     less = { "deno_fmt" },
     yaml = { "deno_fmt" },
     html = { "deno_fmt" },
+    svelte = { "deno_fmt" },
   },
 
   formatters = {
