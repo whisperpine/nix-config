@@ -8,7 +8,7 @@
 }:
 let
   system = "aarch64-darwin";
-  # Pass non-defualt args to modules.
+  # Pass non-default args to modules.
   extraSpecialArgs = {
     pkgs-stable = import nixpkgs-stable {
       inherit system;
