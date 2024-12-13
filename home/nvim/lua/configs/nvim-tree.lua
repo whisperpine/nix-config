@@ -1,4 +1,9 @@
 return {
+  filters = {
+    custom = { "^\\.git", "^\\.direnv" },
+    git_ignored = false,
+  },
+
   git = {
     enable = true,
     show_on_dirs = true,
