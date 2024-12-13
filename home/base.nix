@@ -29,8 +29,10 @@
 
   home.packages = with pkgs; [
     # required by neovim
-    tree-sitter
     python312
+    tree-sitter
+    luajitPackages.luarocks
+    lua5_1
 
     # required by neovim plugins
     yarn-berry # render-markdown.nvim
