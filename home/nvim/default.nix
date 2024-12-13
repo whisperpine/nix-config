@@ -12,6 +12,15 @@
   };
 
   home.packages = with pkgs; [
+    # required by neovim plugins
+    lua5_1 # lazy.nvim
+    luajitPackages.luarocks # lazy.nvim
+    tree-sitter # tree-sitter.nvim
+    yarn-berry # render-markdown.nvim
+    nodejs_22 # render-markdown.nvim
+    ripgrep # telescope.nvim
+    fd # telescope.nvim
+
     # formatters and linters
     # find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters

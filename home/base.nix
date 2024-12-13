@@ -28,20 +28,8 @@
   };
 
   home.packages = with pkgs; [
-    # required by neovim
-    python312
-    tree-sitter
-    luajitPackages.luarocks
-    lua5_1
-
-    # required by neovim plugins
-    yarn-berry # render-markdown.nvim
-    nodejs_22 # render-markdown.nvim
-    ripgrep # telescope.nvim
-    fd # telescope.nvim
-
-    # utilities
     translate-shell
+    python312
     onefetch
     kubectl
     lazygit
