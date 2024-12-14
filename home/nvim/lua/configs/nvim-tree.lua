@@ -103,6 +103,7 @@ return {
     end
     -- see ":h nvim-tree-mappings-default"
     vim.keymap.set("n", "l", api.node.open.edit, opts "Open")
+    vim.keymap.set("n", "h", api.node.navigate.parent_close, opts "Close Directory")
     -- BEGIN_DEFAULT_ON_ATTACH
     vim.keymap.set("n", "<C-]>", api.tree.change_root_to_node, opts "CD")
     vim.keymap.set("n", "<C-e>", api.node.open.replace_tree_buffer, opts "Open: In Place")
