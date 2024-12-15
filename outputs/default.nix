@@ -1,4 +1,4 @@
-{ self, ... }@inputs:
+{ ... }@inputs:
 {
   nixosConfigurations = {
     # windows wsl
@@ -9,7 +9,4 @@
     # mac mini
     creator = import ./aarch64-darwin.nix inputs;
   };
-
-  # Expose the package set, including overlays, for convenience.
-  darwinPackages = self.darwinConfigurations."creator".pkgs;
 }
