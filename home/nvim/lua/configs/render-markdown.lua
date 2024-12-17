@@ -44,7 +44,8 @@ return {
     -- Replaces '#+' of 'atx_h._marker'
     -- The number of '#' in the heading determines the 'level'
     -- The 'level' is used to index into the list using a cycle
-    icons = { "# ", "## ", "### ", "#### ", "##### ", "###### " },
+    -- icons = { "# ", "## ", "### ", "#### ", "##### ", "###### " },
+    icons = {},
     -- The 'level' is used to index into the list using a clamp
     -- Highlight for the heading icon and extends through the entire line
     backgrounds = {
