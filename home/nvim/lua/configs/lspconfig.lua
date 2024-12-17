@@ -51,6 +51,7 @@ local lspconfig = require "lspconfig"
 local servers = {
   "basedpyright",
   "terraformls",
+  "marksman",
   "dockerls",
   "helm_ls",
   "lemminx",
@@ -109,22 +110,6 @@ lspconfig.lua_ls.setup {
       },
     },
   },
-}
-
--- configuring single server: markdown_oxide
-lspconfig.markdown_oxide.setup {
-  on_attach = on_attach,
-  on_init = nvlsp.on_init,
-  -- Ensure that dynamicRegistration is enabled!
-  -- This allows the LS to take into account actions like the
-  -- Create Unresolved File code action, resolving completions for unindexed code blocks, ...
-  capabilities = vim.tbl_deep_extend("force", nvlsp.capabilities, {
-    workspace = {
-      didChangeWatchedFiles = {
-        dynamicRegistration = true,
-      },
-    },
-  }),
 }
 
 -- configuring single server: ts_ls

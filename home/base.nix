@@ -12,6 +12,7 @@
     ./starship
     ./direnv
     ./zellij
+    ./marksman
   ];
 
   # Allow unfree software to by installed.

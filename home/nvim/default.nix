@@ -49,11 +49,11 @@
     bash-language-server # bash sh shell
     yaml-language-server # yaml
     lua-language-server # lua
-    markdown-oxide # markdown
     rust-analyzer # rust
     terraform-ls # terraform
     basedpyright # python
     clang-tools # c, cpp, objc
+    marksman # markdown
     lemminx # xml, svg
     helm-ls # helm
     vale-ls # English
