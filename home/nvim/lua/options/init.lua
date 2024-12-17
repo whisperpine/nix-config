@@ -22,7 +22,7 @@ o.hlsearch = false
 o.spell = true
 -- "yusong" refers to nvim/spell/yusong.utf-8.spl
 -- every time after nvim/spell/yusong being modified,
--- remember to run command (":mkspell") to generate .spl.
+-- remember to run command (":mkspell") to generate `.spl`.
 o.spelllang = "en_us,cjk,yusong"
 -- fold by treesitter
 o.foldmethod = "expr"
@@ -83,7 +83,7 @@ autocmd("Filetype", {
   },
 })
 
--- set textwidth in markdown files.
+-- set `textwidth` in markdown files.
 autocmd("Filetype", {
   command = "setlocal textwidth=80",
   pattern = { "markdown" },

@@ -1,6 +1,6 @@
 # README
 
-Yusong's NixOS Config.
+Yusong's Nix config.
 
 ## Reference
 
@@ -8,7 +8,7 @@ Yusong's NixOS Config.
 - [Home Manager Option Search](https://home-manager-options.extranix.com/).
 - [the-nix-way/dev-templates](https://github.com/the-nix-way/dev-templates).
 
-## Get Started
+## Get started
 
 ### NixOS-WSL
 
@@ -67,5 +67,5 @@ nix --extra-experimental-features "nix-command flakes" \
 darwin-rebuild switch --flake ~/nix-config
 ```
 
-Tip: `darwin-help` will open a HTML version of the man-page in the default browser.\
+Tip: `darwin-help` will open an HTML version of the man-page in the default browser.\
 `man 5 configuration.nix` will open the manual of nix-darwin right in the terminal.

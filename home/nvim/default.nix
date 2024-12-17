@@ -56,6 +56,7 @@
     clang-tools # c, cpp, objc
     lemminx # xml, svg
     helm-ls # helm
+    harper # English
     texlab # latex
     taplo # toml
     sqls # sql

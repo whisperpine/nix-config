@@ -8,7 +8,7 @@
 -- add custom keymap.
 local map = vim.keymap.set
 
--- press ctrl-s to save current buffer.
+-- press `ctrl-s` to save current buffer.
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- only take effect in insert mode
