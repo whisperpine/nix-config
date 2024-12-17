@@ -1,6 +1,6 @@
 return {
   filters = {
-    custom = { "^\\.git", "^\\.direnv" },
+    custom = { "^\\.git$", "^\\.direnv$" },
     git_ignored = false,
   },
 

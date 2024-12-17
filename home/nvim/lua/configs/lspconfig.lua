@@ -59,6 +59,7 @@ local servers = {
   "yamlls",
   "nil_ls",
   "bashls",
+  "vale_ls",
   "texlab",
   "graphql",
   "svelte",
@@ -198,25 +199,6 @@ lspconfig.rust_analyzer.setup {
           },
         },
       },
-    },
-  },
-}
-
--- configuring single server: harper_ls
-lspconfig.harper_ls.setup {
-  on_attach = on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-  -- https://github.com/Automattic/harper/blob/master/harper-ls/README.md#configuration
-  settings = {
-    ["harper-ls"] = {
-      linters = {
-        matcher = false,
-        long_sentences = false,
-        sentence_capitalization = false,
-      },
-      -- can be either "hint", "information", "warning", or "error"
-      diagnosticSeverity = "information",
     },
   },
 }

@@ -1,6 +1,6 @@
 # README
 
-Yusong's Nix config.
+Yusong's nix config.
 
 ## Reference
 
@@ -8,7 +8,7 @@ Yusong's Nix config.
 - [Home Manager Option Search](https://home-manager-options.extranix.com/).
 - [the-nix-way/dev-templates](https://github.com/the-nix-way/dev-templates).
 
-## Get started
+## Get Started
 
 ### NixOS-WSL
 
