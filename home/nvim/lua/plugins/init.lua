@@ -7,8 +7,8 @@ return {
   {
     "gitsigns.nvim",
     keys = {
-      { "<leader>cr", "<cmd> Gitsigns reset_hunk <cr>", { desc = "git reset hunk" } },
-      { "<leader>cs", "<cmd> Gitsigns stage_hunk <cr>", { desc = "git stage hunk" } },
+      { "<leader>cr", "<cmd> Gitsigns reset_hunk <cr>", desc = "git reset hunk" },
+      { "<leader>cs", "<cmd> Gitsigns stage_hunk <cr>", desc = "git stage hunk" },
     },
   },
 
@@ -33,7 +33,7 @@ return {
       return vim.tbl_deep_extend("force", nvchad_config, my_config)
     end,
     keys = {
-      { "<C-n>", "<cmd> NvimTreeToggle <cr>", { desc = "nvimtree toggle window" } },
+      { "<C-n>", "<cmd> NvimTreeToggle <cr>", desc = "nvimtree toggle window" },
     },
   },
 
@@ -86,7 +86,7 @@ return {
       {
         "<leader>mr",
         "<cmd> RenderMarkdown toggle <cr>",
-        { desc = "toggle render markdown" },
+        desc = "toggle render markdown",
       },
     },
   },
@@ -106,7 +106,7 @@ return {
       {
         "<leader>mv",
         "<cmd> MarkdownPreviewToggle <cr>",
-        { desc = "toggle markdown preview" },
+        desc = "toggle markdown preview",
       },
     },
   },
@@ -238,11 +238,26 @@ return {
     },
   },
 
-  -- Todo: remove this plugin when neovim is upgraded to 0.11.0
+  -- todo: remove this plugin when neovim is upgraded to 0.11.0
   {
     "folke/ts-comments.nvim",
     opts = {},
     event = "VeryLazy",
     enabled = vim.fn.has "nvim-0.10.0" == 1,
+  },
+
+  {
+    "zk-org/zk-nvim",
+    main = "zk",
+    -- event = "VeryLazy",
+    opts = {
+      -- can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`)
+      -- it's recommended to use "telescope", "fzf", "fzf_lua", or "minipick"
+      picker = "telescope",
+    },
+    keys = {
+      { "<leader>mm", "<cmd> ZkNotes <cr>", desc = "telescope zk notes" },
+      { "<leader>mt", "<cmd> ZkTags <cr>", desc = "telescope zk tags" },
+    },
   },
 }

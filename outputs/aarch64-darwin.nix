@@ -41,6 +41,7 @@ let
       # Set system-wide environment variables.
       environment.variables = {
         EDITOR = "nvim";
+        ZK_SHELL = "bash";
         SHELL = "/etc/profiles/per-user/yusong/bin/nu";
       };
       # This is important to find command path (e.g. nix, darwin-rebuild).

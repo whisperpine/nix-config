@@ -38,7 +38,11 @@ let
       # Set nushell as the default shell for all users.
       users.defaultUserShell = pkgs.nushell;
       # Set system-wide environment variables.
-      environment.variables.EDITOR = "nvim";
+      environment.variables = {
+        EDITOR = "nvim";
+        ZK_SHELL = "bash";
+        SHELL = "nu";
+      };
       # Enable docker.
       users.extraGroups.docker.members = [ "yusong" ];
       virtualisation.oci-containers.backend = "docker";
