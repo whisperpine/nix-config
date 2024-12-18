@@ -64,6 +64,13 @@ return {
     "folke/which-key.nvim",
     lazy = false,
     opts = { delay = 0 },
+    config = function()
+      local wk = require "which-key"
+      wk.add {
+        { "<leader>mn", icon = { icon = "", color = "grey" } },
+        { "<leader>md", icon = { icon = "", color = "grey" } },
+      }
+    end,
   },
 
   {
@@ -81,6 +88,14 @@ return {
     },
     event = "BufReadPost",
     opts = require "configs.render-markdown",
+    keys = {
+      {
+        "<leader>mr",
+        "<cmd> RenderMarkdown toggle <cr>",
+        desc = "render markdown",
+        ft = "markdown",
+      },
+    },
   },
 
   {
@@ -93,6 +108,14 @@ return {
       vim.api.nvim_set_var("mkdp_combine_preview", 1)
     end,
     ft = { "markdown" },
+    keys = {
+      {
+        "<leader>mv",
+        "<cmd> MarkdownPreviewToggle <cr>",
+        desc = "preview markdown",
+        ft = "markdown",
+      },
+    },
   },
 
   {
@@ -225,33 +248,5 @@ return {
     opts = {},
     event = "VeryLazy",
     enabled = vim.fn.has "nvim-0.10.0" == 1,
-  },
-
-  {
-    "zk-org/zk-nvim",
-    main = "zk",
-    opts = {
-      -- can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`)
-      -- it's recommended to use "telescope", "fzf", "fzf_lua", or "minipick"
-      picker = "telescope",
-      lsp = {
-        auto_attach = { enabled = false },
-      },
-    },
-    -- other keymaps are defined in nvim/ftplugin/markdown.lua
-    keys = {
-      -- find notes
-      {
-        "<leader>mm",
-        "<Cmd> ZkNotes { sort = { 'modified' } } <CR>",
-        desc = "telescope zk notes",
-      },
-      -- open notes tags
-      {
-        "<leader>mt",
-        "<Cmd> ZkTags <CR>",
-        desc = "telescope zk tags",
-      },
-    },
   },
 }
