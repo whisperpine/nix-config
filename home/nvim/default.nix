@@ -20,6 +20,7 @@
     nodejs_22 # render-markdown.nvim
     ripgrep # telescope.nvim
     fd # telescope.nvim
+    zk # zk-nvim
 
     # formatters and linters
     # find all formatters here:

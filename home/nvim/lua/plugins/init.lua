@@ -81,14 +81,6 @@ return {
     },
     event = "BufReadPost",
     opts = require "configs.render-markdown",
-    keys = {
-      -- toggle markdown rendering ( provided by render-markdown.nvim)
-      {
-        "<leader>mr",
-        "<cmd> RenderMarkdown toggle <cr>",
-        desc = "toggle render markdown",
-      },
-    },
   },
 
   {
@@ -101,14 +93,6 @@ return {
       vim.api.nvim_set_var("mkdp_combine_preview", 1)
     end,
     ft = { "markdown" },
-    keys = {
-      -- toggle markdown preview ( provided by markdown-preview.nvim)
-      {
-        "<leader>mv",
-        "<cmd> MarkdownPreviewToggle <cr>",
-        desc = "toggle markdown preview",
-      },
-    },
   },
 
   {
@@ -122,9 +106,6 @@ return {
         "BufWritePost",
         "BufReadPost",
         "InsertLeave",
-        -- "FocusGained",
-        -- "CmdlineLeave",
-        -- "TextChanged",
       }
       vim.api.nvim_create_autocmd(lint_events, {
         callback = function()
@@ -249,15 +230,28 @@ return {
   {
     "zk-org/zk-nvim",
     main = "zk",
-    -- event = "VeryLazy",
     opts = {
       -- can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`)
       -- it's recommended to use "telescope", "fzf", "fzf_lua", or "minipick"
       picker = "telescope",
+      lsp = {
+        auto_attach = { enabled = false },
+      },
     },
+    -- other keymaps are defined in nvim/ftplugin/markdown.lua
     keys = {
-      { "<leader>mm", "<cmd> ZkNotes <cr>", desc = "telescope zk notes" },
-      { "<leader>mt", "<cmd> ZkTags <cr>", desc = "telescope zk tags" },
+      -- find notes
+      {
+        "<leader>mm",
+        "<Cmd> ZkNotes { sort = { 'modified' } } <CR>",
+        desc = "telescope zk notes",
+      },
+      -- open notes tags
+      {
+        "<leader>mt",
+        "<Cmd> ZkTags <CR>",
+        desc = "telescope zk tags",
+      },
     },
   },
 }
