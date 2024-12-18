@@ -64,5 +64,14 @@
       "$0",
       "</details>"
     ]
+  },
+  "vale": {
+    "prefix": "vale",
+    "description": "vale pairs",
+    "body": [
+      "<!-- vale off -->",
+      "$0",
+      "<!-- vale on -->"
+    ]
   }
 }
