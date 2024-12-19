@@ -1,6 +1,20 @@
 -- use options from nvchad
 require "nvchad.options"
 
+-- additional filetype bindings
+vim.filetype.add {
+  extension = {
+    env = "conf",
+  },
+  filename = {
+    ["terraform.tfstate"] = "json",
+    ["terraform.tfstate.backup"] = "json",
+  },
+  pattern = {
+    [".env.*"] = "conf",
+  },
+}
+
 -- enable inlay hints
 vim.lsp.inlay_hint.enable(true, { 0 })
 
@@ -110,13 +124,5 @@ autocmd("TermOpen", {
   pattern = "*",
   callback = function()
     vim.o.spell = false
-  end,
-})
-
--- disable diagnostics in ".env" file
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { ".env", "*.env", ".env.*" },
-  callback = function()
-    vim.diagnostic.enable(false, { bufnr = 0 })
   end,
 })
