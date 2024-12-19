@@ -85,8 +85,8 @@ autocmd("Filetype", {
 
 -- set `textwidth` in markdown files.
 autocmd("Filetype", {
-  command = "setlocal textwidth=80",
   pattern = { "markdown" },
+  command = "setlocal textwidth=80",
 })
 
 -- restore cursor position on file open
@@ -110,5 +110,13 @@ autocmd("TermOpen", {
   pattern = "*",
   callback = function()
     vim.o.spell = false
+  end,
+})
+
+-- disable diagnostics in ".env" file
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { ".env", "*.env", ".env.*" },
+  callback = function()
+    vim.diagnostic.enable(false, { bufnr = 0 })
   end,
 })
