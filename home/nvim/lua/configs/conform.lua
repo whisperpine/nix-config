@@ -9,15 +9,17 @@ return {
   formatters_by_ft = {
     -- Use the "_" filetype to run formatters on filetypes that don't
     -- have other formatters configured.
-    ["_"] = { "trim_whitespace", "trim_newlines" },
+    ["_"] = { "trim_whitespace" },
 
-    -- -- Use the "*" filetype to run formatters on all filetypes.
-    -- ["*"] = {
-    --   "final_new_line", -- This formatter is defined below.
-    -- },
+    -- Use the "*" filetype to run formatters on all filetypes.
+    ["*"] = {
+      "trim_newlines",
+      -- "final_new_line", -- This formatter is defined below.
+    },
 
     markdown = { "markdownlint" },
     terraform = { "tofu_fmt" },
+    ["terraform-vars"] = { "tofu_fmt" },
     python = { "ruff_format" },
     objc = { "clang-format" },
     cpp = { "clang-format" },

@@ -40,6 +40,7 @@ return {
     "yaml",
     "toml",
     "json",
+    "ruby",
     "nu",
     "c",
   },
