@@ -145,26 +145,26 @@ lspconfig.ts_ls.setup {
   },
 }
 
--- configuring single server: tailwindcss
-lspconfig.tailwindcss.setup {
-  on_attach = on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-  filetypes = {
-    "vue",
-    "mdx",
-    "css",
-    "less",
-    "postcss",
-    "sass",
-    "scss",
-    "html",
-    "sugarss",
-    "javascript",
-    "typescript",
-    "svelte",
-  },
-}
+-- -- configuring single server: tailwindcss
+-- lspconfig.tailwindcss.setup {
+--   on_attach = on_attach,
+--   on_init = nvlsp.on_init,
+--   capabilities = nvlsp.capabilities,
+--   filetypes = {
+--     "vue",
+--     "mdx",
+--     "css",
+--     "less",
+--     "postcss",
+--     "sass",
+--     "scss",
+--     "html",
+--     "sugarss",
+--     "javascript",
+--     "typescript",
+--     "svelte",
+--   },
+-- }
 
 -- configuring single server: rust_analyzer
 lspconfig.rust_analyzer.setup {

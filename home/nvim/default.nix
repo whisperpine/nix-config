@@ -45,7 +45,7 @@
     dockerfile-language-server-nodejs # dockerfile
     vscode-langservers-extracted # json, css
     typescript-language-server # typescript, javascript
-    tailwindcss-language-server # tailwind css
+    # tailwindcss-language-server # tailwind css
     svelte-language-server # svelte
     bash-language-server # bash sh shell
     yaml-language-server # yaml
