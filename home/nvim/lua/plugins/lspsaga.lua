@@ -11,7 +11,7 @@ return {
         virtual_text = false,
       },
       ui = {
-        code_action = "",
+        code_action = " ",
       },
     },
     keys = {
@@ -34,14 +34,18 @@ return {
       {
         "]e",
         function()
-          require("lspsaga.diagnostic"):goto_prev { severity = vim.diagnostic.severity.ERROR }
+          require("lspsaga.diagnostic"):goto_prev {
+            severity = vim.diagnostic.severity.ERROR,
+          }
         end,
         desc = "lspsaga diagnostic next error",
       },
       {
         "[e",
         function()
-          require("lspsaga.diagnostic"):goto_prev { severity = vim.diagnostic.severity.ERROR }
+          require("lspsaga.diagnostic"):goto_prev {
+            severity = vim.diagnostic.severity.ERROR,
+          }
         end,
         desc = "lspsaga diagnostic prev error",
       },
