@@ -73,5 +73,45 @@
       "$0",
       "<!-- vale on -->"
     ]
+  },
+  "note": {
+    "prefix": "> note",
+    "description": "GitHub flavored alerts: NOTE",
+    "body": [
+      "> [!NOTE]",
+      "> $0"
+    ]
+  },
+  "tip": {
+    "prefix": "> tip",
+    "description": "GitHub flavored alerts: TIP",
+    "body": [
+      "> [!TIP]",
+      "> $0"
+    ]
+  },
+  "important": {
+    "prefix": "> important",
+    "description": "GitHub flavored alerts: IMPORTANT",
+    "body": [
+      "> [!IMPORTANT]",
+      "> $0"
+    ]
+  },
+  "warning": {
+    "prefix": "> warning",
+    "description": "GitHub flavored alerts: WARNING",
+    "body": [
+      "> [!WARNING]",
+      "> $0"
+    ]
+  },
+  "caution": {
+    "prefix": "> caution",
+    "description": "GitHub flavored alerts: CAUTION",
+    "body": [
+      "> [!CAUTION]",
+      "> $0"
+    ]
   }
 }
