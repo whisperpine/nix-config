@@ -11,11 +11,19 @@ return {
         virtual_text = false,
       },
       ui = {
+        border = "single",
+        lines = { "└", "├", "│", "─", "┌" },
         code_action = " ",
+        expand = "",
+        collapse = "",
+      },
+      outline = {
+        win_width = 32,
+        auto_preview = true,
+        close_after_jump = true,
       },
     },
     keys = {
-      -- todo: enable after bug fix
       -- {
       --   "<leader>co",
       --   "<cmd> Lspsaga outline <cr>",
