@@ -79,7 +79,7 @@ return {
           File = " ",
           Function = "󰡱 ",
           Interface = " ",
-          Key = " ",
+          Key = " ",
           Method = " ",
           Module = "󰏖 ",
           Namespace = "󰦮 ",
