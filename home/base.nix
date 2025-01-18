@@ -35,6 +35,7 @@
     lazygit
 
     # cloud
+    docker-compose
     kubectl
     awscli2
 

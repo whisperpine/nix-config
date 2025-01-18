@@ -70,13 +70,12 @@ let
       environment.systemPackages = with pkgs; [
         git
         git-lfs
+        nushell
+        neovim
+        clang
+        unzip
         wget
         curl
-        clang
-        neovim
-        nushell
-        unzip
-        docker-compose
         # WSL specific.
         xdg-utils
         wslu
