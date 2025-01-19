@@ -29,11 +29,18 @@
   };
 
   home.packages = with pkgs; [
-    translate-shell
     python312
-    onefetch
-    kubectl
+
+    # tui
     lazygit
+
+    # cloud
+    kubectl
+    awscli2
+
+    # utilities
+    translate-shell
+    onefetch
     tokei
     tree
     just
