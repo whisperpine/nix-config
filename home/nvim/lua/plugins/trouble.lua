@@ -108,7 +108,6 @@ return {
         "<cmd> Trouble diagnostics toggle filter.buf=0 focus=true <cr>",
         desc = "trouble buffer diagnostics",
       },
-      -- todo: disable this and use lspsaga after bug fix
       {
         "<leader>co",
         "<cmd> Trouble symbols toggle focus=true win.position=right <cr>",

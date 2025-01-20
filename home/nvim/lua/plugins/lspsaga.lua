@@ -24,11 +24,6 @@ return {
       },
     },
     keys = {
-      -- {
-      --   "<leader>co",
-      --   "<cmd> Lspsaga outline <cr>",
-      --   desc = "lspsaga outline",
-      -- },
       {
         "]d",
         "<cmd> Lspsaga diagnostic_jump_next <cr>",
