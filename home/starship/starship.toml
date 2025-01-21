@@ -20,6 +20,13 @@ read_only = " ro"
 [battery]
 disabled = true
 
+[hostname]
+ssh_symbol = "ssh "
+format = "[$ssh_symbol$hostname]($style) in "
+
+[username]
+format = "[$user](style) "
+
 [git_commit]
 tag_symbol = " tag "
 
