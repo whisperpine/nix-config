@@ -82,6 +82,7 @@ autocmd("Filetype", {
     "javascript",
     "typescript",
     "terraform",
+    "sshconfig",
     "markdown",
     "xhtml",
     "json",
