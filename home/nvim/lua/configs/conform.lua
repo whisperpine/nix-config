@@ -31,21 +31,20 @@ return {
     nix = { "nixfmt" },
     proto = { "buf" },
     sql = { "sqlfluff" },
+    graphql = { "biome" },
 
     -- deno_fmt
-    javascript = { "deno_fmt" },
-    typescript = { "deno_fmt" },
     jsx = { "deno_fmt" },
     tsx = { "deno_fmt" },
+    javascript = { "deno_fmt" },
+    typescript = { "deno_fmt" },
     jsonc = { "deno_fmt" },
     json = { "deno_fmt" },
     css = { "deno_fmt" },
-    sass = { "deno_fmt" },
     scss = { "deno_fmt" },
     less = { "deno_fmt" },
     yaml = { "deno_fmt" },
     html = { "deno_fmt" },
-    svelte = { "deno_fmt" },
   },
 
   formatters = {

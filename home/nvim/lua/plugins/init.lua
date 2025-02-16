@@ -124,6 +124,13 @@ return {
     config = function()
       require("lint").linters_by_ft = {
         markdown = { "markdownlint" },
+        javascript = { "biomejs" },
+        typescript = { "biomejs" },
+        graphql = { "biomejs" },
+        json = { "biomejs" },
+        css = { "biomejs" },
+        jsx = { "biomejs" },
+        tsx = { "biomejs" },
       }
       local lint_events = {
         "BufWritePost",

@@ -34,8 +34,9 @@
     rustfmt # rust
     stylua # lua
     shfmt # shell
+    biome # ts, js, css, json, graphql
+    deno # ts, js, json, css
     ruff # python
-    deno # typescript, javascript, json
     buf # protobuf
 
     # language servers
