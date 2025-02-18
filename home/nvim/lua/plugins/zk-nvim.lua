@@ -28,7 +28,13 @@ return {
       {
         "<leader>mn",
         "<Cmd> ZkNew { dir = vim.fn.expand('%:p:h') } <CR>",
-        desc = "zk new",
+        desc = "zk new cwd",
+      },
+      -- create a new note under "zettelkasten"
+      {
+        "<leader>ma",
+        "<Cmd> ZkNew { dir = 'zettelkasten' } <CR>",
+        desc = "zk new abs",
       },
       -- create a new dail note
       {

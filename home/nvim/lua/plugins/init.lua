@@ -68,6 +68,7 @@ return {
       local wk = require "which-key"
       wk.add {
         { "<leader>mn", icon = { icon = "", color = "grey" } },
+        { "<leader>ma", icon = { icon = "", color = "grey" } },
         { "<leader>md", icon = { icon = "", color = "grey" } },
       }
     end,
