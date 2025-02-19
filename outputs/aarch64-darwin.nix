@@ -21,8 +21,6 @@ let
     {
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = system;
-      # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
       # System configurations.
       system = {
         # Set Git commit hash for darwin-version.
