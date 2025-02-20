@@ -70,6 +70,7 @@ return {
         { "<leader>mn", icon = { icon = "", color = "grey" } },
         { "<leader>ma", icon = { icon = "", color = "grey" } },
         { "<leader>md", icon = { icon = "", color = "grey" } },
+        { "<leader>mi", icon = { icon = "", color = "grey" } },
       }
     end,
   },

@@ -12,6 +12,12 @@ return {
     },
     -- other keymaps are defined in nvim/ftplugin/markdown.lua
     keys = {
+      -- index notes
+      {
+        "<leader>mi",
+        "<Cmd> ZkIndex <CR>",
+        desc = "zk index",
+      },
       -- find notes
       {
         "<leader>mm",
