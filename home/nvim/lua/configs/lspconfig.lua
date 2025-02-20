@@ -95,6 +95,11 @@ lspconfig.lua_ls.setup {
   on_init = nvlsp.on_init,
   settings = {
     Lua = {
+      hint = {
+        enable = true,
+        setType = true,
+        arrayIndex = "Disable",
+      },
       diagnostics = {
         globals = { "vim" },
       },
