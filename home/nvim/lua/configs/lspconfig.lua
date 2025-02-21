@@ -63,7 +63,6 @@ local servers = {
   "bashls",
   "vale_ls",
   "texlab",
-  "graphql",
   "svelte",
   "taplo",
   "html",

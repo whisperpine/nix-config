@@ -42,7 +42,6 @@
     # language servers
     # find all language servers here:
     # https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
-    nodePackages.graphql-language-service-cli # graphql
     dockerfile-language-server-nodejs # dockerfile
     vscode-langservers-extracted # json, css
     typescript-language-server # typescript, javascript
