@@ -2,7 +2,7 @@
 
 Yusong's nix config.
 
-## Reference
+## References
 
 - [An unofficial book for beginners](https://nixos-and-flakes.thiscute.world/).
 - [Home Manager Option Search](https://home-manager-options.extranix.com/).
