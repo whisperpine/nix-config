@@ -1,81 +1,33 @@
-{
+input@{
   nixpkgs,
   nixpkgs-stable,
-  neovim-nightly-overlay,
   home-manager,
   nixos-wsl,
+  hostname,
   ...
 }:
 let
+  username = "yusong";
   system = "x86_64-linux";
   # Pass non-default args to modules.
-  extraSpecialArgs = {
+  # Caution: DO NOT rename `specialArgs`.
+  specialArgs = input // {
     pkgs-stable = import nixpkgs-stable {
       inherit system;
       config.allowUnfree = true;
     };
-    inherit neovim-nightly-overlay;
+    # Allow unfree software to be installed.
+    nixpkgs.config.allowUnfree = true;
+    # Inhereit variables define above.
+    inherit system username hostname;
   };
   configuration =
     { pkgs, config, ... }:
     {
-      # This value determines the NixOS release from which the default
-      # settings for stateful data, like file locations and database versions
-      # on your system were taken. It's perfectly fine and recommended to leave
-      # this value at the release version of the first install of this system.
-      # Before changing this value read the documentation for this option
-      # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-      system.stateVersion = "24.05";
-      # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = system;
-      # Enable experimental features.
-      nix.settings.experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-      # It doesn't need to keep too much generations.
-      boot.loader.systemd-boot.configurationLimit = 10;
-      # Set nushell as the default shell for all users.
-      users.defaultUserShell = pkgs.nushell;
-      # Set system-wide environment variables.
-      environment.variables = {
-        EDITOR = "nvim";
-        ZK_SHELL = "bash";
-        SHELL = "nu";
-      };
-      # Enable docker.
-      users.extraGroups.docker.members = [ "yusong" ];
-      virtualisation.oci-containers.backend = "docker";
-      virtualisation.docker = {
-        enable = true;
-        rootless.enable = true;
-        # Config /etc/docker/daemon.json:
-        # https://docs.docker.com/reference/cli/dockerd/#daemon-configuration-file
-        daemon.settings = {
-          userland-proxy = false;
-          # Enable containerd image store:
-          # https://docs.docker.com/engine/storage/containerd/
-          features.containerd-snapshotter = true;
-        };
-      };
-      # Optimize storage.
-      nix.settings.auto-optimise-store = true;
-      # Do garbage collection weekly to keep disk usage low.
-      nix.gc = {
-        automatic = true;
-        dates = "weekly";
-        options = "--delete-older-than 1w";
-      };
       # Install packages in operating system.
       environment.systemPackages = with pkgs; [
         git
-        git-lfs
-        nushell
         neovim
-        clang
-        unzip
-        wget
-        curl
         # WSL specific.
         xdg-utils
         wslu
@@ -83,16 +35,24 @@ let
     };
 in
 nixpkgs.lib.nixosSystem {
+  # Make inherited variables accessible to modules.
+  # Caution: DO NOT rename `specialArgs`.
+  inherit specialArgs;
+  # Merge modules.
   modules = [
     # This modules id defined above in "let" expression.
     configuration
 
+    ./modules/nix-core.nix
+    ./modules/host-users.nix
+    ./modules/docker.nix
+
     # WSL (Windows Subsystem for Linux).
     nixos-wsl.nixosModules.default
     {
-      system.stateVersion = "24.05";
       wsl.enable = true;
-      wsl.defaultUser = "yusong";
+      wsl.defaultUser = username;
+      system.stateVersion = "24.05";
     }
 
     # Home Manager as a module.
@@ -100,8 +60,8 @@ nixpkgs.lib.nixosSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.users.yusong = import ../home/linux.nix;
-      home-manager.extraSpecialArgs = extraSpecialArgs;
+      home-manager.users.${username} = import ../home/linux.nix;
+      home-manager.extraSpecialArgs = specialArgs;
     }
   ];
 }

@@ -15,21 +15,14 @@
     ./marksman
   ];
 
-  # Allow unfree software to by installed.
-  nixpkgs.config.allowUnfree = true;
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-
-  xresources.properties = {
-    # Set mouse cursor size.
-    "Xcursor.size" = 16;
-    # Set system font size.
-    "Xft.dpi" = 172;
-  };
-
   home.packages = with pkgs; [
+    # manage itself
+    home-manager
+
+    # toolchain
     python312
+    git-lfs
+    clang
 
     # tui
     lazygit
@@ -46,6 +39,9 @@
     tree
     just
     file
+    unzip
+    wget
+    curl
   ];
 
   # This value determines the Home Manager release that your

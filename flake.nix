@@ -3,6 +3,8 @@
 
   outputs = inputs: import ./outputs inputs;
 
+  # `inputs` are the dependencies of the flake, Each item in `inputs` will be
+  # passed as a parameter to the `outputs` function after being pulled and built.
   inputs = {
     #---------- common ----------#
     # Use the unstable branch by default.

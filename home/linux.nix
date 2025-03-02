@@ -1,16 +1,7 @@
-{ ... }:
-let
-  configuration =
-    { pkgs, config, ... }:
-    {
-      home.username = "yusong";
-      home.homeDirectory = "/home/yusong";
-      home.packages = with pkgs; [ helm ];
-    };
-in
+{ username, pkgs, ... }:
 {
-  imports = [
-    ./base.nix
-    configuration
-  ];
+  imports = [ ./base.nix ];
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
+  home.packages = with pkgs; [ helm ];
 }

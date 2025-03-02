@@ -1,4 +1,8 @@
-{ pkgs, neovim-nightly-overlay, ... }:
+{
+  pkgs,
+  # neovim-nightly-overlay ,
+  ...
+}:
 {
   programs.neovim = {
     enable = true;

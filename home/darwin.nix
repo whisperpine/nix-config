@@ -1,17 +1,10 @@
-{ ... }:
-let
-  configuration =
-    { pkgs, ... }:
-    {
-      home.packages = with pkgs; [
-        colima
-        docker
-      ];
-    };
-in
+{ username, pkgs, ... }:
 {
-  imports = [
-    ./base.nix
-    configuration
+  imports = [ ./base.nix ];
+  home.username = username;
+  home.homeDirectory = "/Users/${username}";
+  home.packages = with pkgs; [
+    colima
+    docker
   ];
 }
