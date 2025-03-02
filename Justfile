@@ -1,5 +1,5 @@
 deploy:
-    nixos-rebuild switch --flake . --use-remote-sudo
+    nixos-rebuild switch --flake .#nixos --use-remote-sudo
 
 darwin:
     darwin-rebuild switch --flake .

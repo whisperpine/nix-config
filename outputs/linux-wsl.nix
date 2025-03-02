@@ -3,12 +3,11 @@ input@{
   nixpkgs-stable,
   home-manager,
   nixos-wsl,
-  hostname,
+  system,
   ...
 }:
 let
   username = "yusong";
-  system = "x86_64-linux";
   # Pass non-default args to modules.
   # Caution: DO NOT rename `specialArgs`.
   specialArgs = input // {
@@ -19,7 +18,7 @@ let
     # Allow unfree software to be installed.
     nixpkgs.config.allowUnfree = true;
     # Inhereit variables define above.
-    inherit system username hostname;
+    inherit username;
   };
   configuration =
     { pkgs, config, ... }:
