@@ -11,6 +11,9 @@
 
   # Fix macOS Spotlight indexing issue.
   system.activationScripts.applications.text =
+    # env: /nix/store/qn19jn8g89sggs7pk88hw7c04dswzgqd-system-applications
+    # copying /nix/store/z2iqr3c02fg9mzgnmhdxagqhpilik8ic-wezterm-0-unstable-2025-02-23/Applications/WezTerm.app
+    # copying /nix/store/nj3xprcrqyizlcykink7x5va474xp6vp-alacritty-0.15.1/Applications/Alacritty.app
     let
       env = pkgs.buildEnv {
         name = "system-applications";
@@ -21,13 +24,14 @@
     pkgs.lib.mkForce ''
       # Set up applications.
       echo "setting up /Applications..." >&2
-      rm -rf /Applications/Nix\ Apps
-      mkdir -p /Applications/Nix\ Apps
+      echo "env: ${env}"
+      rm -rf /Applications/NixApps
+      mkdir -p /Applications/NixApps
       find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
       while read -r src; do
         app_name=$(basename "$src")
         echo "copying $src" >&2
-        ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
+        ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/NixApps/$app_name"
       done
     '';
 
