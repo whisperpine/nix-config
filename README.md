@@ -8,6 +8,10 @@ Yusong's nix config.
 - [Home Manager Option Search](https://home-manager-options.extranix.com/).
 - [the-nix-way/dev-templates](https://github.com/the-nix-way/dev-templates).
 
+## Showcase
+
+![neovim-zellij](./assets/neovim-zellij.webp)
+
 ## Get Started
 
 ### NixOS-WSL
