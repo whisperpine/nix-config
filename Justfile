@@ -1,27 +1,37 @@
+# error if a .env file doesn't exist.
+set dotenv-required
+
+# build and switch (manully set HOSTNAME in .env)
 deploy:
-    nixos-rebuild switch --flake .#nixos --use-remote-sudo
+    echo ${HOSTNAME}
+    nixos-rebuild switch --flake .#$HOSTNAME --use-remote-sudo
 
+# build and switch on darwin (manully set HOSTNAME in .env)
 darwin:
-    darwin-rebuild switch --flake .
+    echo ${HOSTNAME}
+    darwin-rebuild switch --flake .#$HOSTNAME
 
+# build and show trace in verbose level
 debug:
-    nixos-rebuild switch --flake . --use-remote-sudo --show-trace --verbose
+    echo ${HOSTNAME}
+    nixos-rebuild build --flake .#$HOSTNAME \
+        --use-remote-sudo --show-trace --verbose
 
+# nix flake update
 up:
     nix flake update
 
+# show profile hisotry
 history:
     nix profile history --profile /nix/var/nix/profiles/system
 
-repl:
-    nix repl -f flake:nixpkgs
-
+# remove all generations older than 7 days
 clean:
-    # remove all generations older than 7 days
-    sudo nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 7d
+    sudo nix profile wipe-history \
+        --profile /nix/var/nix/profiles/system --older-than 7d
 
+# garbage collect all unused nix store entries
 gc:
-    # garbage collect all unused nix store entries
     sudo nix store gc --debug
     sudo nix-collect-garbage --delete-old
     nix-collect-garbage --delete-old
