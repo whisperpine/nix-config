@@ -12,6 +12,48 @@ Yusong's nix config.
 
 ![neovim-zellij](./assets/neovim-zellij.webp)
 
+## Structure
+
+```mermaid
+flowchart LR
+  flake(flake.nix)
+  h_base(base)
+  h_desktop(desktop)
+  h_linux_wsl(linux-wsl)
+  h_linux_server(linux-server)
+  h_linux_desktop(linux-desktop)
+  h_darwin_desktop(darwin-desktop)
+
+  o_linux_wsl(linux-wsl)
+  o_linux_server(linux-server)
+  o_linux_desktop(linux-desktop)
+  o_darwin_desktop(darwin-desktop)
+  o_default(default)
+
+  flake --> o_default
+
+  subgraph outputs/
+    o_default --> o_linux_desktop
+    o_default --> o_linux_wsl
+    o_default --> o_linux_server
+    o_default --> o_darwin_desktop
+
+  end
+
+  subgraph home/
+    o_linux_desktop -.-> h_linux_desktop
+    o_linux_wsl -.-> h_linux_wsl
+    o_linux_server -.-> h_linux_server
+    o_darwin_desktop -.-> h_darwin_desktop
+
+    h_linux_server --> h_base
+    h_desktop --> h_base
+    h_linux_desktop --> h_desktop
+    h_linux_wsl --> h_desktop
+    h_darwin_desktop --> h_desktop
+  end
+```
+
 ## Get Started
 
 ### NixOS-WSL

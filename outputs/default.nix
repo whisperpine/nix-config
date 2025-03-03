@@ -2,7 +2,7 @@
 {
   darwinConfigurations = {
     # mac mini
-    "creator" = import ./darwin.nix (
+    "creator" = import ./darwin-desktop.nix (
       inputs
       // {
         hostname = "creator";

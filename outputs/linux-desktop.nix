@@ -26,9 +26,6 @@ let
       environment.systemPackages = with pkgs; [
         git
         neovim
-        # WSL specific.
-        xdg-utils
-        wslu
       ];
     };
 in
@@ -51,7 +48,7 @@ nixpkgs.lib.nixosSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.users.${username} = import ../home/linux.nix;
+      home-manager.users.${username} = import ../home/linux-desktop.nix;
       home-manager.extraSpecialArgs = specialArgs;
     }
   ];

@@ -60,7 +60,7 @@ nix-darwin.lib.darwinSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.users.${username} = import ../home/darwin.nix;
+      home-manager.users.${username} = import ../home/darwin-desktop.nix;
       home-manager.extraSpecialArgs = specialArgs;
     }
   ];

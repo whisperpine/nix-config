@@ -1,6 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  # marksman is declared in nvim/default.nix
+  home.packages = [ pkgs.marksman ];
 
   xdg.configFile.marksman = {
     enable = true;

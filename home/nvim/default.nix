@@ -15,6 +15,10 @@
     source = ../nvim;
   };
 
+  imports = [
+    ../marksman # markdown language server
+  ];
+
   home.packages = with pkgs; [
     # required by neovim plugins
     lua5_1 # lazy.nvim
@@ -58,7 +62,6 @@
     terraform-ls # terraform
     basedpyright # python
     clang-tools # c, cpp, objc
-    marksman # markdown
     lemminx # xml, svg
     helm-ls # helm
     vale-ls # English

@@ -7,8 +7,9 @@
     docker
   ];
   imports = [
-    ./base.nix
+    ./desktop.nix
     ./alacritty
     ./wezterm
+    ./zsh
   ];
 }
