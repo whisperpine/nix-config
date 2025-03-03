@@ -8,6 +8,7 @@
   ];
   imports = [
     ./base.nix
+    ./alacritty
     ./wezterm
   ];
 }

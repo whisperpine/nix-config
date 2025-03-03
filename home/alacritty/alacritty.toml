@@ -1,0 +1,58 @@
+[font]
+size = 15
+normal = { family = "Cascadia Mono NF" }
+bold = { family = "Cascadia Mono NF", style = "regular" }
+bold_italic = { family = "Cascadia Mono NF", style = "regular" }
+italic = { family = "Cascadia Mono NF", style = "regular" }
+
+[window]
+padding = { x = 12, y = 12 }
+dynamic_title = false
+dimensions = { columns = 121, lines = 39 }
+position = { x = 650, y = 300 }
+decorations = "buttonless"
+option_as_alt = "Both"
+
+[mouse]
+hide_when_typing = true
+
+[colors.primary]
+background = "#202020"
+foreground = "#bdbdbd"
+
+[colors.normal]
+white = "#bdbdbd"
+blue = "#4c90a8"
+cyan = "#79af98"
+green = "#879c54"
+red = "#d95f5f"
+yellow = "#cc8b00"
+magenta = "#aa739a"
+
+[colors.bright]
+white = "#bdbdbd"
+blue = "#4c90a8"
+cyan = "#79af98"
+green = "#879c54"
+red = "#d95f5f"
+yellow = "#cc8b00"
+magenta = "#aa739a"
+
+[colors.dim]
+white = "#bdbdbd"
+blue = "#4c90a8"
+cyan = "#79af98"
+green = "#879c54"
+red = "#d95f5f"
+yellow = "#cc8b00"
+magenta = "#aa739a"
+
+[colors.cursor]
+cursor = "#bdbdbd"
+
+[colors.vi_mode_cursor]
+cursor = "#cc8b00"
+
+[cursor]
+vi_mode_style.shape = "Block"
+style.shape = "Underline"
