@@ -61,7 +61,6 @@
     rust-analyzer # rust
     terraform-ls # terraform
     basedpyright # python
-    clang-tools # c, cpp, objc
     lemminx # xml, svg
     helm-ls # helm
     vale-ls # English
@@ -70,5 +69,9 @@
     taplo # toml
     sqls # sql
     nil # nix
+
+    # including lsp "clangd" and formatter "clang-format"
+    # lsp: c, cpp, objc. formatter: c, cpp, objc, java, csharp
+    clang-tools
   ];
 }

@@ -17,8 +17,11 @@
     kubectl
     awscli2
 
-    # utilities
+    # dev tools
     python312
+    uv
+
+    # utilities
     translate-shell
     onefetch
     tokei

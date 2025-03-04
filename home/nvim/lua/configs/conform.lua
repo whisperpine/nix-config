@@ -21,9 +21,6 @@ return {
     terraform = { "tofu_fmt" },
     ["terraform-vars"] = { "tofu_fmt" },
     python = { "ruff_format" },
-    objc = { "clang-format" },
-    cpp = { "clang-format" },
-    c = { "clang-format" },
     xml = { "xmlstarlet" },
     rust = { "rustfmt" },
     lua = { "stylua" },
@@ -32,6 +29,13 @@ return {
     proto = { "buf" },
     sql = { "sqlfluff" },
     graphql = { "biome" },
+
+    -- clang-format
+    objc = { "clang-format" },
+    cpp = { "clang-format" },
+    c = { "clang-format" },
+    cs = { "clang-format" },
+    java = { "clang-format" },
 
     -- deno_fmt
     jsx = { "deno_fmt" },
