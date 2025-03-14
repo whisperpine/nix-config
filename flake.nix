@@ -1,6 +1,16 @@
 {
   description = "Yusong's NixOS Config";
 
+  # The nixConfig here only affects the flake itself, not the system configuration.
+  nixConfig = {
+    substituters = [
+      # Query the mirror of USTC first, and then the official cache.
+      "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://cache.nixos.org"
+    ];
+  };
+
+  # The `outputs` function will return all the build results of the flake.
   outputs = inputs: import ./outputs inputs;
 
   # `inputs` are the dependencies of the flake, Each item in `inputs` will be
