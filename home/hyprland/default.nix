@@ -2,8 +2,13 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    xwayland.enable = true;
   };
 
-  # Hint Electron apps to use Wayland.
-  home.sessionVariables.NIXOS_OZONE_WL = "1";
+  home.sessionVariables = {
+    # If the cursor becomes invisible.
+    WLR_NO_HARDWARE_CURSORS = "1";
+    # Hint Electron apps to use Wayland.
+    NIXOS_OZONE_WL = "1";
+  };
 }

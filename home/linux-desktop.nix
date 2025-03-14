@@ -2,10 +2,16 @@
 {
   home.username = username;
   home.homeDirectory = "/home/${username}";
-  home.packages = with pkgs; [ kitty ];
+  home.packages = with pkgs; [
+    kitty
+    waybar
+    dunst
+    libnotify
+  ];
   imports = [
     ./desktop.nix
     ./wezterm
+    ./xdg
     # ./hyprland
   ];
 }
