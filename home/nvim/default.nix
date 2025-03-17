@@ -24,8 +24,8 @@
     lua5_1 # lazy.nvim
     luajitPackages.luarocks # lazy.nvim
     tree-sitter # tree-sitter.nvim
-    yarn-berry # render-markdown.nvim
-    nodejs_22 # render-markdown.nvim
+    yarn-berry # markdown-preview.nvim
+    nodejs_22 # markdown-preview.nvim
     ripgrep # telescope.nvim
     fd # telescope.nvim
     zk # zk-nvim
