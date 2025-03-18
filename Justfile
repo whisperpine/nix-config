@@ -4,7 +4,9 @@ set dotenv-required
 # build and switch (manully set HOSTNAME in .env)
 deploy:
     echo ${HOSTNAME}
-    nixos-rebuild switch --flake .#$HOSTNAME --use-remote-sudo
+    nixos-rebuild switch \
+        --use-remote-sudo \
+        --flake .#$HOSTNAME
 
 # build and switch on darwin (manully set HOSTNAME in .env)
 darwin:
@@ -14,8 +16,10 @@ darwin:
 # build and show trace in verbose level
 debug:
     echo ${HOSTNAME}
-    nixos-rebuild build --flake .#$HOSTNAME \
-        --use-remote-sudo --show-trace --verbose
+    nixos-rebuild build \
+        --use-remote-sudo \
+        --show-trace --verbose \
+        --flake .#$HOSTNAME
 
 # nix flake update
 up:

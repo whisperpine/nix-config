@@ -1,7 +1,13 @@
 { ... }:
 #----------  hardware configuration ----------#
 {
+  # https://wiki.hyprland.org/Nvidia/#suspendwakeup-issues
   boot.kernelParams = [ "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];
+
+  # Enabling ip_forward on the host machine is important for the docker
+  # container to be able to perform networking tasks (such as cloning the
+  # gitlab repo). See: https://nixos.wiki/wiki/Gitlab_runner
+  boot.kernel.sysctl."net.ipv4.ip_forward" = true;
 
   hardware.nvidia = {
     # Enable experimental power management through systemd.
