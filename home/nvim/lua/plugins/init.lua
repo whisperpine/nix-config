@@ -202,7 +202,7 @@ return {
 
   {
     "keaising/im-select.nvim",
-    event = "VeryLazy",
+    event = "InsertLeave",
     opts = function()
       local options = {
         -- Restore the previous used input method state when the following events
@@ -259,7 +259,7 @@ return {
   {
     "folke/ts-comments.nvim",
     opts = {},
-    event = "VeryLazy",
+    event = "BufReadPost",
     enabled = vim.fn.has "nvim-0.10.0" == 1,
   },
 }

@@ -1,7 +1,20 @@
 return {
   {
     "yetone/avante.nvim",
-    event = "VeryLazy",
+    -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
+    build = "make",
+    -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      --- The below dependencies are optional,
+      "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+    },
+    keys = {
+      { "<leader>aa", "<cmd>AvanteAsk<cr>", desc = "avante: ask" },
+    },
     opts = {
       provider = "deepseek",
       openai = {
@@ -25,17 +38,25 @@ return {
           model = "deepseek-chat",
         },
       },
-    },
-    -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-    build = "make",
-    -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "stevearc/dressing.nvim",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      --- The below dependencies are optional,
-      "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+      windows = {
+        width = 50, -- default % based on available width
+        sidebar_header = {
+          align = "left", -- left, center, right for title
+          rounded = false,
+        },
+        input = {
+          prefix = "",
+          height = 8, -- Height of the input window in vertical layout
+        },
+      },
+      mappings = {
+        sidebar = {
+          close_from_input = { normal = "<Esc>", insert = "<C-d>" },
+        },
+      },
+      behaviour = {
+        enable_token_counting = false,
+      },
     },
   },
 }
