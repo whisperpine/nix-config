@@ -13,6 +13,7 @@
 
   imports = [
     ./git
+    ./gpg
     ./bash
     ./btop
     ./yazi
