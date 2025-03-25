@@ -1,9 +1,4 @@
-{
-  system,
-  username,
-  config,
-  ...
-}:
+{ system, username, ... }:
 #----------  nix-core configuration ----------#
 {
   # This value determines the NixOS release from which the default

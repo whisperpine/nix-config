@@ -17,6 +17,9 @@
     owner = "${username}";
   };
 
+  # Set system-wide environment variables.
+  # Note: changes on these env vars need system reboot to take effect.
+  # Note: ./nix-core.nix stores other env vars.
   environment.variables = {
     DEEPSEEK_API_KEY = "${builtins.readFile config.sops.secrets.deepseek-api-key.path}";
   };
