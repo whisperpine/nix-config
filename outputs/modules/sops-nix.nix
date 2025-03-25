@@ -1,4 +1,9 @@
-{ username, sops-nix, ... }:
+{
+  config,
+  username,
+  sops-nix,
+  ...
+}:
 #----------  sops-nix configuration ----------#
 {
   imports = [ sops-nix.nixosModules.sops ];
@@ -10,5 +15,9 @@
   sops.secrets."example-key" = { };
   sops.secrets."deepseek-api-key" = {
     owner = "${username}";
+  };
+
+  environment.variables = {
+    DEEPSEEK_API_KEY = "${builtins.readFile config.sops.secrets.deepseek-api-key.path}";
   };
 }

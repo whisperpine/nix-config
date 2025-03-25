@@ -26,7 +26,6 @@
     EDITOR = "nvim";
     ZK_SHELL = "bash";
     SHELL = "/etc/profiles/per-user/${username}/bin/nu";
-    DEEPSEEK_API_KEY = "${builtins.readFile config.sops.secrets.deepseek-api-key.path}";
   };
 
   # Optimize storage.
