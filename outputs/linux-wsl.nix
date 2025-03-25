@@ -45,6 +45,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/docker.nix
+    ./modules/sops-nix.nix
 
     # WSL (Windows Subsystem for Linux).
     nixos-wsl.nixosModules.default

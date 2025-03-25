@@ -33,5 +33,8 @@
     file
     unzip
     curl
+
+    sops
+    age
   ];
 }

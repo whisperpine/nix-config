@@ -1,4 +1,9 @@
-{ system, username, ... }:
+{
+  system,
+  username,
+  config,
+  ...
+}:
 #----------  nix-core configuration ----------#
 {
   # This value determines the NixOS release from which the default
@@ -15,14 +20,15 @@
     "nix-command"
     "flakes"
   ];
-  # # It doesn't need to keep too much generations.
-  # boot.loader.systemd-boot.configurationLimit = 10;
   # Set system-wide environment variables.
+  # Note: changes on these env vars need system reboot to take effect.
   environment.variables = {
     EDITOR = "nvim";
     ZK_SHELL = "bash";
     SHELL = "/etc/profiles/per-user/${username}/bin/nu";
+    DEEPSEEK_API_KEY = "${builtins.readFile config.sops.secrets.deepseek-api-key.path}";
   };
+
   # Optimize storage.
   nix.optimise.automatic = true;
 }
