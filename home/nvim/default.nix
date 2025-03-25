@@ -28,6 +28,7 @@
     nodejs_22 # markdown-preview.nvim
     ripgrep # telescope.nvim
     fd # telescope.nvim
+    gnumake # avante.nvim
     zk # zk-nvim
 
     # formatters and linters

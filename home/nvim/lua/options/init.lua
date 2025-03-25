@@ -47,7 +47,9 @@ o.tabstop = 4
 o.shiftwidth = 4
 o.softtabstop = 4
 -- disable right-click menu
-vim.o.mousemodel = "extend"
+o.mousemodel = "extend"
+-- always show status in the last window
+o.laststatus = 3
 
 -- autocmd --
 local autocmd = vim.api.nvim_create_autocmd

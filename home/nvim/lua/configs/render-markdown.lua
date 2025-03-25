@@ -8,7 +8,7 @@ return {
   max_file_size = 10.0,
 
   -- Filetypes this plugin will run on
-  file_types = { "markdown" },
+  file_types = { "markdown", "Avante" },
 
   -- Vim modes that will show a rendered view of the markdown file
   -- All other modes will be unaffected by this plugin

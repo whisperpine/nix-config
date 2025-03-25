@@ -90,6 +90,7 @@ return {
     },
     event = "BufReadPost",
     opts = require "configs.render-markdown",
+    ft = { "markdown", "Avante" },
     keys = {
       {
         "<leader>mr",
