@@ -37,7 +37,6 @@ flowchart LR
     o_default --> o_linux_wsl
     o_default --> o_linux_server
     o_default --> o_darwin_desktop
-
   end
 
   subgraph home/
@@ -60,6 +59,8 @@ flowchart LR
 
 Download `nixos-wsl.tar.gz` from the [latest release](https://github.com/nix-community/NixOS-WSL/releases).
 
+<details><summary>Install WSL and run NixOS with the default configuration.</summary>
+
 ```sh
 # make sure wsl feature is enabled
 wsl --install --no-distribution
@@ -73,9 +74,13 @@ wsl --import NixOS ~/NixOS/ path/to/nixos-wsl.tar.gz
 wsl -d NixOS
 ```
 
+</details>
+
 Follow the instructions
 [How to change the username](https://nix-community.github.io/NixOS-WSL/how-to/change-username.html)
 to change username.
+
+<details><summary>Pull this repository and apply the configurations.</summary>
 
 ```sh
 # generate ssh key pairs
@@ -98,7 +103,11 @@ vim .env
 sudo nixos-rebuild switch
 ```
 
+</details>
+
 ### Nix-Darwin
+
+<details><summary>Install nix and apply configurations.</summary>
 
 ```sh
 # install nix
@@ -122,5 +131,19 @@ nix --extra-experimental-features "nix-command flakes" \
 darwin-rebuild switch --flake ~/nix-config
 ```
 
+</details>
+
 Tip: `darwin-help` will open an HTML version of the man-page in the default browser.\
 `man 5 configuration.nix` will open the manual of nix-darwin right in the terminal.
+
+## Secrets
+
+Secrets are managed by [sops-nix](https://github.com/Mic92/sops-nix),
+which is based on [sops](https://github.com/getsops/sops).\
+Considering [age](https://github.com/FiloSottile/age) is used,
+make sure *~/.config/sops/age/keys.txt* exists.
+
+```sh
+# decrypt and edit the encrypted file
+sops secrets/encrypted.yaml
+```
