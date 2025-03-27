@@ -26,6 +26,7 @@
     tree-sitter # tree-sitter.nvim
     yarn-berry # markdown-preview.nvim
     nodejs_22 # markdown-preview.nvim
+    fswatch # file watcher used by LSP
     ripgrep # telescope.nvim
     fd # telescope.nvim
     gnumake # avante.nvim
