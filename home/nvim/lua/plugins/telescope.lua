@@ -1,12 +1,15 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    opts = function(_, conf)
-      conf.defaults.mappings.i = {
-        ["<Esc>"] = require("telescope.actions").close,
-      }
-      return conf
-    end,
+    opts = {
+      -- defaults = {
+      --   mappings = {
+      --     i = {
+      --       ["<Esc>"] = require("telescope.actions").close,
+      --     },
+      --   },
+      -- },
+    },
     keys = {
       {
         "<leader>fw",
