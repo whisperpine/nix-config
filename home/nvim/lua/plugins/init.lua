@@ -83,6 +83,20 @@ return {
   },
 
   {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = {
+      -- image = { enabled = true }, -- image viewer using Kitty Graphics Protocol
+      bigfile = { enabled = true }, -- prevents LSP attaching to bigfile
+      input = { enabled = true }, -- better `vim.ui.input` (e.g. when renaming)
+      picker = { enabled = true, prompt = "" }, -- a modern fuzzy-finder akin to telescope
+      scope = { enabled = true }, -- scope detection based on treesitter or indent
+      words = { enabled = true }, -- auto-show LSP references and quickly navigate between them
+    },
+  },
+
+  {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
