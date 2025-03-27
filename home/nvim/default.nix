@@ -65,6 +65,7 @@
     basedpyright # python
     lemminx # xml, svg
     helm-ls # helm
+    harper # English
     vale-ls # English
     vale # English
     texlab # latex

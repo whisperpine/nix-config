@@ -192,6 +192,38 @@ lspconfig.rust_analyzer.setup {
     },
   },
 }
+
+-- configuring single server: harper_ls
+lspconfig.harper_ls.setup {
+  on_attach = on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    ["harper-ls"] = {
+      -- default userDictPath: ~/.config/harper-ls/dictionary.txt
+      userDictPath = "",
+      -- default fileDictPath: ~/.local/share/harper-ls/file_dictionaries
+      fileDictPath = "",
+      -- see all linter rules:
+      -- https://writewithharper.com/docs/rules
+      linters = {
+        SpellCheck = false,
+        ToDoHyphen = false,
+        UnclosedQuotes = false,
+        SentenceCapitalization = false,
+      },
+      codeActions = {
+        ForceStable = true,
+      },
+      markdown = {
+        IgnoreLinkTitle = true,
+      },
+      diagnosticSeverity = "hint",
+      isolateEnglish = true,
+    },
+  },
+}
+
 -- only enable vale_ls when `.vale.ini` exists
 if vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".vale.ini")) then
   lspconfig.vale_ls.setup {
