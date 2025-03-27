@@ -62,7 +62,6 @@ local servers = {
   "yamlls",
   "nil_ls",
   "bashls",
-  "vale_ls",
   "texlab",
   "svelte",
   "taplo",
@@ -193,3 +192,11 @@ lspconfig.rust_analyzer.setup {
     },
   },
 }
+-- only enable vale_ls when `.vale.ini` exists
+if vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".vale.ini")) then
+  lspconfig.vale_ls.setup {
+    on_attach = on_attach,
+    on_init = nvlsp.on_init,
+    capabilities = nvlsp.capabilities,
+  }
+end
