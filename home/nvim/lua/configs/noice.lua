@@ -1,14 +1,8 @@
 return {
   lsp = {
-    progress = {
-      enabled = true,
-    },
-    hover = {
-      enabled = false,
-    },
-    signature = {
-      enabled = false,
-    },
+    progress = { enabled = true },
+    hover = { enabled = false },
+    signature = { enabled = false },
   },
 
   -- you can enable a preset for easier configuration
@@ -57,14 +51,48 @@ return {
   },
 
   routes = {
+    -- trouble.nvim --
+    {
+      filter = { find = "No information available" },
+      opts = { skip = true },
+    },
+    -- vim.lsp.buf.code_action --
+    {
+      filter = { find = "No code actions available" },
+      opts = { skip = true },
+    },
+    -- telescope.nvim --
+    {
+      filter = { find = "Nothing currently selected" },
+      opts = { skip = true },
+    },
+    -- nvim-tree.lua --
+    {
+      filter = { find = "added to clipboard" },
+      view = "mini",
+    },
+    {
+      filter = { find = "to system clipboard" },
+      view = "mini",
+    },
+    {
+      filter = { find = "was properly created" },
+      view = "mini",
+    },
+    {
+      filter = { find = "was properly removed" },
+      view = "mini",
+    },
+    {
+      filter = { find = "%->" },
+      view = "mini",
+    },
+    -- zk-nvim --
     {
       filter = {
-        event = "notify",
-        find = "No information available",
+        find = "{%s*addedCount = %d+,%s*duration = %d+,%s*modifiedCount = %d+,%s*removedCount = %d+,%s*sourceCount = %d+%s*}",
       },
-      opts = {
-        skip = true,
-      },
+      opts = { skip = true },
     },
   },
 }
