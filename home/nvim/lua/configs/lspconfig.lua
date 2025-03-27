@@ -8,9 +8,10 @@ local on_attach = function(_, bufnr)
   local function opts(desc)
     return { buffer = bufnr, desc = "LSP " .. desc }
   end
-  map("n", "<leader>ra", "<cmd> Lspsaga rename <cr>", opts "NvRenamer")
-  map("n", "<leader>ca", vim.lsp.buf.code_action, opts "code action") -- todo: use lspsaga after bug fix
-  -- map("n", "<leader>ca", "<cmd> Lspsaga code_action <cr>", opts "code action")
+  -- map("n", "grn", "<cmd> Lspsaga rename <cr>", opts "NvRenamer")
+  map("n", "grn", vim.lsp.buf.rename, opts "LSP rename")
+  -- map("n", "gra", "<cmd> Lspsaga code_action <cr>", opts "code action")
+  map("n", "gra", vim.lsp.buf.code_action, opts "code action")
   map("n", "<leader>sh", vim.lsp.buf.signature_help, opts "show signature help")
   map("i", "<C-l>", vim.lsp.buf.signature_help, opts "show signature help")
   map(

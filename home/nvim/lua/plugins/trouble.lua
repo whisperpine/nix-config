@@ -114,12 +114,12 @@ return {
         desc = "trouble document symbols",
       },
       {
-        "gr",
+        "grr", -- override the default keymap as of neovim 0.11.0
         "<cmd> Trouble lsp_references focus=true <cr>",
         desc = "LSP show references",
       },
       {
-        "gi",
+        "gri", -- override the default keymap as of neovim 0.11.0
         "<cmd> Trouble lsp_implementations focus=true <cr>",
         desc = "LSP go to implementation",
       },
