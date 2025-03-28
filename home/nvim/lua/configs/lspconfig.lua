@@ -207,10 +207,13 @@ lspconfig.harper_ls.setup {
       -- see all linter rules:
       -- https://writewithharper.com/docs/rules
       linters = {
+        AnA = false,
         SpellCheck = false,
         ToDoHyphen = false,
         UnclosedQuotes = false,
         SentenceCapitalization = false,
+        CapitalizePersonalPronouns = false,
+        OxfordComma = false,
       },
       codeActions = {
         ForceStable = true,

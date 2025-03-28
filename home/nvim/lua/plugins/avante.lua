@@ -1,9 +1,7 @@
 return {
   {
     "yetone/avante.nvim",
-    -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-    build = "make",
-    -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
+    build = "make", -- gnumake should be installed in your OS
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       -- "stevearc/dressing.nvim",
@@ -34,7 +32,6 @@ return {
           __inherited_from = "openai",
           api_key_name = "DEEPSEEK_API_KEY",
           endpoint = "https://api.deepseek.com",
-          -- model = "deepseek-coder",
           model = "deepseek-chat",
         },
       },
