@@ -25,7 +25,7 @@ return {
     ignore = {
       head_icon = true,
       code_background = true,
-      sign = true,
+      -- sign = true,
     },
     -- Number of lines above cursor to show
     above = 0,
@@ -71,10 +71,10 @@ return {
   bullet = {
     -- Turn on / off list bullet rendering
     enabled = true,
-    -- Replaces '-'|'+'|'*' of 'list_item'
-    -- How deeply nested the list is determines the 'level' which is used to index into the list using a cycle
-    -- The item number in the list is used to index into the value using a clamp if the value is also a list
-    -- If the item is a 'checkbox' a conceal is used to hide the bullet instead
+    -- Replaces '-'|'+'|'*' of 'list_item'.
+    -- How deeply nested the list is determines the 'level' which is used to index into the list using a cycle.
+    -- The item number in the list is used to index into the value using a clamp if the value is also a list.
+    -- If the item is a 'checkbox' a conceal is used to hide the bullet instead.
     -- icons = { "", "", "󰨐", "󱓜" },
     icons = { "󰨐", "󱓜", "󰨐", "󱓜" },
     -- icons = { "", "", "", "" },
@@ -105,13 +105,13 @@ return {
       scope_highlight = nil,
     },
     -- Define custom checkbox states, more involved as they are not part of the markdown grammar
-    -- As a result this requires neovim >= 0.10.0 since it relies on 'inline' extmarks
-    -- Can specify as many additional states as you like following the 'todo' pattern below
-    --   The key in this case 'todo' is for health check and to allow users to change its values
-    --   'raw': Matched against the raw text of a 'shortcut_link'
-    --   'rendered': Replaces the 'raw' value when rendering
-    --   'highlight': Highlight for the 'rendered' icon
-    --   'scope_highlight': Highlight for item associated with custom checkbox
+    -- As a result this requires neovim >= 0.10.0 since it relies on 'inline' extmarks.
+    -- Can specify as many additional states as you like following the 'todo' pattern below.
+    --   The key in this case 'todo' is for health check and to allow users to change its values.
+    --   'raw': Matched against the raw text of a 'shortcut_link'.
+    --   'rendered': Replaces the 'raw' value when rendering.
+    --   'highlight': Highlight for the 'rendered' icon.
+    --   'scope_highlight': Highlight for item associated with custom checkbox.
     custom = {
       todo = {
         raw = "[~]",
@@ -144,5 +144,16 @@ return {
         '└', '┴', '┘',
         ' ', '─',
     },
+  },
+
+  code = {
+    -- Turn on / off any sign column related rendering.
+    sign = true,
+    -- Determines how the top / bottom of code block are rendered.
+    -- none: do not render a border.
+    -- thick: use the same highlight as the code body.
+    -- thin: when lines are empty overlay the above & below icons.
+    -- hide: conceal lines unless language name or icon is added.
+    border = "thin",
   },
 }
