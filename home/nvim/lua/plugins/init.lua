@@ -131,6 +131,7 @@ return {
     event = "BufReadPost",
     config = function()
       require("lint").linters_by_ft = {
+        sql = { "sqlfluff" },
         markdown = { "markdownlint" },
         javascript = { "biomejs" },
         typescript = { "biomejs" },

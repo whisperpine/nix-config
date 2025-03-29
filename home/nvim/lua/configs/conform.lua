@@ -27,7 +27,6 @@ return {
     bash = { "shfmt" },
     nix = { "nixfmt" },
     proto = { "buf" },
-    sql = { "sqlfluff" },
     graphql = { "biome" },
 
     -- clang-format
