@@ -50,6 +50,9 @@ o.softtabstop = 4
 o.mousemodel = "extend"
 -- always show status in the last window
 o.laststatus = 3
+-- `c:ver25` set the cursor as a vertical line
+vim.o.guicursor =
+  "n-v-sm:block,c:ver25,i-ci-ve:ver25,r-cr-o:hor20,t:block-blinkon500-blinkoff500-TermCursor"
 
 -- autocmd --
 local autocmd = vim.api.nvim_create_autocmd

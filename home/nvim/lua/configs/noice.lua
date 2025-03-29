@@ -12,6 +12,10 @@ return {
     long_message_to_split = true, -- long messages will be sent to a split
   },
 
+  views = {
+    cmdline_popup = { win_options = { cursorline = true } },
+  },
+
   messages = {
     -- NOTE: If you enable messages, then the cmdline is enabled automatically.
     -- This is a current Neovim limitation.
@@ -52,41 +56,18 @@ return {
 
   routes = {
     -- trouble.nvim --
-    {
-      filter = { find = "No information available" },
-      opts = { skip = true },
-    },
+    { filter = { find = "No information available" }, opts = { skip = true } },
     -- vim.lsp.buf.code_action --
-    {
-      filter = { find = "No code actions available" },
-      opts = { skip = true },
-    },
+    { filter = { find = "No code actions available" }, opts = { skip = true } },
     -- telescope.nvim --
-    {
-      filter = { find = "Nothing currently selected" },
-      opts = { skip = true },
-    },
+    { filter = { find = "Nothing currently selected" }, opts = { skip = true } },
+    { filter = { find = "No diagnostics found" }, opts = { skip = true } },
     -- nvim-tree.lua --
-    {
-      filter = { find = "added to clipboard" },
-      view = "mini",
-    },
-    {
-      filter = { find = "to system clipboard" },
-      view = "mini",
-    },
-    {
-      filter = { find = "was properly created" },
-      view = "mini",
-    },
-    {
-      filter = { find = "was properly removed" },
-      view = "mini",
-    },
-    {
-      filter = { find = "%->" },
-      view = "mini",
-    },
+    { filter = { find = "added to clipboard" }, view = "mini" },
+    { filter = { find = "to system clipboard" }, view = "mini" },
+    { filter = { find = "was properly created" }, view = "mini" },
+    { filter = { find = "was properly removed" }, view = "mini" },
+    { filter = { find = "%->" }, view = "mini" },
     -- zk-nvim --
     {
       filter = {
