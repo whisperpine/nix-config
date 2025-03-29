@@ -25,4 +25,6 @@
 
   # Optimize storage.
   nix.optimise.automatic = true;
+
+  time.timeZone = "Asia/Shanghai";
 }
