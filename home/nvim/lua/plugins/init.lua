@@ -64,15 +64,6 @@ return {
     "folke/which-key.nvim",
     lazy = false,
     opts = { delay = 0 },
-    init = function()
-      local wk = require "which-key"
-      wk.add {
-        { "<leader>mn", icon = { icon = "", color = "grey" } },
-        { "<leader>ma", icon = { icon = "", color = "grey" } },
-        { "<leader>md", icon = { icon = "", color = "grey" } },
-        { "<leader>mi", icon = { icon = "", color = "grey" } },
-      }
-    end,
   },
 
   {

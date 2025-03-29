@@ -2,6 +2,22 @@ return {
   {
     "zk-org/zk-nvim",
     main = "zk",
+    cond = function()
+      -- only enable this plugin when `.zk` exists
+      return vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".zk")) ~= nil
+    end,
+    dependencies = {
+      "folke/which-key.nvim",
+    },
+    init = function()
+      local wk = require "which-key"
+      wk.add {
+        { "<leader>mn", icon = { icon = "", color = "grey" } },
+        { "<leader>ma", icon = { icon = "", color = "grey" } },
+        { "<leader>md", icon = { icon = "", color = "grey" } },
+        { "<leader>mi", icon = { icon = "", color = "grey" } },
+      }
+    end,
     opts = {
       -- can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`)
       -- it's recommended to use "telescope", "fzf", "fzf_lua", or "minipick"
