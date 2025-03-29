@@ -15,7 +15,7 @@ map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })
 
--- only take effect in insert mode
+-- only take effect in normal mode
 map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
 map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
 map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
@@ -25,6 +25,12 @@ map("n", "<C-s>", "<cmd> w <cr>", { desc = "general save file" })
 map("n", "<C-c>", "<cmd> %y+ <cr>", { desc = "general copy whole file" })
 map("n", "<leader>rn", "<cmd> set rnu! <cr>", { desc = "toggle relative number" })
 map("n", "<leader>ch", "<cmd> NvCheatsheet <cr>", { desc = "toggle nvcheatsheet" })
+map("n", "<leader>cp", function()
+  print(vim.fn.expand "%")
+end, { desc = "print relative path" })
+map("n", "<leader>cP", function()
+  print(vim.fn.expand "%:p")
+end, { desc = "print absolute path" })
 -- toggle inlay hints
 map("n", "<leader>cl", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
