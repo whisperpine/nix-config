@@ -7,6 +7,9 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
+      symbol_in_winbar = {
+        hide_keyword = false,
+      },
       lightbulb = {
         virtual_text = false,
       },
