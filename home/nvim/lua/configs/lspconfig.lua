@@ -64,6 +64,7 @@ local servers = {
   "bashls",
   "texlab",
   "svelte",
+  "buf_ls",
   "taplo",
   "html",
   "sqls",
