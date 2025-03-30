@@ -260,12 +260,4 @@ return {
       },
     },
   },
-
-  -- todo: remove this plugin when neovim is upgraded to 0.11.0
-  {
-    "folke/ts-comments.nvim",
-    opts = {},
-    event = "BufReadPost",
-    enabled = vim.fn.has "nvim-0.10.0" == 1,
-  },
 }
