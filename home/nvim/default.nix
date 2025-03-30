@@ -17,6 +17,7 @@
 
   imports = [
     ../marksman # markdown language server
+    ../sqls # sql language server
   ];
 
   home.packages = with pkgs; [
@@ -70,7 +71,6 @@
     vale # English
     texlab # latex
     taplo # toml
-    sqls # sql
     nil # nix
 
     # including lsp "clangd" and formatter "clang-format"
