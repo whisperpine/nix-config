@@ -84,4 +84,4 @@ plugin.keys = {
   },
 }
 
-return { plugin }
+return plugin

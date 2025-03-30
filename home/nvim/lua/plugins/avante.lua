@@ -59,4 +59,5 @@ plugin.opts = {
   },
 }
 
-return { plugin }
+-- return { plugin }
+return plugin

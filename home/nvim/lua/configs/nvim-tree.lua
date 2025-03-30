@@ -50,6 +50,8 @@ M.diagnostics = {
 }
 
 M.renderer = {
+  root_folder_label = false,
+  indent_markers = { enable = true },
   -- "none", "icon", "name", "all"
   highlight_git = "none",
   highlight_diagnostics = "name",

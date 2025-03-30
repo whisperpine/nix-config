@@ -2,7 +2,7 @@ local plugin = {}
 
 plugin = {
   "folke/trouble.nvim",
-  event = "VeryLazy",
+  event = "LspAttach",
   cmd = "Trouble",
 }
 
@@ -67,6 +67,7 @@ plugin.opts = {
       }, -- filter
     }, -- symbols
   }, -- modes
+
   icons = {
     folder_closed = " ",
     folder_open = " ",
@@ -103,14 +104,14 @@ plugin.opts = {
 
 plugin.keys = {
   {
-    "<leader>dS",
-    "<cmd> Trouble diagnostics toggle focus=true <cr>",
-    desc = "trouble workspace diagnostics",
-  },
-  {
     "<leader>ds",
     "<cmd> Trouble diagnostics toggle filter.buf=0 focus=true <cr>",
     desc = "trouble buffer diagnostics",
+  },
+  {
+    "<leader>dS",
+    "<cmd> Trouble diagnostics toggle focus=true <cr>",
+    desc = "trouble workspace diagnostics",
   },
   {
     "<leader>co",
@@ -139,4 +140,4 @@ plugin.keys = {
   },
 }
 
-return { plugin }
+return plugin

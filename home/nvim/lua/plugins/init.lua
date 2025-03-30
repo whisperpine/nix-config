@@ -1,26 +1,57 @@
 return {
-  -- disable plugins brought from nvchad
-  { "windwp/nvim-autopairs", enabled = false },
-  { "williamboman/mason.nvim", enabled = false },
-  { "rafamadriz/friendly-snippets", enabled = false },
+  --########## nvchad below ##########--
+  "nvim-lua/plenary.nvim",
+  "nvzone/volt",
 
   {
-    "lewis6991/gitsigns.nvim",
-    keys = {
-      { "<leader>cr", "<cmd> Gitsigns reset_hunk <cr>", desc = "git reset hunk" },
-      { "<leader>cs", "<cmd> Gitsigns stage_hunk <cr>", desc = "git stage hunk" },
-    },
+    "nvchad/base46",
+    build = function()
+      require("base46").load_all_highlights()
+    end,
   },
 
   {
-    "L3MON4D3/LuaSnip",
-    opts = { history = true, updateevents = "TextChanged,TextChangedI" },
+    "nvchad/ui",
+    lazy = false,
+    config = function()
+      require "nvchad"
+    end,
+  },
+
+  {
+    "nvim-tree/nvim-web-devicons",
+    opts = function()
+      dofile(vim.g.base46_cache .. "devicons")
+      return { override = require "nvchad.icons.devicons" }
+    end,
+  },
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = "User FilePost",
+    opts = {
+      indent = { char = "│", highlight = "IblChar" },
+      scope = { char = "│", highlight = "IblScopeChar" },
+    },
     config = function(_, opts)
-      require("luasnip").config.set_config(opts)
-      require "nvchad.configs.luasnip"
-      require("luasnip.loaders.from_vscode").load {
-        paths = { "./snippets" },
-      }
+      dofile(vim.g.base46_cache .. "blankline")
+
+      local hooks = require "ibl.hooks"
+      hooks.register(hooks.type.WHITESPACE, hooks.builtin.hide_first_space_indent_level)
+      require("ibl").setup(opts)
+
+      dofile(vim.g.base46_cache .. "blankline")
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+    build = ":TSUpdate",
+    opts = require "configs.nvim-treesitter",
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
     end,
   },
 
@@ -34,11 +65,6 @@ return {
   },
 
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = require "configs.nvim-treesitter",
-  },
-
-  {
     "stevearc/conform.nvim",
     event = "BufReadPost",
     opts = require "configs.conform",
@@ -46,8 +72,8 @@ return {
 
   {
     "neovim/nvim-lspconfig",
+    event = "User FilePost",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -55,7 +81,12 @@ return {
   {
     "folke/which-key.nvim",
     lazy = false,
-    opts = { delay = 0 },
+    cmd = "WhichKey",
+    opts = function()
+      dofile(vim.g.base46_cache .. "whichkey")
+      return { delay = 0 }
+    end,
+    keys = { "<leader>", "<c-w>", '"', "'", "`", "c", "v", "g" },
   },
 
   {
@@ -119,36 +150,6 @@ return {
   },
 
   {
-    "mfussenegger/nvim-lint",
-    event = "BufReadPost",
-    config = function()
-      require("lint").linters_by_ft = {
-        sql = { "sqlfluff" },
-        markdown = { "markdownlint" },
-        javascript = { "biomejs" },
-        typescript = { "biomejs" },
-        graphql = { "biomejs" },
-        json = { "biomejs" },
-        css = { "biomejs" },
-        jsx = { "biomejs" },
-        tsx = { "biomejs" },
-      }
-      local lint_events = {
-        "BufWritePost",
-        "BufReadPost",
-        "InsertLeave",
-      }
-      vim.api.nvim_create_autocmd(lint_events, {
-        callback = function()
-          -- try_lint without arguments runs the linters defined
-          -- in `linters_by_ft` for the current filetype
-          require("lint").try_lint()
-        end,
-      })
-    end,
-  },
-
-  {
     "fei6409/log-highlight.nvim",
     event = "BufReadPost",
     opts = {
@@ -189,7 +190,6 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
-      "nvim-telescope/telescope.nvim",
     },
     keys = {
       { "<leader>fn", "<cmd> Telescope notify <cr>", desc = "telescope notify" },
@@ -219,36 +219,6 @@ return {
       end
       return options
     end,
-  },
-
-  {
-    "stevearc/oil.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      view_options = {
-        -- Show files and directories that start with "."
-        show_hidden = true,
-      },
-      -- Add additional keymaps.
-      keymaps = {
-        ["q"] = { "actions.close", mode = "n" },
-        ["h"] = { "actions.parent", mode = "n" },
-        ["l"] = "actions.select",
-      },
-      -- Configuration for the floating window in oil.open_float
-      float = {
-        border = "single",
-      },
-    },
-    keys = {
-      {
-        "<leader>ro",
-        function()
-          require("oil").open_float()
-        end,
-        desc = "oil open float",
-      },
-    },
   },
 
   {

@@ -1,4 +1,5 @@
 dofile(vim.g.base46_cache .. "lsp")
+-- https://github.com/NvChad/ui/blob/27f449be42b360cbb9f133aa8853017d277f0c49/lua/nvchad/lsp/init.lua
 require("nvchad.lsp").diagnostic_config()
 
 -- modified from:
@@ -8,9 +9,7 @@ local on_attach = function(_, bufnr)
   local function opts(desc)
     return { buffer = bufnr, desc = "LSP " .. desc }
   end
-  -- map("n", "grn", "<cmd> Lspsaga rename <cr>", opts "NvRenamer")
-  map("n", "grn", vim.lsp.buf.rename, opts "LSP rename")
-  -- map("n", "gra", "<cmd> Lspsaga code_action <cr>", opts "code action")
+  map("n", "grn", vim.lsp.buf.rename, opts "rename")
   map("n", "gra", vim.lsp.buf.code_action, opts "code action")
   map("n", "<leader>sh", vim.lsp.buf.signature_help, opts "show signature help")
   map("i", "<C-l>", vim.lsp.buf.signature_help, opts "show signature help")
@@ -38,14 +37,36 @@ local on_attach = function(_, bufnr)
     "<cmd> Telescope diagnostics <cr>",
     { desc = "telescope workspace diagnostics" }
   )
-  -- map("n", "gr", vim.lsp.buf.references, opts "Show references")
-  -- map("n", "gi", vim.lsp.buf.implementation, opts "Go to implementation")
-  -- map("n", "gD", vim.lsp.buf.declaration, opts "Go to declaration")
-  -- map("n", "gd", vim.lsp.buf.definition, opts "Go to definition")
 end
 
--- require "nvchad.configs.lspconfig"
-local nvlsp = require "nvchad.configs.lspconfig"
+-- disable semanticTokens
+local on_init = function(client, _)
+  if client.supports_method "textDocument/semanticTokens" then
+    client.server_capabilities.semanticTokensProvider = nil
+  end
+end
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem = {
+  documentationFormat = { "markdown", "plaintext" },
+  snippetSupport = true,
+  preselectSupport = true,
+  insertReplaceSupport = true,
+  labelDetailsSupport = true,
+  deprecatedSupport = true,
+  commitCharactersSupport = true,
+  tagSupport = { valueSet = { 1 } },
+  resolveSupport = {
+    properties = {
+      "documentation",
+      "detail",
+      "additionalTextEdits",
+    },
+  },
+}
+
+-- -- require "nvchad.configs.lspconfig"
+-- local nvlsp = require "nvchad.configs.lspconfig"
 
 -- require "lspconfig"
 local lspconfig = require "lspconfig"
@@ -74,16 +95,16 @@ local servers = {
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
+    on_init = on_init,
+    capabilities = capabilities,
   }
 end
 
 -- configuring single server: clangd
 lspconfig.clangd.setup {
   on_attach = on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
+  on_init = on_init,
+  capabilities = capabilities,
   -- with "proto" excluded
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
 }
@@ -91,8 +112,8 @@ lspconfig.clangd.setup {
 -- configuring single server: lua_ls
 lspconfig.lua_ls.setup {
   on_attach = on_attach,
-  capabilities = nvlsp.capabilities,
-  on_init = nvlsp.on_init,
+  capabilities = capabilities,
+  on_init = on_init,
   settings = {
     Lua = {
       hint = {
@@ -121,8 +142,8 @@ lspconfig.lua_ls.setup {
 -- configuring single server: ts_ls
 lspconfig.ts_ls.setup {
   on_attach = on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
+  on_init = on_init,
+  capabilities = capabilities,
   settings = {
     typescript = {
       inlayHints = {
@@ -175,8 +196,8 @@ lspconfig.ts_ls.setup {
 -- configuring single server: rust_analyzer
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
+  on_init = on_init,
+  capabilities = capabilities,
   settings = {
     ["rust-analyzer"] = {
       check = { command = "clippy" },
@@ -197,8 +218,8 @@ lspconfig.rust_analyzer.setup {
 -- configuring single server: harper_ls
 lspconfig.harper_ls.setup {
   on_attach = on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
+  on_init = on_init,
+  capabilities = capabilities,
   settings = {
     ["harper-ls"] = {
       -- default userDictPath: ~/.config/harper-ls/dictionary.txt
@@ -232,7 +253,7 @@ lspconfig.harper_ls.setup {
 if vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".vale.ini")) then
   lspconfig.vale_ls.setup {
     on_attach = on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
+    on_init = on_init,
+    capabilities = capabilities,
   }
 end
