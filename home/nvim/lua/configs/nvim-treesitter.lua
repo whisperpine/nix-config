@@ -1,4 +1,16 @@
+pcall(function()
+  dofile(vim.g.base46_cache .. "syntax")
+  dofile(vim.g.base46_cache .. "treesitter")
+end)
+
 return {
+  highlight = {
+    enable = true,
+    use_languagetree = true,
+  },
+
+  indent = { enable = true },
+
   -- all the supported languages by tree-sitter:
   -- https://github.com/nvim-treesitter/nvim-treesitter
   ensure_installed = {
@@ -22,6 +34,7 @@ return {
     "c_sharp",
     "python",
     "vimdoc",
+    "printf",
     "latex",
     "vim",
     "proto",
@@ -34,6 +47,7 @@ return {
     "sql",
     "cpp",
     "rust",
+    "luadoc",
     "lua",
     "html",
     "css",

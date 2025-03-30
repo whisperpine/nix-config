@@ -1,4 +1,6 @@
-return {
+local M = {}
+
+M = {
   lsp = {
     progress = { enabled = true },
     hover = { enabled = false },
@@ -16,64 +18,58 @@ return {
     cmdline_popup = { win_options = { cursorline = true } },
   },
 
-  messages = {
-    -- NOTE: If you enable messages, then the cmdline is enabled automatically.
-    -- This is a current Neovim limitation.
-    enabled = false, -- enables the Noice messages UI
-    view = "notify", -- default view for messages
-    view_error = "notify", -- view for errors
-    view_warn = "notify", -- view for warnings
-    view_history = "messages", -- view for :messages
-    view_search = false, -- view for search count messages. Set to `false` to disable
-  },
+  messages = { enabled = false },
+}
 
-  cmdline = {
-    enabled = true, -- enables the Noice cmdline UI
-    view = "cmdline_popup", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
-    opts = {}, -- global options for the cmdline. See section on views
-    format = {
-      -- conceal: (default=true) This will hide the text in the cmdline that matches the pattern.
-      -- view: (default is cmdline view)
-      -- opts: any options passed to the view
-      -- icon_hl_group: optional hl_group for the icon
-      -- title: set to anything or empty string to hide
-      cmdline = { pattern = "^:", icon = ":", lang = "vim" },
-      search_down = { kind = "search", pattern = "^/", icon = "/", lang = "regex" },
-      search_up = { kind = "search", pattern = "^%?", icon = "?", lang = "regex" },
-      filter = { conceal = false, pattern = "^:%s*!", icon = "$", lang = "bash" },
-      lua = {
-        conceal = false,
-        pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" },
-        icon = "",
-        lang = "lua",
-      },
-      help = { conceal = false, pattern = "^:%s*he?l?p?%s+", icon = "󰈙" },
-      map = { conceal = false, pattern = "^:%s*map%s+", icon = "󰥻" },
-      input = { view = "cmdline_input", icon = "" }, -- Used by input()
-      -- lua = false, -- to disable a format, set to `false`
+M.cmdline = {
+  enabled = true, -- enables the Noice cmdline UI
+  view = "cmdline_popup", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
+  opts = {}, -- global options for the cmdline. See section on views
+  format = {
+    -- conceal: (default=true) This will hide the text in the cmdline that matches the pattern.
+    -- view: (default is cmdline view)
+    -- opts: any options passed to the view
+    -- icon_hl_group: optional hl_group for the icon
+    -- title: set to anything or empty string to hide
+    cmdline = { pattern = "^:", icon = ":", lang = "vim" },
+    search_down = { kind = "search", pattern = "^/", icon = "/", lang = "regex" },
+    search_up = { kind = "search", pattern = "^%?", icon = "?", lang = "regex" },
+    filter = { conceal = false, pattern = "^:%s*!", icon = "$", lang = "bash" },
+    lua = {
+      conceal = false,
+      pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" },
+      icon = "",
+      lang = "lua",
     },
-  },
-
-  routes = {
-    -- trouble.nvim --
-    { filter = { find = "No information available" }, opts = { skip = true } },
-    -- vim.lsp.buf.code_action --
-    { filter = { find = "No code actions available" }, opts = { skip = true } },
-    -- telescope.nvim --
-    { filter = { find = "Nothing currently selected" }, opts = { skip = true } },
-    { filter = { find = "No diagnostics found" }, opts = { skip = true } },
-    -- nvim-tree.lua --
-    { filter = { find = "added to clipboard" }, view = "mini" },
-    { filter = { find = "to system clipboard" }, view = "mini" },
-    { filter = { find = "was properly created" }, view = "mini" },
-    { filter = { find = "was properly removed" }, view = "mini" },
-    { filter = { find = "%->" }, view = "mini" },
-    -- zk-nvim --
-    {
-      filter = {
-        find = "{%s*addedCount = %d+,%s*duration = %d+,%s*modifiedCount = %d+,%s*removedCount = %d+,%s*sourceCount = %d+%s*}",
-      },
-      opts = { skip = true },
-    },
+    help = { conceal = false, pattern = "^:%s*he?l?p?%s+", icon = "󰈙" },
+    map = { conceal = false, pattern = "^:%s*map%s+", icon = "󰥻" },
+    input = { view = "cmdline_input", icon = "" }, -- Used by input()
+    -- lua = false, -- to disable a format, set to `false`
   },
 }
+
+M.routes = {
+  -- trouble.nvim --
+  { filter = { find = "No information available" }, opts = { skip = true } },
+  -- vim.lsp.buf.code_action --
+  { filter = { find = "No code actions available" }, opts = { skip = true } },
+  -- telescope.nvim --
+  { filter = { find = "Nothing currently selected" }, opts = { skip = true } },
+  { filter = { find = "No diagnostics found" }, opts = { skip = true } },
+  -- nvim-tree.lua --
+  { filter = { find = "added to clipboard" }, view = "mini" },
+  { filter = { find = "removed from clipboard" }, view = "mini" },
+  { filter = { find = "to system clipboard" }, view = "mini" },
+  { filter = { find = "was properly created" }, view = "mini" },
+  { filter = { find = "was properly removed" }, view = "mini" },
+  { filter = { find = "%->" }, view = "mini" },
+  -- zk-nvim --
+  {
+    filter = {
+      find = "{%s*addedCount = %d+,%s*duration = %d+,%s*modifiedCount = %d+,%s*removedCount = %d+,%s*sourceCount = %d+%s*}",
+    },
+    opts = { skip = true },
+  },
+}
+
+return M

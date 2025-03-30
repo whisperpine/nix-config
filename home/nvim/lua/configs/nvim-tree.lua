@@ -1,8 +1,8 @@
 dofile(vim.g.base46_cache .. "nvimtree")
 
-local opts = {}
+local M = {}
 
-opts = {
+M = {
   disable_netrw = true,
   hijack_cursor = true,
   sync_root_with_cwd = true,
@@ -33,7 +33,7 @@ opts = {
   },
 }
 
-opts.diagnostics = {
+M.diagnostics = {
   enable = true,
   show_on_dirs = false,
   show_on_open_dirs = true,
@@ -49,7 +49,7 @@ opts.diagnostics = {
   },
 }
 
-opts.renderer = {
+M.renderer = {
   -- "none", "icon", "name", "all"
   highlight_git = "none",
   highlight_diagnostics = "name",
@@ -107,8 +107,11 @@ opts.renderer = {
   },
 }
 
-opts.on_attach = function(bufnr)
+M.on_attach = function(bufnr)
   local api = require "nvim-tree.api"
+
+  ---@param desc string
+  ---@return table
   local function opts(desc)
     return {
       desc = "nvim-tree: " .. desc,
@@ -175,4 +178,4 @@ opts.on_attach = function(bufnr)
   -- END_DEFAULT_ON_ATTACH
 end
 
-return opts
+return M

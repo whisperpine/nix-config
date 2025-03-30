@@ -5,7 +5,7 @@ return {
   { "rafamadriz/friendly-snippets", enabled = false },
 
   {
-    "gitsigns.nvim",
+    "lewis6991/gitsigns.nvim",
     keys = {
       { "<leader>cr", "<cmd> Gitsigns reset_hunk <cr>", desc = "git reset hunk" },
       { "<leader>cs", "<cmd> Gitsigns stage_hunk <cr>", desc = "git stage hunk" },
@@ -27,11 +27,7 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    opts = function()
-      local my_config = require "configs.nvim-tree"
-      local nvchad_config = require "nvchad.configs.nvimtree"
-      return vim.tbl_deep_extend("force", nvchad_config, my_config)
-    end,
+    opts = require "configs.nvim-tree",
     keys = {
       { "<C-n>", "<cmd> NvimTreeToggle <cr>", desc = "nvimtree toggle window" },
     },
@@ -39,11 +35,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = function()
-      local my_config = require "configs.nvim-treesitter"
-      local nvchad_config = require "nvchad.configs.treesitter"
-      return vim.tbl_deep_extend("force", nvchad_config, my_config)
-    end,
+    opts = require "configs.nvim-treesitter",
   },
 
   {
@@ -195,11 +187,9 @@ return {
     event = "VeryLazy",
     opts = require "configs.noice",
     dependencies = {
-      -- If you lazy-load any plugin below, make sure to add proper `module="..."` entries.
       "MunifTanjim/nui.nvim",
-      -- `nvim-notify` is only needed, if you want to use the notification view.
-      -- If not available, we use `mini` as the fallback.
       "rcarriga/nvim-notify",
+      "nvim-telescope/telescope.nvim",
     },
     keys = {
       { "<leader>fn", "<cmd> Telescope notify <cr>", desc = "telescope notify" },
