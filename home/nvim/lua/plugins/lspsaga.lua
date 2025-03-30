@@ -32,6 +32,11 @@ plugin.opts = {
 
 plugin.keys = {
   {
+    "<C-K>", -- ctrl+shift+k
+    "<cmd> Lspsaga show_line_diagnostics <cr>",
+    desc = "lspsaga show line diagnostics",
+  },
+  {
     "]d",
     "<cmd> Lspsaga diagnostic_jump_next <cr>",
     desc = "lspsaga diagnostic next",
