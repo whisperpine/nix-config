@@ -4,7 +4,6 @@ local M = {}
 M = {
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
-  -- root_dir = vim.fs.root(0, { "Cargo.toml", ".git" }),
   root_markers = { "Cargo.toml", ".git" },
 }
 
