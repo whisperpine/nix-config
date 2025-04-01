@@ -54,7 +54,7 @@
     # find all language servers here:
     # https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
     dockerfile-language-server-nodejs # dockerfile
-    vscode-langservers-extracted # json, css
+    vscode-langservers-extracted # json, css, html
     typescript-language-server # typescript, javascript
     # tailwindcss-language-server # tailwind css
     svelte-language-server # svelte

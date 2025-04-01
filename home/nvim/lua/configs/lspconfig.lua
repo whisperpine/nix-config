@@ -2,71 +2,10 @@ dofile(vim.g.base46_cache .. "lsp")
 -- https://github.com/NvChad/ui/blob/27f449be42b360cbb9f133aa8853017d277f0c49/lua/nvchad/lsp/init.lua
 require("nvchad.lsp").diagnostic_config()
 
--- modified from:
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/lspconfig.lua#L5C15-L5C23
-local on_attach = function(_, bufnr)
-  local map = vim.keymap.set
-  local function opts(desc)
-    return { buffer = bufnr, desc = "LSP " .. desc }
-  end
-  map("n", "grn", vim.lsp.buf.rename, opts "rename")
-  map("n", "gra", vim.lsp.buf.code_action, opts "code action")
-  map("n", "<leader>sh", vim.lsp.buf.signature_help, opts "show signature help")
-  map("i", "<C-l>", vim.lsp.buf.signature_help, opts "show signature help")
-  map(
-    "n",
-    "<leader>fs",
-    "<cmd> Telescope lsp_document_symbols <cr>",
-    { desc = "telescope document symbols" }
-  )
-  map(
-    "n",
-    "<leader>fS",
-    "<cmd> Telescope lsp_dynamic_workspace_symbols <cr>",
-    { desc = "telescope workspace symbols" }
-  )
-  map(
-    "n",
-    "<leader>dd",
-    "<cmd> Telescope diagnostics bufnr=0 <cr>",
-    { desc = "telescope buffer diagnostics" }
-  )
-  map(
-    "n",
-    "<leader>dD",
-    "<cmd> Telescope diagnostics <cr>",
-    { desc = "telescope workspace diagnostics" }
-  )
-end
-
--- disable semanticTokens
-local on_init = function(client, _)
-  if client.supports_method "textDocument/semanticTokens" then
-    client.server_capabilities.semanticTokensProvider = nil
-  end
-end
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem = {
-  documentationFormat = { "markdown", "plaintext" },
-  snippetSupport = true,
-  preselectSupport = true,
-  insertReplaceSupport = true,
-  labelDetailsSupport = true,
-  deprecatedSupport = true,
-  commitCharactersSupport = true,
-  tagSupport = { valueSet = { 1 } },
-  resolveSupport = {
-    properties = {
-      "documentation",
-      "detail",
-      "additionalTextEdits",
-    },
-  },
-}
-
--- -- require "nvchad.configs.lspconfig"
--- local nvlsp = require "nvchad.configs.lspconfig"
+local lsputil = require "lsputil"
+local on_attach = lsputil.on_attach
+local on_init = lsputil.on_init
+local capabilities = lsputil.capabilities
 
 -- require "lspconfig"
 local lspconfig = require "lspconfig"
@@ -214,46 +153,3 @@ lspconfig.rust_analyzer.setup {
     },
   },
 }
-
--- configuring single server: harper_ls
-lspconfig.harper_ls.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-  settings = {
-    ["harper-ls"] = {
-      -- default userDictPath: ~/.config/harper-ls/dictionary.txt
-      userDictPath = "",
-      -- default fileDictPath: ~/.local/share/harper-ls/file_dictionaries
-      fileDictPath = "",
-      -- see all linter rules:
-      -- https://writewithharper.com/docs/rules
-      linters = {
-        AnA = false,
-        SpellCheck = false,
-        ToDoHyphen = false,
-        UnclosedQuotes = false,
-        SentenceCapitalization = false,
-        CapitalizePersonalPronouns = false,
-        OxfordComma = false,
-      },
-      codeActions = {
-        ForceStable = true,
-      },
-      markdown = {
-        IgnoreLinkTitle = true,
-      },
-      diagnosticSeverity = "hint",
-      isolateEnglish = true,
-    },
-  },
-}
-
--- only enable vale_ls when `.vale.ini` exists
-if vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".vale.ini")) then
-  lspconfig.vale_ls.setup {
-    on_attach = on_attach,
-    on_init = on_init,
-    capabilities = capabilities,
-  }
-end
