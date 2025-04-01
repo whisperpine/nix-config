@@ -27,7 +27,7 @@
     tree-sitter # tree-sitter.nvim
     yarn-berry # markdown-preview.nvim
     nodejs_22 # markdown-preview.nvim
-    fswatch # file watcher used by LSP
+    inotify-tools # file watcher used by LSP
     ripgrep # telescope.nvim
     gnumake # avante.nvim
     fd # telescope.nvim
@@ -56,7 +56,7 @@
     dockerfile-language-server-nodejs # dockerfile
     vscode-langservers-extracted # json, css, html
     typescript-language-server # typescript, javascript
-    # tailwindcss-language-server # tailwind css
+    tailwindcss-language-server # tailwind css
     svelte-language-server # svelte
     bash-language-server # bash sh shell
     yaml-language-server # yaml

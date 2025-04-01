@@ -75,7 +75,7 @@ vim.lsp.config("*", {
 })
 
 -- enable language servers defined under ~/.config/nvim/lsp
-vim.lsp.enable { "harper_ls" }
+vim.lsp.enable { "harper_ls", "rust_analyzer", "ts_ls", "lua_ls" }
 
 -- only enable vale_ls when `.vale.ini` exists
 if vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".vale.ini")) then
