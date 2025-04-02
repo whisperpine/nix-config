@@ -6,6 +6,7 @@ in
   home.packages = with pkgs; [
     git
     delta
+    git-lfs
   ];
 
   xdg.configFile.gitconfig = {

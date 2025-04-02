@@ -27,7 +27,6 @@
     home-manager
 
     docker-compose
-    git-lfs
     clang
     tree
     file
