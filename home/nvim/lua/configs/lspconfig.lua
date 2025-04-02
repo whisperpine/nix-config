@@ -23,7 +23,6 @@ local servers = {
   "buf_ls",
   "taplo",
   "html",
-  "sqls",
 }
 
 -- LSPs with default config

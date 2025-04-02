@@ -29,6 +29,7 @@ M.formatters_by_ft = {
   nix = { "nixfmt" },
   proto = { "buf" },
   graphql = { "biome" },
+  sql = { "sqruff" },
 
   -- clang-format
   objc = { "clang-format" },

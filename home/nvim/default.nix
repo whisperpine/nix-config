@@ -17,7 +17,6 @@
 
   imports = [
     ../marksman # markdown language server
-    ../sqls # sql language server
   ];
 
   home.packages = with pkgs; [
@@ -42,6 +41,7 @@
     xmlstarlet # xml
     opentofu # terraform, opentofu
     sqlfluff # sql
+    sqruff # sql
     rustfmt # rust
     stylua # lua
     shfmt # shell
