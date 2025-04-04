@@ -18,6 +18,7 @@
     ./btop
     ./yazi
     ./nvim
+    ./pgcli
     ./nushell
     ./starship
   ];
