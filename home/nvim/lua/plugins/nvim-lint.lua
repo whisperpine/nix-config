@@ -7,7 +7,7 @@ plugin = {
 
 plugin.config = function()
   require("lint").linters_by_ft = {
-    sql = { "sqlfluff" },
+    sql = { "sqruff" },
     markdown = { "markdownlint" },
     javascript = { "biomejs" },
     typescript = { "biomejs" },
