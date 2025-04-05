@@ -49,6 +49,8 @@ M.cmdline = {
 }
 
 M.routes = {
+  -- neovim native man.lua
+  { filter = { find = "man.lua: no manual entry for" }, opts = { skip = true } },
   -- trouble.nvim --
   { filter = { find = "No information available" }, opts = { skip = true } },
   -- vim.lsp.buf.code_action --
