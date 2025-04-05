@@ -65,6 +65,8 @@ M.routes = {
   { filter = { find = "was properly created" }, view = "mini" },
   { filter = { find = "was properly removed" }, view = "mini" },
   { filter = { find = "%->" }, view = "mini" },
+  -- nvim-treesitter
+  { filter = { find = "All parsers are up-to-date!" }, opts = { skip = true } },
   -- zk-nvim --
   {
     filter = {
