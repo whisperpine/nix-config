@@ -14,9 +14,9 @@ M = {
     long_message_to_split = true, -- long messages will be sent to a split
   },
 
-  views = {
-    cmdline_popup = { win_options = { cursorline = true } },
-  },
+  -- views = {
+  --   cmdline_popup = { win_options = { cursorline = true } },
+  -- },
 
   messages = { enabled = false },
 }
