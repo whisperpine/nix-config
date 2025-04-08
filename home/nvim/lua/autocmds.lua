@@ -26,14 +26,13 @@ autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
 -- make generated directories and files readonly
 autocmd({ "BufRead" }, {
   pattern = {
+    "**/.local/share/nvim/**",
     "**/.cargo/registry/**",
     "**/node_modules/**",
     "**/.venv/**",
     "**/target/**",
     "**/.direnv/**",
-    "Cargo.lock",
-    "flake.lock",
-    "uv.lock",
+    "*.lock",
   },
   callback = function()
     vim.bo.readonly = true
