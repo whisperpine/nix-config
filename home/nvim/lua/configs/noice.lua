@@ -58,6 +58,12 @@ M.routes = {
   -- telescope.nvim --
   { filter = { find = "Nothing currently selected" }, opts = { skip = true } },
   { filter = { find = "No diagnostics found" }, opts = { skip = true } },
+  { filter = { find = "No changes found" }, opts = { skip = true } },
+  -- lspsaga
+  {
+    filter = { find = "response of request method textDocument/definition is empty" },
+    opts = { skip = true },
+  },
   -- nvim-tree.lua --
   { filter = { find = "added to clipboard" }, view = "mini" },
   { filter = { find = "removed from clipboard" }, view = "mini" },
