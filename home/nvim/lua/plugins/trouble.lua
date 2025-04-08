@@ -6,6 +6,10 @@ plugin = {
   cmd = "Trouble",
 }
 
+plugin.init = function()
+  dofile(vim.g.base46_cache .. "trouble")
+end
+
 plugin.opts = {
   multiline = false, -- render multi-line messages
   warn_no_results = false, -- show a warning when there are no results

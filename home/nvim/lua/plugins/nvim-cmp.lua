@@ -16,7 +16,6 @@ plugin = {
         }
       end,
     },
-
     -- cmp sources plugins
     {
       "saadparwaiz1/cmp_luasnip",

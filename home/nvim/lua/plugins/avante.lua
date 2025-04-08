@@ -16,6 +16,10 @@ plugin = {
   -- },
 }
 
+plugin.init = function()
+  dofile(vim.g.base46_cache .. "avante")
+end
+
 plugin.opts = {
   provider = "deepseek",
   openai = {

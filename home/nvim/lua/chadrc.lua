@@ -7,6 +7,10 @@ local M = {}
 
 M.base46 = {
   theme = "tomorrow_night",
+  -- extra integrations.
+  -- compiled files are located under "~/.local/share/nvim/base46"
+  -- note: REINSTALL "base46" plugin after altering this attribute.
+  integrations = { "avante", "trouble" },
 }
 
 M.ui = {
