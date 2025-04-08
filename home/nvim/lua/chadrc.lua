@@ -7,9 +7,53 @@ local M = {}
 
 M.base46 = {
   theme = "tomorrow_night",
-  -- extra integrations.
+
+  -- copy highlight groups to an empty buffer:
+  -- ":redir @a | silent hi | redir END | new | put a"
+  hl_override = {
+    CursorLine = { bg = "#313131" },
+    NvimTreeNormal = { bg = "#191919" },
+    NvimTreeNormalNC = { bg = "#191919" },
+    NvimTreeCursorLine = { bg = "#313131" },
+    TelescopeSelection = { fg = "#c5c8c2", bg = "#313131" },
+    LspInlayHint = { fg = "#7b7b7b", bg = "#2a2a2a" },
+    LspSignatureActiveParameter = { fg = "#8b8b8b" },
+    ["@keyword.exception"] = { fg = "#b294bb" }, -- e.g. "try" and "except" in python
+    ["@module"] = { fg = "#8AB689" }, -- e.g. module of rust, python, javascript
+    ["@variable"] = { fg = "#cc6666" },
+    ["@variable.member"] = { fg = "#cc6666" }, -- e.g. rust struct elements, python class attributes
+    ["@property"] = { fg = "#cc6666" }, -- e.g. "fg" in this line
+    ["@function.macro"] = { fg = "#8AA0EA" }, -- e.g. rust macros
+    ["@variable.parameter"] = { fg = "#c5c8c6" }, -- e.g. parameters in function signature
+    ["@punctuation.delimiter"] = { fg = "#c5c8c6" },
+  },
+
+  -- change attributes of theme
+  changed_themes = {
+    ---@diagnostic disable-next-line: missing-fields
+    all = {},
+    tomorrow_night = {
+      ---@diagnostic disable-next-line: missing-fields
+      base_30 = {
+        black = "#202020", -- background
+        darker_black = "#202020", -- nvimtree bg, floating term bg
+        statusline_bg = "#2a2a2a",
+        black2 = "#2a2a2a", -- tabufline, telescope search bg
+        grey_fg = "#666666", -- comments
+      },
+      -- https://github.com/chriskempson/base16/blob/main/styling.md
+      ---@diagnostic disable-next-line: missing-fields
+      base_16 = {
+        base00 = "#202020", -- default background
+        base01 = "#161616", -- lighter background
+        base02 = "#3b3b3b", -- selection background
+      },
+    },
+  },
+
+  -- extra integrations
   -- compiled files are located under "~/.local/share/nvim/base46"
-  -- note: REINSTALL "base46" plugin after altering this attribute.
+  -- note: REINSTALL "base46" plugin after altering this attribute
   integrations = { "avante", "trouble" },
 }
 
@@ -50,6 +94,7 @@ M.term = {
     col = 0.0,
     width = 1.0,
     height = 0.80,
+    -- single, double, rounded, solid, shadow, none
     border = "single",
   },
 }

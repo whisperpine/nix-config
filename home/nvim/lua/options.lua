@@ -19,6 +19,14 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
+-- config hilight groups
+local highlights = {
+  -- CursorLine = { bg = "#313131" },
+}
+for group, opts in pairs(highlights) do
+  vim.api.nvim_set_hl(0, group, opts)
+end
+
 -------------------------------------- options ------------------------------------------
 o.showmode = false
 
