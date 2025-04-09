@@ -8,6 +8,7 @@ local M = {}
 -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/lspconfig.lua#L5C15-L5C23
 M.on_attach = function(_, bufnr)
   local map = vim.keymap.set
+  ---@param desc string
   local function opts(desc)
     return { buffer = bufnr, desc = "LSP " .. desc }
   end
@@ -38,6 +39,17 @@ M.on_attach = function(_, bufnr)
     "<leader>dD",
     "<cmd> Telescope diagnostics <cr>",
     { desc = "telescope workspace diagnostics" }
+  )
+  map(
+    "n",
+    "<C-K>", -- ctrl+shift+k
+    function()
+      vim.diagnostic.open_float {
+        scope = "line",
+        severity_sort = true,
+      }
+    end,
+    opts "show line diagnostics"
   )
 end
 
