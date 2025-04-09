@@ -1,0 +1,18 @@
+# git
+.git
+
+# direnv
+.direnv
+
+# js/ts
+node_modules
+
+# rust
+target
+
+# python
+.venv
+
+# others
+cache
+dist

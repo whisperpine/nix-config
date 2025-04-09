@@ -17,6 +17,7 @@
 
   imports = [
     ../marksman # markdown language server
+    ../fd # telescope.nvim
   ];
 
   home.packages = with pkgs; [
@@ -29,7 +30,6 @@
     inotify-tools # file watcher used by LSP
     ripgrep # telescope.nvim
     gnumake # avante.nvim
-    fd # telescope.nvim
     zk # zk-nvim
 
     # formatters and linters
