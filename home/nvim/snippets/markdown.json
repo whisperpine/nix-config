@@ -113,5 +113,13 @@
       "> [!CAUTION]",
       "> $0"
     ]
+  },
+  "lint": {
+    "prefix": "lint",
+    "description": "Disable a markdownlint rule",
+    "body": [
+      "<!-- markdownlint-disable MD$0 -->",
+      "<!-- markdownlint-enable MD$0 -->"
+    ]
   }
 }
