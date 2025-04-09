@@ -11,9 +11,9 @@ plugin = {
     --- The below dependencies are optional,
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
   },
-  -- keys = {
-  --   { "<leader>aa", "<cmd>AvanteAsk<cr>", desc = "avante: ask" },
-  -- },
+  keys = {
+    { "<leader>aa", "<cmd>AvanteAsk<cr>", desc = "avante: ask" },
+  },
 }
 
 plugin.init = function()
