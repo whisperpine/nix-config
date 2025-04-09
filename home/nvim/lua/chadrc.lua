@@ -12,8 +12,8 @@ M.base46 = {
   -- ":redir @a | silent hi | redir END | new | put a"
   hl_override = {
     CursorLine = { bg = "#313131" },
-    NvimTreeNormal = { bg = "#191919" },
-    NvimTreeNormalNC = { bg = "#191919" },
+    -- NvimTreeNormal = { bg = "#191919" },
+    -- NvimTreeNormalNC = { bg = "#191919" },
     NvimTreeCursorLine = { bg = "#313131" },
     TelescopeSelection = { fg = "#c5c8c2", bg = "#313131" },
     LspInlayHint = { fg = "#7b7b7b", bg = "#2a2a2a" },
