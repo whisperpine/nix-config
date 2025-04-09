@@ -1,11 +1,10 @@
-{
-  pkgs ? import <nixpkgs> { },
-  ...
-}:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [ erdtree ];
 
-  home.file.".config/erdtree/.erdtree.toml" = {
+  xdg.configFile.erdtree = {
+    enable = true;
     source = ./.erdtree.toml;
+    target = "./erdtree/.erdtree.toml";
   };
 }
