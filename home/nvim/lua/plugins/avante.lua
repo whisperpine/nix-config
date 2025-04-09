@@ -21,6 +21,7 @@ plugin.init = function()
 end
 
 plugin.opts = {
+  hints = { enabled = false },
   provider = "deepseek",
   openai = {
     endpoint = "https://api.openai.com/v1",
