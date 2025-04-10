@@ -1,9 +1,10 @@
 local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
 
 -- user event that loads after UIEnter
 -- modified from: https://github.com/NvChad/NvChad/blob/6f25b2739684389ca69ea8229386c098c566c408/lua/nvchad/autocmds.lua
 autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
-  group = vim.api.nvim_create_augroup("NvFilePost", { clear = true }),
+  group = augroup("NvFilePost", { clear = true }),
   callback = function(args)
     if not vim.g.ui_entered and args.event == "UIEnter" then
       vim.g.ui_entered = true
@@ -25,6 +26,7 @@ autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
 
 -- make generated directories and files readonly
 autocmd({ "BufRead" }, {
+  group = augroup("DirFileReadonly", { clear = true }),
   pattern = {
     "**/.local/share/nvim/**",
     "**/.cargo/registry/**",
@@ -42,6 +44,7 @@ autocmd({ "BufRead" }, {
 -- when current buffer is readonly,
 -- set no modifiable and disable diagnostics
 autocmd("BufReadPost", {
+  group = augroup("ReadonlyNoModifiableDiagnostics", { clear = true }),
   callback = function()
     vim.bo.modifiable = not vim.bo.readonly
     vim.diagnostic.enable(not vim.bo.readonly, { bufnr = 0 })
@@ -50,6 +53,7 @@ autocmd("BufReadPost", {
 
 -- set indent size by filetype
 autocmd("Filetype", {
+  group = augroup("SetIndentSizeByFiletype", { clear = true }),
   command = "setlocal shiftwidth=2 tabstop=2 softtabstop=2",
   pattern = {
     "javascript",
@@ -72,13 +76,15 @@ autocmd("Filetype", {
 })
 
 -- set `textwidth` in markdown files.
-autocmd("Filetype", {
-  pattern = { "markdown" },
+autocmd("BufEnter", {
+  group = augroup("SetTextwidthForMarkdown", { clear = true }),
+  pattern = { "*.md" },
   command = "setlocal textwidth=80",
 })
 
 -- restore cursor position on file open
 autocmd("BufReadPost", {
+  group = augroup("RestoreCursorPosition", { clear = true }),
   pattern = "*",
   callback = function()
     local line = vim.fn.line "'\""
@@ -95,8 +101,16 @@ autocmd("BufReadPost", {
 
 -- turn off spell checking in terminal mode
 autocmd("TermOpen", {
+  group = augroup("TerminalDisableSpellChecking", { clear = true }),
   pattern = "*",
   callback = function()
     vim.o.spell = false
   end,
+})
+
+-- clear indentexpr for python
+autocmd("BufEnter", {
+  group = augroup("SetPythonIndentexpr", { clear = true }),
+  pattern = { "*.py" },
+  command = "setlocal indentexpr=",
 })
