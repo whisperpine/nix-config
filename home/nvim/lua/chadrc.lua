@@ -39,7 +39,7 @@ M.base46 = {
         darker_black = "#202020", -- nvimtree bg, floating term bg
         statusline_bg = "#2a2a2a",
         black2 = "#2a2a2a", -- tabufline, telescope search bg
-        grey_fg = "#666666", -- comments
+        grey_fg = "#717171", -- comments
       },
       -- https://github.com/chriskempson/base16/blob/main/styling.md
       ---@diagnostic disable-next-line: missing-fields
