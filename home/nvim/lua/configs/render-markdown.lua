@@ -151,4 +151,7 @@ M.anti_conceal = {
   below = 0,
 }
 
+-- disable LaTex rendering
+M.latex = { enabled = false }
+
 return M
