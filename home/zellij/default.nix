@@ -11,17 +11,17 @@
         };
       };
       themes.custom = {
-        fg = "#aaaaaa";
-        bg = "#202020";
+        fg = "#bdbdbd"; # selection foreground
+        bg = "#3f3f3f"; # selection background
         black = "#161616";
         red = "#161616";
         green = "#879c54";
-        yellow = "#f3cd03";
-        blue = "#4c90a8";
-        magenta = "#aa739a";
+        yellow = "#e6be6f";
+        blue = "#81a2be";
+        magenta = "#b18fbb";
         cyan = "#79af98";
         white = "#bdbdbd";
-        orange = "#cc8b00";
+        orange = "#de935f";
       };
     };
   };

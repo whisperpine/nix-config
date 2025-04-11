@@ -6,12 +6,10 @@
     ./erdtree
     ./direnv
     ./zellij
+    ./lazygit
   ];
 
   home.packages = with pkgs; [
-    # tui
-    lazygit
-
     # cloud
     kubernetes-helm
     kubectl

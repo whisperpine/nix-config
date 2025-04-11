@@ -22,36 +22,36 @@ foreground = "#bdbdbd"
 
 [colors.normal]
 white = "#bdbdbd"
-blue = "#4c90a8"
+blue = "#6c95b8"
 cyan = "#79af98"
 green = "#879c54"
-red = "#d95f5f"
-yellow = "#cc8b00"
-magenta = "#aa739a"
+red = "#cc6666"
+yellow = "#e6be6f"
+magenta = "#b18fbb"
 
 [colors.bright]
 white = "#bdbdbd"
-blue = "#4c90a8"
+blue = "#6c95b8"
 cyan = "#79af98"
 green = "#879c54"
-red = "#d95f5f"
-yellow = "#cc8b00"
-magenta = "#aa739a"
+red = "#cc6666"
+yellow = "#e6be6f"
+magenta = "#b18fbb"
 
 [colors.dim]
 white = "#bdbdbd"
-blue = "#4c90a8"
+blue = "#6c95b8"
 cyan = "#79af98"
 green = "#879c54"
-red = "#d95f5f"
-yellow = "#cc8b00"
-magenta = "#aa739a"
+red = "#cc6666"
+yellow = "#e6be6f"
+magenta = "#b18fbb"
 
 [colors.cursor]
 cursor = "#bdbdbd"
 
 [colors.vi_mode_cursor]
-cursor = "#cc8b00"
+cursor = "#e6be6f"
 
 [cursor]
 vi_mode_style.shape = "Block"

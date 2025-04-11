@@ -1,0 +1,24 @@
+# Config relating to the Lazygit UI
+gui:
+  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-author-color
+  authorColors:
+    Yusong: cyan
+    whisperpine: cyan
+
+  # Window border style.
+  # One of 'rounded' (default) | 'single' | 'double' | 'hidden'
+  border: single
+
+  # Config relating to colors and styles.
+  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#color-attributes
+  theme:
+    selectedLineBgColor:
+      - "#383838"
+
+    # Border color of focused window
+    activeBorderColor:
+      - yellow
+
+    # Border color of non-focused windows
+    inactiveBorderColor:
+      - blue
