@@ -4,10 +4,10 @@
     enable = true;
     enableCompletion = true;
     shellAliases = {
+      za = "zellij attach";
       kc = "kubectl";
       lg = "lazygit";
       vim = "nvim";
-      z = "zellij attach";
     };
     # .zprofile
     profileExtra = ''
