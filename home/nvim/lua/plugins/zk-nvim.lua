@@ -21,6 +21,17 @@ plugin = {
   end,
 }
 
+plugin.dependencies = { "folke/which-key.nvim" }
+plugin.init = function()
+  local wk = require "which-key"
+  wk.add {
+    -- { "<leader>mn", icon = { icon = "", color = "grey" } },
+    { "<leader>ma", icon = { icon = "", color = "grey" } },
+    { "<leader>md", icon = { icon = "", color = "grey" } },
+    { "<leader>mi", icon = { icon = "", color = "grey" } },
+  }
+end
+
 plugin.opts = {
   -- can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`)
   -- it's recommended to use "telescope", "fzf", "fzf_lua", or "minipick"
@@ -50,12 +61,12 @@ plugin.keys = {
     "<Cmd> ZkTags <CR>",
     desc = "telescope zk tags",
   },
-  -- create a new note
-  {
-    "<leader>mn",
-    "<Cmd> ZkNew { dir = vim.fn.expand('%:p:h') } <CR>",
-    desc = "zk new cwd",
-  },
+  -- -- create a new note
+  -- {
+  --   "<leader>mn",
+  --   "<Cmd> ZkNew { dir = vim.fn.expand('%:p:h') } <CR>",
+  --   desc = "zk new cwd",
+  -- },
   -- create a new note under "zettelkasten"
   {
     "<leader>ma",

@@ -77,13 +77,13 @@ plugin.keys = {
     "<cmd> Telescope terms <cr>",
     desc = "telescope pick hidden term",
   },
-  {
-    "<leader>th",
-    function()
-      require("nvchad.themes").open()
-    end,
-    desc = "telescope nvchad themes",
-  },
+  -- {
+  --   "<leader>th",
+  --   function()
+  --     require("nvchad.themes").open()
+  --   end,
+  --   desc = "telescope nvchad themes",
+  -- },
   {
     "<leader>ff",
     function()
