@@ -212,12 +212,12 @@ system-toolbar = 'noinherit bold'
 arg-toolbar = 'noinherit bold'
 arg-toolbar.text = 'nobold'
 bottom-toolbar.transaction.valid = 'bg:#222222 #879c54 bold'
-bottom-toolbar.transaction.failed = 'bg:#222222 #d95f5f bold'
+bottom-toolbar.transaction.failed = 'bg:#222222 #cc6666 bold'
 # These three values can be used to further refine the syntax highlighting.
 # They are commented out by default, since they have priority over the theme set
 # with the `syntax_style` setting and overriding its behavior can be confusing.
 literal.string = '#879c54'
-literal.number = '#cc8b00'
+literal.number = '#de935f'
 keyword = 'bold #b294bb'
 
 # style classes for colored table output
