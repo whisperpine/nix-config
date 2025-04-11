@@ -2,7 +2,6 @@ local plugin = {}
 
 plugin = {
   "nvim-telescope/telescope.nvim",
-
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   cmd = "Telescope",
 }
@@ -25,23 +24,13 @@ plugin.opts = {
       width = 0.87,
       height = 0.80,
     },
+    -- require() will make lazy.nvim load this plugin on startup
+    -- even "lazy=true" is set, which adds startup latency
     mappings = {
-      n = { ["q"] = require("telescope.actions").close },
+      -- n = { ["q"] = require("telescope.actions").close },
       -- i = { ["<Esc>"] = require("telescope.actions").close },
     },
   },
-
-  -- pickers = {
-  --   find_files = {
-  --     find_command = {
-  --       "fd",
-  --       "--type",
-  --       "f",
-  --       "--hidden",
-  --       "--no-ignore-vcs",
-  --     },
-  --   },
-  -- },
 
   extensions_list = { "themes", "terms" },
   extensions = {},

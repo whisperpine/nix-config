@@ -7,7 +7,7 @@ plugin = {
 plugin.dependencies = {
   {
     "tpope/vim-dadbod",
-    lazy = false,
+    ft = { "sql", "mysql", "plsql" },
   },
   {
     "kristijanhusak/vim-dadbod-completion",
