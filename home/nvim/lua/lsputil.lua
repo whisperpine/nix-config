@@ -92,6 +92,7 @@ vim.lsp.enable {
   -- "postgres_lsp",
   -- "tailwindcss",
   "harper_ls",
+  "tinymist",
   "lua_ls",
   "ts_ls",
 }

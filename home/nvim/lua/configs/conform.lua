@@ -30,6 +30,7 @@ M.formatters_by_ft = {
   proto = { "buf" },
   graphql = { "biome" },
   sql = { "sqruff" },
+  typst = { "typstyle" },
 
   -- clang-format
   objc = { "clang-format" },

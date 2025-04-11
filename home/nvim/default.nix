@@ -40,8 +40,9 @@
     shellcheck # shell linter
     xmlstarlet # xml
     opentofu # terraform, opentofu
-    sqruff # sql
+    typstyle # typst
     rustfmt # rust
+    sqruff # sql
     stylua # lua
     shfmt # shell
     biome # ts, js, css, json, graphql
@@ -63,6 +64,7 @@
     rust-analyzer # rust
     terraform-ls # terraform
     basedpyright # python
+    tinymist # typst
     lemminx # xml, svg
     helm-ls # helm
     harper # English
