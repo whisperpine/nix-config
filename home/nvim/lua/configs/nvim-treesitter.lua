@@ -40,6 +40,7 @@ M.ensure_installed = {
   "vimdoc",
   "printf",
   "latex",
+  "typst",
   "vim",
   "proto",
   "nix",
