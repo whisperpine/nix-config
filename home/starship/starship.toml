@@ -291,6 +291,10 @@ format = "[$symbol]($style)"
 symbol = "erlang "
 format = "[$symbol]($style)"
 
+[typst]
+symbol = "typ "
+format = "[$symbol]($style)"
+
 [jobs]
 symbol = "+"
 format = "[$symbol$number]($style) "
