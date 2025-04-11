@@ -10,6 +10,7 @@ plugin = {
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+    "folke/which-key.nvim", -- for which-key icon customization
   },
   keys = {
     { "<leader>aa", "<cmd>AvanteAsk<cr>", desc = "avante: ask" },
@@ -18,6 +19,10 @@ plugin = {
 
 plugin.init = function()
   dofile(vim.g.base46_cache .. "avante")
+  local wk = require "which-key"
+  wk.add {
+    { "<leader>aa", icon = { icon = "󰍦 ", color = "azure" } },
+  }
 end
 
 plugin.opts = {

@@ -7,18 +7,6 @@ plugin = {
     -- only enable this plugin when `.zk` exists
     return vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".zk")) ~= nil
   end,
-  dependencies = {
-    "folke/which-key.nvim",
-  },
-  init = function()
-    local wk = require "which-key"
-    wk.add {
-      { "<leader>mn", icon = { icon = "", color = "grey" } },
-      { "<leader>ma", icon = { icon = "", color = "grey" } },
-      { "<leader>md", icon = { icon = "", color = "grey" } },
-      { "<leader>mi", icon = { icon = "", color = "grey" } },
-    }
-  end,
 }
 
 plugin.dependencies = { "folke/which-key.nvim" }
