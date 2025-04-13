@@ -14,8 +14,8 @@ M.on_attach = function(_, bufnr)
   end
   map("n", "grn", vim.lsp.buf.rename, opts "rename")
   map("n", "gra", vim.lsp.buf.code_action, opts "code action")
-  -- map("n", "<leader>sh", vim.lsp.buf.signature_help, opts "show signature help")
-  map({ "n", "i" }, "<C-l>", vim.lsp.buf.signature_help, opts "show signature help")
+  map("n", "<leader>cc", vim.lsp.buf.signature_help, opts "show signature help")
+  map("i", "<C-l>", vim.lsp.buf.signature_help, opts "show signature help")
   map(
     "n",
     "<leader>fs",
@@ -40,17 +40,12 @@ M.on_attach = function(_, bufnr)
     "<cmd> Telescope diagnostics <cr>",
     { desc = "telescope workspace diagnostics" }
   )
-  map(
-    "n",
-    "<C-K>", -- ctrl+shift+k
-    function()
-      vim.diagnostic.open_float {
-        scope = "line",
-        severity_sort = true,
-      }
-    end,
-    opts "show line diagnostics"
-  )
+  map("n", "<leader>dl", function()
+    vim.diagnostic.open_float {
+      scope = "line",
+      severity_sort = true,
+    }
+  end, opts "show line diagnostics")
 end
 
 -- disable semanticTokens

@@ -43,6 +43,7 @@ M.cmdline = {
     },
     help = { conceal = false, pattern = "^:%s*he?l?p?%s+", icon = "󰈙" },
     map = { conceal = false, pattern = "^:%s*map%s+", icon = "󰥻" },
+    imap = { conceal = false, pattern = "^:%s*imap%s+", icon = "󰥻" },
     input = { view = "cmdline_input", icon = "" }, -- Used by input()
     -- lua = false, -- to disable a format, set to `false`
   },
