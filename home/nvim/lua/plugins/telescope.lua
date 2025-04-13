@@ -72,11 +72,11 @@ plugin.keys = {
     "<cmd> Telescope git_status <cr>",
     desc = "telescope git status",
   },
-  {
-    "<leader>ft",
-    "<cmd> Telescope terms <cr>",
-    desc = "telescope pick hidden term",
-  },
+  -- {
+  --   "<leader>ft",
+  --   "<cmd> Telescope terms <cr>",
+  --   desc = "telescope pick hidden term",
+  -- },
   -- {
   --   "<leader>th",
   --   function()

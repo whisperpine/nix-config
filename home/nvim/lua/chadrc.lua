@@ -75,12 +75,11 @@ M.ui = {
   cmp = {
     -- only for non-atom styles!
     icons_left = true,
-    lspkind_text = true,
     -- default/flat_light/flat_dark/atom/atom_colored
     style = "default",
+    -- for tailwind, css, lsp, etc
     format_colors = {
-      -- will work for css lsp too
-      tailwind = true,
+      lsp = true,
       icon = "󱓻",
     },
   },

@@ -84,7 +84,6 @@ vim.lsp.config("*", {
 -- enable language servers defined under ~/.config/nvim/lsp
 vim.lsp.enable {
   "rust_analyzer",
-  -- "tailwindcss",
   -- "postgrestools",
   "harper_ls",
   "tinymist",
