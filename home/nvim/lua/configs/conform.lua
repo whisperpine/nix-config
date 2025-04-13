@@ -33,24 +33,24 @@ M.formatters_by_ft = {
   typst = { "typstyle" },
 
   -- clang-format
+  cs = { "clang-format" },
+  java = { "clang-format" },
   objc = { "clang-format" },
   cpp = { "clang-format" },
   c = { "clang-format" },
-  cs = { "clang-format" },
-  java = { "clang-format" },
 
   -- deno_fmt
-  jsx = { "deno_fmt" },
-  tsx = { "deno_fmt" },
-  javascript = { "deno_fmt" },
-  typescript = { "deno_fmt" },
+  javascriptreact = { "deno_fmt", "rustywind" },
+  typescriptreact = { "deno_fmt", "rustywind" },
+  javascript = { "deno_fmt", "rustywind" },
+  typescript = { "deno_fmt", "rustywind" },
+  html = { "deno_fmt", "rustywind" },
+  yaml = { "deno_fmt" },
   jsonc = { "deno_fmt" },
   json = { "deno_fmt" },
   css = { "deno_fmt" },
   scss = { "deno_fmt" },
   less = { "deno_fmt" },
-  yaml = { "deno_fmt" },
-  html = { "deno_fmt" },
 }
 
 M.formatters = {

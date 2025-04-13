@@ -40,6 +40,7 @@
     shellcheck # shell linter
     xmlstarlet # xml
     opentofu # terraform, opentofu
+    rustywind # tailwind
     typstyle # typst
     rustfmt # rust
     sqruff # sql
