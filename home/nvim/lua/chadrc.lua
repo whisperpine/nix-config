@@ -26,6 +26,7 @@ M.base46 = {
     ["@function.macro"] = { fg = "#8AA0EA" }, -- e.g. rust macros
     ["@variable.parameter"] = { fg = "#c5c8c6" }, -- e.g. parameters in function signature
     ["@punctuation.delimiter"] = { fg = "#c5c8c6" },
+    ["@markup.quote"] = { bg = "#202020" },
   },
 
   -- change attributes of theme
