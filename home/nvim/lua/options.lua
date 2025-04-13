@@ -76,8 +76,8 @@ o.wrap = false
 -- o.scrolloff = 3
 -- disable search highlighting
 o.hlsearch = false
--- enable spell checking
-o.spell = true
+-- disable spell checking
+o.spell = false
 -- "yusong" refers to nvim/spell/yusong.utf-8.spl
 -- every time after nvim/spell/yusong being modified,
 -- remember to run command (":mkspell") to generate `.spl`.
