@@ -19,14 +19,6 @@ return {
   },
 
   {
-    "nvim-tree/nvim-web-devicons",
-    opts = function()
-      dofile(vim.g.base46_cache .. "devicons")
-      return { override = require "nvchad.icons.devicons" }
-    end,
-  },
-
-  {
     "lukas-reineke/indent-blankline.nvim",
     event = "User FilePost",
     config = function(_, opts)
@@ -83,14 +75,13 @@ return {
   },
 
   {
-    "folke/which-key.nvim",
-    lazy = false,
-    cmd = "WhichKey",
+    "nvim-tree/nvim-web-devicons",
     init = function()
-      dofile(vim.g.base46_cache .. "whichkey")
+      dofile(vim.g.base46_cache .. "devicons")
     end,
-    opts = { delay = 0 },
-    keys = { "<leader>", "<c-w>", '"', "'", "`", "c", "v", "g" },
+    opts = function()
+      return { override = require "nvchad.icons.devicons" }
+    end,
   },
 
   {

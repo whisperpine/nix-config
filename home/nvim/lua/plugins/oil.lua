@@ -2,7 +2,27 @@ local plugin = {}
 
 plugin = {
   "stevearc/oil.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+    "folke/which-key.nvim",
+  },
+}
+
+plugin.init = function()
+  local wk = require "which-key"
+  wk.add {
+    { "<leader>ro", icon = { icon = "󰙅 ", color = "blue" } },
+  }
+end
+
+plugin.keys = {
+  {
+    "<leader>ro",
+    function()
+      require("oil").open_float()
+    end,
+    desc = "oil open float",
+  },
 }
 
 plugin.opts = {
@@ -19,16 +39,6 @@ plugin.opts = {
   -- Configuration for the floating window in oil.open_float
   float = {
     border = "single",
-  },
-}
-
-plugin.keys = {
-  {
-    "<leader>ro",
-    function()
-      require("oil").open_float()
-    end,
-    desc = "oil open float",
   },
 }
 

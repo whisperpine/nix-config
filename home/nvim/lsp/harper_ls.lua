@@ -51,6 +51,7 @@ M.settings = {
       SentenceCapitalization = false,
       CapitalizePersonalPronouns = false,
       OxfordComma = false,
+      CommaFixes = false,
     },
     codeActions = {
       ForceStable = true,

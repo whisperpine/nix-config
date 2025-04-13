@@ -16,8 +16,8 @@ plugin.opts = function()
 end
 
 plugin.keys = {
-  { "<leader>cr", "<cmd> Gitsigns reset_hunk <cr>", desc = "git reset hunk" },
-  { "<leader>cs", "<cmd> Gitsigns stage_hunk <cr>", desc = "git stage hunk" },
+  { "<leader>rr", "<cmd> Gitsigns reset_hunk <cr>", desc = "git reset hunk" },
+  { "<leader>rs", "<cmd> Gitsigns stage_hunk <cr>", desc = "git stage hunk" },
 }
 
 return plugin
