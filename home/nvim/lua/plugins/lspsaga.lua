@@ -32,34 +32,6 @@ plugin.opts = {
 
 plugin.keys = {
   {
-    "]d",
-    "<cmd> Lspsaga diagnostic_jump_next <cr>",
-    desc = "lspsaga diagnostic next",
-  },
-  {
-    "[d",
-    "<cmd> Lspsaga diagnostic_jump_prev <cr>",
-    desc = "lspsaga diagnostic prev",
-  },
-  {
-    "]e",
-    function()
-      require("lspsaga.diagnostic"):goto_prev {
-        severity = vim.diagnostic.severity.ERROR,
-      }
-    end,
-    desc = "lspsaga diagnostic next error",
-  },
-  {
-    "[e",
-    function()
-      require("lspsaga.diagnostic"):goto_prev {
-        severity = vim.diagnostic.severity.ERROR,
-      }
-    end,
-    desc = "lspsaga diagnostic prev error",
-  },
-  {
     "gp",
     "<cmd> Lspsaga peek_definition <cr>",
     desc = "lspsaga peek definition",

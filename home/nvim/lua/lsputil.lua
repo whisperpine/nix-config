@@ -40,12 +40,39 @@ M.on_attach = function(_, bufnr)
     "<cmd> Telescope diagnostics <cr>",
     { desc = "telescope workspace diagnostics" }
   )
-  map("n", "<leader>dl", function()
-    vim.diagnostic.open_float {
-      scope = "line",
-      severity_sort = true,
+  map("n", "[d", function()
+    vim.diagnostic.jump {
+      count = -1,
+      float = true,
     }
-  end, opts "show line diagnostics")
+  end, { desc = "lspsaga diagnostic prev" })
+  map("n", "]d", function()
+    vim.diagnostic.jump {
+      count = 1,
+      float = true,
+    }
+  end, { desc = "lspsaga diagnostic next" })
+  map("n", "[e", function()
+    vim.diagnostic.jump {
+      count = -1,
+      float = true,
+      severity = vim.diagnostic.severity.ERROR,
+    }
+  end, { desc = "diagnostic prev error" })
+  map("n", "]e", function()
+    vim.diagnostic.jump {
+      count = 1,
+      float = true,
+      severity = vim.diagnostic.severity.ERROR,
+    }
+  end, { desc = "diagnostic next error" })
+  -- ## neovim defualt shortcut `<C-w>d`
+  -- map("n", "<leader>dl", function()
+  --   vim.diagnostic.open_float {
+  --     scope = "line",
+  --     severity_sort = true,
+  --   }
+  -- end, opts "show line diagnostics")
 end
 
 -- disable semanticTokens
@@ -81,14 +108,38 @@ vim.lsp.config("*", {
   capabilities = M.capabilities,
 })
 
+-- config clangd
+vim.lsp.config("clangd", {
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+})
+
 -- enable language servers defined under ~/.config/nvim/lsp
 vim.lsp.enable {
+  -- ### written by myself ###
   "rust_analyzer",
-  -- "postgrestools",
   "harper_ls",
-  "tinymist",
   "lua_ls",
   "ts_ls",
+
+  -- ### written by lspconfig ###
+  "basedpyright",
+  "terraformls",
+  "marksman",
+  "dockerls",
+  "tinymist",
+  "helm_ls",
+  "lemminx",
+  "jsonls",
+  "cssls",
+  "yamlls",
+  "nil_ls",
+  "bashls",
+  "texlab",
+  "svelte",
+  "buf_ls",
+  "clangd",
+  "taplo",
+  "html",
 }
 
 -- only enable vale_ls when `.vale.ini` exists
