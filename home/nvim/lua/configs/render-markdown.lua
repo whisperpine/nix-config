@@ -154,4 +154,15 @@ M.anti_conceal = {
 -- disable LaTex rendering
 M.latex = { enabled = false }
 
+M.callout = {
+  -- note = { highlight = "RenderMarkdownInfo" },
+  -- tip = { highlight = "RenderMarkdownSuccess" },
+  -- important = { highlight = "RenderMarkdownHint" },
+  -- warning = { highlight = "RenderMarkdownWarn" },
+  -- caution = { highlight = "RenderMarkdownError" },
+  note = { highlight = "Question" },
+  tip = { highlight = "DiagnosticInfo" },
+  important = { highlight = "Keyword" },
+}
+
 return M
