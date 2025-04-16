@@ -17,7 +17,7 @@
     "prefix": "equal width",
     "description": "two images aligned by width",
     "body": [
-      "<div style=\"display:flex;\">",
+      "<div style=\"display: flex;\">",
       "\t<img src=\"\" style=\"object-fit: contain; max-width: 45%\" />",
       "\t<p>&nbsp;&nbsp;</p>",
       "\t<img src=\"\" style=\"object-fit: contain; max-width: 45%\" />",
@@ -28,7 +28,7 @@
     "prefix": "equal height",
     "description": "two images aligned by height",
     "body": [
-      "<div style=\"display:flex;\">",
+      "<div style=\"display: flex;\">",
       "\t<img src=\"\" style=\"object-fit: contain; max-height: 200px\" />",
       "\t<p>&nbsp;&nbsp;</p>",
       "\t<img src=\"\" style=\"object-fit: contain; max-height: 200px\" />",
