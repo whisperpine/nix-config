@@ -60,6 +60,7 @@ M.ensure_installed = {
   "toml",
   "json",
   "ruby",
+  "xml",
   "nu",
   "c",
 }
