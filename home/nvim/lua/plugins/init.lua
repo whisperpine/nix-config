@@ -59,9 +59,7 @@ return {
   },
 
   {
-    -- "stevearc/conform.nvim",
-    "whisperpine-contrib/conform.nvim",
-    -- dir = "~/projects/forked/conform.nvim",
+    "stevearc/conform.nvim",
     event = "BufReadPost",
     opts = require "configs.conform",
   },
