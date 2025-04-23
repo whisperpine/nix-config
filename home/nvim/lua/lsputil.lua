@@ -66,13 +66,12 @@ M.on_attach = function(_, bufnr)
       severity = vim.diagnostic.severity.ERROR,
     }
   end, { desc = "diagnostic next error" })
-  -- ## neovim defualt shortcut `<C-w>d`
-  -- map("n", "<leader>dl", function()
-  --   vim.diagnostic.open_float {
-  --     scope = "line",
-  --     severity_sort = true,
-  --   }
-  -- end, opts "show line diagnostics")
+  -- by default lsp config sets K in normal mode to hover with no border.
+  -- https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#configuration
+  -- manually overriding the mapping passing in the border style.
+  map("n", "K", function()
+    vim.lsp.buf.hover { border = "single" }
+  end, { desc = "LSP show details", silent = true })
 end
 
 -- disable semanticTokens
