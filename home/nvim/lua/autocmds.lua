@@ -64,6 +64,7 @@ autocmd("Filetype", {
     "xhtml",
     "json",
     "jsonc",
+    "hurl",
     "html",
     "scss",
     "yaml",

@@ -31,6 +31,7 @@ M.formatters_by_ft = {
   graphql = { "biome" },
   sql = { "sqruff" },
   typst = { "typstyle" },
+  hurl = { "hurlfmt" },
 
   -- clang-format
   cs = { "clang-format" },
