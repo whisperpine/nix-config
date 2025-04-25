@@ -7,6 +7,9 @@
 # js/ts
 node_modules
 
+# terraform
+.terraform
+
 # rust
 target
 
