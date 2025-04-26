@@ -34,7 +34,7 @@ plugin.opts = {
   keymaps = {
     ["q"] = { "actions.close", mode = "n" },
     ["h"] = { "actions.parent", mode = "n" },
-    ["l"] = "actions.select",
+    ["l"] = { "actions.select", mode = "n" },
   },
   -- Configuration for the floating window in oil.open_float
   float = {
