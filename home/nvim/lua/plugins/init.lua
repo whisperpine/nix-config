@@ -160,17 +160,23 @@ return {
 
   {
     "rcarriga/nvim-notify",
-    config = function()
-      require("notify").setup {
-        -- fade, fade_in_slide_out, no_animation, slide, static
-        stages = "static",
-        -- default, minimal, simple, compact
-        render = "compact",
-        background_colour = "FloatShadow",
-        timeout = 5000,
-      }
+    init = function()
       vim.notify = require "notify"
     end,
+    opts = {
+      -- fade, fade_in_slide_out, no_animation, slide, static
+      stages = "static",
+      -- default, minimal, simple, compact
+      render = "compact",
+      background_colour = "FloatShadow",
+      timeout = 5000,
+      -- config notification window
+      on_open = function(win)
+        local config = vim.api.nvim_win_get_config(win)
+        config.border = "solid"
+        vim.api.nvim_win_set_config(win, config)
+      end,
+    },
   },
 
   {

@@ -27,6 +27,7 @@ M = {
     cmdline_popupmenu = { border = { style = "single" } },
     cmdline_popup = {
       border = { style = "single" },
+      -- win_options = { cursorline = true },
     },
   },
 
