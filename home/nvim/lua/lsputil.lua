@@ -14,8 +14,12 @@ M.on_attach = function(_, bufnr)
   end
   map("n", "grn", vim.lsp.buf.rename, opts "rename")
   map("n", "gra", vim.lsp.buf.code_action, opts "code action")
-  map("n", "<leader>cc", vim.lsp.buf.signature_help, opts "show signature help")
-  map("i", "<C-l>", vim.lsp.buf.signature_help, opts "show signature help")
+  map("n", "<leader>cc", function()
+    vim.lsp.buf.signature_help { border = "single" }
+  end, opts "show signature help")
+  map("i", "<C-l>", function()
+    vim.lsp.buf.signature_help { border = "single" }
+  end, opts "show signature help")
   map(
     "n",
     "<leader>fs",
