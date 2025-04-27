@@ -20,9 +20,15 @@ M = {
     long_message_to_split = true, -- long messages will be sent to a split
   },
 
-  -- views = {
-  --   cmdline_popup = { win_options = { cursorline = true } },
-  -- },
+  views = {
+    popup = { border = { style = "single" } },
+    confirm = { border = { style = "single" } },
+    cmdline_input = { border = { style = "single" } },
+    cmdline_popupmenu = { border = { style = "single" } },
+    cmdline_popup = {
+      border = { style = "single" },
+    },
+  },
 
   messages = { enabled = false },
 }
