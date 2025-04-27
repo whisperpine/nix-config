@@ -15,7 +15,8 @@ M.formatters_by_ft = {
   -- Use the "*" filetype to run formatters on all filetypes.
   ["*"] = {
     "trim_newlines",
-    -- "final_new_line", -- This formatter is defined below.
+    -- This formatter is defined below.
+    -- "final_new_line",
   },
 
   markdown = { "markdownlint" },
@@ -32,6 +33,7 @@ M.formatters_by_ft = {
   sql = { "sqruff" },
   typst = { "typstyle" },
   hurl = { "hurlfmt" },
+  toml = { "taplo" },
 
   -- clang-format
   cs = { "clang-format" },
