@@ -28,7 +28,6 @@
     home-manager
 
     docker-compose
-    clang
     tree
     file
     unzip

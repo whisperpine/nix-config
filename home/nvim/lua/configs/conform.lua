@@ -34,6 +34,7 @@ M.formatters_by_ft = {
   typst = { "typstyle" },
   hurl = { "hurlfmt" },
   toml = { "taplo" },
+  zig = { "zigfmt" },
 
   -- clang-format
   cs = { "clang-format" },
