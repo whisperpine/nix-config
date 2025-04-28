@@ -30,7 +30,7 @@
     docker-compose
     tree
     file
-    unzip
+    ouch
     curl
 
     sops
