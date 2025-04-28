@@ -143,6 +143,7 @@ vim.lsp.enable {
   "clangd",
   "taplo",
   "html",
+  "zls",
 }
 
 -- only enable vale_ls when `.vale.ini` exists

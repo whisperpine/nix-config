@@ -30,6 +30,7 @@
     inotify-tools # file watcher used by LSP
     ripgrep # telescope.nvim
     gnumake # avante.nvim
+    zig # tree-sitter.nvim
     zk # zk-nvim
 
     # formatters and linters
@@ -73,6 +74,7 @@
     vale # English
     texlab # latex
     taplo # toml
+    zls # zig
     nil # nix
 
     # including lsp "clangd" and formatter "clang-format"

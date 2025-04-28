@@ -62,6 +62,7 @@ M.ensure_installed = {
   "ruby",
   "hurl",
   "xml",
+  "zig",
   "nu",
   "c",
 }
