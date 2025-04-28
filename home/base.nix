@@ -32,6 +32,7 @@
     file
     ouch
     curl
+    eza
 
     sops
     age
