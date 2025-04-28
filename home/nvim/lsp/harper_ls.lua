@@ -50,6 +50,7 @@ M.settings = {
       UnclosedQuotes = false,
       SentenceCapitalization = false,
       CapitalizePersonalPronouns = false,
+      ExpandStandardInput = false,
       OxfordComma = false,
       CommaFixes = false,
     },
