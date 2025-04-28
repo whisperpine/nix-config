@@ -98,5 +98,4 @@ o.mouse = "a"
 -- always show status in the last window
 o.laststatus = 3
 -- `c:ver25` set the cursor as a vertical line
-o.guicursor =
-  "n-v-sm:block,c:ver25,i-ci-ve:ver25,r-cr-o:hor20,t:block-blinkon500-blinkoff500-TermCursor"
+o.guicursor = "n-v-sm:block,c:ver25,i-ci-ve:ver25,r-cr-o:hor20"
