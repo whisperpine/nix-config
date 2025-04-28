@@ -14,6 +14,7 @@
   imports = [
     ./git
     ./gpg
+    ./zsh
     ./bash
     ./btop
     ./yazi
