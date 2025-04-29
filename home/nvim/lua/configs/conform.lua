@@ -26,7 +26,6 @@ M.formatters_by_ft = {
   xml = { "xmlstarlet" },
   rust = { "rustfmt" },
   lua = { "stylua" },
-  bash = { "shfmt" },
   nix = { "nixfmt" },
   proto = { "buf" },
   graphql = { "biome" },
@@ -35,6 +34,7 @@ M.formatters_by_ft = {
   hurl = { "hurlfmt" },
   toml = { "taplo" },
   zig = { "zigfmt" },
+  sh = { "shfmt" },
 
   -- clang-format
   cs = { "clang-format" },
