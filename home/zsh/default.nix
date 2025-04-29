@@ -9,8 +9,8 @@
       kc = "kubectl";
       lg = "lazygit";
       vim = "nvim";
-      ls = "eza";
-      ll = "eza -l --icons";
+      e = "eza";
+      el = "eza -l";
     };
     # .zprofile
     profileExtra = ''

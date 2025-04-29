@@ -8,7 +8,8 @@
       kc = "kubectl";
       lg = "lazygit";
       vim = "nvim";
-      ls = "eza";
+      e = "eza";
+      el = "eza -l";
     };
     # .bashrc
     bashrcExtra = ''

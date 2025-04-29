@@ -8,6 +8,8 @@
       kc = "kubectl";
       lg = "lazygit";
       vim = "nvim";
+      e = "eza";
+      el = "eza -l";
     };
   };
 }
