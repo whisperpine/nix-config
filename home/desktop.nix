@@ -22,6 +22,7 @@
     # utilities
     translate-shell
     onefetch
+    ffmpeg
     tokei
     just
   ];
