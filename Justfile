@@ -1,7 +1,7 @@
 # error if a .env file doesn't exist.
 set dotenv-required
 
-# build and switch (manully set HOSTNAME in .env)
+# build and switch (manually set HOSTNAME in .env)
 deploy:
     echo ${HOSTNAME}
     nixos-rebuild switch \
@@ -9,7 +9,7 @@ deploy:
         --flake .#$HOSTNAME \
         --impure
 
-# build and switch on darwin (manully set HOSTNAME in .env)
+# build and switch on darwin (manually set HOSTNAME in .env)
 darwin:
     echo ${HOSTNAME}
     darwin-rebuild switch \
@@ -29,7 +29,7 @@ debug:
 up:
     nix flake update
 
-# show profile hisotry
+# show profile history
 history:
     nix profile history --profile /nix/var/nix/profiles/system
 

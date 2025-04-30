@@ -47,6 +47,7 @@
     sqruff # sql
     stylua # lua
     shfmt # shell
+    typos # spell checker
     biome # ts, js, css, json, graphql
     deno # ts, js, json, css
     ruff # python

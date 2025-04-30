@@ -28,7 +28,7 @@ local module = {
 	split = "#121212",
 
 	ansi = {
-		"#161616", -- black -- yazi shortcut background
+		"#161616", -- black, yazi shortcut background
 		"#cc6666", -- red
 		"#879c54", -- green
 		"#e6be6f", -- yellow
@@ -38,7 +38,7 @@ local module = {
 		"#bdbdbd", -- white
 	},
 	brights = {
-		"#777777", -- black -- nushell command suggestion
+		"#777777", -- black, nushell command suggestion
 		"#cc6666", -- red
 		"#879c54", -- green
 		"#e6be6f", -- yellow

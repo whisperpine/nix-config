@@ -1,0 +1,5 @@
+[default]
+extend-ignore-re = ["<leader>fo", 'symbol = "typ "']
+
+[default.extend-words]
+noice = "noice"

@@ -206,7 +206,7 @@
   "embed": {
     "prefix": "embed",
     "body": "<embed src=\"$1\" />$2",
-    "description": "HTML - Defines external interactive content ot plugin",
+    "description": "HTML - Defines external interactive content or plugin",
     "scope": "text.html"
   },
   "fieldset": {

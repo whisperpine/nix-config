@@ -1,4 +1,4 @@
--- set base46_cache path ("data" referers to "~/.local/share/nvim")
+-- set base46_cache path ("data" refers to "~/.local/share/nvim")
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 -- set leader key as `space`.
 vim.g.mapleader = " "
