@@ -39,6 +39,7 @@
     nixfmt-rfc-style # nix formatter
     markdownlint-cli # markdown
     shellcheck # shell linter
+    actionlint # github actions
     xmlstarlet # xml
     opentofu # terraform, opentofu
     rustywind # tailwind

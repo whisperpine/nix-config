@@ -43,7 +43,7 @@ M.formatters_by_ft = {
   cpp = { "clang-format" },
   c = { "clang-format" },
 
-  -- deno_fmt
+  -- deno_fmt, rustywind
   javascriptreact = { "deno_fmt", "rustywind" },
   typescriptreact = { "deno_fmt", "rustywind" },
   javascript = { "deno_fmt", "rustywind" },

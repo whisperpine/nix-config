@@ -6,7 +6,6 @@ vim.filetype.add {
   filename = {
     ["terraform.tfstate"] = "json",
     ["terraform.tfstate.backup"] = "json",
-    [".*/.github/workflows/.*%.yml"] = "yaml.ghaction",
   },
   pattern = {
     [".env.*"] = "conf",
