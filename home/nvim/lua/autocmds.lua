@@ -68,6 +68,7 @@ autocmd("Filetype", {
     "html",
     "scss",
     "yaml",
+    "helm",
     "yml",
     "xml",
     "css",

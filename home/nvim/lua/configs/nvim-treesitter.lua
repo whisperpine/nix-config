@@ -61,6 +61,7 @@ M.ensure_installed = {
   "json",
   "ruby",
   "hurl",
+  "helm",
   "xml",
   "zig",
   "nu",

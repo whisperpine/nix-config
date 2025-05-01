@@ -1,7 +1,18 @@
+local helm_or_yaml = function(_, bufnr)
+  local content = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+  for _, line in ipairs(content) do
+    if line:match "{{.*}}" then
+      return "helm"
+    end
+  end
+  return "yaml"
+end
 -- additional filetype bindings
 vim.filetype.add {
   extension = {
     env = "conf",
+    yaml = helm_or_yaml,
+    yml = helm_or_yaml,
   },
   filename = {
     ["terraform.tfstate"] = "json",
@@ -9,6 +20,8 @@ vim.filetype.add {
   },
   pattern = {
     [".env.*"] = "conf",
+    [".*/templates/.*%.yaml"] = "helm",
+    [".*/templates/.*%.tpl"] = "helm",
   },
 }
 
