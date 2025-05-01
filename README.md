@@ -96,7 +96,7 @@ sudo mv /etc/nixos /etc/nixos.bak
 # create a symlink to /etc/nixos
 sudo ln -s ~/nix-config /etc/nixos
 # create .env file from template
-cd ~/nix-config && cp demo.env .env
+cd ~/nix-config && cp example.env .env
 # edit .env (follow the comment inside)
 vim .env
 # tada
@@ -119,7 +119,7 @@ mkdir -p ~/.config && cd ~/.config
 git clone git@github.com:whisperpine/nix-config.git
 
 # create .env file from template
-cd ~/.config/nix-config && cp demo.env .env
+cd ~/.config/nix-config && cp example.env .env
 # edit .env (follow the comment inside)
 vim .env
 
