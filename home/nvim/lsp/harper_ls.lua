@@ -45,6 +45,7 @@ M.settings = {
     -- https://writewithharper.com/docs/rules
     linters = {
       AnA = false,
+      Dashes = false,
       SpellCheck = false,
       ToDoHyphen = false,
       UnclosedQuotes = false,
