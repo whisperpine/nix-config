@@ -29,3 +29,4 @@ $env.config.cursor_shape = {
 ## To add entries to PATH
 use std "path add"
 path add "/opt/homebrew/bin"
+path add "/etc/nixos/scripts/"
