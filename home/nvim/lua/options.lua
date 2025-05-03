@@ -4,6 +4,7 @@ vim.filetype.add {
     env = "conf",
   },
   filename = {
+    [".envrc"] = "sh",
     ["terraform.tfstate"] = "json",
     ["terraform.tfstate.backup"] = "json",
     ["helmfile.yaml"] = "helm",
