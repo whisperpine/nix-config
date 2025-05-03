@@ -1,0 +1,31 @@
+#!/bin/sh
+
+## Check typos of commit messages
+
+# The first argument is the path to the file containing the commit message
+commit_msg_file="$1"
+
+# Read the commit message from the file
+commit_message=$(cat "$commit_msg_file")
+
+# Check if the commit message is empty
+if [ -z "$commit_message" ]; then
+    echo "Error: Commit message is empty."
+    exit 1
+fi
+
+# Run typos on the commit message
+typos_output=$(echo "$commit_message" | typos --format brief -)
+
+if [ -n "$typos_output" ]; then
+    echo "Error: Spelling issues found in the commit message."
+    echo "Please fix the typos or use 'git push --no-verify' to bypass."
+    echo
+    echo "Spelling issues:"
+    echo "$typos_output"
+    echo
+    echo "==================== Commit message ======================"
+    echo "$commit_message"
+    echo "==================== Commit message ======================"
+    exit 2
+fi

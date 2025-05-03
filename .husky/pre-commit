@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# check spelling.
+typos --hidden --exclude .git --format brief
