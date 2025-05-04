@@ -70,12 +70,6 @@ M.on_attach = function(_, bufnr)
       severity = vim.diagnostic.severity.ERROR,
     }
   end, { desc = "diagnostic next error" })
-  -- by default lsp config sets K in normal mode to hover with no border.
-  -- https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#configuration
-  -- manually overriding the mapping passing in the border style.
-  map("n", "K", function()
-    vim.lsp.buf.hover { border = "single" }
-  end, { desc = "LSP show details", silent = true })
 end
 
 -- disable semanticTokens
@@ -104,9 +98,14 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    M.on_attach(_, args.buf)
+  end,
+})
+
 -- default config for all language servers
 vim.lsp.config("*", {
-  on_attach = M.on_attach,
   on_init = M.on_init,
   capabilities = M.capabilities,
 })

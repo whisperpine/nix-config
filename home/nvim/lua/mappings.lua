@@ -9,7 +9,7 @@
 local map = vim.keymap.set
 
 -- press `ctrl-s` to save current buffer.
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map({ "n" }, "<C-s>", "<cmd> w <cr>")
 
 -- only take effect in insert mode
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
@@ -62,3 +62,13 @@ end, { desc = "terminal toggleable horizontal term" })
 map({ "n", "t" }, "<A-i>", function()
   require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
 end, { desc = "terminal toggle floating term" })
+
+-- by default lsp config sets K in normal mode to hover with no border.
+-- https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#configuration
+-- manually overriding the mapping passing in the border style.
+map("n", "K", function()
+  local clients = vim.lsp.get_clients { bufnr = vim.api.nvim_get_current_buf() }
+  if #clients > 0 then
+    vim.lsp.buf.hover { border = "single" }
+  end
+end, { desc = "LSP show details", silent = true, noremap = true })
