@@ -120,7 +120,7 @@ vim.lsp.config("clangd", {
 vim.lsp.enable {
   -- ### written by myself ###
   "rust_analyzer",
-  "harper_ls",
+  -- "harper_ls",
   "lua_ls",
   "ts_ls",
 
