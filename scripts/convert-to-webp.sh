@@ -16,7 +16,7 @@ fi
 found_files=0
 
 # Loop through all PNG and JPG files in the current directory.
-for file in *.png *.jpg *.jpeg; do
+for file in *.png *.jpg *.jpeg *.PNG *.JPG *.JPEG; do
     # Check if any PNG or JPG files exist.
     if [ -f "$file" ]; then
         found_files=1
