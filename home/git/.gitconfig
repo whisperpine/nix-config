@@ -24,6 +24,8 @@
 	rebase = true
 
 [core]
+    compression = 9
+    whitespace = error
 	longpaths = true
 	autocrlf = false
 	quotepath = false
