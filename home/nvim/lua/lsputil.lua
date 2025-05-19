@@ -17,7 +17,7 @@ M.on_attach = function(_, bufnr)
   map("n", "<leader>cc", function()
     vim.lsp.buf.signature_help { border = "single" }
   end, opts "show signature help")
-  map("i", "<C-l>", function()
+  map("i", "<C-s>", function()
     vim.lsp.buf.signature_help { border = "single" }
   end, opts "show signature help")
   map(
