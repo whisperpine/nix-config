@@ -20,14 +20,14 @@
     # Use the unstable branch by default.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # The latest stable branch which can be used as a fallback.
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     # To install the nightly version of Neovim.
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     # Secrept provisioning by sops-nix
     sops-nix.url = "github:Mic92/sops-nix";
     # Home Manager used for managing user configuration.
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       # The `follows` keyword in inputs is used for inheritance.
       # `inputs.nixpkgs` of home-manager is kept consistent with
       # the `inputs.nixpkgs` of the current flake,
