@@ -119,6 +119,7 @@ vim.lsp.config("clangd", {
 vim.lsp.enable {
   -- ### written by myself ###
   "rust_analyzer",
+  "wgsl_analyzer",
   -- "harper_ls",
   "lua_ls",
   "ts_ls",

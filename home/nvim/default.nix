@@ -56,7 +56,7 @@
 
     # language servers
     # find all language servers here:
-    # https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
+    # https://github.com/neovim/nvim-lspconfig
     dockerfile-language-server-nodejs # dockerfile
     vscode-langservers-extracted # json, css, html
     typescript-language-server # typescript, javascript
@@ -65,6 +65,7 @@
     bash-language-server # bash sh shell
     yaml-language-server # yaml
     lua-language-server # lua
+    wgsl-analyzer # wgsl
     rust-analyzer # rust
     terraform-ls # terraform
     basedpyright # python
