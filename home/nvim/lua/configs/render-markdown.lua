@@ -113,22 +113,22 @@ M.heading = {
   -- The 'level' is used to index into the list using a clamp
   -- Highlight for the heading icon and extends through the entire line
   backgrounds = {
-    "RenderMarkdownH1Bg",
-    "RenderMarkdownH1Bg",
-    "RenderMarkdownH1Bg",
-    "RenderMarkdownH1Bg",
-    "RenderMarkdownH1Bg",
-    "RenderMarkdownH1Bg",
+    "RenderMarkdownH2Bg",
+    "RenderMarkdownH2Bg",
+    "RenderMarkdownH2Bg",
+    "RenderMarkdownH2Bg",
+    "RenderMarkdownH2Bg",
+    "RenderMarkdownH2Bg",
   },
   -- The 'level' is used to index into the list using a clamp
   -- Highlight for the heading and sign icons
   foregrounds = {
-    "RenderMarkdownH1",
-    "RenderMarkdownH1",
-    "RenderMarkdownH1",
-    "RenderMarkdownH1",
-    "RenderMarkdownH1",
-    "RenderMarkdownH1",
+    "RenderMarkdownH2",
+    "RenderMarkdownH2",
+    "RenderMarkdownH2",
+    "RenderMarkdownH2",
+    "RenderMarkdownH2",
+    "RenderMarkdownH2",
   },
 }
 
