@@ -132,6 +132,7 @@ vim.lsp.enable {
   "tinymist",
   "helm_ls",
   "lemminx",
+  "nushell",
   "jsonls",
   "cssls",
   "yamlls",
