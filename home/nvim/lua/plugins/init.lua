@@ -39,17 +39,6 @@ return {
   },
 
   {
-    "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPost", "BufNewFile" },
-    cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
-    build = ":TSUpdate",
-    opts = require "configs.nvim-treesitter",
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-    end,
-  },
-
-  {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     opts = require "configs.nvim-tree",

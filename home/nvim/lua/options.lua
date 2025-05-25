@@ -88,7 +88,7 @@ o.spell = false
 o.spelllang = "en_us,cjk,yusong"
 -- fold by treesitter
 o.foldmethod = "expr"
-o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 o.foldlevelstart = 99
 -- indenting
 o.tabstop = 4
