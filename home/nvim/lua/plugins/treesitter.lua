@@ -2,7 +2,7 @@ local plugin = {}
 
 plugin = {
   "nvim-treesitter/nvim-treesitter",
-  -- branch = "main",
+  branch = "main",
   event = { "BufReadPost", "BufNewFile" },
   cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
   build = ":TSUpdate",
@@ -12,10 +12,28 @@ plugin = {
       dofile(vim.g.base46_cache .. "treesitter")
     end)
   end,
-  config = function(_, opts)
-    require("nvim-treesitter.configs").setup(opts)
-  end,
 }
+
+plugin.config = function(_, opts)
+  local ensure_installed = opts.ensure_installed -- (list of your parsers)
+  local already_installed = require("nvim-treesitter.config").installed_parsers()
+  local parsers_to_install = vim
+    .iter(ensure_installed)
+    :filter(function(parser)
+      return not vim.tbl_contains(already_installed, parser)
+    end)
+    :totable()
+  require("nvim-treesitter").install(parsers_to_install)
+
+  -- add autocmd to start treesitter
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true }),
+    pattern = opts.ensure_installed,
+    callback = function(args)
+      vim.treesitter.start(args.buf)
+    end,
+  })
+end
 
 plugin.opts = {
   highlight = {
