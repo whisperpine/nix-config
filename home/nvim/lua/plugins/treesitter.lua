@@ -16,7 +16,7 @@ plugin = {
 
 plugin.config = function(_, opts)
   local ensure_installed = opts.ensure_installed -- (list of your parsers)
-  local already_installed = require("nvim-treesitter.config").installed_parsers()
+  local already_installed = require("nvim-treesitter").get_installed()
   local parsers_to_install = vim
     .iter(ensure_installed)
     :filter(function(parser)
