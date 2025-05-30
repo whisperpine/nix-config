@@ -46,6 +46,10 @@ format = "[$symbol]($style)"
 symbol = "bun "
 format = "[$symbol]($style)"
 
+[buf]
+symbol = "buf "
+format = "[$symbol]($style)"
+
 [c]
 symbol = "C "
 format = "[$symbol]($style)"
