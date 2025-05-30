@@ -8,7 +8,7 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
     enableNushellIntegration = true;
-    pinentryPackage = pkgs.pinentry-tty;
+    pinentry.package = pkgs.pinentry-tty;
   };
   home.packages = with pkgs; [ pinentry-tty ];
 }
