@@ -25,12 +25,6 @@ map("n", "<C-s>", "<cmd> w <cr>", { desc = "general save file" })
 map("n", "<C-c>", "<cmd> %y+ <cr>", { desc = "general copy whole file" })
 map("n", "<leader>rn", "<cmd> set rnu! <cr>", { desc = "toggle relative number" })
 map("n", "<leader>ch", "<cmd> NvCheatsheet <cr>", { desc = "toggle nvcheatsheet" })
--- map("n", "<leader>cp", function()
---   print(vim.fn.expand "%")
--- end, { desc = "print relative path" })
--- map("n", "<leader>cP", function()
---   print(vim.fn.expand "%:p")
--- end, { desc = "print absolute path" })
 
 -- toggle inlay hints
 map("n", "<leader>cl", function()
@@ -62,6 +56,14 @@ end, { desc = "terminal toggleable horizontal term" })
 map({ "n", "t" }, "<A-i>", function()
   require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
 end, { desc = "terminal toggle floating term" })
+
+-- diagnostic
+map("n", "<leader>dt", function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled { bufnr = 0 }, { bufnr = 0 })
+end, { noremap = true, desc = "toggle buffer diagnostic" })
+map("n", "<leader>dT", function()
+  vim.diagnostic.enable(not vim.diagnostic.is_enabled { bufnr = 0 })
+end, { noremap = true, desc = "toggle workspace diagnostic" })
 
 -- by default lsp config sets K in normal mode to hover with no border.
 -- https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#configuration
