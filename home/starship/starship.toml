@@ -219,6 +219,10 @@ format = "[$symbol]($style)"
 symbol = "php "
 format = "[$symbol]($style)"
 
+[pixi]
+symbol = "pixi "
+format = "[$symbol]($style)"
+
 [pijul_channel]
 symbol = "pijul "
 format = "[$symbol]($style)"

@@ -16,6 +16,9 @@ target
 # python
 .venv
 
+# pixi
+.pixi
+
 # others
 cache
 dist

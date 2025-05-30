@@ -7,6 +7,7 @@
     ./direnv
     ./zellij
     ./lazygit
+    ./pixi
   ];
 
   home.packages = with pkgs; [
