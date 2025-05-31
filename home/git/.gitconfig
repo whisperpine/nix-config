@@ -3,7 +3,7 @@
 
 [user]
 	name = Yusong
-	email = yusong.lai@icloud.com
+	email = yusonglai64@gmail.com
 
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
