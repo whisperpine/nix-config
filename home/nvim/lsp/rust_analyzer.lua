@@ -11,7 +11,7 @@ M.settings = {
   ["rust-analyzer"] = {
     check = { command = "clippy" },
     completion = { callable = { snippets = "none" } },
-    inlayHints = { bindingModeHints = { enable = true } },
+    -- inlayHints = { bindingModeHints = { enable = true } },
     procMacro = {
       ignored = {
         leptos_macro = {
