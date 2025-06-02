@@ -1,5 +1,4 @@
 return {
-  --########## nvchad below ##########--
   "nvim-lua/plenary.nvim",
   "nvzone/volt",
 
