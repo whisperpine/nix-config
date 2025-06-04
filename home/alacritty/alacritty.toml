@@ -1,3 +1,6 @@
+[terminal]
+shell = "/etc/profiles/per-user/yusong/bin/zsh"
+
 [font]
 size = 15
 normal = { family = "Cascadia Mono NF" }
