@@ -1,8 +1,17 @@
 {
   pkgs,
+  config,
   # neovim-nightly-overlay,
   ...
 }:
+let
+  # Path to your nvim config directory.
+  # NOTE: It should be a string on behalf of the full path. If a path is used
+  # (e.g. `../nvim`), the files will be linked to nix store statically instead
+  # of being linked to the source files dynamically (with write permission).
+  # NOTE: This also means this repo should be clone right under user's home dir.
+  nvimPath = "${config.home.homeDirectory}/nix-config/home/nvim";
+in
 {
   programs.neovim = {
     enable = true;
@@ -10,9 +19,7 @@
   };
 
   xdg.configFile.nvim = {
-    enable = true;
-    recursive = true;
-    source = ../nvim;
+    source = config.lib.file.mkOutOfStoreSymlink nvimPath;
   };
 
   imports = [
