@@ -7,18 +7,19 @@
   services.gitlab-runner = {
     enable = true;
     services = {
-      # runner for building in docker via host's nix-daemon
-      # nix store will be readable in runner, might be insecure
+      # Runner for building in docker via host's nix-daemon.
+      # Nix store will be readable in runner, might be insecure.
       nix = {
         # File should contain at least these two variables:
         # `CI_SERVER_URL` and `CI_SERVER_TOKEN`.
         # A list of all supported environment variables can be found with:
         # gitlab-runner register --help
-        authenticationTokenConfigFile = toString ./gitlab-runner.env;
         registrationFlags = [
           ''--url ${builtins.getEnv "CI_SERVER_URL"}''
           ''--token ${builtins.getEnv "CI_SERVER_TOKEN"}''
         ];
+        # NOTE: use either `registrationFlags` or `authenticationTokenConfigFile`.
+        # authenticationTokenConfigFile = toString ./gitlab-runner.env;
 
         dockerImage = "alpine";
         dockerVolumes = [
