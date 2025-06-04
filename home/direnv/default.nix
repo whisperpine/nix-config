@@ -6,7 +6,6 @@
   };
 
   xdg.configFile.direnv = {
-    enable = true;
     source = ./direnv.toml;
     target = "./direnv/direnv.toml";
   };
