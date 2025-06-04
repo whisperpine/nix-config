@@ -3,13 +3,14 @@ input@{
   nixpkgs-stable,
   home-manager,
   nixos-wsl,
+  sops-nix,
   system,
   ...
 }:
 let
   username = "yusong";
   # Pass non-default args to modules.
-  # Caution: DO NOT rename `specialArgs`.
+  # CAUTION: DO NOT rename `specialArgs`.
   specialArgs = input // {
     pkgs-stable = import nixpkgs-stable {
       inherit system;
@@ -45,6 +46,9 @@ nixpkgs.lib.nixosSystem {
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/docker.nix
+
+    # sops-nix module differs in linux and darwin
+    sops-nix.nixosModules.sops
     ./modules/sops-nix.nix
 
     # WSL (Windows Subsystem for Linux).

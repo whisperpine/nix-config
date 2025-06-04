@@ -3,6 +3,7 @@ input@{
   nixpkgs-stable,
   home-manager,
   nix-darwin,
+  sops-nix,
   system,
   ...
 }:
@@ -47,13 +48,17 @@ nix-darwin.lib.darwinSystem {
   inherit specialArgs;
   # Merge modules.
   modules = [
-    # This modules id defined above in "let" expression.
+    # This module id defined above in "let" expression.
     configuration
 
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/darwin-system.nix
     ./modules/fonts.nix
+
+    # sops-nix module differs in linux and darwin
+    sops-nix.darwinModules.sops
+    ./modules/sops-nix.nix
 
     # Home Manager settings.
     home-manager.darwinModules.home-manager

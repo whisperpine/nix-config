@@ -24,7 +24,10 @@
     # To install the nightly version of Neovim.
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     # Secrept provisioning by sops-nix
-    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Home Manager used for managing user configuration.
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
