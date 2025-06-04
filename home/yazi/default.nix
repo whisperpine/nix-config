@@ -5,9 +5,5 @@
     enableNushellIntegration = true;
     enableBashIntegration = true;
   };
-  xdg.configFile.yazi = {
-    enable = true;
-    recursive = true;
-    source = ../yazi;
-  };
+  xdg.configFile.yazi.source = ../yazi;
 }

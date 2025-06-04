@@ -1,11 +1,11 @@
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["g", "r"]
 run = '''
   shell 'ya pub dds-cd --str "$(git rev-parse --show-toplevel)"' --confirm
 '''
 desc = "Go to current git repo"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "!"
 run = "shell nu --block --confirm"
 desc = "Open shell here"
