@@ -12,7 +12,7 @@ deploy:
 # build and switch on darwin (manually set HOSTNAME in .env)
 darwin:
     echo ${HOSTNAME}
-    darwin-rebuild switch \
+    sudo darwin-rebuild switch \
         --flake .#$HOSTNAME \
         --impure
 

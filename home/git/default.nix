@@ -1,7 +1,4 @@
 { pkgs, ... }:
-let
-  home = builtins.getEnv "HOME";
-in
 {
   home.packages = with pkgs; [
     git
@@ -9,10 +6,7 @@ in
     git-lfs
   ];
 
-  xdg.configFile.gitconfig = {
-    source = ./.gitconfig;
-    target = "${home}/.gitconfig";
-  };
+  home.file.".gitconfig".source = ./.gitconfig;
 
   xdg.configFile.themes = {
     source = ./themes.gitconfig;

@@ -25,6 +25,7 @@ in
   imports = [
     ../marksman # markdown language server
     ../fd # telescope.nvim
+    ../inotify # file watcher used by LSP
   ];
 
   home.packages = with pkgs; [
@@ -34,7 +35,6 @@ in
     tree-sitter # tree-sitter.nvim
     yarn-berry # markdown-preview.nvim
     nodejs_22 # markdown-preview.nvim
-    inotify-tools # file watcher used by LSP
     ripgrep # telescope.nvim
     gnumake # avante.nvim
     zig # tree-sitter.nvim

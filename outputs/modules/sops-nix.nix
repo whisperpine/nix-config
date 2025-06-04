@@ -1,4 +1,5 @@
 {
+  pkgs,
   config,
   username,
   sops-nix,
@@ -10,7 +11,11 @@
 
   sops.defaultSopsFile = ../../secrets/encrypted.yaml;
   # This is using an age key that is expected to already be in the filesystem
-  sops.age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
+  sops.age.keyFile =
+    if pkgs.stdenv.isDarwin then
+      "/Users/${username}/.config/sops/age/keys.txt"
+    else
+      "/home/${username}/.config/sops/age/keys.txt";
   # This is the actual specification of the secrets.
   sops.secrets."example-key" = { };
   sops.secrets."deepseek-api-key" = {
