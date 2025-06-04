@@ -13,7 +13,6 @@
 
   imports = [
     ./git
-    ./gpg
     ./bat
     ./zsh
     ./bash
@@ -31,9 +30,7 @@
 
     docker-compose
     tree
-    file
     ouch
-    curl
     eza
 
     sops

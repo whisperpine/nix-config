@@ -10,6 +10,5 @@
     ./desktop.nix
     ./alacritty
     ./wezterm
-    ./zsh
   ];
 }
