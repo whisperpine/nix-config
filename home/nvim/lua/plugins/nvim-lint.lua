@@ -7,6 +7,7 @@ plugin = {
 
 plugin.config = function()
   require("lint").linters_by_ft = {
+    html = { "htmlhint" },
     terraform = { "tflint" },
     sql = { "sqruff" },
     markdown = { "markdownlint" },

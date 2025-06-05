@@ -51,6 +51,7 @@ in
     opentofu # terraform, opentofu
     rustywind # tailwind
     typstyle # typst
+    htmlhint # html
     rustfmt # rust
     tflint # terraform
     sqruff # sql
