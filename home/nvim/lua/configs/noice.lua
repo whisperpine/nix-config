@@ -87,6 +87,8 @@ M.routes = {
   { filter = { find = "%->" }, view = "mini" },
   -- nvim-treesitter
   { filter = { find = "All parsers are up-to-date!" }, opts = { skip = true } },
+  -- lazy.nvim
+  { filter = { find = "Config Change Detected. Reloading..." }, opts = { skip = true } },
   -- zk-nvim --
   {
     filter = {

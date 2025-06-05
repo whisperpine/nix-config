@@ -3,8 +3,7 @@ local plugin = {}
 plugin = {
   "nvim-treesitter/nvim-treesitter",
   branch = "main",
-  event = { "BufReadPost", "BufNewFile" },
-  cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+  event = "VeryLazy",
   build = ":TSUpdate",
   init = function()
     pcall(function()
@@ -28,7 +27,7 @@ plugin.config = function(_, opts)
   -- add autocmd to start treesitter
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true }),
-    pattern = opts.ensure_installed,
+    pattern = vim.tbl_extend("force", opts.ensure_installed, { "sh" }),
     callback = function(args)
       vim.treesitter.start(args.buf)
     end,
