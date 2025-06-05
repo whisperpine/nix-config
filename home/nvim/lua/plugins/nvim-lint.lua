@@ -7,6 +7,7 @@ plugin = {
 
 plugin.config = function()
   require("lint").linters_by_ft = {
+    terraform = { "tflint" },
     sql = { "sqruff" },
     markdown = { "markdownlint" },
     javascript = { "biomejs" },

@@ -52,6 +52,7 @@ in
     rustywind # tailwind
     typstyle # typst
     rustfmt # rust
+    tflint # terraform
     sqruff # sql
     stylua # lua
     shfmt # shell
