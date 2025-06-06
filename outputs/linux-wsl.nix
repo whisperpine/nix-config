@@ -46,6 +46,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/docker.nix
+    ./modules/services/k3s.nix
 
     # sops-nix module differs in linux and darwin
     sops-nix.nixosModules.sops
