@@ -115,6 +115,14 @@ vim.lsp.config("clangd", {
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
 })
 
+-- config yamlls
+vim.lsp.config("yamlls", {
+  settings = {
+    -- Apply Kubernetes schema to all YAML files
+    yaml = { schemas = { kubernetes = "*.yaml" } },
+  },
+})
+
 -- enable language servers defined under ~/.config/nvim/lsp
 vim.lsp.enable {
   -- ### written by myself ###
