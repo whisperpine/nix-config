@@ -25,15 +25,12 @@ debug:
         --flake .#$HOSTNAME \
         --impure
 
-# nix flake update
-up:
-    nix flake update
-
 # show profile history
 history:
     nix profile history --profile /nix/var/nix/profiles/system
 
 # remove all generations older than 7 days
+# For non-home-manager profiles
 clean:
     sudo nix profile wipe-history \
         --profile /nix/var/nix/profiles/system --older-than 7d
@@ -41,5 +38,8 @@ clean:
 # garbage collect all unused nix store entries
 gc:
     sudo nix store gc --debug
+    # also removes old profile generations
     sudo nix-collect-garbage --delete-old
+    # clean up user profiles in XDG directories:
+    # https://github.com/NixOS/nix/issues/8508
     nix-collect-garbage --delete-old
