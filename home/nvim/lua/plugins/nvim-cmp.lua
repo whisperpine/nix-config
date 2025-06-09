@@ -14,6 +14,9 @@ plugin = {
         require("luasnip.loaders.from_vscode").load {
           paths = { "./snippets" },
         }
+        vim.keymap.set({ "i", "s" }, "<C-l>", function()
+          require("luasnip").jump(1)
+        end, { silent = true })
       end,
     },
     -- cmp sources plugins
