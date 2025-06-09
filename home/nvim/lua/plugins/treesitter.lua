@@ -14,8 +14,11 @@ plugin = {
 }
 
 plugin.config = function(_, opts)
+  ---@type string[]
   local ensure_installed = opts.ensure_installed -- (list of your parsers)
+  ---@type string[]
   local already_installed = require("nvim-treesitter").get_installed()
+  ---@type string[]
   local parsers_to_install = vim
     .iter(ensure_installed)
     :filter(function(parser)
@@ -24,10 +27,20 @@ plugin.config = function(_, opts)
     :totable()
   require("nvim-treesitter").install(parsers_to_install)
 
+  ---@type string[]
+  local start_pattern = vim.tbl_extend("force", opts.ensure_installed, { "sh" })
+  for index, value in ipairs(start_pattern) do
+    -- Only use dockerfile parse in markdown files (code block). Don't start
+    -- treesitter when the filetype is dockerfile, because of existing issues.
+    if value == "dockerfile" then
+      table.remove(start_pattern, index)
+    end
+  end
+
   -- add autocmd to start treesitter
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true }),
-    pattern = vim.tbl_extend("force", opts.ensure_installed, { "sh" }),
+    pattern = start_pattern,
     callback = function(args)
       vim.treesitter.start(args.buf)
     end,
@@ -47,6 +60,7 @@ plugin.opts = {
 
   -- all the supported languages by tree-sitter:
   -- https://github.com/nvim-treesitter/nvim-treesitter
+  ---@type string[]
   ensure_installed = {
     "markdown_inline",
     "markdown",
@@ -60,6 +74,7 @@ plugin.opts = {
     "editorconfig",
     "ssh_config",
     "terraform",
+    "dockerfile",
     "mermaid",
     "graphql",
     "svelte",
