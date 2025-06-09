@@ -3,27 +3,31 @@
   "contributes": {
     "snippets": [
       {
-        "language": ["all"],
+        "language": "all",
         "path": "./all.json"
       },
       {
-        "language": ["markdown"],
+        "language": "markdown",
         "path": "./markdown.json"
       },
       {
-        "language": ["rust"],
+        "language": "rust",
         "path": "./rust.json"
       },
       {
-        "language": ["toml"],
+        "language": "toml",
         "path": "./toml.json"
       },
       {
-        "language": ["yaml"],
+        "language": "yaml",
         "path": "./yaml.json"
       },
       {
-        "language": ["html"],
+        "language": "yaml",
+        "path": "./kubernetes.json"
+      },
+      {
+        "language": "html",
         "path": "./html.json"
       }
     ]
