@@ -276,7 +276,7 @@ symbol = "swift "
 format = "[$symbol]($style)"
 
 [terraform]
-symbol = "terraform "
+symbol = "tf "
 format = "[$symbol]($style)"
 
 [zig]

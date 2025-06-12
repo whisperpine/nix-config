@@ -120,8 +120,8 @@ vim.lsp.config("yamlls", {
   settings = {
     yaml = {
       schemas = {
-        -- apply Kubernetes schema to all YAML files
-        kubernetes = "*.yaml",
+        -- -- apply Kubernetes schema to all YAML files
+        -- kubernetes = "*.yaml",
         -- apply docker compose schema to compose.yaml and compose.yml
         ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = {
           "compose.yaml",
