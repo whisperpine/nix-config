@@ -9,8 +9,8 @@ let
   # NOTE: It should be a string on behalf of the full path. If a path is used
   # (e.g. `../nvim`), the files will be linked to nix store statically instead
   # of being linked to the source files dynamically (with write permission).
-  # NOTE: This also means this repo should be clone right under user's home dir.
-  nvimPath = "${config.home.homeDirectory}/nix-config/home/nvim";
+  # NOTE: "/etc/nixos" should be a symbolic link of this repo.
+  nvimPath = "/etc/nixos/home/nvim";
 in
 {
   programs.neovim = {
@@ -23,8 +23,8 @@ in
   };
 
   imports = [
-    ../marksman # markdown language server
     ../fd # telescope.nvim
+    ../marksman # markdown language server
     ../inotify # file watcher used by LSP
   ];
 

@@ -55,13 +55,6 @@ flowchart LR
 
 ## Get Started
 
-> [!NOTE]
-> This repo must be cloned right under user's home directory (`~`). This is
-> required to achieve symlink via `config.lib.file.mkOutOfStoreSymlink` with
-> write permission, which is a time savor for rapid changes in neovim
-> configurations. Refer to the comments of `nvimPath` in
-> [./home/nvim/default.nix](./home/nvim/default.nix) for more details.
-
 ### NixOS-WSL
 
 Download `nixos-wsl.tar.gz` from the [latest release](https://github.com/nix-community/NixOS-WSL/releases).
