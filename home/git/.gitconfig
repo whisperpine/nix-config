@@ -2,49 +2,49 @@
     path = ~/.config/git/themes.gitconfig
 
 [user]
-	name = Yusong
-	email = yusonglai64@gmail.com
+    name = Yusong
+    email = yusonglai64@gmail.com
 
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
 
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	pushff = push --force-with-lease --force-if-includes
-	sc = sparse-checkout
-	sm = submodule
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    pushff = push --force-with-lease --force-if-includes
+    sc = sparse-checkout
+    sm = submodule
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 
 [pull]
-	rebase = true
+    rebase = true
 
 [core]
     compression = 9
     whitespace = error
-	longpaths = true
-	autocrlf = false
-	quotepath = false
-	fsmonitor = false
-	symlinks = true
+    longpaths = true
+    autocrlf = false
+    quotepath = false
+    fsmonitor = false
+    symlinks = true
     # https://github.com/dandavison/delta
     pager = delta
 
 [rerere]
-	enable = true
+    enable = true
 
 [fetch]
-	writeCommitGraph = true
+    writeCommitGraph = true
 
 [submodule]
-	recurse = true
+    recurse = true
 
 [lfs]
-	locksverify = false
+    locksverify = false
 
 [interactive]
     diffFilter = delta --color-only
