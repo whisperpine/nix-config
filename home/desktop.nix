@@ -23,6 +23,7 @@
     translate-shell
     onefetch
     ffmpeg
+    kondo
     tokei
     just
   ];
