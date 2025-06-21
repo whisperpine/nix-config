@@ -16,7 +16,7 @@
     awscli2
 
     # dev tools
-    python312
+    python313
     uv
 
     # utilities

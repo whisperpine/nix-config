@@ -1,7 +1,7 @@
 { ... }@inputs:
 {
   # devShells environment can be entered by `nix develop`
-  devShells = import ./dev-shells.nix { nixpkgs = inputs.nixpkgs; };
+  devShells = import ./dev-shells.nix inputs;
 
   darwinConfigurations = {
     # mac mini
@@ -33,7 +33,7 @@
       }
     );
 
-    # nixos desktop x86_64
+    # nixos desktop aarch64
     "yunixa" = import ./linux-desktop.nix (
       inputs
       // {

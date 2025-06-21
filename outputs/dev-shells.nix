@@ -1,4 +1,4 @@
-{ nixpkgs }:
+inputs:
 let
   supportedSystems = [
     "x86_64-linux"
@@ -7,16 +7,16 @@ let
     "aarch64-darwin"
   ];
   forEachSupportedSystem =
-    f: nixpkgs.lib.genAttrs supportedSystems (system: f { pkgs = import nixpkgs { inherit system; }; });
+    f:
+    inputs.nixpkgs.lib.genAttrs supportedSystems (
+      system: f { pkgs = import inputs.nixpkgs { inherit system; }; }
+    );
 in
 forEachSupportedSystem (
   { pkgs }:
   {
     default = pkgs.mkShell {
-      packages = with pkgs; [
-        husky
-        typos
-      ];
+      packages = with pkgs; [ husky ];
       shellHook = ''
         # install git hook managed by husky
         if [ ! -e "./.husky/_" ]; then

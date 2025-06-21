@@ -1,6 +1,4 @@
-# README
-
-Yusong's nix config.
+# Yusong's Nix Config
 
 ## References
 
