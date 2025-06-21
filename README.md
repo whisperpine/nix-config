@@ -2,15 +2,14 @@
 
 ## References
 
-- [An unofficial book for beginners](https://nixos-and-flakes.thiscute.world/).
 - [Home Manager Option Search](https://home-manager-options.extranix.com/).
-- [the-nix-way/dev-templates](https://github.com/the-nix-way/dev-templates).
+- [An unofficial book for beginners](https://nixos-and-flakes.thiscute.world/).
 
-## Showcase
+## Screenshots
 
 ![neovim-zellij](./assets/neovim-zellij.webp)
 
-## Structure
+## Code Structure
 
 ```mermaid
 flowchart LR
@@ -133,7 +132,7 @@ darwin-rebuild switch --flake ~/nix-config
 Tip: `darwin-help` will open an HTML version of the man-page in the default browser.\
 `man 5 configuration.nix` will open the manual of nix-darwin right in the terminal.
 
-## Secrets
+## Secret Management
 
 Secrets are managed by [sops-nix](https://github.com/Mic92/sops-nix),
 which is based on [sops](https://github.com/getsops/sops).\
