@@ -29,6 +29,10 @@
       {
         "language": "html",
         "path": "./html.json"
+      },
+      {
+        "language": ["bash", "sh"],
+        "path": "./bash.json"
       }
     ]
   }
