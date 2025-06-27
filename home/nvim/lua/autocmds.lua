@@ -114,6 +114,14 @@ autocmd("TermOpen", {
 -- clear indentexpr for python
 autocmd("BufEnter", {
   group = augroup("SetPythonIndentexpr", { clear = true }),
-  pattern = { "*.py" },
+  pattern = "*.py",
   command = "setlocal indentexpr=",
+})
+
+autocmd("Filetype", {
+  group = augroup("SetIniCommentString", { clear = true }),
+  pattern = "ini",
+  callback = function()
+    vim.bo.commentstring = "# %s"
+  end,
 })
