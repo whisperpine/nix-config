@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # check spelling.
-typos --hidden --exclude .git --format brief
+sh ./scripts/check-typos-in-files.sh
