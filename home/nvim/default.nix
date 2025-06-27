@@ -54,8 +54,8 @@ in
     htmlhint # html
     rustfmt # rust
     tflint # terraform
-    sqruff # sql
     sqlfluff # sql
+    # sqruff # sql
     stylua # lua
     shfmt # shell
     typos # spell checker
