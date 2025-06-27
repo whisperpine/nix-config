@@ -104,6 +104,7 @@ plugin.opts = {
     "yaml",
     "toml",
     "json",
+    "jsonc",
     "ruby",
     "hurl",
     "helm",
