@@ -25,7 +25,19 @@ plugin.dependencies = {
           }
         end,
       })
+
+      local wk = require "which-key"
+      wk.add {
+        { "<leader>db", icon = { icon = "󰆼 ", color = "yellow" } },
+      }
     end,
+    keys = {
+      {
+        "<leader>db",
+        "<cmd> DBCompletionClearCache <cr>",
+        desc = "refresh db auto completion",
+      },
+    },
   },
 }
 
