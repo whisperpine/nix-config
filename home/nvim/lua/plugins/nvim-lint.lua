@@ -9,7 +9,7 @@ plugin.config = function()
   require("lint").linters_by_ft = {
     html = { "htmlhint" },
     terraform = { "tflint" },
-    sql = { "sqruff" },
+    sql = { "sqlfluff" },
     markdown = { "markdownlint" },
     javascript = { "biomejs" },
     typescript = { "biomejs" },
@@ -26,6 +26,12 @@ plugin.init = function()
     "BufWritePost",
     "BufReadPost",
     "InsertLeave",
+  }
+  -- customize built-in linter: sqlfluff
+  local sqlfluff = require("lint").linters.sqlfluff
+  sqlfluff.args = {
+    "lint",
+    "--format=json",
   }
   vim.api.nvim_create_autocmd(lint_events, {
     callback = function()

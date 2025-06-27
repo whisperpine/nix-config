@@ -55,6 +55,7 @@ in
     rustfmt # rust
     tflint # terraform
     sqruff # sql
+    sqlfluff # sql
     stylua # lua
     shfmt # shell
     typos # spell checker
