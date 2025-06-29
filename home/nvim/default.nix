@@ -52,6 +52,7 @@ in
     rustywind # tailwind
     typstyle # typst
     htmlhint # html
+    redocly # openapi
     rustfmt # rust
     tflint # terraform
     sqlfluff # sql
