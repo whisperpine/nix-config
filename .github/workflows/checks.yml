@@ -34,5 +34,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v31
-      - name: Run markdownlint command
+      - name: Run nix command
         run: nix flake check --impure --all-systems
