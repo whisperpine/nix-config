@@ -39,6 +39,7 @@ nixpkgs.lib.nixosSystem {
     configuration
 
     ./modules/hardware/desktop.nix
+    ./modules/xdg-hyprland.nix
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/docker.nix
