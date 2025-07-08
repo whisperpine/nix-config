@@ -16,10 +16,7 @@ forEachSupportedSystem (
   { pkgs }:
   {
     default = pkgs.mkShell {
-      packages = with pkgs; [
-        husky
-        typos
-      ];
+      packages = with pkgs; [ husky ];
       shellHook = ''
         # install git hook managed by husky
         if [ ! -e "./.husky/_" ]; then

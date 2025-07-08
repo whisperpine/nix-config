@@ -1,19 +1,19 @@
-name: CI
+name: Checks
 
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
       - main
 
 jobs:
-  spelling:
+  typos:
     runs-on: ubuntu-latest
     name: spell check with typos
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
-        shell: nix develop --quiet --command bash {0}
-        run: |
-          sh ./scripts/check-typos-in-files.sh
+        shell: nix shell nixpkgs#typos --quiet --command bash {0}
+        run: sh ./scripts/check-typos-in-files.sh
