@@ -38,7 +38,7 @@ nixpkgs.lib.nixosSystem {
     # This modules id defined above in "let" expression.
     configuration
 
-    ./modules/hardware.nix
+    ./modules/hardware/desktop.nix
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/docker.nix

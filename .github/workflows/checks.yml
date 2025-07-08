@@ -30,7 +30,7 @@ jobs:
 
   nix-flake-check:
     runs-on: ubuntu-latest
-    name: lint markdown by markdownlint
+    name: nix flake check
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v31
