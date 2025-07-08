@@ -9,6 +9,16 @@
   # gitlab repo). See: https://nixos.wiki/wiki/Gitlab_runner
   boot.kernel.sysctl."net.ipv4.ip_forward" = true;
 
+  # The devices on which the boot loader, GRUB, will be installed.
+  boot.loader.grub.devices = [ "/dev/sdd" ];
+
+  fileSystems = {
+    "/" = {
+      device = "/dev/sdd";
+      fsType = "btrfs";
+    };
+  };
+
   hardware.nvidia = {
     # Enable experimental power management through systemd.
     powerManagement.enable = true;
