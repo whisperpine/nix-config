@@ -17,3 +17,13 @@ jobs:
       - name: Run typos command
         shell: nix shell nixpkgs#typos --quiet --command bash {0}
         run: sh ./scripts/check-typos-in-files.sh
+
+  markdownlint:
+    runs-on: ubuntu-latest
+    name: lint markdown by markdownlint
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - name: Run markdownlint command
+        shell: nix shell nixpkgs#markdownlint-cli --quiet --command bash {0}
+        run: markdownlint .

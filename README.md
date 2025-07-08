@@ -3,7 +3,7 @@
 [![Nix](https://img.shields.io/badge/Nix-5277C3?logo=nixos&logoColor=white)](https://github.com/NixOS)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/whisperpine/nix-config)](https://github.com/whisperpine/nix-config/commits/main/)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr-closed/whisperpine/nix-config)](https://github.com/whisperpine/nix-config/pulls)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/whisperpine/nix-config/checks.yml?label=checks)](https://github.com/whisperpine/nix-config/actions)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/whisperpine/nix-config/checks.yml?label=checks)](https://github.com/whisperpine/nix-config/actions/workflows/checks.yml)
 [![GitHub Tag](https://img.shields.io/github/v/tag/whisperpine/nix-config)](https://github.com/whisperpine/nix-config/tags)
 [![GitHub License](https://img.shields.io/github/license/whisperpine/nix-config)](https://github.com/whisperpine/nix-config/blob/main/LICENSE)
 
