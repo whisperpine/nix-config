@@ -8,7 +8,7 @@ let
 in
 {
   sops.defaultSopsFile = ../../secrets/encrypted.yaml;
-  # This is using an age key that is expected to already be in the filesystem
+  # This is using an age key that is expected to already be in the filesystem.
   sops.age.keyFile = keyFile;
   # This is the actual specification of the secrets.
   sops.secrets."example-key" = { };
@@ -23,7 +23,11 @@ in
     # This is required to override the default path.
     # https://github.com/getsops/sops?tab=readme-ov-file#23encrypting-using-age
     SOPS_AGE_KEY_FILE = keyFile;
-    # This is used by avante.nvim, a neovim plugin. This makes nix impure.
-    DEEPSEEK_API_KEY = "${builtins.readFile config.sops.secrets.deepseek-api-key.path}";
+    # This is used by avante.nvim, a neovim plugin. This makes nix "impure".
+    DEEPSEEK_API_KEY =
+      if builtins.pathExists config.sops.secrets.deepseek-api-key.path then
+        "${builtins.readFile config.sops.secrets.deepseek-api-key.path}"
+      else
+        "";
   };
 }
