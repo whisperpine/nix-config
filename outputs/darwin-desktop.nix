@@ -30,16 +30,10 @@ let
         # Used for backwards compatibility.
         stateVersion = lib.mkForce 5;
       };
-      # Override user's home directory (defined in host-users.nix).
-      users.users."${username}".home = lib.mkForce "/Users/${username}";
       # This is important to find command path (e.g. nix, darwin-rebuild).
       programs.zsh.enable = true;
       # Install packages in operating system.
-      environment.systemPackages = with pkgs; [
-        mkalias
-        alacritty
-        wezterm
-      ];
+      environment.systemPackages = with pkgs; [ mkalias ];
     };
 in
 nix-darwin.lib.darwinSystem {
@@ -52,7 +46,7 @@ nix-darwin.lib.darwinSystem {
     configuration
 
     ./modules/nix-core.nix
-    ./modules/host-users.nix
+    ./modules/darwin-users.nix
     ./modules/darwin-system.nix
     ./modules/fonts.nix
 

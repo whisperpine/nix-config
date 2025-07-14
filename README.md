@@ -93,6 +93,9 @@ cd ~ && git clone git@github.com:whisperpine/nix-config.git
 cd ~/.config/nix-config && cp example.env .env
 # edit .env (follow the comment inside)
 vim .env
+# create a symlink to /etc/nixos
+# (this symlink is used by neovim configs and PATH env var)
+sudo ln -s ~/nix-config /etc/nixos
 
 # tada
 nix --extra-experimental-features "nix-command flakes" \
