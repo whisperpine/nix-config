@@ -14,6 +14,7 @@ vim.filetype.add {
     [".env.*"] = "conf",
     [".*/templates/.*%.yaml"] = "helm",
     [".*/templates/.*%.tpl"] = "helm",
+    [".*%.conf.template"] = "nginx",
   },
 }
 
