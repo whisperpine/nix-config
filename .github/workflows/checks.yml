@@ -43,6 +43,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v31
-      - name: Run tflint command
+      - name: Run shellcheck command
         shell: nix shell nixpkgs#shellcheck --quiet --command bash {0}
         run: shellcheck ./scripts/*.sh
