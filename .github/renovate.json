@@ -9,5 +9,10 @@
   "labels": ["renovate"],
   "rebaseWhen": "conflicted",
   "prHourlyLimit": 2,
-  "automerge": false
+  "automerge": false,
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "home/nvim/snippets/package.json"
+  ]
 }
