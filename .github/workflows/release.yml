@@ -1,0 +1,37 @@
+name: Create a Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+" # Matches tags like "v1.2.3"
+      - "v[0-9]+.[0-9]+.[0-9]+-*" # Matches tags like "v1.2.3-alpha.1"
+
+jobs:
+  release:
+    name: create a release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history.
+          filter: blob:none
+          fetch-tags: true
+      - uses: cachix/install-nix-action@v31
+      - name: Run git cliff command
+        shell: nix shell nixpkgs#git-cliff --quiet --command bash {0}
+        run: |
+          TAG=${{ github.ref_name }}
+          if [[ $TAG =~ ^v?[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              git-cliff --latest -o CHANGELOG.md
+          elif [[ $TAG =~ ^v?[0-9]+.[0-9]+.[0-9]+-.*$ ]]; then
+              git-cliff --latest --tag-pattern "" -o CHANGELOG.md
+          fi
+      - name: Create a release
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
+        with:
+          body_path: CHANGELOG.md
+          prerelease: true
+          make_latest: false

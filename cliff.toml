@@ -1,0 +1,79 @@
+# git-cliff ~ configuration file
+# https://git-cliff.org/docs/configuration
+
+[changelog]
+# A Tera template to be rendered as the changelog's footer.
+# See https://keats.github.io/tera/docs/#introduction
+header = """
+"""
+# A Tera template to be rendered for each release in the changelog.
+# See https://keats.github.io/tera/docs/#introduction
+body = """
+> {{ timestamp | date(format="%Y-%m-%d") }}
+{% if previous %}\
+    {% if previous.version and version %}
+        A full diff can be seen here: \
+        [{{ previous.version }}...{{ version }}]($REPO/compare/{{ previous.version }}...{{ version }})
+    {% endif %}\
+{% endif %}\
+{% for group, commits in commits | group_by(attribute="group") %}
+    ## {{ group | striptags | trim | upper_first }}
+    {% for commit in commits
+    | filter(attribute="scope")
+    | sort(attribute="scope") %}
+        - ({{commit.scope}}){% if commit.breaking %} [**breaking**]{% endif %} \
+            {{ commit.message }} ({{ commit.id | truncate(length=7, end="") }})
+    {%- endfor -%}
+    {% raw %}\n{% endraw %}\
+    {%- for commit in commits %}
+        {%- if commit.scope -%}
+        {% else -%}
+            - {% if commit.breaking %} [**breaking**]{% endif %}\
+                {{ commit.message }} ({{ commit.id | truncate(length=7, end="") }})
+        {% endif -%}
+    {% endfor -%}
+{% endfor %}\n
+"""
+# A Tera template to be rendered as the changelog's footer.
+# See https://keats.github.io/tera/docs/#introduction
+footer = """
+"""
+# Remove leading and trailing whitespaces from the changelog's body.
+trim = true
+# postprocessors
+postprocessors = [
+  # Replace the placeholder `<REPO>` with a URL.
+  { pattern = '\$REPO', replace = "https://github.com/whisperpine/nix-config" }, # replace repository URL
+]
+
+[git]
+# Include Only Stable Tags (e.g. "v1.2.3" yes, "v1.2.3-beta.1" no).
+tag_pattern = '^v?[0-9]+\.[0-9]+\.[0-9]+$'
+# Parse commits according to the conventional commits specification.
+# See https://www.conventionalcommits.org
+conventional_commits = true
+# Exclude commits that do not match the conventional commits specification.
+filter_unconventional = true
+# An array of regex based parsers for extracting data from the commit message.
+# Assigns commits to groups.
+# Optionally sets the commit's scope and can decide to exclude commits from further processing.
+commit_parsers = [
+  { message = "^feat", group = "<!-- 0 -->Features" },
+  { message = "^fix", group = "<!-- 1 -->Bug Fixes" },
+  { message = "^perf", group = "<!-- 2 -->Performance" },
+  { message = "^refactor", group = "<!-- 3 -->Refactor" },
+  { message = "^revert", group = "<!-- 4 -->Revert" },
+  { message = "^test", group = "<!-- 5 -->Testing" },
+  { message = "^ci", group = "<!-- 6 -->CI/CD" },
+  { message = "^doc", group = "<!-- 7 -->Documentation" },
+  { message = "^chore\\(deps\\):", skip = true },
+  { message = "^chore\\(release\\):", skip = true },
+  { message = "^chore", group = "<!-- 8 -->Miscellaneous" },
+]
+# Exclude commits that are not matched by any commit parser.
+filter_commits = true
+# Order releases topologically instead of chronologically.
+topo_order = false
+# Order of commits in each group/release within the changelog.
+# Allowed values: newest, oldest
+sort_commits = "oldest"
