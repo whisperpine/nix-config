@@ -16,7 +16,7 @@ This repository contains all my Nix configurations for desktops (NixOS and
 macOS) and homelab servers.
 </div>
 
-## Background
+---
 
 Nix declaratively defines: operating system, software and their configurations.
 This ensures consistency, reproducibility and hassle-free rolling back, which is
@@ -174,7 +174,7 @@ flowchart LR
 ## Contributing
 
 As this repository is for personal use, Pull Requests regarding new features or
-refactor will *not* be accepted, but fixes are welcome and appreciated.
+refactor will *not* be accepted.
 If you have any question, recommendation or related things to share,
 feel free to [open a discussion](https://github.com/whisperpine/nix-config/discussions).
 
