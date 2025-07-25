@@ -10,13 +10,8 @@
 
 </div>
 
-<div align="center">
-
 This repository contains all my Nix configurations for desktops (NixOS and
 macOS) and homelab servers.
-</div>
-
----
 
 Nix declaratively defines: operating system, software and their configurations.
 This ensures consistency, reproducibility and hassle-free rolling back, which is
