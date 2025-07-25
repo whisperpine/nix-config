@@ -1,9 +1,4 @@
-{
-  pkgs,
-  hostname,
-  username,
-  ...
-}:
+{ hostname, username, ... }:
 #----------  host & users configuration ----------#
 {
   networking.hostName = hostname;
@@ -13,7 +8,7 @@
     name = username;
     description = username;
     home = "/home/${username}";
-    shell = pkgs.nushell;
+    shell = "/etc/profiles/per-user/${username}/bin/nu";
     isNormalUser = true;
     group = "yusong";
   };
