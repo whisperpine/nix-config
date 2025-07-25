@@ -10,11 +10,11 @@
 
 </div>
 
-<p align="center">
+<div align="center">
 
 This repository contains all my Nix configurations for desktops (NixOS and
 macOS) and homelab servers.
-</p>
+</div>
 
 ## Background
 
