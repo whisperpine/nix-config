@@ -1,3 +1,5 @@
+# NOTE: manually run `direnv reload` after changing this file (as a workaround).
+# This file change isn't automatically detected by direnv somehow.
 inputs:
 let
   supportedSystems = [
@@ -16,7 +18,10 @@ forEachSupportedSystem (
   { pkgs }:
   {
     default = pkgs.mkShell {
-      packages = with pkgs; [ husky ];
+      packages = with pkgs; [
+        husky
+        git-cliff
+      ];
       shellHook = ''
         # install git hook managed by husky
         if [ ! -e "./.husky/_" ]; then
