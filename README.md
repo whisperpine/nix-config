@@ -1,6 +1,6 @@
-<h1 style="text-align: center;">Yusong's Nix Config</h1>
+<h1 align="center">Yusong's Nix Config</h1>
 
-<div style="text-align: center;">
+<div align="center">
 
 [![Nix](https://img.shields.io/badge/Nix-5277C3?logo=nixos&logoColor=white)](https://github.com/NixOS)
 [![GitHub License](https://img.shields.io/github/license/whisperpine/nix-config)](https://github.com/whisperpine/nix-config/blob/main/LICENSE)
