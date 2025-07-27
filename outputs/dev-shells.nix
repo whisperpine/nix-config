@@ -19,8 +19,8 @@ forEachSupportedSystem (
   {
     default = pkgs.mkShell {
       packages = with pkgs; [
-        husky
-        git-cliff
+        husky # managing git hooks
+        git-cliff # changelog generator
       ];
       shellHook = ''
         # install git hook managed by husky
