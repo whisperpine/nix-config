@@ -13,7 +13,6 @@
     # cloud
     kubernetes-helm
     kubectl
-    awscli2
 
     # dev tools
     python313
@@ -25,6 +24,5 @@
     ffmpeg
     kondo
     tokei
-    just
   ];
 }
