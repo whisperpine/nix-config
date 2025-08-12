@@ -75,6 +75,7 @@ autocmd("Filetype", {
     "css",
     "nix",
     "lua",
+    "just",
     "bash",
     "zsh",
     "sh",
