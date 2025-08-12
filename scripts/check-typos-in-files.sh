@@ -8,8 +8,8 @@
 
 # Check if typos is installed.
 if ! command -v typos >/dev/null 2>&1; then
-    echo "typos is not installed. Please install it first."
-    exit 1
+  echo "typos is not installed. Please install it first."
+  exit 1
 fi
 
 typos --hidden --exclude .git --format brief

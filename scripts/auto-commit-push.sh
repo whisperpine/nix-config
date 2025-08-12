@@ -21,15 +21,15 @@ cd "$project_root" || exit
 
 # If there isn't any change.
 if [ ! "$(git status -s)" ]; then
-    {
-        echo
-        echo "No changes to commit on $current_date_time"
-    } >>"$log_file"
-    # In case of local commits ahead of remote branch
-    if ! git push; then
-        echo "error: git push failed" >>"$log_file"
-    fi
-    exit 0
+  {
+    echo
+    echo "No changes to commit on $current_date_time"
+  } >>"$log_file"
+  # In case of local commits ahead of remote branch
+  if ! git push; then
+    echo "error: git push failed" >>"$log_file"
+  fi
+  exit 0
 fi
 
 git add -A
@@ -38,12 +38,12 @@ changed_files=$(git status -s)
 git commit -m "$commit_message" -m "$changed_files"
 
 {
-    echo
-    echo "Commit on $current_date_time"
-    echo "Changed files:"
-    echo "$changed_files"
+  echo
+  echo "Commit on $current_date_time"
+  echo "Changed files:"
+  echo "$changed_files"
 } >>"$log_file"
 
 if ! git push; then
-    echo "error: git push failed" >>"$log_file"
+  echo "error: git push failed" >>"$log_file"
 fi
