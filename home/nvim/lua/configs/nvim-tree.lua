@@ -1,4 +1,6 @@
-dofile(vim.g.base46_cache .. "nvimtree")
+if vim.fn.filereadable(vim.g.base46_cache .. "nvimtree") == 1 then
+  dofile(vim.g.base46_cache .. "nvimtree")
+end
 
 local M = {}
 

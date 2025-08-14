@@ -7,7 +7,9 @@ plugin = {
 }
 
 plugin.init = function()
-  dofile(vim.g.base46_cache .. "telescope")
+  if vim.fn.filereadable(vim.g.base46_cache .. "telescope") == 1 then
+    dofile(vim.g.base46_cache .. "telescope")
+  end
 end
 
 plugin.opts = {

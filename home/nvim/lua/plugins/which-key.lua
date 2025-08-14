@@ -10,7 +10,9 @@ plugin = {
 }
 
 plugin.init = function()
-  dofile(vim.g.base46_cache .. "whichkey")
+  if vim.fn.filereadable(vim.g.base46_cache .. "whichkey") == 1 then
+    dofile(vim.g.base46_cache .. "whichkey")
+  end
   local wk = require "which-key"
   wk.add {
     {

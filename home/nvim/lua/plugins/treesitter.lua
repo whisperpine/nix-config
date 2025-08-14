@@ -6,10 +6,15 @@ plugin = {
   event = "VeryLazy",
   build = ":TSUpdate",
   init = function()
-    pcall(function()
-      dofile(vim.g.base46_cache .. "syntax")
-      dofile(vim.g.base46_cache .. "treesitter")
-    end)
+    if
+      vim.fn.filereadable(vim.g.base46_cache .. "syntax") == 1
+      and vim.fn.filereadable(vim.g.base46_cache .. "treesitter") == 1
+    then
+      pcall(function()
+        dofile(vim.g.base46_cache .. "syntax")
+        dofile(vim.g.base46_cache .. "treesitter")
+      end)
+    end
   end,
 }
 

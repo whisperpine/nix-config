@@ -6,7 +6,9 @@ plugin = {
 }
 
 plugin.opts = function()
-  dofile(vim.g.base46_cache .. "git")
+  if vim.fn.filereadable(vim.g.base46_cache .. "git") == 1 then
+    dofile(vim.g.base46_cache .. "git")
+  end
   return {
     signs = {
       delete = { text = "󰍵" },
