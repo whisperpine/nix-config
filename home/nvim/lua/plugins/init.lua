@@ -57,6 +57,8 @@ return {
     event = "User FilePost",
   },
 
+  { "b0o/schemastore.nvim" },
+
   {
     "nvim-tree/nvim-web-devicons",
     init = function()
