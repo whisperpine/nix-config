@@ -113,11 +113,6 @@ vim.lsp.config("*", {
   capabilities = M.capabilities,
 })
 
--- config clangd
-vim.lsp.config("clangd", {
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
-})
-
 -- config yamlls
 vim.lsp.config("yamlls", {
   settings = {
