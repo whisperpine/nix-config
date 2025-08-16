@@ -11,7 +11,6 @@
 
   home.packages = with pkgs; [
     # cloud
-    kubernetes-helm
     kubectl
 
     # dev tools
