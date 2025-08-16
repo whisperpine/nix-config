@@ -22,6 +22,7 @@
     ./pgcli
     ./nushell
     ./starship
+    ./zoxide
   ];
 
   home.packages = with pkgs; [
