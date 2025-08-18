@@ -188,8 +188,8 @@ null_string = '<null>'
 # manage pager on startup
 enable_pager = True
 
-# Use keyring to automatically save and load password in a secure manner
-keyring = True
+# Do not use keyring to automatically save and load password in a secure manner
+keyring = False
 
 # Custom colors for the completion menu, toolbar, etc.
 [colors]
