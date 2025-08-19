@@ -1,6 +1,9 @@
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 export PATH="$PATH:/etc/nixos/scripts/"
 
+# Bind a shortcut `ctrl+o`.
+bind '"\C-o": edit-and-execute-command'
+
 # --------------------
 # Zellij Integration
 # --------------------
