@@ -23,6 +23,7 @@
     ./nushell
     ./starship
     ./zoxide
+    ./atuin
   ];
 
   home.packages = with pkgs; [
