@@ -26,11 +26,12 @@ $env.config.cursor_shape = {
   vi_normal: block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (underscore is the default)
 }
 
-## To add entries to PATH
+# To add entries to PATH.
 use std "path add"
 path add "/opt/homebrew/bin"
 path add "/etc/nixos/scripts/"
 
+# Configure hooks for direnv.
 # https://github.com/nushell/nu_scripts/blob/main/nu-hooks/nu-hooks/direnv/config.nu
 $env.config.hooks.env_change.PWD = (
     $env.config.hooks.env_change.PWD?
