@@ -2,8 +2,6 @@
 {
   programs.zellij = {
     enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
     settings = {
       theme = "custom";
       scroll_buffer_size = 1500;
