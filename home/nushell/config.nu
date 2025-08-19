@@ -30,3 +30,16 @@ $env.config.cursor_shape = {
 use std "path add"
 path add "/opt/homebrew/bin"
 path add "/etc/nixos/scripts/"
+
+# https://github.com/nushell/nu_scripts/blob/main/nu-hooks/nu-hooks/direnv/config.nu
+$env.config.hooks.env_change.PWD = (
+    $env.config.hooks.env_change.PWD?
+    | default []
+    | append {||
+        if (which direnv | is-empty) {
+            return
+        }
+        direnv export json | from json | default {} | load-env
+        $env.PATH = $env.PATH | split row (char env_sep)
+    }
+)

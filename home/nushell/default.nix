@@ -1,4 +1,7 @@
-{ pkgs-stable, ... }:
+{
+  # pkgs-stable,
+  ...
+}:
 {
   programs.nushell = {
     enable = true;
@@ -12,7 +15,7 @@
       el = "eza -l";
     };
 
-    # This is a workaround for the conflict with direnv's hook.
-    package = pkgs-stable.nushell;
+    # # This is a workaround for the conflict with direnv's hook.
+    # package = pkgs-stable.nushell;
   };
 }
