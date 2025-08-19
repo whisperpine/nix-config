@@ -3,6 +3,7 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
+    bashrcExtra = "${builtins.readFile ./.bashrc}";
     shellAliases = {
       za = "zellij attach";
       kc = "kubectl";
@@ -11,10 +12,5 @@
       e = "eza";
       el = "eza -l";
     };
-    # .bashrc
-    bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
-      export PATH="$PATH:/etc/nixos/scripts/"
-    '';
   };
 }
