@@ -1,2 +1,1 @@
-bleopt complete_source_cmd=0
 bleopt complete_menu_filter=0

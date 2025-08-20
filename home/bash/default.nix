@@ -17,6 +17,9 @@
     };
   };
 
+  # Key bindings for bash.
+  home.file.".inputrc".source = ./.inputrc;
+
   # # atuin bash integration also requires ble.sh
   # home.packages = with pkgs; [ blesh ];
   # xdg.configFile.blesh = {

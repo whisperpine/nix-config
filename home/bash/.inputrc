@@ -1,0 +1,2 @@
+# Bind a shortcut `ctrl+o`.
+"\C-o": edit-and-execute-command
