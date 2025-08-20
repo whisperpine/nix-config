@@ -8,7 +8,9 @@
     name = username;
     description = username;
     home = "/home/${username}";
-    shell = "/etc/profiles/per-user/${username}/bin/nu";
+    # shell = "/etc/profiles/per-user/${username}/bin/nu";
+    # shell = "/etc/profiles/per-user/${username}/bin/zsh";
+    shell = "/sbin/bash";
     isNormalUser = true;
     group = "yusong";
   };
