@@ -1,8 +1,17 @@
+# Environment variable PATH.
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 export PATH="$PATH:/etc/nixos/scripts/"
 
-# Bind a shortcut `ctrl+o`.
-bind '"\C-o": edit-and-execute-command'
+# Configurations that only work in interactive mode.
+if [[ $- == *i* ]]; then
+  # Bind a shortcut `ctrl+o`.
+  bind '"\C-o": edit-and-execute-command'
+fi
+
+# # shellcheck disable=SC1094
+# source /nix/store/g4mn0iswaaf4hsyssx10n489q9whhl28-blesh-0.4.0-devel3/share/blesh/ble.sh
+# # shellcheck disable=1091
+# source "$(nix eval --raw nixpkgs#blesh)/share/blesh/ble.sh"
 
 # --------------------
 # Zellij Integration
