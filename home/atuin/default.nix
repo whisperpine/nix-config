@@ -4,7 +4,7 @@
     enable = true;
     enableZshIntegration = true;
     enableBashIntegration = true;
-    # enableNushellIntegration = false;
+    enableNushellIntegration = false;
   };
 
   xdg.configFile.atuin = {
