@@ -1,4 +1,7 @@
-{ ... }:
+{ config, ... }:
+let
+  atuinConfig = "/etc/nixos/home/atuin/config.toml";
+in
 {
   programs.atuin = {
     enable = true;
@@ -8,7 +11,7 @@
   };
 
   xdg.configFile.atuin = {
-    source = ./config.toml;
+    source = config.lib.file.mkOutOfStoreSymlink atuinConfig;
     target = "./atuin/config.toml";
   };
 }
