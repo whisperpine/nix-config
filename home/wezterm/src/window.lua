@@ -9,7 +9,7 @@ wezterm.on("gui-startup", function(cmd)
 	if string.find(target_triple, "windows") then
 		-- tab, pane, window
 		local _, _, _ = wezterm.mux.spawn_window(cmd or {
-			position = { x = 800, y = 400 },
+			position = { x = 900, y = 280 },
 		})
 	elseif string.find(target_triple, "darwin") then
 		local _, _, _ = wezterm.mux.spawn_window(cmd or {
@@ -23,8 +23,8 @@ function module.apply_to_config(config)
 	config.window_close_confirmation = "NeverPrompt"
 	config.window_decorations = "RESIZE"
 	if string.find(target_triple, "windows") then
-		config.initial_rows = 38
-		config.initial_cols = 116
+		config.initial_rows = 42
+		config.initial_cols = 120
 	elseif string.find(target_triple, "darwin") then
 		config.initial_rows = 39
 		config.initial_cols = 110
