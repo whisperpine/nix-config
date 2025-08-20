@@ -8,6 +8,9 @@ local config = wezterm.config_builder()
 
 config.front_end = "WebGpu"
 
+-- This makes typing in Zellij fluent (the default is 60 fps).
+config.max_fps = 120
+
 -- x86_64-pc-windows-msvc - Windows
 -- x86_64-apple-darwin - macOS (Intel)
 -- aarch64-apple-darwin - macOS (Apple Silicon)
