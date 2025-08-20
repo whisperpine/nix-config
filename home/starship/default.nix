@@ -4,6 +4,9 @@
   # Otherwise the integration of shells (e.g. nushell) will be disabled.
   programs.starship = {
     enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    enableNushellIntegration = true;
   };
 
   xdg.configFile.starship = {
