@@ -1,0 +1,16 @@
+version: "1"
+# The text editor program to use for authoring text.
+editor: nvim
+# The protocol to use for git clone and push operations.
+git_protocol: ssh
+# Toggle interactive prompting in the terminal.
+prompt: enabled
+# Toggle preference for editor-based interactive prompting in the terminal.
+prefer_editor_prompt: enabled
+# The terminal pager program to send standard output to.
+pager: less
+# Whether to display labels using their RGB hex color codes
+# in terminals that support truecolor.
+color_labels: enabled
+# Define custom aliases for gh commands.
+aliases:

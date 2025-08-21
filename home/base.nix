@@ -12,6 +12,7 @@
   home.enableNixpkgsReleaseCheck = false;
 
   imports = [
+    ./gh
     ./git
     ./bat
     ./zsh
