@@ -11,6 +11,10 @@ zle -N edit-command-line
 # Bind Ctrl+O to the edit the command (which functions like Ctrl+X Ctrl+E).
 bindkey '^O' edit-command-line
 
+# ----- Ctrl+P ----- #
+# Bind Ctrl+P to the atuin widget.
+bindkey '^P' atuin-up-search
+
 # ----- Zellij Pane ----- #
 _set_zellij_pane_title() {
   # Replace $HOME with ~ in the current directory path.
