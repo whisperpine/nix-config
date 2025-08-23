@@ -1,8 +1,4 @@
-{
-  system,
-  # username,
-  ...
-}:
+{ system, username, ... }:
 #----------  nix-core configuration ----------#
 {
   # This value determines the NixOS release from which the default
@@ -25,8 +21,8 @@
     EDITOR = "nvim";
     ZK_SHELL = "bash";
     # SHELL = "/etc/profiles/per-user/${username}/bin/nu";
-    # SHELL = "/etc/profiles/per-user/${username}/bin/zsh";
-    SHELL = "/sbin/bash";
+    SHELL = "/etc/profiles/per-user/${username}/bin/zsh";
+    # SHELL = "/sbin/bash";
   };
 
   # Optimize storage.
