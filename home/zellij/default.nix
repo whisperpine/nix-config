@@ -5,6 +5,7 @@
     settings = {
       theme = "custom";
       scroll_buffer_size = 1500;
+      show_startup_tips = false;
       ui = {
         pane_frames = {
           rounded_corners = false;
