@@ -11,6 +11,7 @@ M.settings = {
   -- https://rust-analyzer.github.io/book
   ["rust-analyzer"] = {
     check = { command = "clippy" },
+    hover = { links = { enable = false } },
     completion = { callable = { snippets = "none" } },
     cargo = {
       -- This prevents rust-analyzer's cargo check and initial build-script and proc-macro building
