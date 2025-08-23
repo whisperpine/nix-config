@@ -1,3 +1,9 @@
+# Purpose: Configures interactive shells, including settings for prompts,
+# aliases, keybindings, and plugins.
+
+# When Loaded: Sourced for interactive shells (both login and non-login), but
+# not for non-interactive shells or scripts.
+
 # Environment variable PATH.
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 export PATH="$PATH:/etc/nixos/scripts/"
@@ -7,10 +13,7 @@ export PATH="$PATH:/etc/nixos/scripts/"
 # # shellcheck disable=1091
 # source "$(nix eval --raw nixpkgs#blesh)/share/blesh/ble.sh"
 
-# --------------------
-# Zellij Integration
-# --------------------
-
+# ----- Zellij Pane ----- #
 # Keep last 2 path components if path is long.
 _short_path() {
   local path="$1"
@@ -20,28 +23,11 @@ _short_path() {
     echo "$path"
   fi
 }
-
-# Function to update Zellij pane title.
-_zellij_update_pane_title() {
-  if [[ -n "$ZELLIJ_SESSION_NAME" ]]; then
-    local dir branch title
-
-    dir="$(_short_path "$PWD")"
-
-    # get git branch if in repo
-    if branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); then
-      title="${dir}:${branch}"
-    else
-      title="$dir"
-    fi
-
-    # rename only if changed
-    if [[ "$title" != "$_ZELLIJ_LAST_TITLE" ]]; then
-      zellij action rename-pane "$title" 2>/dev/null
-      _ZELLIJ_LAST_TITLE="$title"
-    fi
-  fi
+_set_zellij_pane_title() {
+  local display_path
+  # Replace $HOME with ~ in the current directory path.
+  display_path="$(_short_path "${PWD/#$HOME/~}")"
+  # Set terminal title to the directory name.
+  echo -n -e "\033]0;${display_path}\007"
 }
-
-# Hook into prompt.
-PROMPT_COMMAND="_zellij_update_pane_title${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+PROMPT_COMMAND="_set_zellij_pane_title${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
