@@ -5,8 +5,9 @@
     defaultKeymap = "emacs";
     enableCompletion = true;
     autosuggestion.enable = true;
-    profileExtra = "${builtins.readFile ./.zprofile}";
+    envExtra = builtins.readFile ./.zshenv;
     initContent = builtins.readFile ./.zshrc;
+    profileExtra = builtins.readFile ./.zprofile;
     shellAliases = {
       za = "zellij attach";
       kc = "kubectl";
