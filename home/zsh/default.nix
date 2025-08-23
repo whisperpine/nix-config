@@ -2,6 +2,7 @@
 {
   programs.zsh = {
     enable = true;
+    defaultKeymap = "emacs";
     enableCompletion = true;
     autosuggestion.enable = true;
     profileExtra = "${builtins.readFile ./.zprofile}";
