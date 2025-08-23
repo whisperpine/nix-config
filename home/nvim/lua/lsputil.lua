@@ -139,6 +139,11 @@ vim.lsp.config("jsonls", {
   },
 })
 
+-- config bashls
+vim.lsp.config("bashls", {
+  filetypes = { "bash", "zsh", "sh" },
+})
+
 -- enable language servers defined under ~/.config/nvim/lsp
 vim.lsp.enable {
   -- ### written by myself ###

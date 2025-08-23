@@ -34,6 +34,8 @@ M.formatters_by_ft = {
   hurl = { "hurlfmt" },
   toml = { "taplo" },
   zig = { "zigfmt" },
+  bash = { "shfmt" },
+  zsh = { "shfmt" },
   sh = { "shfmt" },
 
   -- clang-format
