@@ -6,6 +6,7 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     profileExtra = "${builtins.readFile ./.zprofile}";
+    initContent = builtins.readFile ./.zshrc;
     shellAliases = {
       za = "zellij attach";
       kc = "kubectl";
