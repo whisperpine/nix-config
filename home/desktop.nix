@@ -19,6 +19,7 @@
 
     # utilities
     translate-shell
+    hyperfine
     onefetch
     ffmpeg
     kondo
