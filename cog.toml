@@ -1,3 +1,5 @@
+tag_prefix = "v"
+
 scopes = [
   # general
   "pkgs",
@@ -34,8 +36,6 @@ scopes = [
   "pgcli",
   "sops",
 ]
-
-tag_prefix = "v"
 
 [commit_types]
 fix = { changelog_title = "Bug Fixes" }
