@@ -35,7 +35,9 @@ jobs:
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
-        run: cog verify "$PR_TITLE"
+        run: |
+          git config user.name "github-actions-workflow"
+          cog verify "$PR_TITLE"
 
   markdownlint:
     runs-on: ubuntu-latest
