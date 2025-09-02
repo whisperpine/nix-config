@@ -1,0 +1,52 @@
+scopes = [
+  # general
+  "pkgs",
+  "deps",
+  "dir",
+  # platforms
+  "wsl",
+  "darwin",
+  # git sha
+  "d6f4cfe",
+  "b1386af",
+  # packages
+  "git",
+  "zsh",
+  "bash",
+  "neovim",
+  "nushell",
+  "starship",
+  "zoxide",
+  "atuin",
+  "lazygit",
+  "yazi",
+  "erdtree",
+  "btop",
+  "zellij",
+  "nodejs",
+  "direnv",
+  "shell",
+  "harper",
+  "wezterm",
+  "alacritty",
+  "gitlab-runner",
+  "services",
+  "pgcli",
+  "sops",
+]
+
+tag_prefix = "v"
+
+[commit_types]
+fix = { changelog_title = "Bug Fixes" }
+feat = { changelog_title = "Features" }
+docs = { changelog_title = "Documentation" }
+chore = { changelog_title = "Miscellaneous" }
+refactor = { changelog_title = "Refactor" }
+revert = { changelog_title = "Revert" }
+perf = { changelog_title = "Performance" }
+test = { changelog_title = "Testing" }
+ci = { changelog_title = "CI/CD" }
+# disabled types
+build = {}
+style = {}

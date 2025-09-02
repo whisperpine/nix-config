@@ -22,6 +22,7 @@ forEachSupportedSystem (
         husky # managing git hooks
         just # just a command runner
         git-cliff # changelog generator
+        cocogitto # conventional commit toolkit
       ];
       shellHook = ''
         # install git hook managed by husky
