@@ -1,22 +1,25 @@
 #!/bin/sh
 
-## Check typos of commit messages
+# Purpose: check commit messages (typos and conventional commits)
+# Usage: make this script the git commit-msg hook
+# Dependencies: typos, cocogitto
+# Date: 2025-09-02
+# Author: Yusong
 
-# The first argument is the path to the file containing the commit message
+set -e
+
+# The first argument is the path to the file containing the commit message.
 commit_msg_file="$1"
-
-# Read the commit message from the file
-commit_message=$(cat "$commit_msg_file")
-
-# Check if the commit message is empty
+# Read the commit message excluding comments (lines starting with #).
+commit_message=$(grep -v '^#' "$commit_msg_file")
+# Check if the commit message is empty.
 if [ -z "$commit_message" ]; then
-  echo "Error: Commit message is empty."
-  exit 1
+  # Git will handle the empty message when exiting with 0.
+  exit 0
 fi
 
-# Run typos on the commit message
+# Run typos on the commit message.
 typos_output=$(echo "$commit_message" | typos --format brief -)
-
 if [ -n "$typos_output" ]; then
   echo "Error: Spelling issues found in the commit message."
   echo "Please fix the typos or use 'git push --no-verify' to bypass."
@@ -27,5 +30,12 @@ if [ -n "$typos_output" ]; then
   echo "==================== Commit message ======================"
   echo "$commit_message"
   echo "==================== Commit message ======================"
-  exit 2
+  exit 1
+fi
+
+# Check if the commit message aligns with conventional commits.
+if ! verify_message=$(cog verify "$commit_message" 2>&1); then
+  echo "Error: Commit message violates conventional commits."
+  echo "$verify_message"
+  exit 1
 fi
