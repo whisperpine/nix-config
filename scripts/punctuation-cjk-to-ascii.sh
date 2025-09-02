@@ -5,6 +5,8 @@
 # Date: 2025-06-26
 # Author: Yusong
 
+set -e
+
 if [ $# -ne 1 ]; then
   echo "Usage: $0 FILE"
   exit 1

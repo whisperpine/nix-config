@@ -6,6 +6,8 @@
 # Date: 2025-04-29
 # Author: Yusong
 
+set -e
+
 # Check if ffmpeg is installed.
 if ! command -v ffmpeg >/dev/null 2>&1; then
   echo "ffmpeg is not installed. Please install it first."

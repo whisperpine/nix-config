@@ -6,6 +6,8 @@
 # Date: 2025-06-27
 # Author: Yusong
 
+set -e
+
 # Check if typos is installed.
 if ! command -v typos >/dev/null 2>&1; then
   echo "typos is not installed. Please install it first."
