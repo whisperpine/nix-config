@@ -35,10 +35,7 @@ jobs:
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
-        run: |
-          filename=$(uuidgen) && touch "$filename"
-          git add "$filename" && git commit -m "$PR_TITLE"
-          cog check --ignore-merge-commits HEAD..HEAD
+        run: cog validate "$PR_TITLE"
 
   markdownlint:
     runs-on: ubuntu-latest
