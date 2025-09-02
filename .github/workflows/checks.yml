@@ -38,7 +38,7 @@ jobs:
         run: |
           filename=$(uuidgen) && touch "$filename"
           git add "$filename" && git commit -m "$PR_TITLE"
-          cog check HEAD..HEAD
+          cog check --ignore-merge-commits HEAD..HEAD
 
   markdownlint:
     runs-on: ubuntu-latest
