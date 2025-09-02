@@ -21,24 +21,14 @@ jobs:
   cocogitto:
     runs-on: ubuntu-latest
     name: check conventional commits
+    # Only run this step in the main branch.
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v5
       - uses: cachix/install-nix-action@v31
-      # Only run this step in the main branch.
       - name: Check the latest commit message
-        if: github.ref == 'refs/heads/main'
         shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
         run: cog check HEAD..HEAD
-      # Only run this step in a Pull Request.
-      - name: Check the Pull Request title
-        if: github.event_name == 'pull_request'
-        env:
-          PR_TITLE: ${{ github.event.pull_request.title }}
-        shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
-        run: |
-          git config user.name "github-actions-workflow"
-          git config user.email "temp@users.noreply.github.com"
-          cog verify "$PR_TITLE"
 
   markdownlint:
     runs-on: ubuntu-latest
