@@ -37,6 +37,7 @@ jobs:
         shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
         run: |
           git config user.name "github-actions-workflow"
+          git config user.email "temp@users.noreply.github.com"
           cog verify "$PR_TITLE"
 
   markdownlint:
