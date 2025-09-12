@@ -144,6 +144,18 @@ vim.lsp.config("bashls", {
   filetypes = { "bash", "zsh", "sh" },
 })
 
+-- config lemminx
+vim.lsp.config("lemminx", {
+  settings = {
+    xml = {
+      validation = {
+        -- suppresses the NoGrammarConstraints warning
+        noGrammar = "ignore",
+      },
+    },
+  },
+})
+
 -- enable language servers defined under ~/.config/nvim/lsp
 vim.lsp.enable {
   -- ### written by myself ###
