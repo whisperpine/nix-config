@@ -156,6 +156,7 @@ vim.lsp.enable {
   -- ### written by lspconfig ###
   "basedpyright",
   "terraformls",
+  "csharp_ls",
   "marksman",
   "dockerls",
   "tinymist",

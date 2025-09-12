@@ -80,6 +80,8 @@ in
     rust-analyzer # rust
     terraform-ls # terraform
     basedpyright # python
+    dotnet-sdk_9 # csharp
+    csharp-ls # csharp
     tinymist # typst
     lemminx # xml, svg
     helm-ls # helm
