@@ -68,7 +68,7 @@ in
     # language servers
     # find all language servers here:
     # https://github.com/neovim/nvim-lspconfig
-    dockerfile-language-server-nodejs # dockerfile
+    dockerfile-language-server # dockerfile
     vscode-langservers-extracted # json, css, html
     typescript-language-server # typescript, javascript
     tailwindcss-language-server # tailwind css
