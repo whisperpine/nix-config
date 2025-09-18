@@ -29,7 +29,7 @@ $env.config.cursor_shape = {
 # To add entries to PATH.
 use std "path add"
 path add "/opt/homebrew/bin"
-path add "/etc/nixos/scripts/"
+path add "/etc/nixos/scripts/as-commands/"
 
 # Configure hooks for direnv.
 # https://github.com/nushell/nu_scripts/blob/main/nu-hooks/nu-hooks/direnv/config.nu

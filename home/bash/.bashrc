@@ -6,7 +6,7 @@
 
 # Environment variable PATH.
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
-export PATH="$PATH:/etc/nixos/scripts/"
+export PATH="$PATH:/etc/nixos/scripts/as-commands/"
 
 # # shellcheck disable=SC1094
 # source /nix/store/g4mn0iswaaf4hsyssx10n489q9whhl28-blesh-0.4.0-devel3/share/blesh/ble.sh
