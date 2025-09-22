@@ -47,22 +47,15 @@ plugin.config = function(_, opts)
     group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true }),
     pattern = start_pattern,
     callback = function(args)
+      -- syntax highlighting, provided by Neovim
       vim.treesitter.start(args.buf)
+      -- indentation, provided by nvim-treesitter
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
 end
 
 plugin.opts = {
-  highlight = {
-    enable = true,
-    use_languagetree = true,
-  },
-
-  indent = {
-    enable = true, -- this will set `indentexpr`
-    disable = { "python", "yaml" }, -- disable for these languages
-  },
-
   -- all the supported languages by tree-sitter:
   -- https://github.com/nvim-treesitter/nvim-treesitter
   ---@type string[]
