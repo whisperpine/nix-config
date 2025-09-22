@@ -94,11 +94,10 @@ o.foldmethod = "expr"
 o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 o.foldlevelstart = 99
 -- indenting
-o.tabstop = 4
-o.shiftwidth = 4
-o.softtabstop = 4
-o.expandtab = true
-o.smartindent = false
+o.shiftwidth = 4 -- number of spaces to use when (auto)indenting
+o.softtabstop = 4 -- number of spaces that a tab counts for
+o.expandtab = true -- insert spaces instead of tab when pressing `Tab` key
+o.smartindent = false -- disabled because indentexpr is a more advanced alternative
 -- disable right-click menu
 o.mousemodel = "extend"
 o.mouse = "a"

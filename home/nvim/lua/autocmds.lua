@@ -54,7 +54,7 @@ autocmd("BufReadPost", {
 -- set indent size by filetype
 autocmd("Filetype", {
   group = augroup("SetIndentSizeByFiletype", { clear = true }),
-  command = "setlocal shiftwidth=2 tabstop=2 softtabstop=2",
+  command = "setlocal shiftwidth=2 softtabstop=2",
   pattern = {
     "javascript",
     "typescript",
