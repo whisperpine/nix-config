@@ -122,6 +122,13 @@ autocmd("BufEnter", {
   command = "setlocal indentexpr=",
 })
 
+-- clear indentexpr for yaml
+autocmd("BufEnter", {
+  group = augroup("SetYamlIndentexpr", { clear = true }),
+  pattern = "*.yaml",
+  command = "setlocal indentexpr=",
+})
+
 autocmd("Filetype", {
   group = augroup("SetIniCommentString", { clear = true }),
   pattern = "ini",

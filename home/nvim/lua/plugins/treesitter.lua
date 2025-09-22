@@ -2,8 +2,8 @@ local plugin = {}
 
 plugin = {
   "nvim-treesitter/nvim-treesitter",
+  lazy = false,
   branch = "main",
-  event = "VeryLazy",
   build = ":TSUpdate",
   init = function()
     if
