@@ -30,7 +30,16 @@ plugin.config = function(_, opts)
       return not vim.tbl_contains(already_installed, parser)
     end)
     :totable()
+  ---@type string[]
+  local parsers_to_uninstall = vim
+    .iter(already_installed)
+    :filter(function(parser)
+      return not vim.tbl_contains(ensure_installed, parser)
+    end)
+    :totable()
+
   require("nvim-treesitter").install(parsers_to_install)
+  require("nvim-treesitter").uninstall(parsers_to_uninstall, { summary = true })
 
   ---@type string[]
   local start_pattern = vim.tbl_extend("force", opts.ensure_installed, { "sh" })
