@@ -42,7 +42,8 @@ plugin.config = function(_, opts)
   require("nvim-treesitter").uninstall(parsers_to_uninstall, { summary = true })
 
   ---@type string[]
-  local start_pattern = vim.tbl_extend("force", opts.ensure_installed, { "sh" })
+  local start_pattern =
+    vim.tbl_extend("force", opts.ensure_installed, { "sh", "yaml.ansible" })
   for index, value in ipairs(start_pattern) do
     -- Only use dockerfile parse in markdown files (code block). Don't start
     -- treesitter when the filetype is dockerfile, because of existing issues.

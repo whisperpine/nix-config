@@ -136,3 +136,13 @@ autocmd("Filetype", {
     vim.bo.commentstring = "# %s"
   end,
 })
+
+autocmd("Filetype", {
+  group = augroup("SetAnsibleFormatter", { clear = true }),
+  pattern = "yaml.ansible",
+  callback = function()
+    require("conform").formatters.deno_fmt = {
+      args = { "fmt", "-", "--ext", "yaml" },
+    }
+  end,
+})
