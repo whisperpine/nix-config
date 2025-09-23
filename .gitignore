@@ -7,3 +7,6 @@
 .env
 .env.*
 !.env.example
+
+# Shell script playground
+/scripts/playground.sh
