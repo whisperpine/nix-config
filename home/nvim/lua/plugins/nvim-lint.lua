@@ -16,6 +16,7 @@ plugin.config = function()
     graphql = { "biomejs" },
     json = { "biomejs", "redocly" },
     yaml = { "redocly" },
+    ["yaml.ansible"] = { "ansible_lint" },
     css = { "biomejs" },
     jsx = { "biomejs" },
     tsx = { "biomejs" },
