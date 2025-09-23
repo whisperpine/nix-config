@@ -45,6 +45,7 @@ in
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
     nixfmt-rfc-style # nix formatter
     markdownlint-cli # markdown
+    ansible-lint # ansible
     shellcheck # shell linter
     actionlint # github actions
     xmlstarlet # xml
@@ -61,7 +62,7 @@ in
     shfmt # shell
     typos # spell checker
     biome # ts, js, css, json, graphql
-    deno # ts, js, json, css
+    deno # ts, js, json, yaml, css, html
     ruff # python
     buf # protobuf
 
@@ -72,6 +73,7 @@ in
     vscode-langservers-extracted # json, css, html
     typescript-language-server # typescript, javascript
     tailwindcss-language-server # tailwind css
+    ansible-language-server # ansible
     svelte-language-server # svelte
     bash-language-server # bash sh shell
     yaml-language-server # yaml
