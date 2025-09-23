@@ -156,6 +156,18 @@ vim.lsp.config("lemminx", {
   },
 })
 
+-- config ansiblels
+vim.lsp.config("ansiblels", {
+  settings = {
+    ansible = {
+      validation = {
+        enabled = false,
+        lint = { enabled = false },
+      },
+    },
+  },
+})
+
 -- enable language servers defined under ~/.config/nvim/lsp
 vim.lsp.enable {
   -- ### written by myself ###
@@ -168,6 +180,7 @@ vim.lsp.enable {
   -- ### written by lspconfig ###
   "basedpyright",
   "terraformls",
+  "ansiblels",
   "csharp_ls",
   "marksman",
   "dockerls",
