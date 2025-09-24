@@ -115,6 +115,13 @@ vim.lsp.config("*", {
 
 -- config yamlls
 vim.lsp.config("yamlls", {
+  filetypes = {
+    "yaml",
+    "yaml.docker-compose",
+    "yaml.gitlab",
+    "yaml.helm-values",
+    "yaml.ansible",
+  },
   settings = {
     yaml = {
       schemas = require("schemastore").yaml.schemas(),
