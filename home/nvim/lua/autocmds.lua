@@ -129,14 +129,17 @@ autocmd("BufEnter", {
   command = "setlocal indentexpr=",
 })
 
+-- reconfigure the comment string for ini filetype
 autocmd("Filetype", {
   group = augroup("SetIniCommentString", { clear = true }),
   pattern = "ini",
   callback = function()
+    -- the default value is "; %s"
     vim.bo.commentstring = "# %s"
   end,
 })
 
+-- set the formatter for "yaml.ansible" filetype
 autocmd("Filetype", {
   group = augroup("SetAnsibleFormatter", { clear = true }),
   pattern = "yaml.ansible",
