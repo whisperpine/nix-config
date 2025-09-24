@@ -41,24 +41,45 @@ plugin.config = function(_, opts)
   require("nvim-treesitter").install(parsers_to_install)
   require("nvim-treesitter").uninstall(parsers_to_uninstall, { summary = true })
 
-  ---@type string[]
-  local start_pattern =
-    vim.tbl_extend("force", opts.ensure_installed, { "sh", "yaml.ansible" })
-  for index, value in ipairs(start_pattern) do
+  for index, value in ipairs(ensure_installed) do
     -- Only use dockerfile parse in markdown files (code block). Don't start
     -- treesitter when the filetype is dockerfile, because of existing issues.
     if value == "dockerfile" then
-      table.remove(start_pattern, index)
+      table.remove(ensure_installed, index)
     end
   end
 
   -- add autocmd to start treesitter
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true }),
-    pattern = start_pattern,
+    pattern = ensure_installed,
     callback = function(args)
       -- syntax highlighting, provided by Neovim
       vim.treesitter.start(args.buf)
+      -- indentation, provided by nvim-treesitter
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+
+  -- add autocmd to start treesitter (for "sh" filetype)
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("TreesitterStartSh", { clear = true }),
+    pattern = "sh",
+    callback = function(args)
+      -- syntax highlighting, provided by Neovim
+      vim.treesitter.start(args.buf, "bash")
+      -- indentation, provided by nvim-treesitter
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+
+  -- add autocmd to start treesitter (for "yaml.ansible" filetype)
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("TreesitterStartAnsible", { clear = true }),
+    pattern = "yaml.ansible",
+    callback = function(args)
+      -- syntax highlighting, provided by Neovim
+      vim.treesitter.start(args.buf, "yaml")
       -- indentation, provided by nvim-treesitter
       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
