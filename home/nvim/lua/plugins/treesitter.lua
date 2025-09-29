@@ -91,6 +91,7 @@ plugin.opts = {
   -- https://github.com/nvim-treesitter/nvim-treesitter
   ---@type string[]
   ensure_installed = {
+    "http",
     "markdown_inline",
     "markdown",
     "ecma",
