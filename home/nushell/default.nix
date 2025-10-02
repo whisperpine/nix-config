@@ -7,6 +7,8 @@
     enable = true;
     configFile.source = ./config.nu;
     shellAliases = {
+      ap = "ansible-playbook";
+      av = "ansible-vault";
       za = "zellij attach";
       kc = "kubectl";
       lg = "lazygit";

@@ -8,6 +8,8 @@
     enableCompletion = true;
     bashrcExtra = builtins.readFile ./.bashrc;
     shellAliases = {
+      ap = "ansible-playbook";
+      av = "ansible-vault";
       za = "zellij attach";
       kc = "kubectl";
       lg = "lazygit";
