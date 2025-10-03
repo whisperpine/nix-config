@@ -35,6 +35,7 @@
     tree
     ouch
     eza
+    jq
 
     sops
     age
