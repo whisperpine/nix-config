@@ -9,6 +9,8 @@
     shellAliases = {
       ap = "ansible-playbook";
       av = "ansible-vault";
+      ai = "ansible-inventory";
+      ad = "ansible-doc";
       za = "zellij attach";
       kc = "kubectl";
       lg = "lazygit";
