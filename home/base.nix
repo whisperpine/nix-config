@@ -35,6 +35,7 @@
     tree
     ouch
     eza
+    dig
     jq
 
     sops
