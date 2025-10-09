@@ -1,0 +1,25 @@
+scroll_buffer_size 1500
+show_startup_tips false
+theme "custom"
+themes {
+    custom {
+        // selection foreground
+        fg "#bdbdbd"
+        // selection background
+        bg "#3f3f3f"
+        black "#161616"
+        red "#161616"
+        green "#879c54"
+        yellow "#e6be6f"
+        blue "#81a2be"
+        magenta "#b18fbb"
+        cyan "#79af98"
+        white "#bdbdbd"
+        orange "#de935f"
+    }
+}
+ui {
+    pane_frames {
+        rounded_corners false
+    }
+}
