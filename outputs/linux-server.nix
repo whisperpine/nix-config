@@ -2,6 +2,8 @@ input@{
   nixpkgs,
   nixpkgs-stable,
   home-manager,
+  sops-nix,
+  nix-ld,
   system,
   ...
 }:
@@ -42,6 +44,13 @@ nixpkgs.lib.nixosSystem {
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/docker.nix
+
+    # sops-nix module differs in linux and darwin.
+    sops-nix.nixosModules.sops
+    ./modules/sops-nix.nix
+
+    # Enable nix-ld system-wide to run dynamic binaries.
+    nix-ld.nixosModules.nix-ld
 
     # Home Manager as a module.
     home-manager.nixosModules.home-manager

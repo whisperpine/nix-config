@@ -8,6 +8,7 @@ scopes = [
   # platforms
   "wsl",
   "darwin",
+  "server",
   # git sha
   "d6f4cfe",
   "b1386af",
