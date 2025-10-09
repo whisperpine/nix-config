@@ -7,6 +7,7 @@
     ./direnv
     ./zellij
     ./lazygit
+    ./bun
   ];
 
   home.packages = with pkgs; [
@@ -16,7 +17,6 @@
 
     # dev tools
     python313
-    bun
     uv
 
     # utilities
