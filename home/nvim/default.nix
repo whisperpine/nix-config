@@ -62,6 +62,7 @@ in
       sqlfluff # sql
       # sqruff # sql
       stylua # lua
+      kdlfmt # kdl
       shfmt # shell
       typos # spell checker
       biome # ts, js, css, json, graphql

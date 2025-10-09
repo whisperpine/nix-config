@@ -34,6 +34,7 @@ M.formatters_by_ft = {
   hurl = { "hurlfmt" },
   toml = { "taplo" },
   zig = { "zigfmt" },
+  kdl = { "kdlfmt" },
   bash = { "shfmt" },
   zsh = { "shfmt" },
   sh = { "shfmt" },
