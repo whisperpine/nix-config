@@ -2,6 +2,7 @@ input@{
   nixpkgs,
   nixpkgs-stable,
   home-manager,
+  sops-nix,
   nix-ld,
   system,
   ...
@@ -46,6 +47,10 @@ nixpkgs.lib.nixosSystem {
     ./modules/docker.nix
     ./modules/fonts.nix
     ./modules/services/bun-add.nix
+
+    # sops-nix module differs in linux and darwin.
+    sops-nix.nixosModules.sops
+    ./modules/sops-nix.nix
 
     # Enable nix-ld system-wide to run dynamic binaries.
     nix-ld.nixosModules.nix-ld
