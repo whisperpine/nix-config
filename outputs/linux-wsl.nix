@@ -4,6 +4,7 @@ input@{
   home-manager,
   nixos-wsl,
   sops-nix,
+  nix-ld,
   system,
   ...
 }:
@@ -49,9 +50,12 @@ nixpkgs.lib.nixosSystem {
     ./modules/services/k3s.nix
     ./modules/services/bun-add.nix
 
-    # sops-nix module differs in linux and darwin
+    # sops-nix module differs in linux and darwin.
     sops-nix.nixosModules.sops
     ./modules/sops-nix.nix
+
+    # Enable nix-ld system-wide to run dynamic binaries.
+    nix-ld.nixosModules.nix-ld
 
     # WSL (Windows Subsystem for Linux).
     nixos-wsl.nixosModules.default
