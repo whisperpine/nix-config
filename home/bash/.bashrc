@@ -5,7 +5,7 @@
 # not for non-interactive shells or scripts.
 
 # Environment variable PATH.
-export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.bun/bin"
 export PATH="$PATH:/etc/nixos/scripts/as-commands/"
 
 # # shellcheck disable=SC1094

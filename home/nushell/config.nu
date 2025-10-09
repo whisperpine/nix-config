@@ -30,6 +30,7 @@ $env.config.cursor_shape = {
 use std "path add"
 path add "/opt/homebrew/bin"
 path add "/etc/nixos/scripts/as-commands/"
+path add "~/.bun/bin"
 
 # Configure hooks for direnv.
 # https://github.com/nushell/nu_scripts/blob/main/nu-hooks/nu-hooks/direnv/config.nu
