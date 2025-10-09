@@ -44,6 +44,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/host-users.nix
     ./modules/docker.nix
     ./modules/fonts.nix
+    ./modules/services/bun-add.nix
 
     # Home Manager as a module.
     home-manager.nixosModules.home-manager
