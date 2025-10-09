@@ -16,6 +16,7 @@
 
     # dev tools
     python313
+    bun
     uv
 
     # utilities
