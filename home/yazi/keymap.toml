@@ -1,11 +1,4 @@
 [[mgr.prepend_keymap]]
-on = ["g", "r"]
-run = '''
-  shell 'ya pub dds-cd --str "$(git rev-parse --show-toplevel)"' --confirm
-'''
-desc = "Go to current git repo"
-
-[[mgr.prepend_keymap]]
 on = "!"
 run = "shell $SHELL --block --confirm"
 desc = "Open shell here"
