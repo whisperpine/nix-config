@@ -23,6 +23,11 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     # To install the nightly version of Neovim.
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    # Run unpatched dynamic binaries.
+    nix-ld = {
+      url = "github:Mic92/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Secrept provisioning by sops-nix
     sops-nix = {
       url = "github:Mic92/sops-nix";
