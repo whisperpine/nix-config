@@ -181,6 +181,7 @@ vim.lsp.enable {
   "rust_analyzer",
   "wgsl_analyzer",
   -- "harper_ls",
+  -- "kdl_ls",
   "lua_ls",
   "ts_ls",
 
