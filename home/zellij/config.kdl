@@ -1,5 +1,7 @@
 scroll_buffer_size 1500
 show_startup_tips false
+// How often in seconds sessions are serialized to disk.
+serialization_interval 3
 theme "custom"
 themes {
     custom {
