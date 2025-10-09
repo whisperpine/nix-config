@@ -7,5 +7,5 @@ desc = "Go to current git repo"
 
 [[mgr.prepend_keymap]]
 on = "!"
-run = "shell nu --block --confirm"
+run = "shell $SHELL --block --confirm"
 desc = "Open shell here"
