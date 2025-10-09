@@ -1,0 +1,13 @@
+{ pkgs, ... }:
+#---------- bun configuration ----------#
+{
+  systemd.user.services.setup-tools = {
+    description = "Install npm packages globally via bun";
+    wantedBy = [ "default.target" ]; # starts when user session starts
+    serviceConfig.Type = "oneshot";
+    script = ''
+      ${pkgs.bun}/bin/bun add -g kdl-lsp @ansible/ansible-language-server
+      ${pkgs.bun}/bin/bun pm cache rm --global
+    '';
+  };
+}
