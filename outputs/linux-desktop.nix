@@ -2,6 +2,7 @@ input@{
   nixpkgs,
   nixpkgs-stable,
   home-manager,
+  nix-ld,
   system,
   ...
 }:
@@ -45,6 +46,9 @@ nixpkgs.lib.nixosSystem {
     ./modules/docker.nix
     ./modules/fonts.nix
     ./modules/services/bun-add.nix
+
+    # Enable nix-ld system-wide to run dynamic binaries.
+    nix-ld.nixosModules.nix-ld
 
     # Home Manager as a module.
     home-manager.nixosModules.home-manager
