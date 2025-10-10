@@ -61,6 +61,7 @@ autocmd("Filetype", {
     "terraform",
     "sshconfig",
     "markdown",
+    "graphql",
     "xhtml",
     "json",
     "jsonc",
