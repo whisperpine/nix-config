@@ -71,6 +71,7 @@ in
     # find all language servers here:
     # https://github.com/neovim/nvim-lspconfig
     dockerfile-language-server # dockerfile
+    graphql-language-service-cli # graphql
     vscode-langservers-extracted # json, css, html
     typescript-language-server # typescript, javascript
     tailwindcss-language-server # tailwind css
