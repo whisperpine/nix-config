@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Purpose: convert CJK punctuations to ASCII ones
-# Usage: sh path/to/punctuation-cjk-to-ascii.sh
+# Usage: sh path/to/punctuation-cjk-to-ascii.sh FILEPATH
 # Date: 2025-06-26
 # Author: Yusong
 
@@ -27,6 +27,7 @@ echo "Input file has been copied to '${backup_path}'."
 sed -i "s/“/ \"/g" "$filepath"
 # shellcheck disable=SC1111
 sed -i "s/”/\" /g" "$filepath"
+sed -i "s/’/\'/g" "$filepath"
 sed -i "s/「/ \"/g" "$filepath"
 sed -i "s/」/\" /g" "$filepath"
 sed -i "s/。/. /g" "$filepath"
