@@ -188,6 +188,7 @@ vim.lsp.enable {
   -- ### written by lspconfig ###
   "basedpyright",
   "terraformls",
+  "tailwindcss",
   "ansiblels",
   "csharp_ls",
   "marksman",
