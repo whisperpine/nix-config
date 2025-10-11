@@ -2,37 +2,10 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/configs/harper_ls.lua
 
 ---@type vim.lsp.Config
-local M = {}
-
-M = {
+local M = {
   cmd = { "harper-ls", "--stdio" },
   root_markers = { ".git" },
-}
-
-M.filetypes = {
-  "c",
-  "cpp",
-  "cs",
-  "gitcommit",
-  "go",
-  "html",
-  "java",
-  "javascript",
-  "lua",
-  "markdown",
-  "nix",
-  "python",
-  "ruby",
-  "rust",
-  "swift",
-  "toml",
-  "typescript",
-  "typescriptreact",
-  "haskell",
-  "cmake",
-  "typst",
-  "php",
-  "dart",
+  filetypes = { "markdown" },
 }
 
 M.settings = {

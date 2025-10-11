@@ -1,8 +1,6 @@
 local plugin = {}
 
-plugin = {
-  "kristijanhusak/vim-dadbod-ui",
-}
+plugin = { "kristijanhusak/vim-dadbod-ui" }
 
 plugin.dependencies = {
   {
@@ -57,7 +55,6 @@ plugin.init = function()
     connection_ok = "ok",
     connection_error = "err",
   }
-
   -- set shiftwidth of the buffer whose name ends with "dbui".
   vim.api.nvim_create_autocmd("BufEnter", {
     pattern = "*",

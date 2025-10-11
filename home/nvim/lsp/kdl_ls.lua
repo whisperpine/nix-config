@@ -1,7 +1,5 @@
 ---@type vim.lsp.Config
-local M = {}
-
-M = {
+local M = {
   cmd = { "kdl-lsp" },
   filetypes = { "kdl" },
   root_markers = { ".git" },

@@ -4,18 +4,14 @@ local M = {}
 M = {
   -- Whether Markdown should be rendered by default or not
   enabled = true,
-
   -- Maximum file size (in MB) that this plugin will attempt to render
   -- Any file larger than this will effectively be ignored
   max_file_size = 10.0,
-
   -- Filetypes this plugin will run on
   file_types = { "markdown", "Avante" },
-
   -- Vim modes that will show a rendered view of the markdown file
   -- All other modes will be unaffected by this plugin
   render_modes = { "n", "c" },
-
   quote = {
     -- Replaces '>' of 'block_quote'
     icon = "▎", -- ▏▎▍▌▋
@@ -29,8 +25,8 @@ M.bullet = {
   -- How deeply nested the list is determines the 'level' which is used to index into the list using a cycle.
   -- The item number in the list is used to index into the value using a clamp if the value is also a list.
   -- If the item is a 'checkbox' a conceal is used to hide the bullet instead.
-  -- icons = { "", "", "󰨐", "󱓜" },
   icons = { "󰨐", "󱓜", "󰨐", "󱓜" },
+  -- icons = { "", "", "󰨐", "󱓜" },
   -- icons = { "", "", "", "" },
 }
 

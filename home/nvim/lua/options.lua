@@ -36,14 +36,6 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
--- config highlight groups
--- local highlights = {
---   -- CursorLine = { bg = "#313131" },
--- }
--- for group, opts in pairs(highlights) do
---   vim.api.nvim_set_hl(0, group, opts)
--- end
-
 -------------------------------------- options ------------------------------------------
 o.showmode = false
 
@@ -54,7 +46,7 @@ opt.fillchars = { eob = " " }
 o.ignorecase = true
 o.smartcase = true
 
--- Numbers
+-- numbers
 o.number = true
 o.numberwidth = 2
 o.ruler = false

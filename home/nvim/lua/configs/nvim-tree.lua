@@ -92,13 +92,6 @@ M.renderer = {
         symlink_open = "",
       },
       git = {
-        -- unstaged = "!",
-        -- staged = "+",
-        -- unmerged = "=",
-        -- renamed = "r",
-        -- untracked = "?",
-        -- deleted = "-",
-        -- ignored = "i",
         unstaged = "󰜄",
         staged = "󰐖",
         unmerged = "󰰏",

@@ -2,9 +2,7 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/configs/ts_ls.lua
 
 ---@type vim.lsp.Config
-local M = {}
-
-M = {
+local M = {
   cmd = { "typescript-language-server", "--stdio" },
   root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
   filetypes = {

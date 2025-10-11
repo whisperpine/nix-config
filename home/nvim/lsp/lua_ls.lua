@@ -43,12 +43,3 @@ M.settings = {
 }
 
 return M
-
--- lspconfig.lua_ls.setup {
---   on_attach = on_attach,
---   capabilities = capabilities,
---   on_init = on_init,
---   settings = {
-
---   },
--- }

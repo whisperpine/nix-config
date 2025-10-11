@@ -90,13 +90,7 @@ plugin.keys = {
     "<leader>ff",
     function()
       require("telescope.builtin").find_files {
-        find_command = {
-          "fd",
-          "--type",
-          "f",
-          "--hidden",
-          "--no-ignore-vcs",
-        },
+        find_command = { "fd", "--type", "f", "--hidden", "--no-ignore-vcs" },
       }
     end,
     desc = "telescope find files",
