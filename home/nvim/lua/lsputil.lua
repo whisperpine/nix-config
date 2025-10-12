@@ -125,6 +125,7 @@ vim.lsp.config("yamlls", {
   settings = {
     yaml = {
       schemas = require("schemastore").yaml.schemas(),
+      customTags = { "!Ref", "!Sub", "!GetAtt", "!ImportValue", "!FindInMap sequence" },
       schemaStore = {
         -- You must disable built-in schemaStore support if you want to use
         -- this plugin and its advanced options like `ignore`.
