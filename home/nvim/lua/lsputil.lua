@@ -121,6 +121,7 @@ vim.lsp.config("yamlls", {
     "yaml.gitlab",
     "yaml.helm-values",
     "yaml.ansible",
+    "yaml.cloudformation",
   },
   settings = {
     yaml = {
