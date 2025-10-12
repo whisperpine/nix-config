@@ -84,6 +84,18 @@ plugin.config = function(_, opts)
       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
+
+  -- add autocmd to start treesitter (for "yaml.cloudformation" filetype)
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("TreesitterStartAnsible", { clear = true }),
+    pattern = "yaml.cloudformation",
+    callback = function(args)
+      -- syntax highlighting, provided by Neovim
+      vim.treesitter.start(args.buf, "yaml")
+      -- indentation, provided by nvim-treesitter
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
 end
 
 plugin.opts = {
