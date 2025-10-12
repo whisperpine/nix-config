@@ -11,15 +11,9 @@ plugin.config = function()
     terraform = { "tflint" },
     sql = { "sqlfluff" },
     markdown = { "markdownlint" },
-    javascript = { "biomejs" },
-    typescript = { "biomejs" },
-    graphql = { "biomejs" },
-    json = { "biomejs", "redocly" },
+    json = { "redocly" },
     yaml = { "redocly" },
     ["yaml.ansible"] = { "ansible_lint" },
-    css = { "biomejs" },
-    jsx = { "biomejs" },
-    tsx = { "biomejs" },
   }
 end
 

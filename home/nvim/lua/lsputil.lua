@@ -208,6 +208,7 @@ vim.lsp.enable {
   "buf_ls",
   "clangd",
   "taplo",
+  "biome",
   "html",
   "zls",
 }
