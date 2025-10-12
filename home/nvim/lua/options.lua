@@ -16,6 +16,7 @@ vim.filetype.add {
     [".*/templates/.*%.tpl"] = "helm",
     [".*/conf.d/default.conf"] = "nginx",
     [".*%.conf.template"] = "nginx",
+    [".*/cloudformation/.*%.ya?ml"] = "yaml.cloudformation",
     [".*/defaults/.*%.ya?ml"] = "yaml.ansible",
     [".*/host_vars/.*%.ya?ml"] = "yaml.ansible",
     [".*/group_vars/.*%.ya?ml"] = "yaml.ansible",
