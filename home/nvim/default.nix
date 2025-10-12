@@ -43,6 +43,7 @@ in
     # formatters and linters
     # find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
+    python313Packages.cfn-lint # cloudformation
     nixfmt-rfc-style # nix formatter
     markdownlint-cli # markdown
     ansible-lint # ansible

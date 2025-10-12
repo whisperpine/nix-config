@@ -12,7 +12,7 @@ plugin.config = function()
     sql = { "sqlfluff" },
     markdown = { "markdownlint" },
     json = { "redocly" },
-    yaml = { "redocly" },
+    yaml = { "redocly", "cfn_lint" },
     ["yaml.ansible"] = { "ansible_lint" },
   }
 end
