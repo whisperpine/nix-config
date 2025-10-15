@@ -73,22 +73,10 @@ plugin.config = function(_, opts)
     end,
   })
 
-  -- add autocmd to start treesitter (for "yaml.ansible" filetype)
+  -- add autocmd to start treesitter (for "yaml.ansible" and "yaml.cloudformation" filetype)
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStartAnsible", { clear = true }),
-    pattern = "yaml.ansible",
-    callback = function(args)
-      -- syntax highlighting, provided by Neovim
-      vim.treesitter.start(args.buf, "yaml")
-      -- indentation, provided by nvim-treesitter
-      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-    end,
-  })
-
-  -- add autocmd to start treesitter (for "yaml.cloudformation" filetype)
-  vim.api.nvim_create_autocmd("FileType", {
-    group = vim.api.nvim_create_augroup("TreesitterStartAnsible", { clear = true }),
-    pattern = "yaml.cloudformation",
+    pattern = { "yaml.ansible", "yaml.cloudformation" },
     callback = function(args)
       -- syntax highlighting, provided by Neovim
       vim.treesitter.start(args.buf, "yaml")
