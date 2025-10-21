@@ -1,0 +1,11 @@
+{
+  "warning in doc": {
+    "prefix": "docstring",
+    "description": "typescript docstring",
+    "body": [
+      "/**",
+      " * $0",
+      " */"
+    ]
+  }
+}

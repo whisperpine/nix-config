@@ -33,6 +33,10 @@
       {
         "language": ["bash", "sh"],
         "path": "./bash.json"
+      },
+      {
+        "language": ["typescript", "javascript", "tsx", "jsx"],
+        "path": "./typescript.json"
       }
     ]
   }
