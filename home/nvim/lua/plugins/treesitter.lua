@@ -61,10 +61,10 @@ plugin.config = function(_, opts)
     end,
   })
 
-  -- add autocmd to start treesitter (for "sh" filetype)
+  -- add autocmd to start treesitter (for "sh" and "zsh" filetype)
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStartSh", { clear = true }),
-    pattern = "sh",
+    pattern = { "sh", "zsh" },
     callback = function(args)
       -- syntax highlighting, provided by Neovim
       vim.treesitter.start(args.buf, "bash")
