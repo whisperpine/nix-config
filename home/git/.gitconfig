@@ -16,6 +16,7 @@
     pushff = push --force-with-lease --force-if-includes
     sc = sparse-checkout
     sm = submodule
+    wt = worktree
 
 [init]
     defaultBranch = main
