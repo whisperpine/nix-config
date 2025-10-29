@@ -11,6 +11,7 @@ M.settings = {
     check = { command = "clippy" },
     hover = { links = { enable = false } },
     completion = { callable = { snippets = "none" } },
+    diagnostics = { enable = false },
     cargo = {
       -- This prevents rust-analyzer's cargo check and initial build-script and proc-macro building
       -- from locking the Cargo.lock at the expense of duplicating build artifacts.
