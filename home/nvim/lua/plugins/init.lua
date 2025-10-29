@@ -167,6 +167,9 @@ return {
         vim.api.nvim_win_set_config(win, config)
       end,
     },
+    keys = {
+      { "<leader>fn", "<cmd> Telescope notify <cr>", desc = "telescope notify" },
+    },
   },
 
   {
@@ -176,9 +179,6 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
-    },
-    keys = {
-      { "<leader>fn", "<cmd> Telescope notify <cr>", desc = "telescope notify" },
     },
   },
 

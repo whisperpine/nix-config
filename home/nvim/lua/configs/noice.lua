@@ -25,10 +25,7 @@ M = {
     confirm = { border = { style = "single" } },
     cmdline_input = { border = { style = "single" } },
     cmdline_popupmenu = { border = { style = "single" } },
-    cmdline_popup = {
-      border = { style = "single" },
-      -- win_options = { cursorline = true },
-    },
+    cmdline_popup = { border = { style = "single" } },
   },
 
   messages = { enabled = false },
