@@ -28,7 +28,6 @@ M.formatters_by_ft = {
   lua = { "stylua" },
   nix = { "nixfmt" },
   proto = { "buf" },
-  graphql = { "biome" },
   -- sql = { "sqruff" },
   typst = { "typstyle" },
   hurl = { "hurlfmt" },
@@ -46,18 +45,17 @@ M.formatters_by_ft = {
   cpp = { "clang-format" },
   c = { "clang-format" },
 
-  -- deno_fmt, rustywind
-  javascriptreact = { "deno_fmt", "rustywind" },
-  typescriptreact = { "deno_fmt", "rustywind" },
-  javascript = { "deno_fmt", "rustywind" },
-  typescript = { "deno_fmt", "rustywind" },
+  -- biome, deno_fmt, rustywind
+  graphql = { "biome" },
+  javascriptreact = { "biome-check", "rustywind" },
+  typescriptreact = { "biome-check", "rustywind" },
+  javascript = { "biome-check", "rustywind" },
+  typescript = { "biome-check", "rustywind" },
   html = { "deno_fmt", "rustywind" },
   yaml = { "deno_fmt" },
   jsonc = { "deno_fmt" },
   json = { "deno_fmt" },
   css = { "deno_fmt" },
-  scss = { "deno_fmt" },
-  less = { "deno_fmt" },
 }
 
 M.formatters = {
