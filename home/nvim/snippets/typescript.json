@@ -1,11 +1,18 @@
 {
-  "warning in doc": {
+  "typescript docstring": {
     "prefix": "docstring",
     "description": "typescript docstring",
     "body": [
       "/**",
       " * $0",
       " */"
+    ]
+  },
+  "biome ignore": {
+    "prefix": "biome ignore",
+    "description": "biome ignore",
+    "body": [
+      "// biome-ignore lint: $0"
     ]
   }
 }
