@@ -73,6 +73,18 @@ plugin.config = function(_, opts)
     end,
   })
 
+  -- add autocmd to start treesitter (for "javascriptreact" and "typescriptreact")
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("TreesitterStartJsTs", { clear = true }),
+    pattern = { "javascriptreact", "typescriptreact" },
+    callback = function(args)
+      -- syntax highlighting, provided by Neovim
+      vim.treesitter.start(args.buf)
+      -- indentation, provided by nvim-treesitter
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+
   -- add autocmd to start treesitter (for "yaml.ansible" and "yaml.cloudformation" filetype)
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStartAnsible", { clear = true }),
