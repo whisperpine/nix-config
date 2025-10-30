@@ -177,6 +177,23 @@ vim.lsp.config("ansiblels", {
   },
 })
 
+-- config ty
+vim.lsp.config("ty", {
+  settings = {
+    ty = {
+      diagnosticMode = "workspace",
+      experimental = {
+        rename = true,
+        autoImport = true,
+      },
+      inlayHints = {
+        enable = true,
+        showFunctionReturnTypes = true,
+      },
+    },
+  },
+})
+
 -- enable language servers defined under ~/.config/nvim/lsp
 vim.lsp.enable {
   -- ### written by myself ###
@@ -189,6 +206,7 @@ vim.lsp.enable {
 
   -- ### written by lspconfig ###
   "basedpyright",
+  -- "ty", -- experimental
   "terraformls",
   "tailwindcss",
   "ansiblels",
