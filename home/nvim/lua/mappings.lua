@@ -65,12 +65,12 @@ map("n", "<leader>dT", function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled { bufnr = 0 })
 end, { noremap = true, desc = "toggle workspace diagnostic" })
 
--- by default lsp config sets K in normal mode to hover with no border.
--- https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#configuration
--- manually overriding the mapping passing in the border style.
-map("n", "K", function()
-  local clients = vim.lsp.get_clients { bufnr = vim.api.nvim_get_current_buf() }
-  if #clients > 0 then
-    vim.lsp.buf.hover { border = "single" }
-  end
-end, { desc = "LSP show details", silent = true, noremap = true })
+-- -- by default lsp config sets K in normal mode to hover with no border.
+-- -- https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#configuration
+-- -- manually overriding the mapping passing in the border style.
+-- map("n", "K", function()
+--   local clients = vim.lsp.get_clients { bufnr = vim.api.nvim_get_current_buf() }
+--   if #clients > 0 then
+--     vim.lsp.buf.hover { border = "single" }
+--   end
+-- end, { desc = "LSP show details", silent = true, noremap = true })

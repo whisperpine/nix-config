@@ -41,6 +41,15 @@ plugin.keys = {
     "<cmd> Lspsaga peek_type_definition <cr>",
     desc = "lspsaga peek type definition",
   },
+  -- The native keymap for "K" in normal mode is `vim.lsp.buf.hover`.
+  -- But some language servers will show unexpected backslash before certain
+  -- punctuation (e.g. vscode-langservers-extracted, basedpyright).
+  -- By leveraging lspsaga, we can work around this issues.
+  {
+    "K",
+    "<cmd>Lspsaga hover_doc <cr>",
+    desc = "lspsaga hover doc",
+  },
 }
 
 return plugin
