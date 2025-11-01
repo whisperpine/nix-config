@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 let
-  # NOTE: "/etc/nixos" should be a symbolic link of this repo.
-  bunPath = "/etc/nixos/home/bun/global";
+  repoDir = builtins.getEnv "PWD";
+  bunPath = "${repoDir}/home/bun/global";
 in
 {
   home.packages = with pkgs; [ bun ];

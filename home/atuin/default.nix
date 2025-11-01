@@ -1,6 +1,7 @@
 { config, ... }:
 let
-  atuinConfig = "/etc/nixos/home/atuin/config.toml";
+  repoDir = builtins.getEnv "PWD";
+  atuinConfig = "${repoDir}/home/atuin/config.toml";
 in
 {
   programs.atuin = {

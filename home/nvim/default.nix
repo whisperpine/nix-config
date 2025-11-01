@@ -5,12 +5,12 @@
   ...
 }:
 let
+  repoDir = builtins.getEnv "PWD";
   # Path to your nvim config directory.
   # NOTE: It should be a string on behalf of the full path. If a path is used
   # (e.g. `../nvim`), the files will be linked to nix store statically instead
   # of being linked to the source files dynamically (with write permission).
-  # NOTE: "/etc/nixos" should be a symbolic link of this repo.
-  nvimPath = "/etc/nixos/home/nvim";
+  nvimPath = "${repoDir}/home/nvim";
 in
 {
   programs.neovim = {

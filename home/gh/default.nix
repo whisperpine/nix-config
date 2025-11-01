@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 let
-  ghConfig = "/etc/nixos/home/gh/config.yml";
+  repoDir = builtins.getEnv "PWD";
+  ghConfig = "${repoDir}/home/gh/config.yml";
 in
 {
   home.packages = with pkgs; [ gh ];
