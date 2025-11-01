@@ -56,7 +56,9 @@ autocmd("Filetype", {
   group = augroup("SetIndentSizeByFiletype", { clear = true }),
   command = "setlocal shiftwidth=2 softtabstop=2",
   pattern = {
+    "javascriptreact",
     "javascript",
+    "typescriptreact",
     "typescript",
     "terraform",
     "sshconfig",
