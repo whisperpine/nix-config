@@ -89,7 +89,7 @@ M.pipe_table = {
 
 M.code = {
   -- Turn on / off any sign column related rendering.
-  sign = true,
+  sign = false,
   -- Determines how the top / bottom of code block are rendered.
   -- none: do not render a border.
   -- thick: use the same highlight as the code body.
