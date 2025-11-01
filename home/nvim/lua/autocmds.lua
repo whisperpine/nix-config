@@ -28,7 +28,7 @@ autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
 autocmd({ "BufRead" }, {
   group = augroup("DirFileReadonly", { clear = true }),
   pattern = {
-    "**/.local/share/nvim/**",
+    "**/.local/share/nvim/lazy/**",
     "**/.cargo/registry/**",
     "**/node_modules/**",
     "**/.venv/**",
