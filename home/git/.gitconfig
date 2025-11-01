@@ -4,6 +4,7 @@
 [user]
     name = Yusong
     email = yusonglai64@gmail.com
+    signingkey = ~/.ssh/id_ed25519_sign.pub
 
 [filter "lfs"]
     smudge = git-lfs smudge -- %f
@@ -57,3 +58,12 @@
 
 [merge]
     conflictstyle = zdiff3
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
+
+[tag]
+    gpgSign = true

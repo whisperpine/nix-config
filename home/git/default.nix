@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  repoDir = builtins.getEnv "PWD";
+  gitconfig = "${repoDir}/home/git/.gitconfig";
+in
 {
   home.packages = with pkgs; [
     git
@@ -6,7 +10,7 @@
     git-lfs
   ];
 
-  home.file.".gitconfig".source = ./.gitconfig;
+  home.file.".gitconfig".source = config.lib.file.mkOutOfStoreSymlink gitconfig;
 
   xdg.configFile.themes = {
     source = ./themes.gitconfig;
