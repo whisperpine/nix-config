@@ -163,3 +163,16 @@ autocmd("Filetype", {
     }
   end,
 })
+
+-- disable vim.diagnostic in floating windows
+autocmd("BufWinEnter", {
+  group = augroup("NoDiagnosticInFloatingWindow", { clear = true }),
+  callback = function(args)
+    local bufnr = args.buf
+    local winid = vim.fn.bufwinid(bufnr)
+    if winid ~= -1 and vim.api.nvim_win_get_config(winid).relative ~= "" then
+      -- this buffer is in a floating window
+      vim.diagnostic.enable(false, { bufnr = 0 })
+    end
+  end,
+})
