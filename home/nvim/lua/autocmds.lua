@@ -109,15 +109,6 @@ autocmd("BufReadPost", {
   end,
 })
 
--- turn off spell checking in terminal mode
-autocmd("TermOpen", {
-  group = augroup("TerminalDisableSpellChecking", { clear = true }),
-  pattern = "*",
-  callback = function()
-    vim.o.spell = false
-  end,
-})
-
 -- clear indentexpr for python
 autocmd("BufEnter", {
   group = augroup("SetPythonIndentexpr", { clear = true }),
