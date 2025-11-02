@@ -100,7 +100,7 @@ M.code = {
 
 M.heading = {
   -- Turn on / off any sign column related rendering
-  sign = true,
+  sign = false,
   -- Replaces '#+' of 'atx_h._marker'
   -- The number of '#' in the heading determines the 'level'
   -- The 'level' is used to index into the list using a cycle
