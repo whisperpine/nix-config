@@ -2,6 +2,7 @@ local plugin = {}
 
 -- load luasnips + cmp related in insert mode only
 plugin = {
+  enabled = false, -- disable this plugin, use blink.cmp instead
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
