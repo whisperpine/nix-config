@@ -14,4 +14,13 @@
     isNormalUser = true;
     group = "yusong";
   };
+
+  # Clean up old files under "~/.local/share/Trash".
+  # Run the following command to list all user scope configs:
+  # systemd-tmpfiles --user --cat-config
+  systemd.user.tmpfiles.users."${username}".rules = [
+    # Type Path Mode User Group Age
+    "d /home/${username}/.local/share/Trash/files - - - 30d"
+    "d /home/${username}/.local/share/Trash/info - - - 30d"
+  ];
 }
