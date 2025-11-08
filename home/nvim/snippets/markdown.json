@@ -118,8 +118,8 @@
     "prefix": "lint",
     "description": "Disable a markdownlint rule",
     "body": [
-      "<!-- markdownlint-disable MD$0 -->",
-      "<!-- markdownlint-enable MD$0 -->"
+      "<!-- markdownlint-disable MD$1 -->",
+      "<!-- markdownlint-enable MD$1 -->"
     ]
   }
 }
