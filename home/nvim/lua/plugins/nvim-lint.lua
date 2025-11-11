@@ -13,6 +13,7 @@ plugin.config = function()
     markdown = { "markdownlint" },
     json = { "redocly" },
     yaml = { "redocly" },
+    go = { "golangcilint" },
     ["yaml.ansible"] = { "ansible_lint" },
     ["yaml.cloudformation"] = { "cfn_lint" },
   }
