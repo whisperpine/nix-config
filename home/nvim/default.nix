@@ -49,6 +49,7 @@ in
     ansible-lint # ansible
     shellcheck # shell linter
     actionlint # github actions
+    golangci-lint # go
     xmlstarlet # xml
     opentofu # terraform, opentofu
     rustywind # tailwind
@@ -92,6 +93,7 @@ in
     vale # English
     texlab # latex
     taplo # toml
+    gopls # go
     zls # zig
     nil # nix
 

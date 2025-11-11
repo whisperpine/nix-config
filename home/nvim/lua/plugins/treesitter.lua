@@ -160,6 +160,7 @@ plugin.opts = {
     "dtd",
     "zig",
     "nu",
+    "go",
     "c",
   },
 }
