@@ -13,7 +13,6 @@
   home.packages = with pkgs; [
     # cloud
     kubectl
-    ansible
 
     # dev tools
     python313
