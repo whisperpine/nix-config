@@ -133,21 +133,10 @@ autocmd("Filetype", {
   end,
 })
 
--- set the formatter for "yaml.ansible" filetype
+-- set the formatter for "yaml.ansible" and "yaml.cloudformation"
 autocmd("Filetype", {
-  group = augroup("SetAnsibleFormatter", { clear = true }),
-  pattern = "yaml.ansible",
-  callback = function()
-    require("conform").formatters.deno_fmt = {
-      args = { "fmt", "-", "--ext", "yaml" },
-    }
-  end,
-})
-
--- set the formatter for "yaml.cloudformation" filetype
-autocmd("Filetype", {
-  group = augroup("SetAnsibleFormatter", { clear = true }),
-  pattern = "yaml.cloudformation",
+  group = augroup("SetYamlFormatter", { clear = true }),
+  pattern = { "yaml.ansible", "yaml.cloudformation" },
   callback = function()
     require("conform").formatters.deno_fmt = {
       args = { "fmt", "-", "--ext", "yaml" },
