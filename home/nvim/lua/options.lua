@@ -1,4 +1,4 @@
--- additional filetype bindings
+-- Additional filetype bindings.
 vim.filetype.add {
   extension = {
     env = "conf",
@@ -30,7 +30,7 @@ vim.filetype.add {
   },
 }
 
--- enable inlay hints
+-- Enable inlay hints.
 vim.lsp.inlay_hint.enable(true, { 0 })
 
 local opt = vim.opt
@@ -47,12 +47,12 @@ opt.fillchars = { eob = " " }
 o.ignorecase = true
 o.smartcase = true
 
--- numbers
+-- Numbers.
 o.number = true
 o.numberwidth = 2
 o.ruler = false
 
--- disable nvim intro
+-- Disable nvim intro.
 opt.shortmess:append "sI"
 
 o.signcolumn = "yes"
@@ -61,50 +61,50 @@ o.splitright = true
 o.timeoutlen = 400
 o.undofile = true
 
--- interval for writing swap file to disk, also used by gitsigns
+-- Interval for writing swap file to disk, also used by gitsigns.
 o.updatetime = 250
 
--- go to previous/next line with h,l,left arrow and right arrow
--- when cursor reaches end/beginning of line
+-- Go to previous/next line with h,l,left arrow and right arrow
+-- when cursor reaches end/beginning of line.
 opt.whichwrap:append "<>[]hl"
 
--- disable some default providers
+-- Disable some default providers.
 g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 
--- to enable cursorline
+-- Enable cursorline.
 o.cursorlineopt = "both"
--- enables 24-bit RGB color
+-- Enables 24-bit RGB color.
 o.termguicolors = true
--- avoid error when displaying Chinese
+-- Avoid error when displaying Chinese.
 o.encoding = "utf-8"
--- don't wrap lines when it's longer than the window width
+-- Don't wrap lines when it's longer than the window width.
 o.wrap = false
--- -- cursor will always be 3 lines above the window edge
+-- -- Cursor will always be 3 lines above the window edge.
 -- o.scrolloff = 3
--- disable search highlighting
+-- Disable search highlighting.
 o.hlsearch = false
--- disable spell checking
+-- Disable spell checking.
 o.spell = false
--- "yusong" refers to nvim/spell/yusong.utf-8.spl
--- every time after nvim/spell/yusong being modified,
+-- "yusong" refers to "nvim/spell/yusong.utf-8.spl".
+-- Every time after nvim/spell/yusong being modified,
 -- remember to run command (":mkspell") to generate `.spl`.
 o.spelllang = "en_us,cjk,yusong"
--- fold by treesitter
+-- Fold by treesitter.
 o.foldmethod = "expr"
 o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 o.foldlevelstart = 99
--- indenting
+-- Indenting.
 o.shiftwidth = 4 -- number of spaces to use when (auto)indenting
 o.softtabstop = 4 -- number of spaces that a tab counts for
 o.expandtab = true -- insert spaces instead of tab when pressing `Tab` key
 o.smartindent = false -- disabled because indentexpr is a more advanced alternative
--- disable right-click menu
+-- Disable right-click menu.
 o.mousemodel = "extend"
 o.mouse = "a"
--- always show status in the last window
+-- Always show status in the last window.
 o.laststatus = 3
--- `c:ver25` set the cursor as a vertical line
+-- `c:ver25` set the cursor as a vertical line.
 o.guicursor = "n-v-sm:block,c:ver25,i-ci-ve:ver25,r-cr-o:hor20"

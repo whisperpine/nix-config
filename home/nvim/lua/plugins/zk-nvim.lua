@@ -4,7 +4,7 @@ plugin = {
   "zk-org/zk-nvim",
   main = "zk",
   cond = function()
-    -- only enable this plugin when `.zk` exists
+    -- Only enable this plugin when `.zk` exists.
     return vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".zk")) ~= nil
   end,
 }
@@ -20,27 +20,27 @@ plugin.init = function()
 end
 
 plugin.opts = {
-  -- can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`)
-  -- it's recommended to use "telescope", "fzf", "fzf_lua", or "minipick"
+  -- Can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`).
+  -- It's recommended to use "telescope", "fzf", "fzf_lua", or "minipick".
   picker = "telescope",
   lsp = { auto_attach = { enabled = false } },
 }
 
--- other keymaps are defined in nvim/ftplugin/markdown.lua
+-- Other keymaps are defined in nvim/ftplugin/markdown.lua
 plugin.keys = {
-  -- index notes
+  -- Index notes.
   { "<leader>mi", "<Cmd> ZkIndex <CR>", desc = "zk index" },
-  -- find notes
+  -- Find notes.
   {
     "<leader>mm",
     "<Cmd> ZkNotes { sort = { 'modified' } } <CR>",
     desc = "telescope zk notes",
   },
-  -- open notes tags
+  -- Open notes tags.
   { "<leader>mt", "<Cmd> ZkTags <CR>", desc = "telescope zk tags" },
-  -- create a new note under "zettelkasten"
+  -- Create a new note under "zettelkasten".
   { "<leader>ma", "<Cmd> ZkNew { dir = 'zettelkasten' } <CR>", desc = "zk new abs" },
-  -- create a new dail note
+  -- Create a new dail note.
   {
     "<leader>md",
     "<Cmd> ZkNew { dir = vim.fn.getcwd() .. '/dailynotes' } <CR>",

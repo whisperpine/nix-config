@@ -1,4 +1,4 @@
--- originates from:
+-- Originates from:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/wgsl_analyzer.lua
 
 ---@type vim.lsp.Config

@@ -140,13 +140,13 @@ return {
       vim.notify = require "notify"
     end,
     opts = {
-      -- fade, fade_in_slide_out, no_animation, slide, static
+      -- Possible values: fade, fade_in_slide_out, no_animation, slide, static.
       stages = "static",
-      -- default, minimal, simple, compact
+      -- Possible values: default, minimal, simple, compact.
       render = "compact",
       background_colour = "FloatShadow",
       timeout = 5000,
-      -- config notification window
+      -- Config notification window.
       on_open = function(win)
         local config = vim.api.nvim_win_get_config(win)
         config.border = "solid"

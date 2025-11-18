@@ -3,7 +3,7 @@ local plugins = {}
 plugins = {
   "saghen/blink.cmp",
   event = { "InsertEnter", "CmdLineEnter" },
-  -- use a release tag to download pre-built binaries
+  -- Use a release tag to download pre-built binaries.
   version = "1.*",
 }
 
@@ -49,13 +49,13 @@ local opts = {
       auto_show_delay_ms = 0,
       window = { border = "single" },
     },
-    -- from nvchad/ui plugin:
+    -- From nvchad/ui plugin:
     -- https://github.com/NvChad/ui/blob/v3.0/lua/nvchad/blink/init.lua
     menu = require("nvchad.blink").menu,
   },
 
-  -- default list of enabled providers defined so that you can extend it
-  -- elsewhere in your config, without redefining it, due to `opts_extend`
+  -- Default list of enabled providers defined so that you can extend it
+  -- elsewhere in your config, without redefining it, due to `opts_extend`.
   sources = {
     default = { "lsp", "path", "snippets", "buffer" },
     per_filetype = {
@@ -67,7 +67,7 @@ local opts = {
     },
   },
 
-  -- rust fuzzy matcher for typo resistance and significantly better performance
+  -- Rust fuzzy matcher for typo resistance and significantly better performance.
   fuzzy = { implementation = "prefer_rust_with_warning" },
 }
 

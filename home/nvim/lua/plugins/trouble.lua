@@ -25,20 +25,20 @@ plugin.opts = {
       },
     },
 
-    -- more advanced example that extends the lsp_document_symbols
+    -- More advanced example that extends the lsp_document_symbols.
     symbols = {
       desc = "document symbols",
       mode = "lsp_document_symbols",
       filter = {
-        -- remove Package since luals uses it for control flow structures
+        -- Remove Package since luals uses it for control flow structures.
         ["not"] = {
           ft = "lua",
           kind = { "Package", "String" },
         },
         any = {
-          -- all symbol kinds for help / markdown files
+          -- All symbol kinds for help / markdown files.
           ft = { "help", "markdown" },
-          -- default set of symbol kinds
+          -- Default set of symbol kinds.
           kind = {
             "Array",
             "Boolean",

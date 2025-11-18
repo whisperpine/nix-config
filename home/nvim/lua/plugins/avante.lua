@@ -8,7 +8,7 @@ plugin = {
     "nvim-treesitter/nvim-treesitter",
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
-    --- The below dependencies are optional,
+    --- The below dependencies are optional.
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "folke/which-key.nvim", -- for which-key icon customization
   },
@@ -38,7 +38,7 @@ plugin.opts = {
     },
     input = {
       prefix = "",
-      height = 8, -- Height of the input window in vertical layout
+      height = 8, -- height of the input window in vertical layout
     },
     edit = {
       border = "single",
@@ -58,15 +58,15 @@ plugin.opts.providers = {
   openai = {
     endpoint = "https://api.openai.com/v1",
     model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
-    timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+    timeout = 30000, -- timeout in milliseconds, increase this for reasoning models
     extra_request_body = {
       temperature = 0,
-      max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+      max_completion_tokens = 8192, -- increase this to include reasoning tokens (for reasoning models)
       reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
     },
   },
   ollama = {
-    endpoint = "http://127.0.0.1:11434", -- Note that there is no /v1 at the end.
+    endpoint = "http://127.0.0.1:11434", -- note that there is no /v1 at the end
     model = "qwq:32b",
   },
   deepseek = {
@@ -77,5 +77,4 @@ plugin.opts.providers = {
   },
 }
 
--- return { plugin }
 return plugin

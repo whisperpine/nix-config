@@ -5,7 +5,7 @@ M = {
     progress = { enabled = true },
     hover = { enabled = false },
     signature = { enabled = false },
-    -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+    -- Override markdown rendering so that "cmp" and other plugins use Treesitter.
     override = {
       ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
       ["vim.lsp.util.stylize_markdown"] = true,
@@ -13,7 +13,7 @@ M = {
     },
   },
 
-  -- you can enable a preset for easier configuration
+  -- You can enable a preset for easier configuration.
   presets = {
     bottom_search = false, -- use a classic bottom cmdline for search
     command_palette = true, -- position the cmdline and popup menu together
@@ -60,7 +60,7 @@ M.cmdline = {
 }
 
 M.routes = {
-  -- neovim native man.lua
+  -- neovim native man.lua --
   { filter = { find = "man.lua: no manual entry for" }, opts = { skip = true } },
   -- trouble.nvim --
   { filter = { find = "No information available" }, opts = { skip = true } },
@@ -70,7 +70,7 @@ M.routes = {
   { filter = { find = "Nothing currently selected" }, opts = { skip = true } },
   { filter = { find = "No diagnostics found" }, opts = { skip = true } },
   { filter = { find = "No changes found" }, opts = { skip = true } },
-  -- lspsaga
+  -- lspsaga --
   {
     filter = { find = "response of request method textDocument/definition is empty" },
     opts = { skip = true },
@@ -82,9 +82,9 @@ M.routes = {
   { filter = { find = "was properly created" }, view = "mini" },
   { filter = { find = "was properly removed" }, view = "mini" },
   { filter = { find = "%->" }, view = "mini" },
-  -- nvim-treesitter
+  -- nvim-treesitter --
   { filter = { find = "All parsers are up-to-date!" }, opts = { skip = true } },
-  -- lazy.nvim
+  -- lazy.nvim --
   { filter = { find = "Config Change Detected. Reloading..." }, opts = { skip = true } },
   -- zk-nvim --
   {

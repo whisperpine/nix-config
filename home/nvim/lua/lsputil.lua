@@ -6,7 +6,7 @@ require("nvchad.lsp").diagnostic_config()
 
 local M = {}
 
--- modified from:
+-- Modified from:
 -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/lspconfig.lua#L5C15-L5C23
 M.on_attach = function(_, bufnr)
   local map = vim.keymap.set
@@ -74,7 +74,7 @@ M.on_attach = function(_, bufnr)
   end, { desc = "diagnostic next error" })
 end
 
--- disable semanticTokens
+-- Disable semanticTokens.
 M.on_init = function(client, _)
   if client.supports_method "textDocument/semanticTokens" then
     client.server_capabilities.semanticTokensProvider = nil
@@ -107,13 +107,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
--- default config for all language servers
+-- Default config for all language servers.
 vim.lsp.config("*", {
   on_init = M.on_init,
   capabilities = M.capabilities,
 })
 
--- config yamlls
+-- Config yamlls.
 vim.lsp.config("yamlls", {
   filetypes = {
     "yaml",
@@ -139,7 +139,7 @@ vim.lsp.config("yamlls", {
   },
 })
 
--- config jsonls
+-- Config jsonls.
 vim.lsp.config("jsonls", {
   settings = {
     json = {
@@ -149,12 +149,12 @@ vim.lsp.config("jsonls", {
   },
 })
 
--- config bashls
+-- Config bashls.
 vim.lsp.config("bashls", {
   filetypes = { "bash", "zsh", "sh" },
 })
 
--- config lemminx
+-- Config lemminx.
 vim.lsp.config("lemminx", {
   settings = {
     xml = {
@@ -166,7 +166,7 @@ vim.lsp.config("lemminx", {
   },
 })
 
--- config ansiblels
+-- Config ansiblels.
 vim.lsp.config("ansiblels", {
   settings = {
     ansible = {
@@ -178,7 +178,7 @@ vim.lsp.config("ansiblels", {
   },
 })
 
--- config ty
+-- Config ty.
 vim.lsp.config("ty", {
   settings = {
     ty = {
@@ -195,7 +195,7 @@ vim.lsp.config("ty", {
   },
 })
 
--- enable language servers defined under ~/.config/nvim/lsp
+-- Enable language servers defined under "~/.config/nvim/lsp".
 vim.lsp.enable {
   -- ### written by myself ###
   "rust_analyzer",
@@ -235,7 +235,7 @@ vim.lsp.enable {
   "zls",
 }
 
--- only enable vale_ls when `.vale.ini` exists
+-- Only enable vale_ls when `.vale.ini` exists.
 if vim.uv.fs_stat(vim.fs.joinpath(vim.fn.getcwd(), ".vale.ini")) then
   vim.lsp.enable "vale_ls"
 end

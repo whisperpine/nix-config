@@ -8,7 +8,7 @@ local M = {}
 M.base46 = {
   theme = "tomorrow_night",
 
-  -- copy highlight groups to an empty buffer:
+  -- Copy highlight groups to an empty buffer:
   -- ":redir @a | silent hi | redir END | new | put a"
   hl_override = {
     CursorLine = { bg = "#313131" },
@@ -29,7 +29,7 @@ M.base46 = {
     ["@markup.quote"] = { bg = "#202020" },
   },
 
-  -- change attributes of theme
+  -- Change attributes of theme.
   changed_themes = {
     ---@diagnostic disable-next-line: missing-fields
     all = {},
@@ -52,19 +52,19 @@ M.base46 = {
     },
   },
 
-  -- extra integrations
-  -- compiled files are located under "~/.local/share/nvim/base46"
-  -- note: REINSTALL "base46" plugin after altering this attribute
+  -- Extra integrations.
+  -- Compiled files are located under "~/.local/share/nvim/base46".
+  -- Note: REINSTALL "base46" plugin after altering this attribute.
   integrations = { "avante", "trouble" },
 }
 
 M.ui = {
   statusline = {
     enabled = true,
-    -- default/vscode/vscode_colored/minimal
+    -- Can be either: default, vscode, vscode_colored, minimal.
     theme = "default",
-    -- default/round/block/arrow separators work only for default statusline theme
-    -- round and block will work for minimal theme only
+    -- The "default, round, block, arrow" separators work only for default statusline theme.
+    -- Round and block will work for minimal theme only.
     separator_style = "block",
   },
 
@@ -73,11 +73,11 @@ M.ui = {
   },
 
   cmp = {
-    -- only for non-atom styles!
+    -- Only for non-atom styles!
     icons_left = true,
-    -- default/flat_light/flat_dark/atom/atom_colored
+    -- Can be either: default, flat_light, flat_dark, atom, atom_colored.
     style = "default",
-    -- for tailwind, css, lsp, etc
+    -- For tailwind, css, lsp, etc.
     format_colors = {
       lsp = true,
       icon = "󱓻",
@@ -94,7 +94,7 @@ M.term = {
     col = 0.0,
     width = 1.0,
     height = 0.80,
-    -- single, double, rounded, solid, shadow, none
+    -- Can be either: single, double, rounded, solid, shadow, none.
     border = "single",
   },
 }

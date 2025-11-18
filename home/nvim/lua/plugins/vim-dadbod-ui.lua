@@ -55,7 +55,7 @@ plugin.init = function()
     connection_ok = "ok",
     connection_error = "err",
   }
-  -- set shiftwidth of the buffer whose name ends with "dbui".
+  -- Set shiftwidth of the buffer whose name ends with "dbui".
   vim.api.nvim_create_autocmd("BufEnter", {
     pattern = "*",
     callback = function()

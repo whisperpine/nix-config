@@ -1,6 +1,6 @@
 local plugin = {}
 
--- load luasnips + cmp related in insert mode only
+-- Load luasnips + cmp related in insert mode only.
 plugin = {
   enabled = false, -- disable this plugin, use blink.cmp instead
   "hrsh7th/nvim-cmp",
@@ -20,7 +20,7 @@ plugin = {
         end, { silent = true })
       end,
     },
-    -- cmp sources plugins
+    -- "cmp" sources plugins.
     {
       "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lua",
@@ -32,7 +32,7 @@ plugin = {
 }
 
 plugin.opts = function()
-  -- originates from:
+  -- Originates from:
   -- https://github.com/NvChad/NvChad/blob/6f25b2739684389ca69ea8229386c098c566c408/lua/nvchad/configs/cmp.lua
 
   dofile(vim.g.base46_cache .. "cmp")

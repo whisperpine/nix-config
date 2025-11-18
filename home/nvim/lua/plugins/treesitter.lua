@@ -49,7 +49,7 @@ plugin.config = function(_, opts)
     end
   end
 
-  -- add autocmd to start treesitter
+  -- Add autocmd to start treesitter.
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true }),
     pattern = ensure_installed,
@@ -61,7 +61,7 @@ plugin.config = function(_, opts)
     end,
   })
 
-  -- add autocmd to start treesitter (for "sh" and "zsh" filetype)
+  -- Add autocmd to start treesitter (for "sh" and "zsh" filetype).
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStartSh", { clear = true }),
     pattern = { "sh", "zsh" },
@@ -73,7 +73,7 @@ plugin.config = function(_, opts)
     end,
   })
 
-  -- add autocmd to start treesitter (for "javascriptreact" and "typescriptreact")
+  -- Add autocmd to start treesitter (for "javascriptreact" and "typescriptreact").
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStartJsTs", { clear = true }),
     pattern = { "javascriptreact", "typescriptreact" },
@@ -85,7 +85,7 @@ plugin.config = function(_, opts)
     end,
   })
 
-  -- add autocmd to start treesitter (for "yaml.ansible" and "yaml.cloudformation" filetype)
+  -- Add autocmd to start treesitter (for "yaml.ansible" and "yaml.cloudformation" filetype).
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStartAnsible", { clear = true }),
     pattern = { "yaml.ansible", "yaml.cloudformation" },
@@ -99,7 +99,7 @@ plugin.config = function(_, opts)
 end
 
 plugin.opts = {
-  -- all the supported languages by tree-sitter:
+  -- All the supported languages by tree-sitter:
   -- https://github.com/nvim-treesitter/nvim-treesitter
   ---@type string[]
   ensure_installed = {

@@ -1,4 +1,4 @@
--- originates from:
+-- Originates from:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/configs/harper_ls.lua
 
 ---@type vim.lsp.Config
@@ -10,11 +10,11 @@ local M = {
 
 M.settings = {
   ["harper-ls"] = {
-    -- default userDictPath: ~/.config/harper-ls/dictionary.txt
+    -- Default userDictPath: ~/.config/harper-ls/dictionary.txt
     userDictPath = "",
-    -- default fileDictPath: ~/.local/share/harper-ls/file_dictionaries
+    -- Default fileDictPath: ~/.local/share/harper-ls/file_dictionaries
     fileDictPath = "",
-    -- see all linter rules:
+    -- See all linter rules:
     -- https://writewithharper.com/docs/rules
     linters = {
       AnA = false,

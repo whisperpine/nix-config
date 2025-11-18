@@ -1,7 +1,7 @@
--- originates from:
+-- Originates from:
 -- https://github.com/NvChad/NvChad/blob/6f25b2739684389ca69ea8229386c098c566c408/lua/nvchad/configs/luasnip.lua
 
--- vscode format
+-- Vscode format.
 require("luasnip.loaders.from_vscode").lazy_load {
   exclude = vim.g.vscode_snippets_exclude or {},
 }
@@ -9,13 +9,13 @@ require("luasnip.loaders.from_vscode").lazy_load {
   paths = vim.g.vscode_snippets_path or "",
 }
 
--- snipmate format
+-- Snipmate format.
 require("luasnip.loaders.from_snipmate").load()
 require("luasnip.loaders.from_snipmate").lazy_load {
   paths = vim.g.snipmate_snippets_path or "",
 }
 
--- lua format
+-- Lua format.
 require("luasnip.loaders.from_lua").load()
 require("luasnip.loaders.from_lua").lazy_load { paths = vim.g.lua_snippets_path or "" }
 

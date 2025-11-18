@@ -25,7 +25,7 @@ plugin.init = function()
     "BufReadPost",
     "InsertLeave",
   }
-  -- customize built-in linter: sqlfluff
+  -- Customize built-in linter: sqlfluff.
   local sqlfluff = require("lint").linters.sqlfluff
   sqlfluff.args = {
     "lint",
@@ -33,14 +33,14 @@ plugin.init = function()
   }
   vim.api.nvim_create_autocmd(lint_events, {
     callback = function()
-      -- try_lint without arguments runs the linters defined
-      -- in `linters_by_ft` for the current filetype
+      -- Try_lint without arguments runs the linters defined
+      -- in `linters_by_ft` for the current filetype.
       require("lint").try_lint()
-      -- you can call `try_lint` with a linter name or a list of names to always
-      -- run specific linters, independent of the `linters_by_ft` configuration
+      -- You can call `try_lint` with a linter name or a list of names to always
+      -- run specific linters, independent of the `linters_by_ft` configuration.
       require("lint").try_lint "typos"
 
-      -- pattern match filepath to lint github actions
+      -- Pattern match filepath to lint github actions.
       local filepath = vim.fn.expand "%:p"
       if filepath:match "^.*/.github/workflows/.*%.y(a?)ml$" then
         require("lint").try_lint "actionlint"

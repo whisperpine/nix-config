@@ -1,4 +1,4 @@
--- originates from:
+-- Originates from:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/configs/ts_ls.lua
 
 ---@type vim.lsp.Config

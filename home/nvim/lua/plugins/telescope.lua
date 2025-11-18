@@ -27,7 +27,7 @@ plugin.opts = {
       height = 0.80,
     },
     -- require() will make lazy.nvim load this plugin on startup
-    -- even "lazy=true" is set, which adds startup latency
+    -- even "lazy=true" is set, which adds startup latency.
     mappings = {
       -- n = { ["q"] = require("telescope.actions").close },
       -- i = { ["<Esc>"] = require("telescope.actions").close },
