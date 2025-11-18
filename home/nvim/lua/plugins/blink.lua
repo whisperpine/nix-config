@@ -27,6 +27,13 @@ local opts = {
   },
 
   completion = {
+    accept = {
+      auto_brackets = {
+        kind_resolution = { enabled = false },
+        semantic_token_resolution = { enabled = false },
+      },
+    },
+
     ghost_text = {
       enabled = true,
       show_with_menu = false,
