@@ -1,10 +1,10 @@
 { ... }@inputs:
 {
-  # devShells environment can be entered by `nix develop`
+  # "devShells" environment can be entered by `nix develop`.
   devShells = import ./dev-shells.nix inputs;
 
   darwinConfigurations = {
-    # mac mini
+    # mac mini.
     "creator" = import ./darwin-desktop.nix (
       inputs
       // {
@@ -15,7 +15,7 @@
   };
 
   nixosConfigurations = {
-    # wsl (windows subsystem for linux)
+    # wsl (windows subsystem for linux).
     "nixos" = import ./linux-wsl.nix (
       inputs
       // {
@@ -24,7 +24,7 @@
       }
     );
 
-    # nixos desktop x86_64
+    # NixOS desktop x86_64.
     "yunix" = import ./linux-desktop.nix (
       inputs
       // {
@@ -33,7 +33,7 @@
       }
     );
 
-    # nixos desktop aarch64
+    # NixOS desktop aarch64.
     "yunixa" = import ./linux-desktop.nix (
       inputs
       // {
@@ -42,7 +42,7 @@
       }
     );
 
-    # nixos server x86_64
+    # NixOS server x86_64.
     "snix" = import ./linux-server.nix (
       inputs
       // {
@@ -51,7 +51,7 @@
       }
     );
 
-    # nixos server aarch64
+    # NixOS server aarch64.
     "snixa" = import ./linux-server.nix (
       inputs
       // {

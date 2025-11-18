@@ -50,7 +50,7 @@ nix-darwin.lib.darwinSystem {
     ./modules/darwin-system.nix
     ./modules/fonts.nix
 
-    # sops-nix module differs in linux and darwin
+    # "sops-nix" module differs in linux and darwin.
     sops-nix.darwinModules.sops
     ./modules/sops-nix.nix
 

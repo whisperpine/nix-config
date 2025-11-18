@@ -1,5 +1,5 @@
 { hostname, username, ... }:
-#----------  host & users configuration for darwin ----------#
+# ----------  host & users configuration for darwin ---------- #
 {
   networking.hostName = hostname;
   nix.settings.trusted-users = [ username ];

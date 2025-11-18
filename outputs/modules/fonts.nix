@@ -1,5 +1,5 @@
 { pkgs, ... }:
-#----------  fonts configuration ----------#
+# ----------  fonts configs ---------- #
 {
   # Install fonts.
   fonts.packages = with pkgs; [

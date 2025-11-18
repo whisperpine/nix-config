@@ -1,5 +1,5 @@
 { pkgs, ... }:
-#---------- bun configuration ----------#
+# ---------- bun configs ---------- #
 {
   systemd.user.services.bun-add = {
     description = "Install npm packages globally via bun";

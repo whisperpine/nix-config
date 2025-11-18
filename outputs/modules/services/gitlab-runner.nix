@@ -1,5 +1,5 @@
 { ... }:
-#---------- gitlab configuration ----------#
+# ---------- gitlab-runner configs ---------- #
 {
   # Run the following command to see the generated config file:
   # sudo cat /var/lib/gitlab-runner/.gitlab-runner/config.toml

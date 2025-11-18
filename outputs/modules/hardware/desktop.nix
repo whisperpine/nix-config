@@ -1,5 +1,5 @@
 { ... }:
-#----------  hardware configuration ----------#
+# ----------  hardware configs ---------- #
 {
   # https://wiki.hyprland.org/Nvidia/#suspendwakeup-issues
   boot.kernelParams = [ "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];

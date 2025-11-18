@@ -1,5 +1,5 @@
 { hostname, username, ... }:
-#----------  host & users configuration ----------#
+# ----------  host & users configs ---------- #
 {
   networking.hostName = hostname;
   nix.settings.trusted-users = [ username ];
@@ -17,9 +17,9 @@
 
   # Clean up old files under "~/.local/share/Trash".
   # Run the following command to list all user scope configs:
-  # systemd-tmpfiles --user --cat-config
+  # "systemd-tmpfiles --user --cat-config"
   systemd.user.tmpfiles.users."${username}".rules = [
-    # Type Path Mode User Group Age
+    # Type Path Mode User Group Age.
     "d /home/${username}/.local/share/Trash/files - - - 30d"
     "d /home/${username}/.local/share/Trash/info - - - 30d"
   ];

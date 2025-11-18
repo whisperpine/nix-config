@@ -1,5 +1,5 @@
 { username, ... }:
-#----------  system configuration for darwin ----------#
+# ----------  system configs for darwin ---------- #
 {
   system.primaryUser = username;
   # System preference.

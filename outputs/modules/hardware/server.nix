@@ -1,5 +1,5 @@
 { ... }:
-#----------  hardware configuration ----------#
+# ----------  hardware configs ---------- #
 {
   # Enabling ip_forward on the host machine is important for the docker
   # container to be able to perform networking tasks (such as cloning the

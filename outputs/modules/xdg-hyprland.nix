@@ -1,10 +1,10 @@
 { pkgs, ... }:
-#----------  xdg-hyprland configuration ----------#
+# ----------  xdg-hyprland configs ---------- #
 {
   # Enable xdg-desktop-portal for Wayland and Hyprland.
   xdg.portal = {
     enable = true;
-    wlr.enable = true; # Enable Wayland backend for portals.
+    wlr.enable = true; # enable Wayland backend for portals
     extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
     # https://mynixos.com/nixpkgs/option/xdg.portal.config
     config = {

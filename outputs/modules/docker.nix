@@ -1,5 +1,5 @@
 { username, ... }:
-#----------  docker configuration ----------#
+# ----------  docker configs ---------- #
 {
   # Enable docker.
   users.extraGroups.docker.members = [ "${username}" ];

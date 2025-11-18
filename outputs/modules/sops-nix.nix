@@ -1,5 +1,5 @@
 { config, username, ... }:
-#----------  sops-nix configuration ----------#
+# ----------  sops-nix configs ---------- #
 # NOTE: this module depends on:
 # `sops-nix.darwinModules.sops` or `sops-nix.nixosModules.sops`
 let
