@@ -120,7 +120,7 @@ vim.lsp.config("yamlls", {
     "yaml.docker-compose",
     "yaml.gitlab",
     "yaml.helm-values",
-    "yaml.ansible",
+    -- "yaml.ansible",
     "yaml.cloudformation",
   },
   settings = {
