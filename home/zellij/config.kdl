@@ -5,9 +5,9 @@ serialization_interval 3
 theme "custom"
 themes {
     custom {
-        // selection foreground
+        // Selection foreground.
         fg "#bdbdbd"
-        // selection background
+        // Selection background.
         bg "#3f3f3f"
         black "#161616"
         red "#161616"

@@ -32,5 +32,5 @@ window_mod.apply_to_config(config)
 local font_mod = require "src.font"
 font_mod.apply_to_config(config)
 
--- and finally, return the configuration to wezterm
+-- And finally, return the configuration to wezterm.
 return config

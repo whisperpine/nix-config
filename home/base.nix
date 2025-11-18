@@ -28,8 +28,7 @@
   ];
 
   home.packages = with pkgs; [
-    # manage itself
-    home-manager
+    home-manager # manage itself
 
     docker-compose
     tree

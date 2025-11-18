@@ -1,8 +1,8 @@
--- default keys: https://wezfurlong.org/wezterm/config/default-keys.html
+-- Default keys: https://wezfurlong.org/wezterm/config/default-keys.html
 
 local wezterm = require "wezterm"
 
--- This is the module table that we will export
+-- This is the module table that we will export.
 local module = {}
 
 local act = wezterm.action

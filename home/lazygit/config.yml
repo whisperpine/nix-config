@@ -1,4 +1,4 @@
-# Config relating to the Lazygit UI
+# Config relating to the Lazygit UI.
 gui:
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#custom-author-color
   authorColors:
@@ -15,10 +15,10 @@ gui:
     selectedLineBgColor:
       - "#383838"
 
-    # Border color of focused window
+    # Border color of focused window.
     activeBorderColor:
       - yellow
 
-    # Border color of non-focused windows
+    # Border color of non-focused windows.
     inactiveBorderColor:
       - blue

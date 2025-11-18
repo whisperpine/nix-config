@@ -11,14 +11,14 @@
   ];
 
   home.packages = with pkgs; [
-    # cloud
+    # --- cloud --- #
     kubectl
 
-    # dev tools
+    # --- dev tools --- #
     python313
     uv
 
-    # utilities
+    # --- utilities --- #
     translate-shell
     hyperfine
     onefetch

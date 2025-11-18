@@ -1,12 +1,12 @@
 # vi: ft=dosini
 [main]
 
-# Enables context sensitive auto-completion. If this is disabled, all
-# possible completions will be listed.
+# Enables context sensitive auto-completion.
+# If this is disabled, all possible completions will be listed.
 smart_completion = True
 
-# Display the completions in several columns. (More completions will be
-# visible.)
+# Display the completions in several columns.
+# (More completions will be # visible.)
 wider_completion_menu = False
 
 # Do not create new connections for refreshing completions; Equivalent to
@@ -65,16 +65,16 @@ generate_aliases = False
 # }
 alias_map_file =
 
-# log_file location.
+# "log_file" location.
 # In Unix/Linux: ~/.config/pgcli/log
 # In Windows: %USERPROFILE%\AppData\Local\dbcli\pgcli\log
 # %USERPROFILE% is typically C:\Users\{username}
 log_file = default
 
-# keyword casing preference. Possible values: "lower", "upper", "auto"
+# Keyword casing preference. Possible values: "lower", "upper", "auto"
 keyword_casing = auto
 
-# casing_file location.
+# "casing_file" location.
 # In Unix/Linux: ~/.config/pgcli/casing
 # In Windows: %USERPROFILE%\AppData\Local\dbcli\pgcli\casing
 # %USERPROFILE% is typically C:\Users\{username}
@@ -87,7 +87,7 @@ generate_casing_file = False
 # Casing of column headers based on the casing_file described above
 case_column_headers = True
 
-# history_file location.
+# "history_file" location.
 # In Unix/Linux: ~/.config/pgcli/history
 # In Windows: %USERPROFILE%\AppData\Local\dbcli\pgcli\history
 # %USERPROFILE% is typically C:\Users\{username}
@@ -176,7 +176,7 @@ verbose_errors = False
 # eg: prompt = '\x1b[35m\u@\x1b[32m\h:\x1b[36m\d>'
 prompt = '\u@\h:\d> '
 
-# Number of lines to reserve for the suggestion menu
+# Number of lines to reserve for the suggestion menu.
 min_num_menu_lines = 4
 
 # Character used to left pad multi-line queries to match the prompt size.
@@ -185,7 +185,7 @@ multiline_continuation_char = ''
 # The string used in place of a null value.
 null_string = '<null>'
 
-# manage pager on startup
+# Manage pager on startup.
 enable_pager = True
 
 # Do not use keyring to automatically save and load password in a secure manner
@@ -220,7 +220,7 @@ literal.string = '#879c54'
 literal.number = '#de935f'
 keyword = 'bold #b294bb'
 
-# style classes for colored table output
+# Style classes for colored table output.
 output.header = "#879c54 bold"
 output.odd-row = ""
 output.even-row = ""

@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  # if wezterm is installed in system level,
+  # If wezterm is installed in system level,
   # there's no need to install it by home-manager.
   # (e.g. on darwin platform)
   home.packages = with pkgs; [ wezterm ];

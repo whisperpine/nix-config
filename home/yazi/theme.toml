@@ -7,7 +7,7 @@ sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
 [mode]
-# default bg
+# Default bg.
 normal_main = { fg = "#202020", bg = "#81a2be" } # blue
 select_main = { fg = "#202020", bg = "#cc6666" } # red
 unset_main = { fg = "#202020", bg = "#de935f" }  # yellow

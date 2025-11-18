@@ -1,13 +1,13 @@
 local wezterm = require "wezterm"
 
--- This is the module table that we will export
+-- This is the module table that we will export.
 local module = {}
 
 local target_triple = wezterm.target_triple
 
 wezterm.on("gui-startup", function(cmd)
   if string.find(target_triple, "windows") then
-    -- tab, pane, window
+    -- Tab, pane, window.
     local _, _, _ = wezterm.mux.spawn_window(cmd or {
       position = { x = 900, y = 280 },
     })
@@ -37,5 +37,5 @@ function module.apply_to_config(config)
   }
 end
 
--- return our module table
+-- Return our module table.
 return module
