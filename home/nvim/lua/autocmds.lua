@@ -1,8 +1,8 @@
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
--- user event that loads after UIEnter
--- modified from: https://github.com/NvChad/NvChad/blob/6f25b2739684389ca69ea8229386c098c566c408/lua/nvchad/autocmds.lua
+-- User event that loads after UIEnter.
+-- Modified from: https://github.com/NvChad/NvChad/blob/6f25b2739684389ca69ea8229386c098c566c408/lua/nvchad/autocmds.lua
 autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   group = augroup("NvFilePost", { clear = true }),
   callback = function(args)
@@ -24,7 +24,7 @@ autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   end,
 })
 
--- make generated directories and files readonly
+-- Make generated directories and files readonly.
 autocmd({ "BufRead" }, {
   group = augroup("DirFileReadonly", { clear = true }),
   pattern = {
@@ -41,8 +41,8 @@ autocmd({ "BufRead" }, {
   end,
 })
 
--- when current buffer is readonly,
--- set no modifiable and disable diagnostics
+-- When current buffer is readonly,
+-- set no modifiable and disable diagnostics.
 autocmd("BufReadPost", {
   group = augroup("ReadonlyNoModifiableDiagnostics", { clear = true }),
   callback = function()
@@ -51,7 +51,7 @@ autocmd("BufReadPost", {
   end,
 })
 
--- set indent size by filetype
+-- Set indent size by filetype.
 autocmd("Filetype", {
   group = augroup("SetIndentSizeByFiletype", { clear = true }),
   command = "setlocal shiftwidth=2 softtabstop=2",
@@ -85,14 +85,14 @@ autocmd("Filetype", {
   },
 })
 
--- set `textwidth` in markdown files.
+-- Set `textwidth` in markdown files.
 autocmd("BufEnter", {
   group = augroup("SetTextwidthForMarkdown", { clear = true }),
   pattern = { "*.md" },
   command = "setlocal textwidth=80",
 })
 
--- restore cursor position on file open
+-- Restore cursor position on file open.
 autocmd("BufReadPost", {
   group = augroup("RestoreCursorPosition", { clear = true }),
   pattern = "*",
@@ -109,21 +109,21 @@ autocmd("BufReadPost", {
   end,
 })
 
--- clear indentexpr for python
+-- Clear indentexpr for python.
 autocmd("BufEnter", {
   group = augroup("SetPythonIndentexpr", { clear = true }),
   pattern = "*.py",
   command = "setlocal indentexpr=",
 })
 
--- clear indentexpr for yaml
+-- Clear indentexpr for yaml.
 autocmd("BufEnter", {
   group = augroup("SetYamlIndentexpr", { clear = true }),
   pattern = "*.yaml",
   command = "setlocal indentexpr=",
 })
 
--- reconfigure the comment string for ini filetype
+-- Reconfigure the comment string for ini filetype.
 autocmd("Filetype", {
   group = augroup("SetIniCommentString", { clear = true }),
   pattern = "ini",
@@ -133,7 +133,7 @@ autocmd("Filetype", {
   end,
 })
 
--- set the formatter for "yaml.ansible" and "yaml.cloudformation"
+-- Set the formatter for "yaml.ansible" and "yaml.cloudformation".
 autocmd("Filetype", {
   group = augroup("SetYamlFormatter", { clear = true }),
   pattern = { "yaml.ansible", "yaml.cloudformation" },
@@ -144,7 +144,7 @@ autocmd("Filetype", {
   end,
 })
 
--- disable vim.diagnostic in floating windows
+-- Disable vim.diagnostic in floating windows.
 autocmd("BufWinEnter", {
   group = augroup("NoDiagnosticInFloatingWindow", { clear = true }),
   callback = function(args)
@@ -155,4 +155,11 @@ autocmd("BufWinEnter", {
       vim.diagnostic.enable(false, { bufnr = 0 })
     end
   end,
+})
+
+-- Modify formatoptions for all filetypes.
+autocmd("Filetype", {
+  group = augroup("SetFormatOptionsForAll", { clear = true }),
+  command = "set formatoptions-=ro",
+  pattern = "*",
 })
