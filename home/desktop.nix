@@ -3,6 +3,7 @@
   imports = [
     ./base.nix
 
+    ./tealdeer
     ./erdtree
     ./direnv
     ./zellij
