@@ -212,6 +212,7 @@ vim.lsp.enable {
   "tailwindcss",
   "ansiblels",
   "csharp_ls",
+  "jinja_lsp",
   "marksman",
   "dockerls",
   "tinymist",
