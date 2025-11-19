@@ -2,6 +2,9 @@
 vim.filetype.add {
   extension = {
     env = "conf",
+    jinja = "jinja",
+    jinja2 = "jinja",
+    j2 = "jinja",
   },
   filename = {
     [".envrc"] = "sh",

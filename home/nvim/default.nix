@@ -90,6 +90,7 @@ in
     helm-ls # helm
     # harper # English
     # vale-ls # English
+    jinja-lsp # jinja
     vale # English
     texlab # latex
     taplo # toml
