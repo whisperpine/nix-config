@@ -88,8 +88,8 @@ in
     tinymist # typst
     lemminx # xml, svg
     helm-ls # helm
-    harper # English
-    vale-ls # English
+    # harper # English
+    # vale-ls # English
     vale # English
     texlab # latex
     taplo # toml
