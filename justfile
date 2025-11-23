@@ -2,6 +2,10 @@
 
 set dotenv-required := true
 
+# list all available subcommands
+_default:
+  @just --list
+
 # build and switch (manually set HOSTNAME in .env)
 deploy:
   echo ${HOSTNAME}
