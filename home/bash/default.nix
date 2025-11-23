@@ -9,6 +9,7 @@
       av = "ansible-vault";
       ai = "ansible-inventory";
       ad = "ansible-doc";
+      ag = "ansible-galaxy";
       za = "zellij attach";
       kc = "kubectl";
       lg = "lazygit";
