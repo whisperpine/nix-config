@@ -20,7 +20,7 @@
     # Use the unstable branch by default.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # The latest stable branch which can be used as a fallback.
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     # To install the nightly version of Neovim.
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     # Run unpatched dynamic binaries.
@@ -35,7 +35,7 @@
     };
     # Home Manager used for managing user configuration.
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       # The `follows` keyword in inputs is used for inheritance.
       # `inputs.nixpkgs` of home-manager is kept consistent with
       # the `inputs.nixpkgs` of the current flake,
@@ -43,11 +43,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #---------- WSL ----------#
+    # ---------- WSL ---------- #
     # WSL (Windows Subsystem for Linux).
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
-    #---------- darwin ----------#
+    # ---------- darwin ---------- #
     # Nix-Darwin.
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
