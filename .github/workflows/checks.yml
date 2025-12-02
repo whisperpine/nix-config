@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     name: spell check with typos
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
         shell: nix shell nixpkgs#typos --quiet --command bash {0}
@@ -24,7 +24,7 @@ jobs:
     # Only run this step in the main branch.
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
       - name: Check the latest commit message
         shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     name: lint markdown by markdownlint
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
       - name: Run markdownlint command
         shell: nix shell nixpkgs#markdownlint-cli --quiet --command bash {0}
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     name: nix flake check
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
       - name: Run nix command
         run: nix flake check --impure --all-systems
@@ -53,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     name: lint shell scripts by shellcheck
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
       - name: Run shellcheck command
         shell: nix shell nixpkgs#shellcheck --quiet --command bash {0}
