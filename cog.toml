@@ -5,10 +5,12 @@ scopes = [
   "pkgs",
   "deps",
   "dir",
+  "nixos",
   # platforms
   "wsl",
   "darwin",
   "server",
+  "desktop",
   # git sha
   "d6f4cfe",
   "b1386af",
