@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: check conventional commits
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
       - name: Check the Pull Request title
         env:
