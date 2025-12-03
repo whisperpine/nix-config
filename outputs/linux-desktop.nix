@@ -71,7 +71,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/services/peripherals.nix
 
     # The windowing system.
-    ./modules/services/x11.nix
+    ./modules/services/xserver.nix
 
     # Only use this module in conjunction with a proxy.
     ./modules/networking.nix
