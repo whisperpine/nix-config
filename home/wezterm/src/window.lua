@@ -28,6 +28,9 @@ function module.apply_to_config(config)
   elseif string.find(target_triple, "darwin") then
     config.initial_rows = 39
     config.initial_cols = 110
+  elseif string.find(target_triple, "linux") then
+    config.initial_rows = 42
+    config.initial_cols = 120
   end
   config.window_padding = {
     left = "1.5cell",

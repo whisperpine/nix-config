@@ -25,6 +25,8 @@ function module.apply_to_config(config)
     config.font_size = 11.0
   elseif string.find(target_triple, "darwin") then
     config.font_size = 15.0
+  elseif string.find(target_triple, "linux") then
+    config.font_size = 13.0
   end
   config.cell_width = 1.0
   config.line_height = 1.0
