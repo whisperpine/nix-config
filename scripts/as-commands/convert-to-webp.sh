@@ -29,7 +29,7 @@ for file in *.png *.jpg *.jpeg *.PNG *.JPG *.JPEG; do
   fi
 done
 
-# Check if no files were found
+# Check if no file was found.
 if [ "$found_files" -eq 0 ]; then
   echo "No PNG or JPG files found in the current directory."
   exit 0
