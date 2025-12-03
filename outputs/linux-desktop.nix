@@ -30,12 +30,11 @@ let
       boot.kernelModules = [
         "i2c-dev" # "ddcutil" requires this module
       ];
+
       # Allow unfree software to be installed.
       nixpkgs.config.allowUnfree = true;
       # Install firefox.
       programs.firefox.enable = true;
-      # Install XWayland for compatibility.
-      programs.xwayland.enable = true;
       # Install packages in operating system.
       environment.systemPackages =
         with pkgs;
