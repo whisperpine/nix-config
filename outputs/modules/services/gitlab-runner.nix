@@ -4,6 +4,11 @@
   # Run the following command to see the generated config file:
   # sudo cat /var/lib/gitlab-runner/.gitlab-runner/config.toml
 
+  # Enabling ip_forward on the host machine is important for the docker
+  # container to be able to perform networking tasks (such as cloning the
+  # gitlab repo). See: https://nixos.wiki/wiki/Gitlab_runner
+  boot.kernel.sysctl."net.ipv4.ip_forward" = true;
+
   # https://nixos.wiki/wiki/Gitlab_runner
   services.gitlab-runner = {
     enable = true;
