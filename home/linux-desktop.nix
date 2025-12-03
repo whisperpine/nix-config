@@ -5,16 +5,11 @@
   home.packages = with pkgs; [
     anki
     ddcutil
-    # kitty
-    # waybar
-    # dunst
-    # libnotify
   ];
   imports = [
     ./desktop.nix
     ./wezterm
-    ./alacritty
+    ./ghostty
     ./xdg
-    # ./hyprland
   ];
 }
