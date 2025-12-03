@@ -12,22 +12,26 @@ let
   # Pass non-default args to modules.
   # Caution: DO NOT rename `specialArgs`.
   specialArgs = input // {
-    pkgs-stable = import nixpkgs-stable {
-      inherit system;
-      config.allowUnfree = true;
-    };
-    # Allow unfree software to be installed.
-    nixpkgs.config.allowUnfree = true;
+    pkgs-stable = import nixpkgs-stable { inherit system; };
     # Inhereit variables define above.
     inherit username;
   };
   configuration =
     { pkgs, config, ... }:
     {
+      # Bootloader.
+      boot.loader.systemd-boot.enable = true;
+      boot.loader.efi.canTouchEfiVariables = true;
+
+      # Allow unfree software to be installed.
+      nixpkgs.config.allowUnfree = true;
+      # Install firefox.
+      programs.firefox.enable = true;
       # Install packages in operating system.
       environment.systemPackages = with pkgs; [
-        git
+        google-chrome # unfree
         neovim
+        git
       ];
     };
 in
@@ -40,13 +44,24 @@ nixpkgs.lib.nixosSystem {
     # This modules id defined above in "let" expression.
     configuration
 
-    ./modules/hardware/desktop.nix
-    ./modules/xdg-hyprland.nix
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/docker.nix
     ./modules/fonts.nix
     ./modules/services/bun-add.nix
+    ./modules/i18n.nix
+
+    # Auto generated hardware configs (DO NOT MODIFY).
+    ./modules/hardware/yunix.nix
+
+    # Peripherals regarding audio, printing, etc.
+    ./modules/services/peripherals.nix
+
+    # The windowing system.
+    ./modules/services/x11.nix
+
+    # Only use this module in conjunction with a proxy.
+    ./modules/networking.nix
 
     # sops-nix module differs in linux and darwin.
     sops-nix.nixosModules.sops
