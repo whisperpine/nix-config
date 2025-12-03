@@ -29,19 +29,19 @@ in
   ];
 
   home.packages = with pkgs; [
-    # required by neovim plugins
+    # --- required by neovim plugins --- #
     lua5_1 # lazy.nvim
     luajitPackages.luarocks # lazy.nvim
-    tree-sitter # tree-sitter.nvim
+    tree-sitter # nvim-treesitter
     yarn-berry # markdown-preview.nvim
     nodejs_22 # markdown-preview.nvim
+    imagemagick # snacks.nvim
     ripgrep # telescope.nvim
     gnumake # avante.nvim
-    zig # tree-sitter.nvim
     zk # zk-nvim
 
-    # formatters and linters
-    # find all formatters here:
+    # --- formatters and linters --- #
+    # Find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
     python313Packages.cfn-lint # cloudformation
     nixfmt-rfc-style # nix formatter
@@ -68,9 +68,10 @@ in
     deno # ts, js, json, yaml, css, html
     ruff # python
     buf # protobuf
+    zig # zig
 
-    # language servers
-    # find all language servers here:
+    # --- language servers --- #
+    # Find all language servers here:
     # https://github.com/neovim/nvim-lspconfig
     dockerfile-language-server # dockerfile
     graphql-language-service-cli # graphql
@@ -98,8 +99,8 @@ in
     zls # zig
     nil # nix
 
-    # including lsp "clangd" and formatter "clang-format"
-    # lsp: c, cpp, objc. formatter: c, cpp, objc, java, csharp
+    # Including lsp "clangd" and formatter "clang-format".
+    # Lsp: c, cpp, objc. Formatter: c, cpp, objc, java, csharp.
     clang-tools
   ];
 }
