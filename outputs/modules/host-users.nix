@@ -12,7 +12,10 @@
     shell = "/etc/profiles/per-user/${username}/bin/zsh";
     # shell = "/sbin/bash";
     isNormalUser = true;
-    group = "yusong";
+    group = "${username}";
+    extraGroups = [
+      "wheel" # allow using "sudo"
+    ];
   };
 
   # Clean up old files under "~/.local/share/Trash".
