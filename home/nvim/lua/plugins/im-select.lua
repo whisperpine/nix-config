@@ -1,4 +1,5 @@
 return {
+  enabled = false, -- disable this plugin (for linux desktop)
   "keaising/im-select.nvim",
   event = "InsertLeave",
   opts = function()
