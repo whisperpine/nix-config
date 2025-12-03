@@ -11,6 +11,7 @@
   imports = [
     ./desktop.nix
     ./wezterm
+    ./alacritty
     ./xdg
     # ./hyprland
   ];
