@@ -3,7 +3,8 @@
   home.username = username;
   home.homeDirectory = "/home/${username}";
   home.packages = with pkgs; [
-    kitty
+    ddcutil
+    # kitty
     # waybar
     # dunst
     # libnotify

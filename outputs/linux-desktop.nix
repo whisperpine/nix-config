@@ -22,6 +22,9 @@ let
       # Bootloader.
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
+      boot.kernelModules = [
+        "i2c-dev" # "ddcutil" requires this module
+      ];
 
       # Allow unfree software to be installed.
       nixpkgs.config.allowUnfree = true;
