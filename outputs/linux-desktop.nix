@@ -53,6 +53,8 @@ nixpkgs.lib.nixosSystem {
 
     # Auto generated hardware configs (DO NOT MODIFY).
     ./modules/hardware/yunix.nix
+    # Nvidia GPU configs.
+    ./modules/hardware/nvidia.nix
 
     # Peripherals regarding audio, printing, etc.
     ./modules/services/peripherals.nix
