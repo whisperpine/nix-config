@@ -4,9 +4,9 @@
   home.homeDirectory = "/home/${username}";
   home.packages = with pkgs; [
     kitty
-    waybar
-    dunst
-    libnotify
+    # waybar
+    # dunst
+    # libnotify
   ];
   imports = [
     ./desktop.nix
