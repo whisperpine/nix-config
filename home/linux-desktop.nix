@@ -6,6 +6,7 @@
     anki
     ddcutil
     fuzzel
+    hyprlock
   ];
   imports = [
     ./desktop.nix
