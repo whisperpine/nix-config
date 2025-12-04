@@ -1,2 +1,34 @@
-foreground = bdbdbd
-background = 202020
+# ----- color ----- #
+foreground = #bdbdbd
+background = #202020
+selection-foreground = #c8c8c8
+selection-background = #363636
+
+# ----- font ----- #
+font-size = 13
+font-style-bold = regular
+alpha-blending = linear
+adjust-underline-thickness = 1
+font-family = Cascadia Mono
+font-family = Symbols Nerd Font
+font-family = Sarasa Mono SC Bold
+
+# ----- cursor ----- #
+cursor-color = #bdbdbd
+shell-integration-features = no-cursor
+adjust-cursor-thickness = 2
+cursor-style-blink = false
+cursor-style = block
+
+# ----- window ----- #
+window-height = 30
+window-width = 100
+window-padding-x = 8
+window-padding-y = 6
+window-padding-balance = true
+window-vsync = true
+window-decoration = none
+
+# ----- misc ----- #
+mouse-hide-while-typing = true
+auto-update = off
