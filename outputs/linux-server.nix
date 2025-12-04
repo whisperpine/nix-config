@@ -25,10 +25,7 @@ let
     { pkgs, config, ... }:
     {
       # Install packages in operating system.
-      environment.systemPackages = with pkgs; [
-        git
-        neovim
-      ];
+      environment.systemPackages = with pkgs; [ neovim ];
     };
 in
 nixpkgs.lib.nixosSystem {

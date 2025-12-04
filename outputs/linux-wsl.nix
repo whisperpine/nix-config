@@ -27,11 +27,9 @@ let
     {
       # Install packages in operating system.
       environment.systemPackages = with pkgs; [
-        git
         neovim
-        # WSL specific.
-        xdg-utils
-        wslu
+        xdg-utils # wsl specific
+        wslu # wsl specific
       ];
     };
 in
