@@ -13,7 +13,7 @@ padding = { x = 12, y = 12 }
 dynamic_title = false
 dimensions = { columns = 121, lines = 39 }
 position = { x = 650, y = 300 }
-decorations = "buttonless"
+decorations = "None"
 option_as_alt = "Both"
 
 [mouse]
