@@ -38,6 +38,7 @@ scopes = [
   "gitlab-runner",
   "services",
   "pgcli",
+  "niri",
   "sops",
 ]
 

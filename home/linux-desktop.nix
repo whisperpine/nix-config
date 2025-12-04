@@ -5,10 +5,13 @@
   home.packages = with pkgs; [
     anki
     ddcutil
+    fuzzel
   ];
   imports = [
     ./desktop.nix
+    ./alacritty
     ./wezterm
     ./ghostty
+    ./niri
   ];
 }
