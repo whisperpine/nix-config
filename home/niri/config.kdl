@@ -1,23 +1,11 @@
-// This config is in the KDL format: https://kdl.dev
-// "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
-// Input device configuration.
-// Find the full list of options on the wiki:
-// https://yalter.github.io/niri/Configuration:-Input
 input {
     keyboard {
+        // If this section is empty, niri will fetch xkb settings
+        // from org.freedesktop.locale1. You can control these using
+        // localectl set-x11-keymap.
         xkb {
- // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-
-            // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
-            // localectl set-x11-keymap.
 
         }
         // Enable numlock on startup, omitting this setting disables it.
@@ -27,82 +15,64 @@ input {
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
     touchpad {
-        // off
-        tap
         // dwt
         // dwtp
         // drag false
         // drag-lock
-        natural-scroll
- // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "two-finger"
         // disabled-on-external-mouse
+        tap
+        natural-scroll
+        accel-speed 0.2
+        accel-profile "flat"
+        scroll-method "two-finger"
     }
     mouse {
- // off
         // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "no-scroll"
-
+        accel-speed 0.2
+        accel-profile "flat"
+        scroll-method "no-scroll"
     }
     trackpoint {
- // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "on-button-down"
-        // scroll-button 273
-        // scroll-button-lock
-        // middle-emulation
 
     }
- // Uncomment this to make the mouse warp to the center of newly focused windows.
-    // warp-mouse-to-focus
-
-    // Focus windows and outputs automatically when moving the mouse into them.
-    // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
+    // Make the mouse warp to the center of newly focused windows.
+    warp-mouse-to-focus
 }
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
-// Uncomment this line to disable this output.
-// off
-// Resolution and, optionally, refresh rate of the output.
-// The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
-// If the refresh rate is omitted, niri will pick the highest refresh rate
-// for the resolution.
-// If the mode is omitted altogether or is invalid, niri will pick one automatically.
-// Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-mode "1920x1080@120.030"
-// You can use integer or fractional scale, for example use 1.5 for 150% scale.
-scale 2
-// Transform allows to rotate the output counter-clockwise, valid values are:
-// normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-transform "normal"
-// Position of the output in the global coordinate space.
-// This affects directional monitor actions like "focus-monitor-left", and cursor movement.
-// The cursor can only move between directly adjacent outputs.
-// Output scale and rotation has to be taken into account for positioning:
-// outputs are sized in logical, or scaled, pixels.
-// For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
-// so to put another output directly adjacent to it on the right, set its x to 1920.
-// If the position is unset or results in an overlap, the output is instead placed
-// automatically.
-position x=1280 y=0
+output "DP-1" {
+    // Resolution and, optionally, refresh rate of the output.
+    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
+    // If the refresh rate is omitted, niri will pick the highest refresh rate
+    // for the resolution.
+    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
+    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
+    mode "3840x2160@60.000"
+    // You can use integer or fractional scale, for example use 1.5 for 150% scale.
+    scale 2
+    // Transform allows to rotate the output counter-clockwise, valid values are:
+    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+    transform "normal"
+    // Position of the output in the global coordinate space.
+    // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
+    // The cursor can only move between directly adjacent outputs.
+    // Output scale and rotation has to be taken into account for positioning:
+    // outputs are sized in logical, or scaled, pixels.
+    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
+    // so to put another output directly adjacent to it on the right, set its x to 1920.
+    // If the position is unset or results in an overlap, the output is instead placed
+    // automatically.
+    position x=0 y=0
 }
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 12
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -142,9 +112,9 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        // off
+        off
         // How many logical pixels the ring extends out from the windows.
-        width 4
+        width 2.5
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
         // - RGB hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
@@ -175,12 +145,13 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        off
-        width 4
-        active-color "#ffc87f"
+        // off
+        width 2
+        // active-color "#ffc87f"
+        active-color "#aaaaaa"
         inactive-color "#505050"
         // Color of the border around windows that request your attention.
-        urgent-color "#9b0000"
+        urgent-color "#cc6666"
  // Gradients can use a few different interpolation color spaces.
         // For example, this is a pastel rainbow gradient via in="oklch longer hue".
         //
@@ -191,7 +162,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        // on
+        on
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
         //
@@ -210,13 +181,13 @@ layout {
         // You can change how shadows look. The values below are in logical
         // pixels and match the CSS box-shadow properties.
         // Softness controls the shadow blur radius.
-        softness 30
+        softness 12
         // Spread expands the shadow.
-        spread 5
+        spread 2
         // Offset moves the shadow relative to the window.
-        offset x=0 y=5
+        offset x=0 y=0
         // You can also change the shadow color and opacity.
-        color "#0007"
+        color "#202020"
     }
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
     // You can think of them as a kind of outer gaps. They are set in logical pixels.
@@ -224,11 +195,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
- // left 64
-        // right 64
-        // top 64
-        // bottom 64
-
+        left 0
+        right 0
+        top 0
+        bottom 0
     }
 }
 // Add lines like this to spawn processes at startup.
@@ -240,9 +210,8 @@ spawn-at-startup "waybar"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 hotkey-overlay {
- // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
-
+    // Disable the "Important Hotkeys" pop-up at startup.
+    skip-at-startup
 }
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -260,12 +229,8 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // The wiki explains how to configure individual animations:
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
- // Uncomment to turn off all animations.
-    // off
-
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
-
+    slowdown 0.8
 }
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
@@ -289,20 +254,18 @@ window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
 }
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-match app-id=r#"^org\.gnome\.World\.Secrets$"#
-block-out-from "screen-capture"
-// Use this instead if you want them visible on third-party screenshot tools.
+// Block out two password managers from screen capture.
+window-rule {
+    match app-id="^org\\.keepassxc\\.KeePassXC$"
+    match app-id="^org\\.gnome\\.World\\.Secrets$"
+    block-out-from "screen-capture"
+ // Use this instead if you want them visible on third-party screenshot tools.
 // block-out-from "screencast"
 }
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-geometry-corner-radius 12
-clip-to-geometry true
+// Enable rounded corners for all windows.
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
 }
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
