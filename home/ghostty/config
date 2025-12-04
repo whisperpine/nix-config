@@ -21,13 +21,14 @@ cursor-style-blink = false
 cursor-style = block
 
 # ----- window ----- #
-window-height = 30
-window-width = 100
 window-padding-x = 8
 window-padding-y = 6
+# window-height = 30
+# window-width = 100
 window-padding-balance = true
 window-vsync = true
 window-decoration = none
+resize-overlay = never
 
 # ----- misc ----- #
 mouse-hide-while-typing = true
