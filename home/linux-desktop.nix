@@ -10,6 +10,5 @@
     ./desktop.nix
     ./wezterm
     ./ghostty
-    ./xdg
   ];
 }

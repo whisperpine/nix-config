@@ -60,6 +60,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/fonts.nix
     ./modules/services/bun-add.nix
     ./modules/i18n.nix
+    ./modules/xdg.nix
 
     # Auto generated hardware configs (DO NOT MODIFY).
     ./modules/hardware/yunix.nix
