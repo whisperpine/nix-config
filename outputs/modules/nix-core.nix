@@ -1,4 +1,9 @@
-{ system, username, ... }:
+{
+  self,
+  system,
+  username,
+  ...
+}:
 # ----------  nix-core configs ---------- #
 {
   # This value determines the NixOS release from which the default
@@ -8,6 +13,10 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11";
+
+  # Set "Configuration Revision" with git sha when building.
+  # To see the "Configuration Revision", run `nixos-rebuild list-generations`.
+  system.configurationRevision = self.rev or self.dirtyRev or null;
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = system;
