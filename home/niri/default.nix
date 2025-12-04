@@ -4,7 +4,10 @@ let
   niriConfig = "${repoDir}/home/niri/config.kdl";
 in
 {
-  home.packages = with pkgs; [ niri ];
+  home.packages = with pkgs; [
+    niri
+    xwayland-satellite
+  ];
   xdg.configFile.niri = {
     source = config.lib.file.mkOutOfStoreSymlink niriConfig;
     target = "./niri/config.kdl";
