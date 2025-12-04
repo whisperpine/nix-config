@@ -16,7 +16,7 @@ font-family = Sarasa Mono SC Bold
 # ----- cursor ----- #
 cursor-color = #bdbdbd
 shell-integration-features = no-cursor
-adjust-cursor-thickness = 2
+adjust-cursor-thickness = 4
 cursor-style-blink = false
 cursor-style = block
 
