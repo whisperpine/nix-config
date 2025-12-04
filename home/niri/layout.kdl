@@ -4,6 +4,7 @@
 layout {
     // Set gaps around windows in logical pixels.
     gaps 12
+
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
     //   or right edge of the screen.
@@ -11,7 +12,8 @@ layout {
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
     center-focused-column "never"
-    // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
+
+    // Customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
@@ -22,14 +24,18 @@ layout {
         // // Fixed sets the width in logical pixels exactly.
         // fixed 1920
     }
-    // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
-    // preset-window-heights { }
-    // You can change the default width of the new windows.
-    default-column-width {
+
+    // Customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
+    preset-window-heights {
         proportion 0.5
+        proportion 1.0
     }
-    // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
+
+    // The default width of the new windows.
+    default-column-width {
+        proportion 0.66667
+    }
+
     // By default focus ring and border are rendered as a solid background rectangle
     // behind windows. That is, they will show up through semitransparent windows.
     // This is because windows using client-side decorations can have an arbitrary shape.
@@ -42,10 +48,12 @@ layout {
     // `draw-border-with-background`.
     // You can change how the focus ring looks.
     focus-ring {
-        // Uncomment this line to disable the focus ring.
+        // Disable the focus ring.
         off
+
         // How many logical pixels the ring extends out from the windows.
         width 2.5
+
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
         // - RGB hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
@@ -76,23 +84,23 @@ layout {
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
+    // The settings are the same as for the focus ring.
+    // If you enable the border, you probably want to disable the focus ring.
     border {
-        // The settings are the same as for the focus ring.
-        // If you enable the border, you probably want to disable the focus ring.
-        // off
+        on
         width 2
-        // active-color "#ffc87f"
-        active-color "#aaaaaa"
+        active-color "#aaaaaa"  // "#ffc87f"
         inactive-color "#505050"
         // Color of the border around windows that request your attention.
         urgent-color "#cc6666"
+
         // Gradients can use a few different interpolation color spaces.
         // For example, this is a pastel rainbow gradient via in="oklch longer hue".
         //
         // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
-
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
+
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
@@ -123,6 +131,7 @@ layout {
         // You can also change the shadow color and opacity.
         color "#202020"
     }
+
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
     // You can think of them as a kind of outer gaps. They are set in logical pixels.
     // Left and right struts will cause the next window to the side to always be visible.
