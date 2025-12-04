@@ -10,16 +10,22 @@
   # Enable wacome tablet support.
   services.xserver.wacom.enable = true;
 
-  # Configure keymap in X11
+  # Configure keymap in X11.
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  # Enable the GNOME Desktop Environment.
-  services.desktopManager.gnome.enable = true;
-  services.displayManager.gdm = {
+  # Use "ly" as the display manager (user login interface).
+  services.displayManager.ly = {
     enable = true;
-    autoSuspend = false;
+    x11Support = false;
   };
+
+  # # Enable the GNOME Desktop Environment.
+  # services.desktopManager.gnome.enable = true;
+  # services.displayManager.gdm = {
+  #   enable = true;
+  #   autoSuspend = false;
+  # };
 }
