@@ -30,19 +30,12 @@ let
       boot.kernelModules = [
         "i2c-dev" # "ddcutil" requires this module
       ];
-
-      # Allow unfree software to be installed.
-      nixpkgs.config.allowUnfree = true;
       # Install firefox.
       programs.firefox.enable = true;
+      # Allow unfree software to be installed (e.g. google-chrome).
+      nixpkgs.config.allowUnfree = true;
       # Install packages in operating system.
-      environment.systemPackages =
-        with pkgs;
-        [
-          neovim
-          git
-        ]
-        ++ [ googleChrome ];
+      environment.systemPackages = with pkgs; [ neovim ] ++ [ googleChrome ];
     };
 in
 nixpkgs.lib.nixosSystem {
