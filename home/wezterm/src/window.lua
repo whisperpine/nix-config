@@ -21,14 +21,16 @@ end)
 function module.apply_to_config(config)
   config.enable_tab_bar = false
   config.window_close_confirmation = "NeverPrompt"
-  config.window_decorations = "RESIZE"
   if string.find(target_triple, "windows") then
+    config.window_decorations = "RESIZE"
     config.initial_rows = 42
     config.initial_cols = 120
   elseif string.find(target_triple, "darwin") then
+    config.window_decorations = "RESIZE"
     config.initial_rows = 39
     config.initial_cols = 110
   elseif string.find(target_triple, "linux") then
+    config.window_decorations = "NONE"
     config.initial_rows = 42
     config.initial_cols = 120
   end
