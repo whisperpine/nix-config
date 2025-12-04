@@ -2,7 +2,7 @@
 shell = "/etc/profiles/per-user/yusong/bin/zsh"
 
 [font]
-size = 15
+size = 13
 normal = { family = "Cascadia Mono NF" }
 bold = { family = "Cascadia Mono NF", style = "regular" }
 bold_italic = { family = "Cascadia Mono NF", style = "regular" }
