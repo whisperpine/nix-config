@@ -12,6 +12,7 @@
     ./alacritty
     ./wezterm
     ./ghostty
+    ./cursor
     ./niri
   ];
 }

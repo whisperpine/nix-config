@@ -41,3 +41,10 @@ animations {
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     slowdown 0.8
 }
+
+cursor {
+    // This name must match the cursor name set in Home Manager.
+    xcursor-theme "Bibata-Modern-Classic"
+    // This size must match the cursor size set in Home Manager.
+    xcursor-size 22
+}
