@@ -20,6 +20,13 @@ window-rule {
     // block-out-from "screencast"
 }
 
+window-rule {
+    match app-id="google-chrome"
+    default-column-width {
+        proportion 1.0
+    }
+}
+
 // Enable rounded corners for all windows.
 window-rule {
     geometry-corner-radius 8
