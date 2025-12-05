@@ -1,14 +1,49 @@
-{ ... }:
+{ pkgs, lib, ... }:
 # ----------  peripherals configs ---------- #
 {
-  # Bluetooth configs.
+  # ----------------- #
+  # Bluetooth configs
+  # ----------------- #
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
   };
 
+  # ---------------- #
+  # Printing configs
+  # ---------------- #
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  # ---------------- #
+  # Lighting configs
+  # ---------------- #
+
+  # Enable OpenRGB.
+  services.hardware.openrgb.enable = true;
+  # Add OpenRGB udev rules to allow access without running as root.
+  services.udev.extraRules = lib.readFile "${pkgs.openrgb}/lib/udev/rules.d/60-openrgb.rules";
+  # Disable RGB lighting.
+  systemd.services.no-rgb = {
+    description = "Turn off all OpenRGB-controlled lighting";
+    # Run at a crucial point in the boot sequence.
+    wantedBy = [ "basic.target" ];
+    # Make sure required OpenRGB services/devices are initialized.
+    after = [
+      "udev.service"
+      "systemd-modules-load.service"
+    ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.openrgb}/bin/openrgb --mode static --color 000000";
+    };
+  };
+
+  # ------------- #
+  # Audio configs
+  # ------------- #
 
   # Enable pipewire itself.
   services.pipewire = {
