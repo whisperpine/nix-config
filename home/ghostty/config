@@ -13,6 +13,7 @@ adjust-box-thickness = 2
 font-family = Cascadia Mono
 font-family = Symbols Nerd Font
 font-family = Sarasa Mono SC Bold
+font-style-bold-italic = italic
 
 # ----- cursor ----- #
 cursor-color = #bdbdbd
