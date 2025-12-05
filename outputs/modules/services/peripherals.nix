@@ -1,6 +1,12 @@
 { ... }:
 # ----------  peripherals configs ---------- #
 {
+  # Bluetooth configs.
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
