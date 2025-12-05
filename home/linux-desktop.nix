@@ -14,6 +14,7 @@ in
       ddcutil
       fuzzel
       hyprlock
+      blender
     ]
     ++ [ discord ];
 
