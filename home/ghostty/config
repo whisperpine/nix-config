@@ -5,7 +5,7 @@ selection-foreground = #c8c8c8
 selection-background = #363636
 
 # ----- font ----- #
-font-size = 13
+font-size = 12
 font-style-bold = regular
 alpha-blending = linear
 adjust-underline-thickness = 1
