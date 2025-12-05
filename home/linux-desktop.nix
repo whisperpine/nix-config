@@ -7,6 +7,7 @@
     ddcutil
     fuzzel
     hyprlock
+    discord
   ];
   imports = [
     ./desktop.nix
