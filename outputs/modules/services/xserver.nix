@@ -7,15 +7,6 @@
   # Use nvidia GPU driver (see also: ../hardware/nvidia.nix).
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  # Enable wacome tablet support.
-  services.xserver.wacom.enable = true;
-
-  # Configure keymap in X11.
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # Use "ly" as the display manager (user login interface).
   services.displayManager.ly = {
     enable = true;
