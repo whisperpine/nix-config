@@ -23,6 +23,7 @@ in
     ./alacritty
     ./wezterm
     ./ghostty
+    ./zathura
     ./cursor
     ./niri
   ];
