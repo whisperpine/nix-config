@@ -33,5 +33,6 @@ window-decoration = none
 resize-overlay = never
 
 # ----- misc ----- #
+confirm-close-surface = false
 mouse-hide-while-typing = true
 auto-update = off
