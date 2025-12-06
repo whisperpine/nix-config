@@ -40,7 +40,6 @@ in
   imports = [
     ./desktop.nix
     ./alacritty
-    ./wezterm
     ./ghostty
     ./zathura
     ./cursor
