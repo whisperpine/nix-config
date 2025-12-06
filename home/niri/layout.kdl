@@ -123,9 +123,9 @@ layout {
         // You can change how shadows look. The values below are in logical
         // pixels and match the CSS box-shadow properties.
         // Softness controls the shadow blur radius.
-        softness 12
+        softness 16
         // Spread expands the shadow.
-        spread 2
+        spread -3
         // Offset moves the shadow relative to the window.
         offset x=0 y=0
         // You can also change the shadow color and opacity.
