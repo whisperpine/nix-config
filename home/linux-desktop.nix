@@ -13,6 +13,8 @@ in
   xdg.mimeApps.defaultApplications = {
     # zathura
     "application/pdf" = "zathura.desktop";
+    # dolphin
+    "inode/directory" = "org.kde.dolphin.desktop";
     # clash-verge
     "x-scheme-handler/clash" = "clash-verge.desktop";
     "x-scheme-handler/clash-verge" = "clash-verge.desktop";
@@ -30,6 +32,7 @@ in
       ddcutil
       fuzzel
       hyprlock
+      kdePackages.dolphin
       blender
     ]
     ++ [ discord ];
