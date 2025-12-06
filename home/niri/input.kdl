@@ -33,6 +33,6 @@ input {
 
     trackpoint {}
 
-    // Make the mouse warp to the center of newly focused windows.
-    warp-mouse-to-focus
+    // // Make the mouse warp to the center of newly focused windows.
+    // warp-mouse-to-focus
 }
