@@ -441,15 +441,18 @@ binds {
     // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
-    Print {
+
+    // Screenshots.
+    Mod+Shift+S {
         screenshot
     }
-    Ctrl+Print {
+    Mod+Alt+Ctrl+Shift+S {
         screenshot-screen
     }
-    Alt+Print {
+    Mod+Alt+Ctrl+S {
         screenshot-window
     }
+
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
     // so they may, for example, forward the key presses as-is to a remote machine.
