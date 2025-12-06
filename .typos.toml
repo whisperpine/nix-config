@@ -1,3 +1,6 @@
+[files]
+extend-exclude = ["home/fcitx5/conf"]
+
 [default]
 extend-ignore-re = ["<leader>fo", 'symbol = "typ "']
 
