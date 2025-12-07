@@ -28,7 +28,6 @@ in
   home.packages =
     with pkgs;
     [
-      anki
       ddcutil
       hyprlock
       blender
@@ -44,6 +43,7 @@ in
     ./fuzzel
     ./cursor
     ./niri
+    ./anki
     ./imv
   ];
 }
