@@ -23,7 +23,6 @@ in
     [
       anki
       ddcutil
-      fuzzel
       hyprlock
       blender
     ]
@@ -35,6 +34,7 @@ in
     ./ghostty
     ./dolphin
     ./zathura
+    ./fuzzel
     ./cursor
     ./niri
     ./imv
