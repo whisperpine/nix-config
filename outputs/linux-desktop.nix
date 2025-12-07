@@ -30,6 +30,8 @@ let
       boot.kernelModules = [
         "i2c-dev" # "ddcutil" requires this module
       ];
+      # Enable dconf so that system preferences (e.g. dark theme) can be set.
+      programs.dconf.enable = true;
       # Install firefox.
       programs.firefox.enable = true;
       # Allow unfree software to be installed (e.g. google-chrome).
