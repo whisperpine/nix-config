@@ -12,6 +12,7 @@ in
     [
       ddcutil # manage monitors (e.g. brightness)
       hyprlock # screen locker used by niri
+      hyprpicker # color picker (used by e.g. pastel)
       blender
     ]
     ++ [ discord ];

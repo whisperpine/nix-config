@@ -23,7 +23,6 @@
     translate-shell
     hyperfine
     onefetch
-    hyprpicker
     pastel
     ffmpeg
     kondo
