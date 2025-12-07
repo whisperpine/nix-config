@@ -9,7 +9,7 @@
   };
 
   # Add the xdg-desktop-portal-wlr package into the xdg.portal.extraPortals
-  # option, and provide the configuration file .
+  # option, and provide the configuration file.
   xdg.portal.wlr.enable = true;
 
   # xdg.portal: since you installed Home Manager via its NixOS module and
