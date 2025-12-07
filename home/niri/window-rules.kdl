@@ -27,6 +27,11 @@ window-rule {
     }
 }
 
+window-rule {
+    match app-id="imv"
+    open-floating true
+}
+
 // Enable rounded corners for all windows.
 window-rule {
     geometry-corner-radius 8
