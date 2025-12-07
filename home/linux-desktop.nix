@@ -37,5 +37,6 @@ in
     ./zathura
     ./cursor
     ./niri
+    ./imv
   ];
 }
