@@ -7,43 +7,34 @@ in
   home.username = username;
   home.homeDirectory = "/home/${username}";
 
-  xdg.mimeApps.enable = true;
-  # This option creates/manages files in both:
-  # "~/.config/mimeapps.list" and "~/.local/share/applications/mimeapps.list".
-  xdg.mimeApps.defaultApplications = {
-    # google-chrome
-    "text/html" = "google-chrome.desktop";
-    "x-scheme-handler/http" = "google-chrome.desktop";
-    "x-scheme-handler/https" = "google-chrome.desktop";
-    "x-scheme-handler/about" = "google-chrome.desktop";
-  };
-
-  # This modifies files under:
-  # /etc/profiles/per-user/yusong/share/applications
-  xdg.desktopEntries.xterm = {
-    name = "XTerm"; # name is required to build
-    noDisplay = true; # hide in app launchers (e.g. fuzzel)
-  };
-
   home.packages =
     with pkgs;
     [
-      ddcutil
-      hyprlock
+      ddcutil # manage monitors (e.g. brightness)
+      hyprlock # screen locker used by niri
       blender
     ]
     ++ [ discord ];
 
   imports = [
+    # --- inherit --- #
     ./desktop.nix
-    ./alacritty
-    ./ghostty
-    ./dolphin
-    ./zathura
-    ./fuzzel
-    ./cursor
-    ./niri
+
+    # --- desktop environment --- #
+    ./xdg # user xdg configs (e.g. mime apps)
+    ./gtk # gtk configs (e.g. dark theme)
+
+    # --- niri bundle --- #
+    ./alacritty # alternative terminal
+    ./ghostty # the default terminal
+    ./fuzzel # the default app launcher
+    ./niri # wayland compositor
+
+    # --- applications --- #
+    ./dolphin # GUI file explorer
+    ./cursor # customized cursor or pointer
+    ./zathura # keyboard-first pdf reader
+    ./imv # image previewer
     ./anki
-    ./imv
   ];
 }
