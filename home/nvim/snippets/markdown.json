@@ -78,7 +78,7 @@
     "prefix": "> note",
     "description": "GitHub flavored alerts: NOTE",
     "body": [
-      "> [!NOTE]",
+      " [!NOTE]",
       "> $0"
     ]
   },
@@ -86,7 +86,7 @@
     "prefix": "> tip",
     "description": "GitHub flavored alerts: TIP",
     "body": [
-      "> [!TIP]",
+      " [!TIP]",
       "> $0"
     ]
   },
@@ -94,7 +94,7 @@
     "prefix": "> important",
     "description": "GitHub flavored alerts: IMPORTANT",
     "body": [
-      "> [!IMPORTANT]",
+      " [!IMPORTANT]",
       "> $0"
     ]
   },
@@ -102,7 +102,7 @@
     "prefix": "> warning",
     "description": "GitHub flavored alerts: WARNING",
     "body": [
-      "> [!WARNING]",
+      " [!WARNING]",
       "> $0"
     ]
   },
@@ -110,7 +110,7 @@
     "prefix": "> caution",
     "description": "GitHub flavored alerts: CAUTION",
     "body": [
-      "> [!CAUTION]",
+      " [!CAUTION]",
       "> $0"
     ]
   },
