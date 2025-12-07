@@ -14,4 +14,9 @@
     serviceMode = true;
     autoStart = true;
   };
+  # This option modifies "/etc/xdg/mimeapps.list
+  xdg.mime.defaultApplications = {
+    "x-scheme-handler/clash" = "clash-verge.desktop";
+    "x-scheme-handler/clash-verge" = "clash-verge.desktop";
+  };
 }

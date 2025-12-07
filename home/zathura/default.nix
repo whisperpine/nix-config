@@ -7,4 +7,8 @@
     zathura
     zathuraPkgs.zathura_pdf_mupdf
   ];
+
+  xdg.mimeApps.associations.added = {
+    "application/pdf" = "zathura.desktop";
+  };
 }

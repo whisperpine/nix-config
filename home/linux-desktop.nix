@@ -11,13 +11,6 @@ in
   # This option creates/manages files in both:
   # "~/.config/mimeapps.list" and "~/.local/share/applications/mimeapps.list".
   xdg.mimeApps.defaultApplications = {
-    # zathura
-    "application/pdf" = "zathura.desktop";
-    # dolphin
-    "inode/directory" = "org.kde.dolphin.desktop";
-    # clash-verge
-    "x-scheme-handler/clash" = "clash-verge.desktop";
-    "x-scheme-handler/clash-verge" = "clash-verge.desktop";
     # google-chrome
     "text/html" = "google-chrome.desktop";
     "x-scheme-handler/http" = "google-chrome.desktop";
@@ -32,7 +25,6 @@ in
       ddcutil
       fuzzel
       hyprlock
-      kdePackages.dolphin
       blender
     ]
     ++ [ discord ];
@@ -41,6 +33,7 @@ in
     ./desktop.nix
     ./alacritty
     ./ghostty
+    ./dolphin
     ./zathura
     ./cursor
     ./niri
