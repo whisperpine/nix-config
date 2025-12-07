@@ -20,6 +20,8 @@
       vim = "nvim";
       e = "eza";
       el = "eza -l";
+      # Todo: this is a temporary solution to lock screen and suspend system.
+      sus = "hyprlock -q --no-fade-in & sleep 0.1 && systemctl suspend";
     };
   };
 }
