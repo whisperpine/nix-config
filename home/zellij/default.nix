@@ -1,8 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  repoDir = builtins.getEnv "PWD";
+  zellijConfig = "${repoDir}/home/zellij/config.kdl";
+in
 {
   home.packages = with pkgs; [ zellij ];
   xdg.configFile.zellij = {
-    source = ./config.kdl;
+    source = config.lib.file.mkOutOfStoreSymlink zellijConfig;
     target = "./zellij/config.kdl";
   };
 }
