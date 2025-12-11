@@ -21,6 +21,12 @@
   };
 
   # ---------------- #
+  # OpenTabletDriver
+  # ---------------- #
+
+  hardware.opentabletdriver.enable = true;
+
+  # ---------------- #
   # Printing configs
   # ---------------- #
 
