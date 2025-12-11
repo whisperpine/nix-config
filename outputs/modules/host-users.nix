@@ -25,9 +25,12 @@
     ];
   };
 
-  # Add udev rule for i2c devices.
+  # Configure udev.
   services.udev.extraRules = ''
+    # Add udev rule for i2c devices.
     SUBSYSTEM=="i2c-dev", GROUP="i2c"
+    # Rule for Vial keyboards (detects the unique Vial serial tag).
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", GROUP="${username}", TAG+="uaccess", TAG+="udev-acl"
   '';
 
   # To reduce the time waiting for the following task when shutting down:
