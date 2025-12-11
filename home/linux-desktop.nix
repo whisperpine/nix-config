@@ -37,6 +37,7 @@ in
     ./cursor # customized cursor or pointer
     ./zathura # keyboard-first pdf reader
     ./imv # image previewer
+    ./mpv # video player
     ./anki
   ];
 }
