@@ -36,6 +36,7 @@ in
     ./dolphin # GUI file explorer
     ./cursor # customized cursor or pointer
     ./zathura # keyboard-first pdf reader
+    ./otd # OpenTabletDriver's icon
     ./imv # image previewer
     ./mpv # video player
     ./anki
