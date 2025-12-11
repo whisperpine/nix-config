@@ -1,14 +1,24 @@
-scroll_buffer_size 1500
+// Disable tips on Zellij startup.
 show_startup_tips false
+
+// The number of lines zellij stores for each pane in the scroll back buffer.
+scroll_buffer_size 1500
+
 // How often in seconds sessions are serialized to disk.
 serialization_interval 3
+
+ui {
+    pane_frames {
+        rounded_corners false
+    }
+}
+
 theme "custom"
+
 themes {
     custom {
-        // Selection foreground.
-        fg "#bdbdbd"
-        // Selection background.
-        bg "#3f3f3f"
+        fg "#bdbdbd" // selection foreground
+        bg "#3f3f3f" // selection background
         black "#161616"
         red "#161616"
         green "#879c54"
@@ -18,10 +28,5 @@ themes {
         cyan "#79af98"
         white "#bdbdbd"
         orange "#de935f"
-    }
-}
-ui {
-    pane_frames {
-        rounded_corners false
     }
 }
