@@ -11,6 +11,16 @@
   };
 
   # ---------------- #
+  # Logitech devices
+  # ---------------- #
+
+  # Logitech wireless devices.
+  hardware.logitech.wireless = {
+    enable = true;
+    enableGraphical = true;
+  };
+
+  # ---------------- #
   # Printing configs
   # ---------------- #
 
