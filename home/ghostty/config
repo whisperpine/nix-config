@@ -35,6 +35,7 @@ resize-overlay = never
 # ----- misc ----- #
 confirm-close-surface = false
 mouse-hide-while-typing = true
+mouse-scroll-multiplier = 0.25
 auto-update = off
 
 # ----- keybind ----- #
