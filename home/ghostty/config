@@ -34,6 +34,7 @@ window-decoration = none
 resize-overlay = never
 
 # ----- misc ----- #
+app-notifications = no-clipboard-copy
 confirm-close-surface = false
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 0.25
