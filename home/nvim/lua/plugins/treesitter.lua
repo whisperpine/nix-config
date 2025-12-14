@@ -99,6 +99,9 @@ plugin.config = function(_, opts)
 end
 
 plugin.opts = {
+  -- Install treesitter parsers under "/home/yusong/.local/share/nvim/site/".
+  install_dir = vim.fn.stdpath "data" .. "/site",
+
   -- All the supported languages by tree-sitter:
   -- https://github.com/nvim-treesitter/nvim-treesitter
   ---@type string[]
