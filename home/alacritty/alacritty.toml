@@ -58,4 +58,4 @@ cursor = "#e6be6f"
 
 [cursor]
 vi_mode_style.shape = "Block"
-style.shape = "Underline"
+style.shape = "Block"
