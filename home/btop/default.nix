@@ -11,11 +11,4 @@
       rounded_corners = false;
     };
   };
-
-  # This modifies files under:
-  # /etc/profiles/per-user/yusong/share/applications
-  xdg.desktopEntries.btop = {
-    name = "btop"; # name is required to build
-    noDisplay = true; # hide in app launchers (e.g. fuzzel)
-  };
 }

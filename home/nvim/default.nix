@@ -22,13 +22,6 @@ in
     source = config.lib.file.mkOutOfStoreSymlink nvimPath;
   };
 
-  # This modifies files under:
-  # /etc/profiles/per-user/yusong/share/applications
-  xdg.desktopEntries.nvim = {
-    name = "Neovim"; # name is required to build
-    noDisplay = true; # hide in app launchers (e.g. fuzzel)
-  };
-
   imports = [
     ../fd # telescope.nvim
     ../marksman # markdown language server
