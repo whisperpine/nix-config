@@ -1,4 +1,5 @@
 # ----- color ----- #
+theme = Tomorrow Night
 foreground = #bdbdbd
 background = #202020
 selection-foreground = #c8c8c8
