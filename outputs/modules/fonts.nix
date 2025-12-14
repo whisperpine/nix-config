@@ -1,6 +1,10 @@
-{ pkgs, ... }:
+{ ... }:
 # ----------  fonts configs ---------- #
+# This configuration cannot be shared with darwin.
+# For darwin, please only import "./fonts-packages.nix".
 {
+  imports = [ ./fonts-packages.nix ];
+
   fonts = {
     # Keep default fonts installed.
     enableDefaultPackages = true;
@@ -27,13 +31,4 @@
     monospace = [ "Noto Sans Mono" ];
     emoji = [ "Noto Color Emoji" ];
   };
-
-  # Install fonts.
-  fonts.packages = with pkgs; [
-    nerd-fonts.symbols-only
-    sarasa-gothic
-    cascadia-code
-    noto-fonts-cjk-sans
-    noto-fonts
-  ];
 }

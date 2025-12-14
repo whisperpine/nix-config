@@ -48,7 +48,7 @@ nix-darwin.lib.darwinSystem {
     ./modules/nix-core.nix
     ./modules/darwin-users.nix
     ./modules/darwin-system.nix
-    ./modules/fonts.nix
+    ./modules/fonts-packages.nix
 
     # "sops-nix" module differs in linux and darwin.
     sops-nix.darwinModules.sops
