@@ -229,6 +229,7 @@ vim.lsp.enable {
   "svelte",
   "buf_ls",
   "clangd",
+  "hyprls",
   "gopls",
   "taplo",
   "biome",

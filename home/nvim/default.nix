@@ -89,6 +89,7 @@ in
     tinymist # typst
     lemminx # xml, svg
     helm-ls # helm
+    hyprls # hyprlang
     # harper # English
     # vale-ls # English
     jinja-lsp # jinja
