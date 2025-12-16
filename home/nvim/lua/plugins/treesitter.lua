@@ -127,6 +127,7 @@ plugin.opts = {
     "mermaid",
     "graphql",
     "svelte",
+    "hyprlang",
     "wgsl_bevy",
     "wgsl",
     "c_sharp",
