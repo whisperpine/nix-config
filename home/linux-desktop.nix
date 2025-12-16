@@ -11,7 +11,6 @@ in
     with pkgs;
     [
       ddcutil # manage monitors (e.g. brightness)
-      hyprlock # screen locker used by niri
       hyprpicker # color picker (used by e.g. pastel)
       obs-studio
       blender
@@ -29,6 +28,7 @@ in
     # --- niri bundle --- #
     ./alacritty # alternative terminal
     ./ghostty # the default terminal
+    ./hyprlock # screen locker used by niri
     ./fuzzel # the default app launcher
     ./niri # wayland compositor
 
