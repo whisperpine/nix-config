@@ -29,15 +29,13 @@
 
   home.packages = with pkgs; [
     home-manager # manage itself
-
-    docker-compose
+    gcc
+    sops
+    age
     tree
     ouch
     eza
     dig
     jq
-
-    sops
-    age
   ];
 }
