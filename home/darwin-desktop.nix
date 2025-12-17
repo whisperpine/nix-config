@@ -3,12 +3,11 @@
   home.username = username;
   home.homeDirectory = "/Users/${username}";
   home.packages = with pkgs; [
-    colima
-    docker
+    colima # container runtime
   ];
   imports = [
     ./desktop.nix
-    ./alacritty
-    ./wezterm
+    ./alacritty # terminal emulator
+    ./wezterm # terminal emulator
   ];
 }

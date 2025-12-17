@@ -1,4 +1,5 @@
 { pkgs, config, ... }:
+# --- terminal emulator --- #
 let
   repoDir = builtins.getEnv "PWD";
   weztermConfig = "${repoDir}/home/wezterm";
