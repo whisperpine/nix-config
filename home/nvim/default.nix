@@ -90,8 +90,6 @@ in
     lemminx # xml, svg
     helm-ls # helm
     hyprls # hyprlang
-    # harper # English
-    # vale-ls # English
     jinja-lsp # jinja
     vale # English
     texlab # latex
