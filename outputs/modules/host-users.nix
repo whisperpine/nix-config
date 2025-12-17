@@ -35,7 +35,8 @@
 
   # To reduce the time waiting for the following task when shutting down:
   # "A stop job is running for user manager for user@1000.service"
-  systemd.user.extraConfig = "DefaultTimeoutStartSec=10";
+  # This config modifies this file: "/etc/systemd/user.conf".
+  systemd.user.extraConfig = "DefaultTimeoutStopSec=10";
 
   # Clean up old files under "~/.local/share/Trash".
   # Run the following command to list all user scope configs:
