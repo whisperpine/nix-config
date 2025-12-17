@@ -23,7 +23,7 @@ in
   };
 
   imports = [
-    ../fd # telescope.nvim
+    ../fd # required by telescope.nvim
     ../marksman # markdown language server
     ../inotify # file watcher used by LSP
   ];
@@ -59,7 +59,6 @@ in
     rustfmt # rust
     tflint # terraform
     sqlfluff # sql
-    # sqruff # sql
     stylua # lua
     kdlfmt # kdl
     shfmt # shell
@@ -85,7 +84,6 @@ in
     wgsl-analyzer # wgsl
     rust-analyzer # rust
     terraform-ls # terraform
-    ty # python
     tinymist # typst
     lemminx # xml, svg
     helm-ls # helm
@@ -97,6 +95,7 @@ in
     gopls # go
     zls # zig
     nil # nix
+    ty # python
 
     # Including lsp "clangd" and formatter "clang-format".
     # Lsp: c, cpp, objc. Formatter: c, cpp, objc, java, csharp.
