@@ -1,4 +1,5 @@
 { pkgs, ... }:
+# --- file-tree visualizer --- #
 {
   home.packages = with pkgs; [ erdtree ];
 

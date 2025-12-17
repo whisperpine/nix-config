@@ -1,4 +1,5 @@
 { pkgs, config, ... }:
+# --- terminal multiplexer --- #
 let
   repoDir = builtins.getEnv "PWD";
   zellijConfig = "${repoDir}/home/zellij/config.kdl";

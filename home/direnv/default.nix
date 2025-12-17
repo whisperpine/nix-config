@@ -1,4 +1,5 @@
 { ... }:
+# --- manage dir-based env vars --- #
 {
   programs.direnv = {
     enable = true;

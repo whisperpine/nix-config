@@ -1,4 +1,5 @@
 { pkgs, ... }:
+# --- fast tldr implementation --- #
 {
   home.packages = [ pkgs.tealdeer ];
 

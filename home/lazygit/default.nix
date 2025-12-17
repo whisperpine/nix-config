@@ -1,4 +1,5 @@
 { pkgs, ... }:
+# --- tui for git --- #
 {
   home.packages = with pkgs; [ lazygit ];
 

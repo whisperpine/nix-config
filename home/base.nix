@@ -23,7 +23,7 @@
     ./git # git configs and extensions
 
     # --- tui --- #
-    ./nvim # my favorite test editor
+    ./nvim # my favorite text editor
     ./btop # monitor of resources
     ./yazi # terminal file manager
 
@@ -45,11 +45,11 @@
     age # a modern encryption tool
     sops # secrets operations
 
-    difftastic # an alternative to diff
+    difftastic # ergonomic alternative to diff
     tree # show a directory as a tree
     ouch # compression and decompression
-    eza # a modern alternative to ls
+    eza # modern alternative to ls
     dig # DNS lookup utility
-    jq # a json processor
+    jq # json processor
   ];
 }

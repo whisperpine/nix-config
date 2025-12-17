@@ -1,4 +1,5 @@
 { pkgs, config, ... }:
+# --- toolkit for js and ts --- #
 let
   repoDir = builtins.getEnv "PWD";
   bunPath = "${repoDir}/home/bun/global";
