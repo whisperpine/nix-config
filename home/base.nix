@@ -29,6 +29,7 @@
 
   home.packages = with pkgs; [
     home-manager # manage itself
+    difftastic
     gcc
     sops
     age
