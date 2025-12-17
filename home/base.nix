@@ -28,15 +28,22 @@
   ];
 
   home.packages = with pkgs; [
-    home-manager # manage itself
-    difftastic
-    gcc
-    sops
-    age
-    tree
-    ouch
-    eza
-    dig
-    jq
+    # Manage home-manager itself.
+    home-manager
+
+    # "nvim-tree" requires gcc to compile parsers.
+    gcc # gnu compiler collection
+
+    # "age" is used in conjunction with "sops".
+    # (e.g. "outputs/modules/sops-nix.nix")
+    age # a modern encryption tool
+    sops # secrets operations
+
+    difftastic # an alternative to diff
+    tree # show a directory as a tree
+    ouch # compression and decompression
+    eza # a modern alternative to ls
+    dig # DNS lookup utility
+    jq # a json processor
   ];
 }
