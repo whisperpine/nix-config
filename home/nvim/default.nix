@@ -85,7 +85,7 @@ in
     wgsl-analyzer # wgsl
     rust-analyzer # rust
     terraform-ls # terraform
-    basedpyright # python
+    ty # python
     tinymist # typst
     lemminx # xml, svg
     helm-ls # helm

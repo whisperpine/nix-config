@@ -206,8 +206,6 @@ vim.lsp.enable {
   "ts_ls",
 
   -- ### written by lspconfig ###
-  "basedpyright",
-  -- "ty", -- experimental
   "terraformls",
   "tailwindcss",
   "ansiblels",
@@ -235,6 +233,7 @@ vim.lsp.enable {
   "biome",
   "html",
   "zls",
+  "ty",
 }
 
 -- Only enable vale_ls when `.vale.ini` exists.
