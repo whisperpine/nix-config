@@ -1,5 +1,10 @@
-{ ... }:
+{ config, ... }:
 # --- terminal file manager --- #
+let
+  repoDir = builtins.getEnv "PWD";
+  yaziConfig = "${repoDir}/home/yazi";
+  mklink = config.lib.file.mkOutOfStoreSymlink;
+in
 {
   programs.yazi = {
     enable = true;
@@ -8,5 +13,5 @@
     enableZshIntegration = true;
   };
 
-  xdg.configFile.yazi.source = ../yazi;
+  xdg.configFile.yazi.source = mklink yaziConfig;
 }
