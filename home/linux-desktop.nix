@@ -12,6 +12,7 @@ in
     [
       ddcutil # manage monitors (e.g. brightness)
       hyprpicker # color picker (used by e.g. pastel)
+      usbutils # tools for working with usb devices
       obs-studio
       blender
     ]
