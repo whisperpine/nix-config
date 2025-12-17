@@ -34,6 +34,7 @@ window-decoration = none
 resize-overlay = never
 
 # ----- misc ----- #
+quit-after-last-window-closed = true
 app-notifications = no-clipboard-copy
 confirm-close-surface = false
 mouse-hide-while-typing = true
