@@ -21,7 +21,6 @@
     ./yazi
     ./nvim
     ./pgcli
-    ./nushell
     ./starship
     ./zoxide
     ./atuin
