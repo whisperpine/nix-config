@@ -57,7 +57,7 @@
     features = arctic-fox
 
 [merge]
-    conflictstyle = zdiff3
+    conflictstyle = diff3
 
 [gpg]
     format = ssh
