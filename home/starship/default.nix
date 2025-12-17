@@ -1,4 +1,5 @@
 { ... }:
+# --- prompt for shells --- #
 {
   # NOTE: do not change this to: `home.packages = with pkgs; [ starship ];`.
   # Otherwise the integration of shells (e.g. nushell) will be disabled.

@@ -1,4 +1,5 @@
 { ... }:
+# --- nushell configs --- #
 {
   programs.nushell = {
     enable = true;

@@ -1,4 +1,5 @@
 { pkgs, config, ... }:
+# --- github cli tool --- #
 let
   repoDir = builtins.getEnv "PWD";
   ghConfig = "${repoDir}/home/gh/config.yml";

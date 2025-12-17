@@ -12,18 +12,25 @@
   home.enableNixpkgsReleaseCheck = false;
 
   imports = [
-    ./gh
-    ./git
-    ./bat
-    ./zsh
-    ./bash
-    ./btop
-    ./yazi
-    ./nvim
-    ./pgcli
-    ./starship
-    ./zoxide
-    ./atuin
+    # --- shell --- #
+    ./zsh # zsh configs
+    ./bash # bash configs
+    ./starship # prompt for shells
+    ./atuin # better shell history
+
+    # --- git --- #
+    ./gh # github cli tool
+    ./git # git configs and extensions
+
+    # --- tui --- #
+    ./nvim # my favorite test editor
+    ./btop # monitor of resources
+    ./yazi # terminal file manager
+
+    # --- utilities --- #
+    ./zoxide # history-aware cd command
+    ./bat # "cat" with syntax highlighting
+    ./pgcli # cli for postgresql
   ];
 
   home.packages = with pkgs; [

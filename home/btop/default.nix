@@ -1,4 +1,5 @@
 { ... }:
+# --- monitor of resources --- #
 {
   programs.btop = {
     enable = true;

@@ -1,4 +1,5 @@
 { config, ... }:
+# --- better shell history --- #
 let
   repoDir = builtins.getEnv "PWD";
   atuinConfig = "${repoDir}/home/atuin/config.toml";

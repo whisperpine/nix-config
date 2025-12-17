@@ -1,4 +1,5 @@
 { pkgs, ... }:
+# --- "cat" with syntax highlighting --- #
 {
   home.packages = with pkgs; [ bat ];
 

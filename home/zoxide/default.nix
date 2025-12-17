@@ -1,4 +1,5 @@
 { ... }:
+# --- history-aware cd command --- #
 {
   programs.zoxide = {
     enable = true;

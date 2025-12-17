@@ -1,4 +1,5 @@
 { pkgs, config, ... }:
+# --- git configs and extensions --- #
 let
   repoDir = builtins.getEnv "PWD";
   gitconfig = "${repoDir}/home/git/.gitconfig";
