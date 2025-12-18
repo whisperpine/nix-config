@@ -20,11 +20,11 @@
     enableGraphical = true;
   };
 
-  # ---------------- #
-  # OpenTabletDriver
-  # ---------------- #
-
-  hardware.opentabletdriver.enable = true;
+  # # ---------------- #
+  # # OpenTabletDriver
+  # # ---------------- #
+  #
+  # hardware.opentabletdriver.enable = true;
 
   # ---------------- #
   # Printing configs
