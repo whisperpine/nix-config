@@ -34,7 +34,7 @@ in
     ./niri # wayland compositor
 
     # --- applications --- #
-    ./dolphin # GUI file explorer
+    ./nautilus # file manager for gnome
     ./cursor # customized cursor or pointer
     ./zathura # keyboard-first pdf reader
     ./otd # OpenTabletDriver's icon
