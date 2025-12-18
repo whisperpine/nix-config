@@ -37,6 +37,7 @@ scopes = [
   "ghostty",
   "gitlab-runner",
   "services",
+  "onedrive",
   "fuzzel",
   "pgcli",
   "niri",
