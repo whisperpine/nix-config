@@ -1,0 +1,7 @@
+# All available options can be found at:
+# https://github.com/abraunegg/onedrive/blob/master/config
+
+# Defines the number of children in a path that is locally removed which
+# will be classified as a 'big data delete' to safeguard large data
+# removals - which are typically accidental local delete events.
+classify_as_big_delete = "100"
