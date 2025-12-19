@@ -10,7 +10,6 @@
     # Config /etc/docker/daemon.json:
     # https://docs.docker.com/reference/cli/dockerd/#daemon-configuration-file
     daemon.settings = {
-      userland-proxy = false;
       # Enable containerd image store:
       # https://docs.docker.com/engine/storage/containerd/
       features.containerd-snapshotter = true;
