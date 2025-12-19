@@ -44,8 +44,11 @@ nixpkgs.lib.nixosSystem {
 
     ./modules/nix-core.nix
     ./modules/host-users.nix
-    ./modules/docker.nix
+    ./modules/services/journald.nix
     ./modules/services/k3s.nix
+    ./modules/docker.nix
+
+    # Install bun packages globally.
     ./modules/services/bun-add.nix
 
     # "sops-nix" module differs in linux and darwin.
