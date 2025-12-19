@@ -38,6 +38,7 @@ scopes = [
   "gitlab-runner",
   "services",
   "onedrive",
+  "docker",
   "fuzzel",
   "pgcli",
   "niri",
