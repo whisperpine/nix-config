@@ -46,7 +46,6 @@
     sops # secrets operations
 
     difftastic # ergonomic alternative to diff
-    nftables # iptables modern successor
     tree # show a directory as a tree
     ouch # compression and decompression
     eza # modern alternative to ls
