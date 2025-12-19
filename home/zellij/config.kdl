@@ -9,7 +9,7 @@ show_startup_tips false
 scroll_buffer_size 1500
 
 // How often in seconds sessions are serialized to disk.
-serialization_interval 3
+serialization_interval 1
 
 ui {
     pane_frames {
