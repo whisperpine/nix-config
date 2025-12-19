@@ -20,8 +20,8 @@ engines=(
 
   # --- documents --- #
   ["  Nerd Fonts"]="https://www.nerdfonts.com/cheat-sheet?q="
-  ["󱄅  Home Manager"]="https://home-manager-options.extranix.com/?query="
-  ["󱄅  NixOS Packages"]="https://search.nixos.org/packages?query="
+  ["󱄅  Home Manager"]="https://home-manager-options.extranix.com/?release=master&query="
+  ["󱄅  NixOS Packages"]="https://search.nixos.org/packages?channel=unstable&query="
   ["󱉟  MDN"]="https://developer.mozilla.org/en-US/search?q="
   ["  Docs.rs"]="https://docs.rs/releases/search?query="
   # ["  tldr"]="https://tldr.inbrowser.app/search?query="
