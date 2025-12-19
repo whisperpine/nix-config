@@ -8,12 +8,8 @@
   networking.proxy.default = "http://127.0.0.1:7897";
   networking.proxy.noProxy = "127.0.0.1,localhost";
 
-  # Enable clash-verge and its service mode.
-  programs.clash-verge = {
-    enable = true;
-    serviceMode = true;
-    autoStart = true;
-  };
+  # Enable clash-verge-rev.
+  programs.clash-verge.enable = true;
   # This option modifies "/etc/xdg/mimeapps.list
   xdg.mime.defaultApplications = {
     "x-scheme-handler/clash" = "clash-verge.desktop";
