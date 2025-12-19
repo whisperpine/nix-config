@@ -28,7 +28,7 @@ plugin.init = function()
 end
 
 plugin.opts = {
-  hints = { enabled = false },
+  selection = { enabled = false },
   provider = "deepseek",
   windows = {
     width = 50, -- default % based on available width
@@ -71,7 +71,7 @@ plugin.opts.providers = {
   },
   deepseek = {
     __inherited_from = "openai",
-    api_key_name = "DEEPSEEK_API_KEY",
+    api_key_name = "AVANTE_DEEPSEEK_API_KEY",
     endpoint = "https://api.deepseek.com",
     model = "deepseek-chat",
   },
