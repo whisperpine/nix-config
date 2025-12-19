@@ -29,6 +29,7 @@ engines=(
 
   # --- package registry --- #
   ["  PyPI"]="https://pypi.org/search/?q="
+  ["󱁢  Terraform"]="https://registry.terraform.io/search/providers?q="
   ["󰡨  Docker Hub"]="https://hub.docker.com/search?q="
   ["  lib.rs"]="https://lib.rs/search?q="
   ["  crates.io"]="https://crates.io/search?q="
