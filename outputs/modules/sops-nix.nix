@@ -24,7 +24,7 @@ in
     # https://github.com/getsops/sops?tab=readme-ov-file#23encrypting-using-age
     SOPS_AGE_KEY_FILE = keyFile;
     # This is used by avante.nvim, a neovim plugin. This makes nix "impure".
-    DEEPSEEK_API_KEY =
+    AVANTE_DEEPSEEK_API_KEY =
       if builtins.pathExists config.sops.secrets.deepseek-api-key.path then
         "${builtins.readFile config.sops.secrets.deepseek-api-key.path}"
       else
