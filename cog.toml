@@ -36,6 +36,7 @@ scopes = [
   "alacritty",
   "ghostty",
   "gitlab-runner",
+  "wireguard",
   "services",
   "onedrive",
   "docker",
