@@ -43,7 +43,7 @@ engines=(
 
 # Choose the search engine.
 engine_name=$(printf "%s\n" "${!engines[@]}" | fuzzel --dmenu --prompt "Search on: ")
-[ -z "$engine_name" ] && exit
+[[ ! -v engines[$engine_name] ]] && exit
 
 # Type the query.
 query=$(fuzzel --dmenu --width 50 --lines 0 --prompt "$engine_name: ")
