@@ -10,6 +10,7 @@
     envExtra = builtins.readFile ./.zshenv;
     initContent = builtins.readFile ./.zshrc;
     profileExtra = builtins.readFile ./.zprofile;
+    history.size = 0; # disable history (use atuin only)
     shellAliases = {
       ap = "ansible-playbook";
       av = "ansible-vault";
