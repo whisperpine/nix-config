@@ -85,7 +85,7 @@ invert = true
 
 ## what to do when the escape key is pressed when searching
 ## possible values: return-original, return-query
-# exit_mode = "return-original"
+exit_mode = "return-query"
 
 ## possible values: emacs, subl
 # word_jump_mode = "emacs"
