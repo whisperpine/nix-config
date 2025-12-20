@@ -31,7 +31,8 @@
   # Note: changes on these env vars need system reboot to take effect.
   environment.variables = {
     EDITOR = "nvim";
-    ZK_SHELL = "bash";
+    PYTHON_HISTORY = "/dev/null"; # disable ~/.python_history
+    ZK_SHELL = "bash"; # used by the `zk` command
     # SHELL = "/etc/profiles/per-user/${username}/bin/nu";
     SHELL = "/etc/profiles/per-user/${username}/bin/zsh";
     # SHELL = "/sbin/bash";
