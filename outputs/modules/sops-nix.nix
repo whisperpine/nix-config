@@ -12,6 +12,7 @@ in
   sops.age.keyFile = keyFile;
   # This is the actual specification of the secrets.
   sops.secrets."example-key" = { };
+  sops.secrets."wg0-private-key" = { };
   sops.secrets."deepseek-api-key" = {
     owner = "${username}";
   };
@@ -25,8 +26,8 @@ in
     SOPS_AGE_KEY_FILE = keyFile;
     # This is used by avante.nvim, a neovim plugin. This makes nix "impure".
     AVANTE_DEEPSEEK_API_KEY =
-      if builtins.pathExists config.sops.secrets.deepseek-api-key.path then
-        "${builtins.readFile config.sops.secrets.deepseek-api-key.path}"
+      if builtins.pathExists config.sops.secrets."deepseek-api-key".path then
+        "${builtins.readFile config.sops.secrets."deepseek-api-key".path}"
       else
         "";
   };
