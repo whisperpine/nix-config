@@ -5,6 +5,8 @@
     enable = true;
     enableCompletion = true;
     bashrcExtra = builtins.readFile ./.bashrc;
+    historyFileSize = 0; # disable "~/.bash_history"
+    historySize = 0; # disable "~/.bash_history"
     shellAliases = {
       ap = "ansible-playbook";
       av = "ansible-vault";
