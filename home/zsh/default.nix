@@ -6,6 +6,7 @@
     defaultKeymap = "emacs";
     enableCompletion = true;
     autosuggestion.enable = true;
+    autosuggestion.strategy = [ ]; # atuin modifies it
     envExtra = builtins.readFile ./.zshenv;
     initContent = builtins.readFile ./.zshrc;
     profileExtra = builtins.readFile ./.zprofile;

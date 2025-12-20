@@ -15,6 +15,11 @@ bindkey '^O' edit-command-line
 # Bind Ctrl+P to the atuin widget.
 bindkey '^P' atuin-up-search
 
+# ----- atuin and autosuggestion ----- #
+# Make sure it's empty to be later set by atuin.
+# shellcheck disable=SC2034
+ZSH_AUTOSUGGEST_STRATEGY=()
+
 # ----- Zellij Pane ----- #
 _set_zellij_pane_title() {
   # Replace $HOME with ~ in the current directory path.
