@@ -230,6 +230,7 @@ vim.lsp.enable {
   "hyprls",
   "gopls",
   "taplo",
+  "qmlls",
   "biome",
   "html",
   "zls",

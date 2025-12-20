@@ -100,5 +100,11 @@ in
     # Including lsp "clangd" and formatter "clang-format".
     # Lsp: c, cpp, objc. Formatter: c, cpp, objc, java, csharp.
     clang-tools
+
+    # Toolkit for QML:
+    # qmlls the language server.
+    # qmlformat the formatter.
+    # qmllint the linter.
+    kdePackages.qtdeclarative
   ];
 }

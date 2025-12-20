@@ -72,6 +72,18 @@ plugin.config = function(_, opts)
     end,
   })
 
+  -- Add autocmd to start treesitter (for "qml" filetype).
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("TreesitterStartQML", { clear = true }),
+    pattern = { "qml" },
+    callback = function(args)
+      -- syntax highlighting, provided by Neovim
+      vim.treesitter.start(args.buf, "qmljs")
+      -- indentation, provided by nvim-treesitter
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+
   -- Add autocmd to start treesitter (for "javascriptreact" and "typescriptreact").
   vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("TreesitterStartJsTs", { clear = true }),
@@ -136,6 +148,7 @@ plugin.opts = {
     "printf",
     "latex",
     "typst",
+    "qmljs",
     "vim",
     "proto",
     "nix",

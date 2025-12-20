@@ -33,6 +33,7 @@ M.formatters_by_ft = {
   hurl = { "hurlfmt" },
   toml = { "taplo" },
   zig = { "zigfmt" },
+  qml = { "qmlformat" },
   -- kdl = { "kdlfmt" },
   bash = { "shfmt" },
   zsh = { "shfmt" },
