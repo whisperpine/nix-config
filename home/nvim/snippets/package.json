@@ -31,7 +31,7 @@
         "path": "./html.json"
       },
       {
-        "language": ["bash", "sh"],
+        "language": ["bash", "zsh", "sh"],
         "path": "./bash.json"
       },
       {
