@@ -108,7 +108,7 @@ inline_height = 16
 ## with ^ or end with $, they'll match anywhere in the command.
 ## For details on the supported regular expression syntax, see
 ## https://docs.rs/regex/latest/regex/#syntax
-history_filter = ["base64", "base32", "^zi$"]
+history_filter = ["base64", "base32", "^zi$", "echo .* wg pubkey"]
 
 ## prevent commands run with cwd matching any of these regexes from being written
 ## to history. Note that these regular expressions are unanchored, i.e. if they don't
