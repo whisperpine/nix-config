@@ -72,6 +72,7 @@
   "wireplumber": {
     "align": 0.5,
     "justify": "center",
+    "cursor": false,
     // "format": "{volume}\n<span font='14'>{icon}</span>",
     "format": "<span font='14'>{icon}</span>\n{volume}",
     "format-muted": "<span font='13'>󰟎</span>\n{volume}",
