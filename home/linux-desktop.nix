@@ -13,6 +13,7 @@ in
       ddcutil # manage monitors (e.g. brightness)
       hyprpicker # color picker (used by e.g. pastel)
       usbutils # tools for working with usb devices
+      alsa-utils # audio utilities (e.g. alsamixer)
       obs-studio
       blender
     ]
