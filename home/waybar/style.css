@@ -1,0 +1,151 @@
+* {
+  font-family: sans-serif, "Symbols Nerd Font";
+  font-weight: 600;
+  color: #dddddd;
+  /* color: #bdbdbd; */
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: rgba(32, 32, 32, 0.99);
+  /* border: 2px solid #505050; */
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  border-radius: 8px;
+}
+
+/* ------- */
+/* tooltip */
+/* ------- */
+
+tooltip {
+  background-color: rgba(32, 32, 32, 0.99);
+  /* border: 1px solid rgba(100, 114, 125, 0.5); */
+  border: 1.5px solid #505050;
+}
+
+tooltip label {
+  color: #dddddd;
+}
+
+/* ------ */
+/* button */
+/* ------ */
+
+button {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:hover {
+  transition-duration: 0.2s;
+}
+
+/* ---------- */
+/* workspaces */
+/* ---------- */
+
+#workspaces {
+  margin: 4px 4px;
+  /* border-radius: 6px; */
+  /* background-color: #2d3436; */
+  background-color: transparent;
+}
+
+#workspaces button {
+  padding: 0px 0px;
+  /* margin: 0px 4px 0px 4px; */
+  margin: 0;
+  background-color: #2d3436;
+  /* background-color: transparent; */
+  border-radius: 0px;
+}
+
+/* Round the top corners of the very first workspace button. */
+#workspaces button:first-child {
+  border-radius: 6px 6px 0 0;
+}
+
+/* Round the bottom corners of the very last workspace button. */
+#workspaces button:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background-color: #64727d;
+}
+
+#workspaces button:hover {
+  background: inherit;
+  /* box-shadow: inset 3px 0 #64727d; */
+}
+
+/* ----- */
+/* clock */
+/* ----- */
+
+#clock {
+  padding: 4px 4px;
+  margin: 4px 4px;
+  background-color: #2d3436;
+  border-radius: 6px;
+  /* Important. */
+  min-width: 20px;
+}
+
+/* --------- */
+/* bluetooth */
+/* --------- */
+
+#bluetooth {
+  padding: 6px 0px 0px 0px;
+  margin: 4px 4px 0px 4px;
+  background-color: transparent;
+  /* background-color: #2d3436; */
+  border-radius: 6px 6px 0px 0px;
+}
+
+/* ------- */
+/* network */
+/* ------- */
+
+#network {
+  padding: 6px 0px;
+  margin: 0px 4px;
+  background-color: transparent;
+  /* background-color: #2d3436; */
+  border-radius: 0;
+}
+
+/* ----------- */
+/* wireplumber */
+/* ----------- */
+
+#wireplumber {
+  padding: 0px 0px 2px 0px;
+  margin: 0px 4px 4px 4px;
+  background-color: transparent;
+  /* background-color: #2d3436; */
+  border-radius: 0px 0px 6px 6px;
+}
+
+/* ---- */
+/* tray */
+/* ---- */
+
+#tray {
+  padding: 5px 0px;
+  margin: 4px 4px;
+  background-color: #2d3436;
+  border-radius: 6px;
+}
+
+#clock:hover,
+#bluetooth:hover,
+#network:hover,
+#wireplumber:hover {
+  transition-duration: 0.2s;
+  color: steelblue;
+}

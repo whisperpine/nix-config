@@ -31,6 +31,7 @@ in
     ./ghostty # the default terminal
     ./hyprlock # screen locker used by niri
     ./fuzzel # the default app launcher
+    ./waybar # customizable wayland bar
     ./niri # wayland compositor
 
     # --- applications --- #

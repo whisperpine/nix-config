@@ -1,0 +1,96 @@
+{
+  // Be in front of or behind other windows ("top" or "bottom").
+  "layer": "top",
+  // Bar position, can be top, bottom, left, right.
+  "position": "left",
+  // Minimal height (leave it empty to use full length).
+  "height": 100,
+  // "spacing": 20,
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "bluetooth",
+    "network",
+    // "battery".
+    "wireplumber",
+    // "cpu",
+    "tray"
+  ],
+
+  "niri/workspaces": {
+    "format": "",
+    // "disable-click": true,
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "clock": {
+    "align": 0.5,
+    "justify": "center",
+    "format": "{:%H\n%M}",
+    // "tooltip": false
+    "tooltip-format": "{:%a, %Y-%m-%d, %I:%M %p %Z}"
+  },
+
+  "bluetooth": {
+    "align": 0.5,
+    "justify": "center",
+    // "format": "{status}\n<span font='15'></span>", //  , 󰂯 , 󰂲
+    "format": "<span font='15'></span>", //  , 󰂯 , 󰂲
+    "format-disabled": "󰂲", // an empty format will hide the module
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+
+  "network": {
+    "align": 0.5,
+    "justify": "center",
+    "format-wifi": "<span font='13'>󰒍</span>", // 󰖪 , 󰖩 ,  ,  , 󰤨 , 󰤭 , 󰒍 , 󰒎 , 󰛳
+    // "format-wifi": "<span font='14'>󰛳</span>", // 󰖪 , 󰖩 ,  ,  , 󰤨 , 󰤭 , 󰒍 , 󰒎 , 󰛳
+    "format-ethernet": "<span font='13'>󰒍</span>",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰤨",
+    "tooltip-format-ethernet": "{ifname} <span font='13'>󰒍</span>",
+    "tooltip-format-disconnected": "Disconnected"
+    // "max-length": 500
+    // "rotate": 90
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "wireplumber": {
+    "align": 0.5,
+    "justify": "center",
+    // "format": "{volume}\n<span font='14'>{icon}</span>",
+    "format": "<span font='14'>{icon}</span>\n{volume}",
+    "format-muted": "<span font='13'>󰟎</span>\n{volume}",
+    "format-icons": ["󰎆"], // 󰎄 , 󰎆 ,  , ,  ,  ,  ,  ,  , 󰋋 , 󰟎
+    // "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "", // disable the scroll actions
+    "on-scroll-down": "", // disable the scroll actions
+    "on-click": ""
+  },
+
+  "cpu": {
+    "format": "<span font='14'>{icon}</span>",
+    "tooltip": false,
+    "format-icons": ["󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"]
+  },
+
+  "tray": {
+    "icon-size": 17,
+    "spacing": 3,
+    "reverse-direction": true
+  }
+}
