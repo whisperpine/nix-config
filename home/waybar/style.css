@@ -71,6 +71,11 @@ button:hover {
   border-bottom: none;
 }
 
+#workspaces button:only-child {
+  border-radius: 6px;
+  border-bottom: none;
+}
+
 #workspaces button.active,
 #workspaces button.focused {
   background-color: #c4c4c4;
