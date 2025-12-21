@@ -39,6 +39,7 @@ scopes = [
   "wireguard",
   "services",
   "onedrive",
+  "waybar",
   "docker",
   "fuzzel",
   "pgcli",
