@@ -31,7 +31,8 @@
     "justify": "center",
     "format": "{:%H\n%M}",
     // "tooltip": false
-    "tooltip-format": "{:%a, %Y-%m-%d, %I:%M %p %Z}"
+    "tooltip-format": "{:%a %b %e %I:%M %p %Z %Y}"
+    // "tooltip-format": "{:%a, %Y-%m-%d, %I:%M %p %Z}"
   },
 
   "bluetooth": {
