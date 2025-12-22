@@ -55,6 +55,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/wireguard.nix
     ./modules/docker.nix
     ./modules/fonts.nix
+    ./modules/steam.nix
     ./modules/i18n.nix
     ./modules/xdg.nix
 
