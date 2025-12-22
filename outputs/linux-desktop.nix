@@ -52,6 +52,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/nix-core.nix
     ./modules/host-users.nix
     ./modules/services/journald.nix
+    ./modules/services/k3s.nix
     ./modules/wireguard.nix
     ./modules/docker.nix
     ./modules/fonts.nix
