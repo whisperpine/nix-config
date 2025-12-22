@@ -3,7 +3,7 @@
   font-weight: 600;
   color: #dddddd;
   font-size: 14px;
-  /* This adds a global transition to all properties. */
+  /* Add a global transition to all properties. */
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -21,7 +21,6 @@ window#waybar {
 
 tooltip {
   background-color: rgba(32, 32, 32, 0.99);
-  /* border: 1px solid rgba(100, 114, 125, 0.5); */
   border: 1.5px solid #505050;
 }
 
@@ -103,11 +102,10 @@ button {
 /* --------- */
 
 #bluetooth {
-  padding: 6px 0px 0px 0px;
-  margin: 4px 4px 0px 4px;
+  padding-top: 3px;
+  margin: 2px 0;
   background-color: transparent;
   /* background-color: #3a3a3a; */
-  border-radius: 6px 6px 0px 0px;
 }
 
 /* ------- */
@@ -115,11 +113,10 @@ button {
 /* ------- */
 
 #network {
-  padding: 6px 0px;
-  margin: 0px 4px;
+  padding: 0;
+  margin: 2px 0;
   background-color: transparent;
   /* background-color: #3a3a3a; */
-  border-radius: 0;
 }
 
 /* ----------- */
@@ -127,11 +124,10 @@ button {
 /* ----------- */
 
 #wireplumber {
-  padding: 0px 0px 2px 0px;
-  margin: 0px 4px 4px 4px;
+  padding-bottom: 2px;
+  margin: 2px 0;
   background-color: transparent;
   /* background-color: #3a3a3a; */
-  border-radius: 0px 0px 6px 6px;
 }
 
 /* ---- */
@@ -140,14 +136,13 @@ button {
 
 #tray {
   padding: 5px 0px;
-  margin: 4px 4px;
+  margin: 1px 4px 4px 4px;
   background-color: #3a3a3a;
   border-radius: 6px;
 }
 
 #tray menu {
   background-color: rgba(32, 32, 32, 0.99);
-  /* border: 1px solid rgba(100, 114, 125, 0.5); */
   border: 1.5px solid #505050;
 }
 
