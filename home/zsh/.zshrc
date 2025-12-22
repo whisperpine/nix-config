@@ -20,6 +20,10 @@ bindkey '^P' atuin-up-search
 # shellcheck disable=SC2034
 ZSH_AUTOSUGGEST_STRATEGY=()
 
+# ----- "Tab" key completion ----- #
+# Make path completion case-insensitive.
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # ----- Zellij Pane ----- #
 _set_zellij_pane_title() {
   # Replace $HOME with ~ in the current directory path.
