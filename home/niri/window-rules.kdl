@@ -2,6 +2,12 @@
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
 
+window-rule {
+    match app-id="waybar"
+    // This prevents Niri from trying to "animate" the bar window itself.
+    geometry-corner-radius 0
+}
+
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:
