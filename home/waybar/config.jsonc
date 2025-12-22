@@ -54,7 +54,7 @@
     // "format-wifi": "<span font='14'>󰛳</span>", // 󰖪 , 󰖩 ,  ,  , 󰤨 , 󰤭 , 󰒍 , 󰒎 , 󰛳
     "format-ethernet": "<span font='13'>󰒍</span>",
     "format-disconnected": "", //An empty format will hide the module.
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰤨",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰖩",
     "tooltip-format-ethernet": "{ifname} <span font='13'>󰒍</span>",
     "tooltip-format-disconnected": "Disconnected"
     // "max-length": 500
