@@ -2,8 +2,9 @@
   font-family: sans-serif, "Symbols Nerd Font";
   font-weight: 600;
   color: #dddddd;
-  /* color: #bdbdbd; */
   font-size: 14px;
+  /* This adds a global transition to all properties. */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 window#waybar {
@@ -38,10 +39,6 @@ button {
   border-radius: 0;
 }
 
-button:hover {
-  transition-duration: 0.2s;
-}
-
 /* ---------- */
 /* workspaces */
 /* ---------- */
@@ -71,6 +68,7 @@ button:hover {
   border-bottom: none;
 }
 
+/* Round all corners if there's only one workspace button. */
 #workspaces button:only-child {
   border-radius: 6px;
   border-bottom: none;
@@ -153,6 +151,10 @@ button:hover {
   border: 1.5px solid #505050;
 }
 
+#tray menu menuitem {
+  transition: none;
+}
+
 #tray menu menuitem:hover {
   background-color: #454545;
 }
@@ -177,6 +179,5 @@ button:hover {
 #bluetooth:hover,
 #network:hover,
 #wireplumber:hover {
-  transition-duration: 0.2s;
   color: #6c95b8;
 }
