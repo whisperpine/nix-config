@@ -4,13 +4,13 @@
   # Enable network manager.
   networking.networkmanager.enable = true;
 
-  # # Enable The AmneziaVPN client.
-  # # It also changes the DNS server in "/etc/resolv.conf".
-  # programs.amnezia-vpn.enable = true;
+  # Enable The AmneziaVPN client.
+  # It also changes the DNS server in "/etc/resolv.conf".
+  programs.amnezia-vpn.enable = true;
 
-  # Setup network proxy (in conjunction with e.g. clash).
-  networking.proxy.default = "http://127.0.0.1:7897";
-  networking.proxy.noProxy = "127.0.0.1,localhost";
+  # # Setup network proxy (in conjunction with e.g. clash).
+  # networking.proxy.default = "http://127.0.0.1:7897";
+  # networking.proxy.noProxy = "127.0.0.1,localhost";
 
   # Enable clash-verge-rev.
   programs.clash-verge.enable = true;
