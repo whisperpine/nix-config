@@ -11,9 +11,8 @@
   "modules-right": [
     "bluetooth",
     "network",
-    // "battery".
+    // "upower",
     "wireplumber",
-    // "cpu",
     "tray"
   ],
 
@@ -70,10 +69,23 @@
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
 
+  "upower": {
+    "align": 0.5,
+    "justify": "center",
+    "swap-icon-label": true,
+    "format": "<span font='12'></span>",
+    "icon-size": 15,
+    "hide-if-empty": true,
+    "tooltip": true,
+    "tooltip-padding": 0,
+    "tooltip-spacing": 0,
+    "show-icon": false,
+    "cursor": false
+  },
+
   "wireplumber": {
     "align": 0.5,
     "justify": "center",
-    "cursor": false,
     // "format": "{volume}\n<span font='14'>{icon}</span>",
     "format": "<span font='14'>{icon}</span>\n{volume}",
     "format-muted": "<span font='13'>󰟎</span>\n{volume}",
@@ -81,13 +93,8 @@
     // "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-scroll-up": "", // disable the scroll actions
     "on-scroll-down": "", // disable the scroll actions
-    "on-click": ""
-  },
-
-  "cpu": {
-    "format": "<span font='14'>{icon}</span>",
-    "tooltip": false,
-    "format-icons": ["󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"]
+    "on-click": "",
+    "cursor": false
   },
 
   "tray": {

@@ -28,6 +28,14 @@ tooltip label {
   color: #dddddd;
 }
 
+/* #upower tooltip label { */
+/*   margin: 0; */
+/* } */
+#upower tooltip * {
+  margin: 0;
+  padding: 0;
+}
+
 /* ------ */
 /* button */
 /* ------ */
@@ -164,6 +172,17 @@ button {
 
 #tray menu menuitem check:checked {
   background-color: #6c95b8;
+}
+
+/* ------ */
+/* upower */
+/* ------ */
+
+#upower {
+  padding-bottom: 2px;
+  margin: 2px 0;
+  background-color: transparent;
+  /* background-color: #3a3a3a; */
 }
 
 /* ----- */
