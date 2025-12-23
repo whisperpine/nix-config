@@ -34,6 +34,12 @@
   services.printing.enable = true;
 
   # ---------------- #
+  # Power management
+  # ---------------- #
+
+  services.upower.enable = true;
+
+  # ---------------- #
   # Lighting configs
   # ---------------- #
 
