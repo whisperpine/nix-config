@@ -1,2 +1,22 @@
-Backups
-Pictures/Icons
+# ----------------------------------- #
+# EXCLUSIONS (ALWAYS PUT THESE FIRST)
+# ----------------------------------- #
+
+!/Backups/ReleasedApk
+
+!/BlenderAssets/add-ons
+!/BlenderAssets/nas-blender
+
+# ------------------------------------- #
+# INCLUSIONS (WHAT YOU DO WANT TO SYNC)
+# ------------------------------------- #
+
+/Backups
+
+/BlenderAssets
+
+/Blender
+
+/Documents
+
+/Pictures/Icons
