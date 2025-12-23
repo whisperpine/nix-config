@@ -38,6 +38,7 @@ in
     # --- applications --- #
     ./nautilus # file manager for gnome
     ./cursor # customized cursor or pointer
+    ./onedrive # onedrive client for linux
     ./zathura # keyboard-first pdf reader
     ./otd # OpenTabletDriver's icon
     ./imv # image previewer
