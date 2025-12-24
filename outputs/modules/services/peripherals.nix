@@ -39,6 +39,12 @@
 
   services.upower.enable = true;
 
+  # ---------------------- #
+  # Temperature management
+  # ---------------------- #
+
+  services.thermald.enable = true;
+
   # ---------------- #
   # Lighting configs
   # ---------------- #
