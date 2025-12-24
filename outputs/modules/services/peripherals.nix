@@ -43,7 +43,8 @@
   # Temperature management
   # ---------------------- #
 
-  services.thermald.enable = true;
+  services.thermald.enable =
+    if (lib.meta.availableOn pkgs.stdenv.hostPlatform pkgs.thermald) then true else false;
 
   # ---------------- #
   # Lighting configs
