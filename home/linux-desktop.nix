@@ -15,7 +15,8 @@ in
       usbutils # tools for working with usb devices
       alsa-utils # audio utilities (e.g. alsamixer)
       obs-studio
-      blender
+      # Enable "cudaSupport" to use OptiX in Cycles render.
+      (blender.override { cudaSupport = true; })
     ]
     ++ [ discord ];
 
