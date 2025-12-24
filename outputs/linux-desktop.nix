@@ -30,6 +30,8 @@ let
       boot.kernelModules = [
         "i2c-dev" # "ddcutil" requires this module
       ];
+      # Enable in-memory compressions.
+      zramSwap.enable = true;
       # Enable dconf so that system preferences (e.g. dark theme) can be set.
       programs.dconf.enable = true;
       # Install firefox.
