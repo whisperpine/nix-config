@@ -19,6 +19,8 @@ let
   };
 in
 {
+  home.packages = [ fcitx5Package ];
+
   # Important: deliberately disable this service to prevent fcitx from starting
   # before the wayland composer (e.g. Niri).
   systemd.user.services."app-org.fcitx.Fcitx5@autostart" = lib.mkForce { };
