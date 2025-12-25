@@ -10,11 +10,8 @@ let
   fcitx5Config = "${repoDir}/home/fcitx5";
   fcitx5Package = pkgs.kdePackages.fcitx5-with-addons.override {
     addons = with pkgs; [
-      fcitx5-gtk
       kdePackages.fcitx5-configtool
-      kdePackages.fcitx5-chinese-addons # Simplified Chinese
-      fcitx5-pinyin-zhwiki # dictionary for Simplified Chinese
-      fcitx5-pinyin-moegirl # dictionary for Simplified Chinese
+      kdePackages.fcitx5-chinese-addons
     ];
   };
 in
