@@ -1,5 +1,5 @@
 return {
-  enabled = false, -- disable this plugin (for linux desktop)
+  enabled = true, -- disable this plugin (for linux desktop)
   "keaising/im-select.nvim",
   event = "InsertLeave",
   opts = function()
@@ -9,16 +9,22 @@ return {
       -- just let it empty as `set_previous_events = {}`.
       set_previous_events = {},
     }
-    local os_info = vim.loop.os_uname()
-    if os_info.sysname == "Windows" then
+
+    local sysname = vim.loop.os_uname().sysname
+
+    if sysname == "Windows" then
       -- Be sure that `im-select.exe` has been added to env var "Path".
       options.default_command = "im-select.exe"
-    elseif os_info.sysname == "Darwin" then
+    elseif sysname == "Darwin" then
       -- Be sure that `im-select` has been added to env var "PATH".
       options.default_command = "im-select"
-    elseif os_info.sysname == "Linux" and vim.fn.has "wsl" == 1 then
+    elseif sysname == "Linux" and vim.fn.has "wsl" == 1 then
       -- Todo: use environment variable to get the path of executable file.
       options.default_command = "/mnt/c/Users/yusong/external/bin/im-select.exe"
+    elseif sysname == "Linux" and vim.fn.has "wsl" == 0 then
+      -- Be sure that fcitx5 is installed and configured properly.
+      options.default_im_select = "keyboard-us"
+      options.default_command = "fcitx5-remote"
     end
     return options
   end,
