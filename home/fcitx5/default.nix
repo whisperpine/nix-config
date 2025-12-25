@@ -16,22 +16,27 @@ let
   };
 in
 {
+  # Install fcitx5 with add-ons.
   home.packages = [ fcitx5Package ];
 
-  # Important: deliberately disable this service to prevent fcitx from starting
-  # before the wayland composer (e.g. Niri).
-  systemd.user.services."app-org.fcitx.Fcitx5@autostart" = lib.mkForce { };
+  # Symlink config files.
+  xdg.configFile.fcitx5 = {
+    source = config.lib.file.mkOutOfStoreSymlink fcitx5Config;
+  };
 
+  # Set environment variables.
   home.sessionVariables = {
     # GLFW_IM_MODULE = "ibus"; # IME support in kitty
     SDL_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
   };
 
-  xdg.configFile.fcitx5 = {
-    source = config.lib.file.mkOutOfStoreSymlink fcitx5Config;
-  };
+  # Important: deliberately disable this service to prevent fcitx from starting
+  # before the wayland composer (e.g. Niri).
+  systemd.user.services."app-org.fcitx.Fcitx5@autostart" = lib.mkForce { };
 
+  # The systemd service to auto start fcitx5.
+  # Important: fcitx5 should be started AFTER the wayland composer.
   systemd.user.services.fcitx5-daemon = lib.mkForce {
     Unit = {
       Description = "Fcitx5 input method editor";
