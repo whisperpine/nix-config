@@ -42,6 +42,7 @@ in
     ./onedrive # onedrive client for linux
     ./zathura # keyboard-first pdf reader
     ./otd # OpenTabletDriver's icon
+    ./fcitx5 # i18n input method
     ./imv # image previewer
     ./mpv # video player
     ./anki

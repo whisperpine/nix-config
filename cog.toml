@@ -43,6 +43,7 @@ scopes = [
   "docker",
   "fuzzel",
   "pgcli",
+  "fcitx5",
   "niri",
   "sops",
 ]
