@@ -14,7 +14,7 @@ in
       hyprpicker # color picker (used by e.g. pastel)
       usbutils # tools for working with usb devices
       alsa-utils # audio utilities (e.g. alsamixer)
-      obs-studio
+      obs-studio # video recording and live streaming
       # Enable "cudaSupport" to use OptiX in Cycles render.
       (blender.override { cudaSupport = true; })
     ]
