@@ -24,6 +24,9 @@ binds {
     Mod+S hotkey-overlay-title="Search in the Browser: fuzzel" {
         spawn-sh "~/.config/fuzzel/fuzzel-dmenu.sh"
     }
+    Ctrl+Shift+M hotkey-overlay-title="Search in the Dict: fuzzel" {
+        spawn-sh "~/.config/fuzzel/fuzzel-dict.sh"
+    }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" {
         spawn "hyprlock"
     }
