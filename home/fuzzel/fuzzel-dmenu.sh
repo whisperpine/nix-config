@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Purpose: search something and open in the browser
+# Usage: sh path/to/fuzzel-dmenu.sh
+# Dependencies: fuzzel
+# Date: 2025-12-18
+# Author: Yusong
+
 # Define search engines.
 declare -A engines
 engines=(
