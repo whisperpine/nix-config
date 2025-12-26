@@ -42,8 +42,8 @@
   # Run the following command to list all user scope configs:
   # "systemd-tmpfiles --user --cat-config"
   systemd.user.tmpfiles.users."${username}".rules = [
-    # Type Path Mode User Group Age.
-    "d /home/${username}/.local/share/Trash/files - - - 30d"
-    "d /home/${username}/.local/share/Trash/info - - - 30d"
+    # Type Path Mode User Group Age Argument.
+    "d /home/${username}/.local/share/Trash/files - - - bmA:15d -"
+    "d /home/${username}/.local/share/Trash/info - - - bmA:15d -"
   ];
 }
