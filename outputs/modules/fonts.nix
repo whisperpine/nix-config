@@ -1,5 +1,5 @@
 { ... }:
-# ----------  fonts configs ---------- #
+# ---------- fonts configs ---------- #
 # This configuration cannot be shared with darwin.
 # For darwin, please only import "./fonts-packages.nix".
 {

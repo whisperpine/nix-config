@@ -1,5 +1,5 @@
 { pkgs, ... }:
-# ----------  fonts packages configs ---------- #
+# ---------- fonts packages configs ---------- #
 # Darwin only supports "fonts.packages" but not other fonts configs.
 {
   # Install fonts.

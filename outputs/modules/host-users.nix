@@ -1,5 +1,5 @@
 { hostname, username, ... }:
-# ----------  host & users configs ---------- #
+# ---------- host & users configs ---------- #
 {
   networking.hostName = hostname;
   nix.settings.trusted-users = [ username ];

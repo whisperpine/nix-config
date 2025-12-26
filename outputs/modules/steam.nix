@@ -1,5 +1,5 @@
 { pkgs, lib, ... }:
-# ----------  steam configs ---------- #
+# ---------- steam configs ---------- #
 let
   # Check if the system is x86_64-linux.
   isX86_64 = pkgs.stdenv.hostPlatform.system == "x86_64-linux";

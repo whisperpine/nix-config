@@ -1,5 +1,5 @@
 { pkgs, config, ... }:
-# ----------  wireguard configs ---------- #
+# ---------- wireguard configs ---------- #
 {
   # Add "wireguard" kernel module.
   boot.kernelModules = [ "wireguard" ];

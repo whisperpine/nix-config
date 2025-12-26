@@ -1,5 +1,5 @@
 { pkgs, ... }:
-# ----------  xdg-hyprland configs ---------- #
+# ---------- xdg-hyprland configs ---------- #
 {
   # Enable xdg-desktop-portal for Wayland and Hyprland.
   xdg.portal = {

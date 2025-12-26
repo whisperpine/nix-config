@@ -1,5 +1,5 @@
 { ... }:
-# ----------  networking configs ---------- #
+# ---------- networking configs ---------- #
 {
   # Enable network manager.
   networking.networkmanager.enable = true;

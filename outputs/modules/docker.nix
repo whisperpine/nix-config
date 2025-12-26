@@ -1,5 +1,5 @@
 { username, ... }:
-# ----------  docker configs ---------- #
+# ---------- docker configs ---------- #
 # How to remove docker entirely:
 # sudo rm -rf /var/lib/docker     # Remove the entire data root
 # rm -rf ~/.local/share/docker    # Where images/volumes live in rootless
