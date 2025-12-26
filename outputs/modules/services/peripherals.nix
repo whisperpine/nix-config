@@ -69,6 +69,11 @@
       ExecStart = "${pkgs.openrgb}/bin/openrgb --mode static --color 000000";
     };
   };
+  # Clean up old files under "/var/lib/OpenRGB/logs".
+  systemd.tmpfiles.rules = [
+    # Type Path Mode UID GID Age Argument.
+    "d /var/lib/OpenRGB/logs - - - bmA:3d -"
+  ];
 
   # ------------- #
   # Audio configs
