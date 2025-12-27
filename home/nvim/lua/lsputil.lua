@@ -74,13 +74,6 @@ M.on_attach = function(_, bufnr)
   end, { desc = "diagnostic next error" })
 end
 
--- Disable semanticTokens.
-M.on_init = function(client, _)
-  if client.supports_method "textDocument/semanticTokens" then
-    client.server_capabilities.semanticTokensProvider = nil
-  end
-end
-
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities.workspace.didChangeConfiguration.dynamicRegistration = true
 M.capabilities.textDocument.completion.completionItem = {
@@ -109,7 +102,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 -- Default config for all language servers.
 vim.lsp.config("*", {
-  on_init = M.on_init,
   capabilities = M.capabilities,
 })
 
