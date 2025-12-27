@@ -12,21 +12,22 @@ M.base46 = {
   -- ":redir @a | silent hi | redir END | new | put a"
   hl_override = {
     CursorLine = { bg = "#313131" },
-    -- NvimTreeNormal = { bg = "#191919" },
-    -- NvimTreeNormalNC = { bg = "#191919" },
     NvimTreeCursorLine = { bg = "#313131" },
-    TelescopeSelection = { fg = "#c5c8c2", bg = "#313131" },
+    TelescopeSelection = { fg = "NONE", bg = "#3f3f3f" },
     LspInlayHint = { fg = "#7b7b7b", bg = "#2a2a2a" },
     LspSignatureActiveParameter = { fg = "#8b8b8b" },
+    TroublePreview = { fg = "NONE", bg = "#555555" },
     ["@keyword.exception"] = { fg = "#b294bb" }, -- e.g. "try" and "except" in python
-    ["@module"] = { fg = "#8AB689" }, -- e.g. module of rust, python, javascript
+    ["@module"] = { fg = "#8ab689" }, -- e.g. module of rust, python, javascript
     ["@variable"] = { fg = "#cc6666" },
-    ["@variable.member"] = { fg = "#cc6666" }, -- e.g. rust struct elements, python class attributes
-    ["@property"] = { fg = "#cc6666" }, -- e.g. "fg" in this line
-    ["@function.macro"] = { fg = "#8AA0EA" }, -- e.g. rust macros
-    ["@variable.parameter"] = { fg = "#c5c8c6" }, -- e.g. parameters in function signature
-    ["@punctuation.delimiter"] = { fg = "#c5c8c6" },
+    ["@variable.member"] = { link = "@variable" }, -- e.g. rust struct elements, python class attributes
+    ["@property"] = { link = "@variable" }, -- e.g. "fg" in this line
+    ["@function.macro"] = { fg = "#8aa0ea" }, -- e.g. rust procedural macros
+    ["@constant.macro"] = { link = "@function.macro" }, -- e.g. rust declarative macros
+    ["@variable.parameter"] = { link = "@operator" }, -- e.g. parameters in function signature
+    ["@punctuation.delimiter"] = { link = "@operator" },
     ["@markup.quote"] = { bg = "#202020" },
+    ["@string"] = { fg = "#abb262" },
   },
 
   -- Change attributes of theme.
