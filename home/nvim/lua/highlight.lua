@@ -10,6 +10,10 @@ hl(0, "DiagnosticUnderlineWarn", { underdotted = true })
 hl(0, "DiagnosticUnnecessary", { underdotted = true })
 hl(0, "DiagnosticUnderlineError", { bg = "#cc6666", foreground = "#202020" })
 
+----- Nix -----
+hl(0, "@lsp.type.operator.nix", { link = "" })
+hl(0, "@lsp.type.property.nix", { link = "" })
+
 ----- Lua -----
 hl(0, "@lsp.type.variable.lua", { link = "" })
 hl(0, "@lsp.mod.global.lua", { link = "@module" })
