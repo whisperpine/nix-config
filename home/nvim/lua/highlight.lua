@@ -29,6 +29,13 @@ hl(0, "@lsp.type.class.python", { link = "" })
 hl(0, "@lsp.type.class.typescript", { link = "" })
 hl(0, "@lsp.type.variable.typescript", { link = "" })
 hl(0, "@lsp.typemod.property.static.typescript", { link = "@constant" })
+hl(0, "@lsp.typemod.variable.defaultLibrary.typescript", { link = "@function.builtin" })
+
+----- JavaScript ------
+hl(0, "@lsp.type.class.javascript", { link = "" })
+hl(0, "@lsp.type.variable.javascript", { link = "" })
+hl(0, "@lsp.typemod.property.static.javascript", { link = "@constant" })
+hl(0, "@lsp.typemod.variable.defaultLibrary.javascript", { link = "@function.builtin" })
 
 ----- Markdown ------
 hl(0, "@lsp.type.class.markdown", { link = "" })
