@@ -12,7 +12,7 @@ plugin.opts = {
   input = { enabled = true }, -- better `vim.ui.input` (e.g. when renaming)
   picker = { enabled = true, prompt = "" }, -- a modern fuzzy-finder akin to telescope
   scope = { enabled = true }, -- scope detection based on treesitter or indent
-  words = { enabled = true }, -- auto-show LSP references and quickly navigate between them
+  -- words = { enabled = true, debounce = 50 }, -- auto-show LSP references and quickly navigate between them
   gh = { enabled = true }, -- github cli integration
 }
 
