@@ -1,3 +1,5 @@
+// Refer to docs in waybar github wiki:
+// https://github.com/Alexays/Waybar/wiki/Configuration
 {
   // Be in front of or behind other windows ("top" or "bottom").
   "layer": "top",
@@ -16,6 +18,7 @@
     "tray"
   ],
 
+  // https://github.com/Alexays/Waybar/wiki/Module:-Niri
   "niri/workspaces": {
     "format": "",
     // "disable-click": true,
@@ -25,6 +28,7 @@
     }
   },
 
+  // https://github.com/Alexays/Waybar/wiki/Module:-Clock
   "clock": {
     "align": 0.5,
     "justify": "center",
@@ -34,6 +38,7 @@
     // "tooltip-format": "{:%a, %Y-%m-%d, %I:%M %p %Z}"
   },
 
+  // https://github.com/Alexays/Waybar/wiki/Module:-Bluetooth
   "bluetooth": {
     "align": 0.5,
     "justify": "center",
@@ -46,6 +51,7 @@
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
   },
 
+  // https://github.com/Alexays/Waybar/wiki/Module:-Network
   "network": {
     "align": 0.5,
     "justify": "center",
@@ -60,6 +66,7 @@
     // "rotate": 90
   },
 
+  // https://github.com/Alexays/Waybar/wiki/Module:-Battery
   "battery": {
     "states": {
       "warning": 30,
@@ -69,6 +76,7 @@
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
 
+  // https://github.com/Alexays/Waybar/wiki/Module:-UPower
   "upower": {
     "align": 0.5,
     "justify": "center",
@@ -83,6 +91,7 @@
     "cursor": false
   },
 
+  // https://github.com/Alexays/Waybar/wiki/Module:-WirePlumber
   "wireplumber": {
     "align": 0.5,
     "justify": "center",
@@ -97,6 +106,7 @@
     "cursor": false
   },
 
+  // https://github.com/Alexays/Waybar/wiki/Module:-Tray
   "tray": {
     "icon-size": 17,
     "spacing": 6,
