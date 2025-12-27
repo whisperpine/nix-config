@@ -31,6 +31,7 @@ vim.filetype.add {
     [".*/roles/.*/handlers/.*%.ya?ml"] = "yaml.ansible",
     [".*/tasks/.*%.ya?ml"] = "yaml.ansible",
     [".*/molecule/.*%.ya?ml"] = "yaml.ansible",
+    [".*/molecule/.*molecule%.ya?ml"] = "yaml",
   },
 }
 

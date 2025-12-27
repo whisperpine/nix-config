@@ -13,6 +13,7 @@ hl(0, "DiagnosticUnderlineError", { bg = "#cc6666", foreground = "#202020" })
 ----- Nix -----
 hl(0, "@lsp.type.operator.nix", { link = "" })
 hl(0, "@lsp.type.property.nix", { link = "" })
+hl(0, "@lsp.typemod.function.builtin.nix", { link = "@function.builtin" })
 
 ----- Lua -----
 hl(0, "@lsp.type.variable.lua", { link = "" })
@@ -28,6 +29,18 @@ hl(0, "@lsp.type.class.python", { link = "" })
 hl(0, "@lsp.type.class.typescript", { link = "" })
 hl(0, "@lsp.type.variable.typescript", { link = "" })
 hl(0, "@lsp.typemod.property.static.typescript", { link = "@constant" })
+
+----- Markdown ------
+hl(0, "@lsp.type.class.markdown", { link = "" })
+
+----- Terraform ------
+hl(0, "@lsp.type.type.terraform", { link = "" })
+hl(0, "@lsp.type.variable.terraform", { link = "" })
+hl(0, "@lsp.type.enumMember.terraform", { link = "@variable" })
+hl(0, "@lsp.mod.defaultLibrary.terraform", { link = "@constant" })
+
+----- Ansible ------
+hl(0, "@lsp.type.keyword.yaml.ansible", { link = "" })
 
 ----- Rust -----
 hl(0, "@lsp.type.keyword.rust", { link = "" })
