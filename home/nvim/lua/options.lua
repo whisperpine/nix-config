@@ -1,4 +1,5 @@
 -- Additional filetype bindings.
+-- Assign filetype according to path or name pattern.
 vim.filetype.add {
   extension = {
     env = "conf",
@@ -36,11 +37,28 @@ vim.filetype.add {
 -- Enable inlay hints.
 vim.lsp.inlay_hint.enable(true, { 0 })
 
+-- Configure diagnostic text.
+vim.diagnostic.config {
+  underline = true,
+  virtual_text = true,
+  severity_sort = true,
+  float = { border = "single" },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "󰅙",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.INFO] = "󰋼",
+      [vim.diagnostic.severity.HINT] = "󰌵",
+    },
+  },
+}
+
+-------------------------------------- options ------------------------------------------
+
 local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
--------------------------------------- options ------------------------------------------
 o.showmode = false
 
 o.clipboard = "unnamedplus"

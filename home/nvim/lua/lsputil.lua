@@ -1,8 +1,6 @@
 if vim.fn.filereadable(vim.g.base46_cache .. "lsp") == 1 then
   dofile(vim.g.base46_cache .. "lsp")
 end
--- https://github.com/NvChad/ui/blob/27f449be42b360cbb9f133aa8853017d277f0c49/lua/nvchad/lsp/init.lua
-require("nvchad.lsp").diagnostic_config()
 
 local M = {}
 
