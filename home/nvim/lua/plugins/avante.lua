@@ -1,6 +1,6 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "yetone/avante.nvim",
   build = "make", -- gnumake should be installed in your OS
   cmd = "AvanteAsk",
@@ -17,7 +17,7 @@ plugin = {
   },
 }
 
-plugin.init = function()
+M.init = function()
   if vim.fn.filereadable(vim.g.base46_cache .. "avante") == 1 then
     dofile(vim.g.base46_cache .. "avante")
   end
@@ -27,7 +27,7 @@ plugin.init = function()
   }
 end
 
-plugin.opts = {
+M.opts = {
   selection = { enabled = false },
   provider = "deepseek",
   windows = {
@@ -54,7 +54,7 @@ plugin.opts = {
   },
 }
 
-plugin.opts.providers = {
+M.opts.providers = {
   openai = {
     endpoint = "https://api.openai.com/v1",
     model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
@@ -77,4 +77,4 @@ plugin.opts.providers = {
   },
 }
 
-return plugin
+return M

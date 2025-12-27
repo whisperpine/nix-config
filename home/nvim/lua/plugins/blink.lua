@@ -1,6 +1,6 @@
-local plugins = {}
+local M = {}
 
-plugins = {
+M = {
   "saghen/blink.cmp",
   event = { "InsertEnter", "CmdLineEnter" },
   -- Use a release tag to download pre-built binaries.
@@ -71,9 +71,9 @@ local opts = {
   fuzzy = { implementation = "prefer_rust_with_warning" },
 }
 
-plugins.opts = function()
+M.opts = function()
   dofile(vim.g.base46_cache .. "blink")
   return opts
 end
 
-return plugins
+return M

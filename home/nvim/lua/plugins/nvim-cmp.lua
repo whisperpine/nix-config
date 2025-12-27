@@ -1,7 +1,7 @@
-local plugin = {}
+local M = {}
 
 -- Load luasnips + cmp related in insert mode only.
-plugin = {
+M = {
   enabled = false, -- disable this plugin, use blink.cmp instead
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
@@ -31,7 +31,7 @@ plugin = {
   },
 }
 
-plugin.opts = function()
+M.opts = function()
   -- Originates from:
   -- https://github.com/NvChad/NvChad/blob/6f25b2739684389ca69ea8229386c098c566c408/lua/nvchad/configs/cmp.lua
 
@@ -74,4 +74,4 @@ plugin.opts = function()
   return vim.tbl_deep_extend("force", options, require "nvchad.cmp")
 end
 
-return plugin
+return M

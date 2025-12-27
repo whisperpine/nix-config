@@ -1,6 +1,6 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "nvim-treesitter/nvim-treesitter",
   lazy = false,
   build = ":TSUpdate",
@@ -17,7 +17,7 @@ plugin = {
   end,
 }
 
-plugin.config = function(_, opts)
+M.config = function(_, opts)
   ---@type string[]
   local ensure_installed = opts.ensure_installed -- (list of your parsers)
   ---@type string[]
@@ -109,7 +109,7 @@ plugin.config = function(_, opts)
   })
 end
 
-plugin.opts = {
+M.opts = {
   -- Install treesitter parsers under "/home/yusong/.local/share/nvim/site/".
   install_dir = vim.fn.stdpath "data" .. "/site",
 
@@ -182,4 +182,4 @@ plugin.opts = {
   },
 }
 
-return plugin
+return M

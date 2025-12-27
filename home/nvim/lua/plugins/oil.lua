@@ -1,6 +1,6 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "stevearc/oil.nvim",
   dependencies = {
     "nvim-tree/nvim-web-devicons",
@@ -8,14 +8,14 @@ plugin = {
   },
 }
 
-plugin.init = function()
+M.init = function()
   local wk = require "which-key"
   wk.add {
     { "<leader>ro", icon = { icon = "󰙅 ", color = "blue" } },
   }
 end
 
-plugin.keys = {
+M.keys = {
   {
     "<leader>ro",
     function()
@@ -25,7 +25,7 @@ plugin.keys = {
   },
 }
 
-plugin.opts = {
+M.opts = {
   view_options = {
     -- Show files and directories that start with "."
     show_hidden = true,
@@ -42,4 +42,4 @@ plugin.opts = {
   },
 }
 
-return plugin
+return M

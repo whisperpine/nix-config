@@ -1,16 +1,16 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "folke/trouble.nvim",
   event = "LspAttach",
   cmd = "Trouble",
 }
 
-plugin.init = function()
+M.init = function()
   dofile(vim.g.base46_cache .. "trouble")
 end
 
-plugin.opts = {
+M.opts = {
   multiline = false, -- render multi-line messages
   warn_no_results = false, -- show a warning when there are no results
   open_no_results = false, -- open the trouble window when there are no results
@@ -106,7 +106,7 @@ plugin.opts = {
   },
 }
 
-plugin.keys = {
+M.keys = {
   {
     "<leader>ds",
     "<cmd> Trouble diagnostics toggle filter.buf=0 focus=true <cr>",
@@ -144,4 +144,4 @@ plugin.keys = {
   },
 }
 
-return plugin
+return M

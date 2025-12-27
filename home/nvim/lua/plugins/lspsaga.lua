@@ -1,6 +1,6 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "nvimdev/lspsaga.nvim",
   event = "LspAttach",
   dependencies = {
@@ -9,7 +9,7 @@ plugin = {
   },
 }
 
-plugin.opts = {
+M.opts = {
   symbol_in_winbar = {
     hide_keyword = false,
   },
@@ -30,7 +30,7 @@ plugin.opts = {
   },
 }
 
-plugin.keys = {
+M.keys = {
   {
     "gp",
     "<cmd> Lspsaga peek_definition <cr>",
@@ -43,4 +43,4 @@ plugin.keys = {
   },
 }
 
-return plugin
+return M

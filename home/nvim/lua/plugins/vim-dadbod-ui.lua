@@ -1,8 +1,8 @@
-local plugin = {}
+local M = {}
 
-plugin = { "kristijanhusak/vim-dadbod-ui" }
+M = { "kristijanhusak/vim-dadbod-ui" }
 
-plugin.dependencies = {
+M.dependencies = {
   {
     "tpope/vim-dadbod",
     ft = { "sql", "mysql", "plsql" },
@@ -39,14 +39,14 @@ plugin.dependencies = {
   },
 }
 
-plugin.cmd = {
+M.cmd = {
   "DBUI",
   "DBUIToggle",
   "DBUIAddConnection",
   "DBUIFindBuffer",
 }
 
-plugin.init = function()
+M.init = function()
   vim.g.db_ui_use_nerd_fonts = 1
   vim.g.db_ui_winwidth = 30
   vim.g.db_ui_icons = {
@@ -67,4 +67,4 @@ plugin.init = function()
   })
 end
 
-return plugin
+return M

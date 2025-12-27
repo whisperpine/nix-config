@@ -1,11 +1,11 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "lewis6991/gitsigns.nvim",
   event = "User FilePost",
 }
 
-plugin.opts = function()
+M.opts = function()
   if vim.fn.filereadable(vim.g.base46_cache .. "git") == 1 then
     dofile(vim.g.base46_cache .. "git")
   end
@@ -17,9 +17,9 @@ plugin.opts = function()
   }
 end
 
-plugin.keys = {
+M.keys = {
   { "<leader>rr", "<cmd> Gitsigns reset_hunk <cr>", desc = "git reset hunk" },
   { "<leader>rs", "<cmd> Gitsigns stage_hunk <cr>", desc = "git stage hunk" },
 }
 
-return plugin
+return M

@@ -1,18 +1,18 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "nvim-telescope/telescope.nvim",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   cmd = "Telescope",
 }
 
-plugin.init = function()
+M.init = function()
   if vim.fn.filereadable(vim.g.base46_cache .. "telescope") == 1 then
     dofile(vim.g.base46_cache .. "telescope")
   end
 end
 
-plugin.opts = {
+M.opts = {
   defaults = {
     prompt_prefix = "   ",
     selection_caret = " ",
@@ -38,7 +38,7 @@ plugin.opts = {
   extensions = {},
 }
 
-plugin.keys = {
+M.keys = {
   {
     "<leader>fw",
     "<cmd> Telescope live_grep <cr>",
@@ -114,4 +114,4 @@ plugin.keys = {
   },
 }
 
-return plugin
+return M

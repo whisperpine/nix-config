@@ -1,6 +1,6 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "zk-org/zk-nvim",
   main = "zk",
   cond = function()
@@ -9,8 +9,8 @@ plugin = {
   end,
 }
 
-plugin.dependencies = { "folke/which-key.nvim" }
-plugin.init = function()
+M.dependencies = { "folke/which-key.nvim" }
+M.init = function()
   local wk = require "which-key"
   wk.add {
     { "<leader>ma", icon = { icon = "", color = "grey" } },
@@ -19,7 +19,7 @@ plugin.init = function()
   }
 end
 
-plugin.opts = {
+M.opts = {
   -- Can be "telescope", "fzf", "fzf_lua", "minipick", or "select" (`vim.ui.select`).
   -- It's recommended to use "telescope", "fzf", "fzf_lua", or "minipick".
   picker = "telescope",
@@ -27,7 +27,7 @@ plugin.opts = {
 }
 
 -- Other keymaps are defined in nvim/ftplugin/markdown.lua
-plugin.keys = {
+M.keys = {
   -- Index notes.
   { "<leader>mi", "<Cmd> ZkIndex <CR>", desc = "zk index" },
   -- Find notes.
@@ -52,4 +52,4 @@ plugin.keys = {
   { "<leader>ml", "<Cmd> ZkLinks <CR>", desc = "zk links", ft = "markdown" },
 }
 
-return plugin
+return M

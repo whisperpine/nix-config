@@ -1,6 +1,6 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "folke/which-key.nvim",
   lazy = false,
   cmd = "WhichKey",
@@ -9,7 +9,7 @@ plugin = {
   keys = { "<leader>", "<c-w>", '"', "'", "`", "c", "v", "g" },
 }
 
-plugin.init = function()
+M.init = function()
   if vim.fn.filereadable(vim.g.base46_cache .. "whichkey") == 1 then
     dofile(vim.g.base46_cache .. "whichkey")
   end
@@ -34,4 +34,4 @@ plugin.init = function()
   }
 end
 
-return plugin
+return M

@@ -1,11 +1,11 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "mfussenegger/nvim-lint",
   event = "BufReadPost",
 }
 
-plugin.config = function()
+M.config = function()
   require("lint").linters_by_ft = {
     html = { "htmlhint" },
     terraform = { "tflint" },
@@ -19,7 +19,7 @@ plugin.config = function()
   }
 end
 
-plugin.init = function()
+M.init = function()
   local lint_events = {
     "BufWritePost",
     "BufReadPost",
@@ -49,4 +49,4 @@ plugin.init = function()
   })
 end
 
-return plugin
+return M

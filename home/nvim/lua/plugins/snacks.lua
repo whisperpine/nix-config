@@ -1,12 +1,12 @@
-local plugin = {}
+local M = {}
 
-plugin = {
+M = {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
 }
 
-plugin.opts = {
+M.opts = {
   -- image = { enabled = true }, -- image viewer using Kitty Graphics Protocol
   bigfile = { enabled = true }, -- prevents LSP attaching to bigfile
   input = { enabled = true }, -- better `vim.ui.input` (e.g. when renaming)
@@ -16,7 +16,7 @@ plugin.opts = {
   gh = { enabled = true }, -- github cli integration
 }
 
-plugin.keys = {
+M.keys = {
   {
     "<leader>gi",
     function()
@@ -47,4 +47,4 @@ plugin.keys = {
   },
 }
 
-return plugin
+return M
