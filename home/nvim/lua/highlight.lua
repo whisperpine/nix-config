@@ -43,6 +43,7 @@ hl(0, "@lsp.mod.defaultLibrary.terraform", { link = "@constant" })
 hl(0, "@lsp.type.keyword.yaml.ansible", { link = "" })
 
 ----- Rust -----
+hl(0, "@character.rust", { link = "@string" })
 hl(0, "@lsp.type.keyword.rust", { link = "" })
 hl(0, "@lsp.type.decorator.rust", { link = "" })
 hl(0, "@lsp.type.punctuation.rust", { link = "@punctuation" })
