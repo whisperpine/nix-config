@@ -169,6 +169,20 @@ return {
   },
 
   {
+    "chomosuke/typst-preview.nvim",
+    ft = "typst",
+    opts = {},
+    keys = {
+      {
+        "<leader>mv",
+        "<cmd> TypstPreviewToggle <cr>",
+        desc = "typst preview toggle",
+        ft = "typst",
+      },
+    },
+  },
+
+  {
     -- dir = "~/projects/whisperpine/quickfix-messages.nvim",
     "whisperpine/quickfix-messages.nvim",
     cmd = "QuickfixMessages",
