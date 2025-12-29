@@ -65,6 +65,7 @@ autocmd("Filetype", {
     "markdown",
     "graphql",
     "xhtml",
+    "query",
     "json",
     "jsonc",
     "hurl",
