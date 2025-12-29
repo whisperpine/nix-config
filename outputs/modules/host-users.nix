@@ -20,8 +20,9 @@
     isNormalUser = true;
     group = "${username}";
     extraGroups = [
-      "i2c" # used by the "i2c-dev" kernel module
       "wheel" # allow using "sudo"
+      "input" # waybar's "keyboard-state"
+      "i2c" # used by the "i2c-dev" kernel module
     ];
   };
 
