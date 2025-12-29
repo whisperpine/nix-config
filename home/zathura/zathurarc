@@ -1,0 +1,13 @@
+set selection-clipboard "clipboard"
+
+set font "Cascadia Mono Regular 10"
+
+set statusbar-bg "#202020"
+set statusbar-fg "#dddddd"
+
+set default-bg "#888888"
+set default-fg "#c5c8c6"
+
+# Press "Ctrl+R" to recolor.
+set recolor-lightcolor "#202020"
+set recolor-darkcolor "#c5c8c6"
