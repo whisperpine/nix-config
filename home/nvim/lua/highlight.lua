@@ -49,6 +49,9 @@ hl(0, "@lsp.mod.defaultLibrary.terraform", { link = "@constant" })
 ----- Ansible ------
 hl(0, "@lsp.type.keyword.yaml.ansible", { link = "" })
 
+----- Typst ------
+hl(0, "@lsp.type.pol.typst", { link = "@variable" })
+
 ----- Rust -----
 hl(0, "@character.rust", { link = "@string" })
 hl(0, "@lsp.type.keyword.rust", { link = "" })
