@@ -105,12 +105,32 @@ button {
   min-width: 20px;
 }
 
+/* -------------- */
+/* keyboard-state */
+/* -------------- */
+
+#keyboard-state {
+  padding-top: 6px;
+  padding-bottom: 1px;
+  margin: 2px 0;
+  background-color: transparent;
+  /* background-color: #3a3a3a; */
+}
+
+#keyboard-state label {
+  transition-duration: 0s;
+}
+
+#keyboard-state label.locked {
+  transition-duration: 0s;
+  color: #cc6666;
+}
+
 /* --------- */
 /* bluetooth */
 /* --------- */
 
 #bluetooth {
-  padding-top: 3px;
   margin: 2px 0;
   background-color: transparent;
   /* background-color: #3a3a3a; */
@@ -121,7 +141,6 @@ button {
 /* ------- */
 
 #network {
-  padding: 0;
   margin: 2px 0;
   background-color: transparent;
   /* background-color: #3a3a3a; */
@@ -132,7 +151,6 @@ button {
 /* ----------- */
 
 #wireplumber {
-  padding-bottom: 2px;
   margin: 2px 0;
   background-color: transparent;
   /* background-color: #3a3a3a; */
@@ -144,7 +162,7 @@ button {
 
 #tray {
   padding: 5px 0px;
-  margin: 1px 4px 4px 4px;
+  margin: 4px 4px 4px 4px;
   background-color: #3a3a3a;
   border-radius: 6px;
 }

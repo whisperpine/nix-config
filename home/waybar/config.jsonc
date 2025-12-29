@@ -11,7 +11,8 @@
   "modules-left": ["niri/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
-    "bluetooth",
+    "keyboard-state",
+    // "bluetooth",
     "network",
     // "upower",
     "wireplumber",
@@ -104,6 +105,17 @@
     "on-scroll-down": "", // disable the scroll actions
     "on-click": "",
     "cursor": false
+  },
+
+  // https://github.com/Alexays/Waybar/wiki/Module:-Keyboard-State
+  "keyboard-state": {
+    "numlock": false,
+    "capslock": true,
+    "format": "<span font='13'>{icon}</span>",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
   },
 
   // https://github.com/Alexays/Waybar/wiki/Module:-Tray
