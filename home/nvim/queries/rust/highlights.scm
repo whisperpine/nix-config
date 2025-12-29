@@ -1,4 +1,4 @@
 ; extends
 
-("#" @punctuation.special
+((self) @variable.builtin
   (#set! priority 150))
