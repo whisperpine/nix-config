@@ -15,6 +15,7 @@ in
       usbutils # tools for working with usb devices
       alsa-utils # audio utilities (e.g. alsamixer)
       obs-studio # video recording and live streaming
+      wechat # messaging and calling app
       # Enable "cudaSupport" to use OptiX in Cycles render.
       (blender.override { cudaSupport = true; })
     ]
