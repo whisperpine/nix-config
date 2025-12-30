@@ -2,6 +2,8 @@
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
 
+// Tip: to get "app-id", run `niri msg windows` when the windows are open.
+
 window-rule {
     match app-id="waybar"
     // This prevents Niri from trying to "animate" the bar window itself.
