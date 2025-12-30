@@ -16,6 +16,7 @@ in
       alsa-utils # audio utilities (e.g. alsamixer)
       obs-studio # video recording and live streaming
       wechat # messaging and calling app
+      udiskie
       # Enable "cudaSupport" to use OptiX in Cycles render.
       (blender.override { cudaSupport = true; })
     ]
@@ -41,6 +42,7 @@ in
     ./nautilus # file manager for gnome
     ./cursor # customized cursor or pointer
     ./onedrive # onedrive client for linux
+    ./udiskie # disk automounter for udisks
     ./zathura # keyboard-first pdf reader
     ./otd # OpenTabletDriver's icon
     ./fcitx5 # i18n input method
