@@ -26,9 +26,11 @@ in
 
   # Set environment variables.
   home.sessionVariables = {
-    # GLFW_IM_MODULE = "ibus"; # IME support in kitty
+    QT_IM_MODULE = "fcitx";
+    GTK_IM_MODULE = "fcitx";
     SDL_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
+    # GLFW_IM_MODULE = "ibus";
   };
 
   # Important: deliberately disable this service to prevent fcitx from starting
