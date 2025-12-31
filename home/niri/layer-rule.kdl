@@ -1,13 +1,13 @@
 layer-rule {
-    match namespace="waybar"
+    match namespace="^waybar$"
     // Ensure this matches Waybar's css border-radius.
     geometry-corner-radius 8
     // Add shadow to Waybar.
     shadow {
         on
         softness 16
-        spread 1
+        spread -1
         offset x=0 y=0
-        color "#202020cc"
+        color "#000000cc"
     }
 }
