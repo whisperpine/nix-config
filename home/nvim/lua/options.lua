@@ -2,7 +2,7 @@
 -- Assign filetype according to path or name pattern.
 vim.filetype.add {
   extension = {
-    env = "conf",
+    env = "dotenv",
     jinja = "jinja",
     jinja2 = "jinja",
     j2 = "jinja",
@@ -15,7 +15,7 @@ vim.filetype.add {
     ["helmfile.yaml"] = "helm",
   },
   pattern = {
-    [".env.*"] = "conf",
+    [".env.*"] = "dotenv",
     [".*/templates/.*%.yaml"] = "helm",
     [".*/templates/.*%.tpl"] = "helm",
     [".*/conf.d/default.conf"] = "nginx",
