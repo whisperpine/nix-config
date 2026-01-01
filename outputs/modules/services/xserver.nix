@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 # ----------  xserver configs ---------- #
 {
   # Enable the X11 windowing system.
@@ -12,6 +12,8 @@
     enable = true;
     x11Support = false;
   };
+
+  services.displayManager.sessionPackages = [ pkgs.niri ];
 
   # # Enable the GNOME Desktop Environment.
   # services.desktopManager.gnome.enable = true;
