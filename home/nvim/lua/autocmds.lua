@@ -86,13 +86,6 @@ autocmd("Filetype", {
   },
 })
 
--- Set `textwidth` in markdown files.
-autocmd("BufEnter", {
-  group = augroup("SetTextwidthForMarkdown", { clear = true }),
-  pattern = { "*.md" },
-  command = "setlocal textwidth=80",
-})
-
 -- Restore cursor position on file open.
 autocmd("BufReadPost", {
   group = augroup("RestoreCursorPosition", { clear = true }),
@@ -107,30 +100,6 @@ autocmd("BufReadPost", {
     then
       vim.cmd 'normal! g`"'
     end
-  end,
-})
-
--- Clear indentexpr for python.
-autocmd("BufEnter", {
-  group = augroup("SetPythonIndentexpr", { clear = true }),
-  pattern = "*.py",
-  command = "setlocal indentexpr=",
-})
-
--- Clear indentexpr for yaml.
-autocmd("BufEnter", {
-  group = augroup("SetYamlIndentexpr", { clear = true }),
-  pattern = "*.yaml",
-  command = "setlocal indentexpr=",
-})
-
--- Reconfigure the comment string for ini filetype.
-autocmd("Filetype", {
-  group = augroup("SetIniCommentString", { clear = true }),
-  pattern = "ini",
-  callback = function()
-    -- the default value is "; %s"
-    vim.bo.commentstring = "# %s"
   end,
 })
 
