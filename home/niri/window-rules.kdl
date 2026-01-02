@@ -36,6 +36,18 @@ window-rule {
 }
 
 window-rule {
+    match app-id="^steam$"
+    default-column-width {
+        proportion 1.0
+    }
+}
+
+window-rule {
+    match app-id=r#"steam_app_\d+"#
+    open-fullscreen true
+}
+
+window-rule {
     match app-id="^imv$"
     open-floating true
 }
