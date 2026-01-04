@@ -36,6 +36,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="^chrome-.*"
+    open-floating true
+}
+
+window-rule {
     match app-id="^steam$"
     default-column-width {
         proportion 1.0
