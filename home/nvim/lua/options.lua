@@ -6,6 +6,11 @@ vim.filetype.add {
     jinja = "jinja",
     jinja2 = "jinja",
     j2 = "jinja",
+    service = "systemd",
+    socket = "systemd",
+    timer = "systemd",
+    target = "systemd",
+    device = "systemd",
   },
   filename = {
     [".envrc"] = "sh",

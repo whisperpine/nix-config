@@ -84,6 +84,7 @@ in
     wgsl-analyzer # wgsl
     rust-analyzer # rust
     terraform-ls # terraform
+    systemd-lsp # systemd
     tinymist # typst
     lemminx # xml, svg
     helm-ls # helm

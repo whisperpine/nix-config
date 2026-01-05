@@ -198,6 +198,7 @@ vim.lsp.enable {
   -- ### written by lspconfig ###
   "terraformls",
   "tailwindcss",
+  "systemd_lsp",
   "ansiblels",
   "csharp_ls",
   "jinja_lsp",
