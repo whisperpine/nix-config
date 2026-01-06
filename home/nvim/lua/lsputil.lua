@@ -225,6 +225,7 @@ vim.lsp.enable {
   "biome",
   "html",
   "zls",
+  "ruff",
   "ty",
 }
 
