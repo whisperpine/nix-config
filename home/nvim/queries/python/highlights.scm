@@ -1,5 +1,23 @@
 ; extends
 
+((class_definition
+  (block
+    (function_definition
+      name: (identifier) @constructor)))
+  (#any-of? @constructor "__new__" "__init__")
+  (#set! priority 150))
+
+((call
+  function: (identifier) @constructor)
+  (#lua-match? @constructor "^%u")
+  (#set! priority 150))
+
+((call
+  function: (attribute
+    attribute: (identifier) @constructor))
+  (#lua-match? @constructor "^%u")
+  (#set! priority 150))
+
 ((call
   function: (identifier) @function.builtin)
   (#any-of? @function.builtin
@@ -10,4 +28,4 @@
     "min" "next" "object" "oct" "open" "ord" "pow" "print" "property" "range" "repr" "reversed"
     "round" "set" "setattr" "slice" "sorted" "staticmethod" "str" "sum" "super" "tuple" "type"
     "vars" "zip" "__import__")
-  (#set! priority 150))
+  (#set! priority 151))

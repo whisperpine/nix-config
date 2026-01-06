@@ -25,7 +25,6 @@ hl(0, "@lsp.typemod.function.defaultLibrary.lua", { link = "@function.builtin" }
 ----- Python -----
 hl(0, "@keyword.repeat.python", { link = "@keyword" })
 hl(0, "@lsp.type.variable.python", { link = "" })
-hl(0, "@lsp.type.class.python", { link = "" })
 
 ----- TypeScript ------
 hl(0, "@lsp.type.class.typescript", { link = "" })
