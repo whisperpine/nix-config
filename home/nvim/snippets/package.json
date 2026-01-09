@@ -37,6 +37,10 @@
       {
         "language": ["typescript", "javascript", "tsx", "jsx"],
         "path": "./typescript.json"
+      },
+      {
+        "language": "python",
+        "path": "./python.json"
       }
     ]
   }

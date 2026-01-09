@@ -1,0 +1,210 @@
+{
+  "Dunder slots": {
+    "prefix": "__slots__",
+    "body": [
+      "__slots__: tuple[str, ...] = (\"$0\",)"
+    ],
+    "description": "The __slots__ class field"
+  },
+
+  "Dunder init": {
+    "prefix": "__init__",
+    "body": [
+      "def __init__(self) -> None:",
+      "\tsuper().__init__()",
+      "\t$0"
+    ],
+    "description": "The __init__ method"
+  },
+
+  "Dunder new": {
+    "prefix": "__new__",
+    "body": [
+      "def __new__(cls) -> $0:",
+      "\treturn super().__new__(cls)"
+    ],
+    "description": "The __new__ method"
+  },
+
+  "Dunder repr": {
+    "prefix": "__repr__",
+    "body": [
+      "def __repr__(self) -> str:",
+      "\treturn f\"{self.__class__.__name__}\""
+    ],
+    "description": "Developer-friendly __repr__"
+  },
+
+  "Dunder str": {
+    "prefix": "__str__",
+    "body": [
+      "def __str__(self) -> str:",
+      "\treturn \"${0}\""
+    ],
+    "description": "User-friendly __str__"
+  },
+
+  "Dunder call": {
+    "prefix": "__call__",
+    "body": [
+      "def __call__(self) -> $0:",
+      "\t..."
+    ],
+    "description": "Make the instance Callable"
+  },
+
+  "Dunder iter": {
+    "prefix": "__iter__",
+    "body": [
+      "def __iter__(self) -> $0:",
+      "\treturn self"
+    ],
+    "description": "Iterable"
+  },
+
+  "Dunder next": {
+    "prefix": "__next__",
+    "body": [
+      "def __next__(self) -> $0:",
+      "\t..."
+    ],
+    "description": "Iterator"
+  },
+
+  "Dunder hash": {
+    "prefix": "__hash__",
+    "body": [
+      "def __hash__(self) -> int:",
+      "\treturn hash($0)"
+    ],
+    "description": "Hash"
+  },
+
+  "Dunder eq": {
+    "prefix": "__eq__",
+    "body": [
+      "def __eq__(self, other: object) -> bool:",
+      "\tif not isinstance(other, self.__class__):",
+      "\t\treturn NotImplemented",
+      "\treturn $0"
+    ],
+    "description": "Equality comparison"
+  },
+
+  "Dunder lt": {
+    "prefix": "__lt__",
+    "body": [
+      "def __lt__(self, other: object) -> bool:",
+      "\tif not isinstance(other, self.__class__):",
+      "\t\treturn NotImplemented",
+      "\treturn $0"
+    ],
+    "description": "'Less than' comparison"
+  },
+
+  "Dunder missing": {
+    "prefix": "__missing__",
+    "body": [
+      "def __missing__(self, key: T) -> None:",
+      "\traise KeyError(key)"
+    ],
+    "description": "Missing key"
+  },
+
+  "Dunder matmul": {
+    "prefix": "__matmul__",
+    "body": [
+      "def __matmul__(self, other):",
+      "\"\"\"Handles left-side matrix multiplication: self @ other\"\"\""
+    ],
+    "description": "Left-side matrix multiplication"
+  },
+
+  "Dunder rmatmul": {
+    "prefix": "__rmatmul__",
+    "body": [
+      "def __rmatmul__(self, other):",
+      "\"\"\"Handles right-side matrix multiplication: other @ self\"\"\""
+    ],
+    "description": "Right-side matrix multiplication"
+  },
+
+  "Dunder imatmul": {
+    "prefix": "__imatmul__",
+    "body": [
+      "def __imatmul__(self, other):",
+      "\"\"\"Handles in-place matrix multiplication: self @= other\"\"\""
+    ],
+    "description": "In-place matrix multiplication"
+  },
+
+  "Dunder enter": {
+    "prefix": "__enter__",
+    "body": [
+      "def __enter__(self) -> $0:",
+      "\treturn self"
+    ],
+    "description": "Part of the context manager pair"
+  },
+
+  "Dunder exit": {
+    "prefix": "__exit__",
+    "body": [
+      "def __exit__(",
+      "\tself,",
+      "\texc_type: type[BaseException] | None,",
+      "\texc_value: BaseException | None,",
+      "\ttraceback: TracebackType | None,",
+      ") -> bool:",
+      "\tif exc_type:",
+      "\t\tprint(f\"An exception occurred: '{exc_value}'.\")",
+      "\treturn False"
+    ],
+    "description": "Part of the context manager pair"
+  },
+
+  "Dunder getitem": {
+    "prefix": "__getitem__",
+    "body": [
+      "def __getitem__(self, index: int) -> $0:",
+      "\t..."
+    ],
+    "description": "Read by index"
+  },
+
+  "Dunder setitem": {
+    "prefix": "__setitem__",
+    "body": [
+      "def __setitem__(self, index: int, value: $0) -> None:",
+      "\t..."
+    ],
+    "description": "Write by index"
+  },
+
+  "Dunder delitem": {
+    "prefix": "__delitem__",
+    "body": [
+      "def __delitem__(self, index: int) -> None:",
+      "\t$0"
+    ],
+    "description": "Delete by index"
+  },
+
+  "Dunder contains": {
+    "prefix": "__contains__",
+    "body": [
+      "def __contains__(self, value: $0) -> bool:",
+      "\t..."
+    ],
+    "description": "Check existence"
+  },
+
+  "Dunder len": {
+    "prefix": "__len__",
+    "body": [
+      "def __len__(self) -> int:",
+      "\t$0"
+    ],
+    "description": "Get length"
+  }
+}
