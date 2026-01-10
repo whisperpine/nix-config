@@ -71,6 +71,24 @@
     "description": "Iterator"
   },
 
+  "Dunder aiter": {
+    "prefix": "__aiter__",
+    "body": [
+      "def __aiter__(self) -> $0:",
+      "\treturn self"
+    ],
+    "description": "AsyncIterable"
+  },
+
+  "Dunder anext": {
+    "prefix": "__anext__",
+    "body": [
+      "async def __anext__(self) -> $0:",
+      "\t..."
+    ],
+    "description": "AsyncIterator"
+  },
+
   "Dunder hash": {
     "prefix": "__hash__",
     "body": [
@@ -161,6 +179,31 @@
       "\treturn False"
     ],
     "description": "Part of the context manager pair"
+  },
+
+  "Dunder aenter": {
+    "prefix": "__aenter__",
+    "body": [
+      "async def __aenter__(self) -> $0:",
+      "\treturn self"
+    ],
+    "description": "Part of the async context manager pair"
+  },
+
+  "Dunder aexit": {
+    "prefix": "__aexit__",
+    "body": [
+      "async def __aexit__(",
+      "\tself,",
+      "\texc_type: type[BaseException] | None,",
+      "\texc_value: BaseException | None,",
+      "\ttraceback: TracebackType | None,",
+      ") -> bool:",
+      "\tif exc_type:",
+      "\t\tprint(f\"An exception occurred: '{exc_value}'.\")",
+      "\treturn False"
+    ],
+    "description": "Part of the async context manager pair"
   },
 
   "Dunder getitem": {
