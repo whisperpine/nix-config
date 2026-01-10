@@ -26,6 +26,12 @@ hl(0, "@lsp.typemod.function.defaultLibrary.lua", { link = "@function.builtin" }
 hl(0, "@keyword.repeat.python", { link = "@keyword" })
 hl(0, "@lsp.type.builtinConstant.python", { link = "@constant" })
 hl(0, "@lsp.type.variable.python", { link = "" })
+hl(0, "@lsp.type.string.python", { link = "" })
+
+----- Dockerfile -----
+hl(0, "@lsp.type.macro.dockerfile", { link = "Special" })
+hl(0, "@lsp.type.property.dockerfile", { link = "@variable" })
+hl(0, "@lsp.type.variable.dockerfile", { link = "" })
 
 ----- TypeScript ------
 hl(0, "@lsp.type.class.typescript", { link = "" })

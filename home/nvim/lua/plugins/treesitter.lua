@@ -40,13 +40,13 @@ M.config = function(_, opts)
   require("nvim-treesitter").install(parsers_to_install)
   require("nvim-treesitter").uninstall(parsers_to_uninstall, { summary = true })
 
-  for index, value in ipairs(ensure_installed) do
-    -- Only use dockerfile parse in markdown files (code block). Don't start
-    -- treesitter when the filetype is dockerfile, because of existing issues.
-    if value == "dockerfile" then
-      table.remove(ensure_installed, index)
-    end
-  end
+  -- for index, value in ipairs(ensure_installed) do
+  --   -- Only use dockerfile parse in markdown files (code block). Don't start
+  --   -- treesitter when the filetype is dockerfile, because of existing issues.
+  --   if value == "dockerfile" then
+  --     table.remove(ensure_installed, index)
+  --   end
+  -- end
 
   -- Add autocmd to start treesitter.
   vim.api.nvim_create_autocmd("FileType", {
