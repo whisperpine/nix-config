@@ -12,6 +12,9 @@ normal_main = { fg = "#202020", bg = "#81a2be" } # blue
 select_main = { fg = "#202020", bg = "#cc6666" } # red
 unset_main = { fg = "#202020", bg = "#de935f" }  # yellow
 
+[indicator]
+padding = { open = "█", close = "█" }
+
 # tomorrow_night:
 #
 # base00 = "#1d1f21",
