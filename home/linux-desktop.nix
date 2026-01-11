@@ -15,8 +15,8 @@ in
       usbutils # tools for working with usb devices
       alsa-utils # audio utilities (e.g. alsamixer)
       obs-studio # video recording and live streaming
+      udiskie # disk automounter for udisks
       wechat # messaging and calling app
-      udiskie
     ]
     ++ [ discord ];
 
@@ -42,11 +42,11 @@ in
     ./onedrive # onedrive client for linux
     ./udiskie # disk automounter for udisks
     ./zathura # keyboard-first pdf reader
+    ./anki # spaced repetition flashcard
     ./blender # the freedom to create
     ./otd # OpenTabletDriver's icon
     ./fcitx5 # i18n input method
     ./imv # image previewer
     ./mpv # video player
-    ./anki
   ];
 }

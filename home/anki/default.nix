@@ -1,4 +1,5 @@
 { pkgs, ... }:
+# --- spaced repetition flashcard --- #
 {
   home.packages = with pkgs; [ anki ];
 
