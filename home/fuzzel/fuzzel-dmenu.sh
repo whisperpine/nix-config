@@ -23,6 +23,7 @@ engines=(
   # --- dictionary --- #
   ["󰺄  Collins Dictionary"]="https://www.collinsdictionary.com/search/?dictCode=english&q="
   ["󰊿  Google Translate"]="https://translate.google.com/?source=osdd&sl=auto&tl=auto&op=translate&text="
+  ["󰺄  Urban Dictionary"]="https://www.urbandictionary.com/define.php?term="
 
   # --- documents --- #
   ["  Nerd Fonts"]="https://www.nerdfonts.com/cheat-sheet?q="
