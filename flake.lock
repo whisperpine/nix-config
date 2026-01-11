@@ -170,6 +170,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-blender": {
+      "locked": {
+        "lastModified": 1767966113,
+        "narHash": "sha256-mSTsvXa4WveSRJexsmCbm9dY17B1fKp7NLpJxllpQw4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f02c91314c8ba4afe83b256b023756412218535",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f02c91314c8ba4afe83b256b023756412218535",
+        "type": "github"
+      }
+    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1767799921,
@@ -226,6 +242,7 @@
         "nix-ld": "nix-ld",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_3",
+        "nixpkgs-blender": "nixpkgs-blender",
         "nixpkgs-stable": "nixpkgs-stable",
         "sops-nix": "sops-nix"
       }

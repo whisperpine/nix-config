@@ -17,8 +17,6 @@ in
       obs-studio # video recording and live streaming
       wechat # messaging and calling app
       udiskie
-      # Enable "cudaSupport" to use OptiX in Cycles render.
-      (blender.override { cudaSupport = true; })
     ]
     ++ [ discord ];
 
@@ -44,6 +42,7 @@ in
     ./onedrive # onedrive client for linux
     ./udiskie # disk automounter for udisks
     ./zathura # keyboard-first pdf reader
+    ./blender # the freedom to create
     ./otd # OpenTabletDriver's icon
     ./fcitx5 # i18n input method
     ./imv # image previewer

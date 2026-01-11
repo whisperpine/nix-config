@@ -21,6 +21,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # The latest stable branch which can be used as a fallback.
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+    # Used to pin blender version (circumvent long building time).
+    nixpkgs-blender.url = "github:NixOS/nixpkgs/5f02c91314c8ba4afe83b256b023756412218535";
     # To install the nightly version of Neovim.
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     # Run unpatched dynamic binaries.
