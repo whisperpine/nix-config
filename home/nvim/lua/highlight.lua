@@ -62,6 +62,7 @@ hl(0, "@lsp.type.pol.typst", { link = "@variable" })
 
 ----- Rust -----
 hl(0, "@character.rust", { link = "@string" })
+hl(0, "@keyword.repeat.rust", { link = "@keyword" })
 hl(0, "@lsp.type.keyword.rust", { link = "" })
 hl(0, "@lsp.type.decorator.rust", { link = "" })
 hl(0, "@lsp.type.punctuation.rust", { link = "@punctuation" })
@@ -70,7 +71,6 @@ hl(0, "@lsp.typemod.parameter.mutable.rust", { underline = true }) -- e.g. (mut 
 hl(0, "@lsp.typemod.method.mutable.rust", { underline = true }) -- e.g. fn (&mut self, ...)
 hl(0, "@lsp.typemod.variable.mutable.rust", { underline = true }) -- mut var, &mut var
 hl(0, "@lsp.typemod.operator.mutable.rust", { underline = true }) -- e.g. +=, -=
-hl(0, "@lsp.mod.controlFlow.rust", { link = "@keyword" }) -- e.g. for, in, ?
 hl(0, "@lsp.type.interface.rust", { fg = "#f0795b" }) -- trait
 hl(0, "@lsp.type.derive.rust", { link = "@lsp.type.interface.rust" })
 hl(0, "@lsp.typemod.typeAlias.associated.rust", { link = "@variable.builtin" })
