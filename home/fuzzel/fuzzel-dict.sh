@@ -2,7 +2,7 @@
 
 # Purpose: search an English word in Collins Dictionary
 # Usage: sh path/to/fuzzel-dict.sh
-# Dependencies: fuzzel
+# Dependencies: fuzzel, xdg-open
 # Date: 2025-12-26
 # Author: Yusong
 
