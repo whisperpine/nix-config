@@ -10,7 +10,8 @@
 declare -A engines
 engines=(
   # --- search engine --- #
-  ["  Google"]="https://www.google.com/search?q="
+  ["  Google AI"]="https://google.ai/search?q="
+  # ["  Google"]="https://www.google.com/search?q="
   ["󰇥  DuckDuckGo"]="https://duckduckgo.com/?&q="
   # ["󰂤  Bing"]="https://www.bing.com/search?q="
 
