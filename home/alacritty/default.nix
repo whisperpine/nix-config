@@ -1,5 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 # --- terminal emulator --- #
+let
+  repoDir = builtins.getEnv "PWD";
+  alacrittyConfig = "${repoDir}/home/alacritty/alacritty.toml";
+in
 {
   # If alacritty is installed in system level,
   # there's no need to install it by home-manager.
@@ -7,7 +11,7 @@
   home.packages = with pkgs; [ alacritty ];
 
   xdg.configFile.alacritty = {
-    source = ./alacritty.toml;
+    source = config.lib.file.mkOutOfStoreSymlink alacrittyConfig;
     target = "./alacritty/alacritty.toml";
   };
 }
