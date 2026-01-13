@@ -72,6 +72,7 @@ hl(0, "@lsp.typemod.parameter.mutable.rust", { underline = true }) -- e.g. (mut 
 hl(0, "@lsp.typemod.method.mutable.rust", { underline = true }) -- e.g. fn (&mut self, ...)
 hl(0, "@lsp.typemod.variable.mutable.rust", { underline = true }) -- mut var, &mut var
 hl(0, "@lsp.typemod.operator.mutable.rust", { underline = true }) -- e.g. +=, -=
+hl(0, "@lsp.typemod.arithmetic.mutable.rust", { underline = true })
 hl(0, "@lsp.type.interface.rust", { fg = "#f0795b" }) -- trait
 hl(0, "@lsp.type.derive.rust", { link = "@lsp.type.interface.rust" })
 hl(0, "@lsp.typemod.typeAlias.associated.rust", { link = "@variable.builtin" })
@@ -85,3 +86,4 @@ hl(0, "@lsp.typemod.generic.injected.rust", { link = "@variable" })
 hl(0, "@lsp.typemod.attributeBracket.injected.rust", { link = "@punctuation" })
 hl(0, "@lsp.typemod.typeAlias.injected.rust", { link = "@type" })
 hl(0, "@lsp.typemod.builtinType.injected.rust", { link = "@type" })
+hl(0, "@lsp.typemod.arithmetic.injected.rust", { link = "@operator" })
