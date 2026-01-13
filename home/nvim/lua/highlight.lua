@@ -27,6 +27,7 @@ hl(0, "@keyword.repeat.python", { link = "@keyword" })
 hl(0, "@lsp.type.builtinConstant.python", { link = "@constant" })
 hl(0, "@lsp.type.variable.python", { link = "" })
 hl(0, "@lsp.type.string.python", { link = "" })
+hl(0, "@lsp.type.decorator.python", { link = "" })
 
 ----- Dockerfile -----
 hl(0, "@lsp.type.macro.dockerfile", { link = "Special" })

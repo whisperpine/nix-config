@@ -11,6 +11,7 @@ M.base46 = {
   -- Copy highlight groups to an empty buffer:
   -- ":redir @a | silent hi | redir END | new | put a"
   hl_override = {
+    -- Include = { fg = "#679cd6" },
     CursorLine = { bg = "#313131" },
     NvimTreeCursorLine = { bg = "#313131" },
     TelescopeSelection = { fg = "NONE", bg = "#3f3f3f" },
