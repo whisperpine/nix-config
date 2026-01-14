@@ -49,12 +49,14 @@ hl(0, "@lsp.typemod.variable.defaultLibrary.javascript", { link = "@function.bui
 hl(0, "@lsp.type.class.markdown", { link = "" })
 
 ----- Terraform ------
+hl(0, "@none.hcl", { link = "@operator" })
 hl(0, "@lsp.type.type.terraform", { link = "" })
 hl(0, "@lsp.type.variable.terraform", { link = "" })
 hl(0, "@lsp.type.enumMember.terraform", { link = "@variable" })
 hl(0, "@lsp.mod.defaultLibrary.terraform", { link = "@constant" })
 hl(0, "@lsp.type.keyword.terraform", { link = "" })
 hl(0, "@lsp.type.parameter.terraform", { link = "" })
+hl(0, "@lsp.type.function.terraform", { link = "" })
 
 ----- Ansible ------
 hl(0, "@lsp.type.keyword.yaml.ansible", { link = "" })
