@@ -23,7 +23,6 @@ hl(0, "@lsp.type.function.lua", { link = "@function" })
 hl(0, "@lsp.typemod.function.defaultLibrary.lua", { link = "@function.builtin" })
 
 ----- Python -----
-hl(0, "@keyword.repeat.python", { link = "@keyword" })
 hl(0, "@lsp.type.builtinConstant.python", { link = "@constant" })
 hl(0, "@lsp.type.variable.python", { link = "" })
 hl(0, "@lsp.type.string.python", { link = "" })
@@ -54,6 +53,8 @@ hl(0, "@lsp.type.type.terraform", { link = "" })
 hl(0, "@lsp.type.variable.terraform", { link = "" })
 hl(0, "@lsp.type.enumMember.terraform", { link = "@variable" })
 hl(0, "@lsp.mod.defaultLibrary.terraform", { link = "@constant" })
+hl(0, "@lsp.type.keyword.terraform", { link = "" })
+hl(0, "@lsp.type.parameter.terraform", { link = "" })
 
 ----- Ansible ------
 hl(0, "@lsp.type.keyword.yaml.ansible", { link = "" })
@@ -63,7 +64,6 @@ hl(0, "@lsp.type.pol.typst", { link = "@variable" })
 
 ----- Rust -----
 hl(0, "@character.rust", { link = "@string" })
-hl(0, "@keyword.repeat.rust", { link = "@keyword" })
 hl(0, "@lsp.type.keyword.rust", { link = "" })
 hl(0, "@lsp.type.decorator.rust", { link = "" })
 hl(0, "@lsp.type.punctuation.rust", { link = "@punctuation" })

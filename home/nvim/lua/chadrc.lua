@@ -18,7 +18,8 @@ M.base46 = {
     LspInlayHint = { fg = "#7b7b7b", bg = "#2a2a2a" },
     LspSignatureActiveParameter = { fg = "NONE", bg = "#4a4a4a" },
     TroublePreview = { fg = "NONE", bg = "#4a4a4a" },
-    ["@keyword.exception"] = { fg = "#b294bb" }, -- e.g. "try" and "except" in python
+    ["@keyword.repeat"] = { link = "@keyword" }, -- e.g. "for" and "loop" in rust
+    ["@keyword.exception"] = { link = "@keyword" }, -- e.g. "try" and "except" in python
     ["@module"] = { fg = "#8ab689" }, -- e.g. module of rust, python, javascript
     ["@variable"] = { fg = "#cc6666" },
     ["@variable.member"] = { link = "@variable" }, -- e.g. rust struct elements, python class attributes
