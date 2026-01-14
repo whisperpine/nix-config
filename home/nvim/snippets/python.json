@@ -1,4 +1,17 @@
 {
+  "Dunder name": {
+    "prefix": "__name__",
+    "body": [
+      "def main() -> None:",
+      "\t$0",
+      "",
+      "",
+      "if __name__ == \"__main__\":",
+      "\tmain()"
+    ],
+    "description": "The entrypoint of a python program"
+  },
+
   "Dunder slots": {
     "prefix": "__slots__",
     "body": [
