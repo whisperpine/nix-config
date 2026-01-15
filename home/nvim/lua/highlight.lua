@@ -8,7 +8,7 @@ hl(0, "DiagnosticUnnecessary", { link = "" })
 hl(0, "DiagnosticUnderlineHint", { underdotted = true })
 hl(0, "DiagnosticUnderlineWarn", { underdotted = true })
 hl(0, "DiagnosticUnnecessary", { underdotted = true })
-hl(0, "DiagnosticUnderlineError", { bg = "#633131" })
+hl(0, "DiagnosticUnderlineError", { bg = "#633131", underdotted = true })
 -- hl(0, "DiagnosticUnderlineError", { bg = "#cc6666", fg = "#202020" })
 
 ----- Nix -----
