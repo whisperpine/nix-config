@@ -61,6 +61,7 @@ autocmd("Filetype", {
     "typescriptreact",
     "typescript",
     "terraform",
+    "terraform-test",
     "sshconfig",
     "markdown",
     "graphql",
