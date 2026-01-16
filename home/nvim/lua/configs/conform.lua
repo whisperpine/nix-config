@@ -19,9 +19,10 @@ M.formatters_by_ft = {
     -- "final_new_line",
   },
 
-  markdown = { "markdownlint" },
+  hcl = { "tofu_fmt" },
   terraform = { "tofu_fmt" },
   ["terraform-vars"] = { "tofu_fmt" },
+  markdown = { "markdownlint" },
   python = { "ruff_format" },
   xml = { "xmlstarlet" },
   rust = { "rustfmt" },
