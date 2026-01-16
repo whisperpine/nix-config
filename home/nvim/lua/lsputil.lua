@@ -104,6 +104,7 @@ vim.lsp.config("*", {
 })
 
 -- Config yamlls.
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/yamlls.lua
 vim.lsp.config("yamlls", {
   filetypes = {
     "yaml",
@@ -130,6 +131,7 @@ vim.lsp.config("yamlls", {
 })
 
 -- Config jsonls.
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/jsonls.lua
 vim.lsp.config("jsonls", {
   settings = {
     json = {
@@ -140,11 +142,19 @@ vim.lsp.config("jsonls", {
 })
 
 -- Config bashls.
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/bashls.lua
 vim.lsp.config("bashls", {
   filetypes = { "bash", "zsh", "sh" },
 })
 
+-- Config terraformls.
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/terraformls.lua
+vim.lsp.config("terraformls", {
+  filetypes = { "terraform", "terraform-vars", "terraform-test" },
+})
+
 -- Config lemminx.
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/lemminx.lua
 vim.lsp.config("lemminx", {
   settings = {
     xml = {
@@ -157,6 +167,7 @@ vim.lsp.config("lemminx", {
 })
 
 -- Config ansiblels.
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/ansiblels.lua
 vim.lsp.config("ansiblels", {
   settings = {
     ansible = {
@@ -169,6 +180,7 @@ vim.lsp.config("ansiblels", {
 })
 
 -- Config ty.
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/ty.lua
 vim.lsp.config("ty", {
   settings = {
     ty = {

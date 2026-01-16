@@ -53,9 +53,9 @@ M.config = function(_, opts)
     group = vim.api.nvim_create_augroup("TreesitterStart", { clear = true }),
     pattern = ensure_installed,
     callback = function(args)
-      -- syntax highlighting, provided by Neovim
+      -- Syntax highlighting, provided by Neovim.
       vim.treesitter.start(args.buf)
-      -- indentation, provided by nvim-treesitter
+      -- Indentation, provided by nvim-treesitter.
       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
@@ -65,9 +65,21 @@ M.config = function(_, opts)
     group = vim.api.nvim_create_augroup("TreesitterStartSh", { clear = true }),
     pattern = { "sh", "dotenv" },
     callback = function(args)
-      -- syntax highlighting, provided by Neovim
+      -- Syntax highlighting, provided by Neovim.
       vim.treesitter.start(args.buf, "bash")
-      -- indentation, provided by nvim-treesitter
+      -- Indentation, provided by nvim-treesitter.
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+
+  -- Add autocmd to start treesitter (for "terraform-test" filetype).
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("TreesitterStartTerraform", { clear = true }),
+    pattern = { "terraform-test" },
+    callback = function(args)
+      -- Syntax highlighting, provided by Neovim.
+      vim.treesitter.start(args.buf, "terraform")
+      -- Indentation, provided by nvim-treesitter.
       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
@@ -77,9 +89,9 @@ M.config = function(_, opts)
     group = vim.api.nvim_create_augroup("TreesitterStartQML", { clear = true }),
     pattern = { "qml" },
     callback = function(args)
-      -- syntax highlighting, provided by Neovim
+      -- Syntax highlighting, provided by Neovim.
       vim.treesitter.start(args.buf, "qmljs")
-      -- indentation, provided by nvim-treesitter
+      -- Indentation, provided by nvim-treesitter.
       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
@@ -89,9 +101,9 @@ M.config = function(_, opts)
     group = vim.api.nvim_create_augroup("TreesitterStartJsTs", { clear = true }),
     pattern = { "javascriptreact", "typescriptreact" },
     callback = function(args)
-      -- syntax highlighting, provided by Neovim
+      -- Syntax highlighting, provided by Neovim.
       vim.treesitter.start(args.buf)
-      -- indentation, provided by nvim-treesitter
+      -- Indentation, provided by nvim-treesitter.
       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
@@ -101,9 +113,9 @@ M.config = function(_, opts)
     group = vim.api.nvim_create_augroup("TreesitterStartAnsible", { clear = true }),
     pattern = { "yaml.ansible", "yaml.cloudformation" },
     callback = function(args)
-      -- syntax highlighting, provided by Neovim
+      -- Syntax highlighting, provided by Neovim.
       vim.treesitter.start(args.buf, "yaml")
-      -- indentation, provided by nvim-treesitter
+      -- Indentation, provided by nvim-treesitter.
       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })

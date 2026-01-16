@@ -57,6 +57,8 @@ hl(0, "@lsp.mod.defaultLibrary.terraform", { link = "@constant" })
 hl(0, "@lsp.type.keyword.terraform", { link = "" })
 hl(0, "@lsp.type.parameter.terraform", { link = "" })
 hl(0, "@lsp.type.function.terraform", { link = "" })
+-- For "terraform-test" filetype.
+hl(0, "@lsp.type.type.terraform-test", { link = "" })
 
 ----- Ansible ------
 hl(0, "@lsp.type.keyword.yaml.ansible", { link = "" })

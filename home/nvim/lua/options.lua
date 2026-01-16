@@ -25,6 +25,7 @@ vim.filetype.add {
     [".*/templates/.*%.tpl"] = "helm",
     [".*/conf.d/default.conf"] = "nginx",
     [".*%.conf.template"] = "nginx",
+    [".*%.tftest%.hcl"] = "terraform-test",
     [".*/cloudformation/.*%.ya?ml"] = "yaml.cloudformation",
     [".*/defaults/.*%.ya?ml"] = "yaml.ansible",
     [".*/host_vars/.*%.ya?ml"] = "yaml.ansible",
