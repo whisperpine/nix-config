@@ -21,6 +21,7 @@ M.formatters_by_ft = {
 
   hcl = { "tofu_fmt" },
   terraform = { "tofu_fmt" },
+  ["terraform-test"] = { "tofu_fmt" },
   ["terraform-vars"] = { "tofu_fmt" },
   markdown = { "markdownlint" },
   python = { "ruff_format" },
