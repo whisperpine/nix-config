@@ -80,6 +80,7 @@ autocmd("Filetype", {
     "css",
     "nix",
     "lua",
+    "hcl",
     "just",
     "bash",
     "zsh",
