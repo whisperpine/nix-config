@@ -6,6 +6,7 @@ local hl = vim.api.nvim_set_hl
 ----- Common -----
 hl(0, "DiagnosticUnnecessary", { link = "" })
 hl(0, "DiagnosticUnderlineHint", { underdotted = true })
+hl(0, "DiagnosticUnderlineInfo", { underdotted = true })
 hl(0, "DiagnosticUnderlineWarn", { underdotted = true })
 hl(0, "DiagnosticUnnecessary", { underdotted = true })
 hl(0, "DiagnosticUnderlineError", { bg = "#633131", underdotted = true })
