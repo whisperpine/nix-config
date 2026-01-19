@@ -10,12 +10,13 @@ M.format_on_save = {
 M.formatters_by_ft = {
   -- Use the "_" filetype to run formatters on filetypes that don't
   -- have other formatters configured.
-  ["_"] = { "trim_whitespace" },
+  ["_"] = {},
 
   -- Use the "*" filetype to run formatters on all filetypes.
   ["*"] = {
     "trim_newlines",
-    -- This formatter is defined below.
+    "trim_whitespace",
+    -- -- This formatter is defined below.
     -- "final_new_line",
   },
 
