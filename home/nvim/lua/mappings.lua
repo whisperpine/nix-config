@@ -74,7 +74,8 @@ map("n", "K", function()
     return
   end
   local ft = vim.bo.filetype
-  local lspsaga_hover_filetypes = { "json", "yaml", "css", "python", "yaml.ansible" }
+  local lspsaga_hover_filetypes =
+    { "json", "jsonc", "yaml", "css", "python", "yaml.ansible" }
   if vim.tbl_contains(lspsaga_hover_filetypes, ft) then
     -- The native keymap for "K" in normal mode is `vim.lsp.buf.hover`.
     -- But some language servers will show unexpected backslash before certain
