@@ -41,6 +41,16 @@ autocmd({ "BufRead" }, {
   end,
 })
 
+-- Disable indentexpr for all filetypes.
+-- This prevents auto indenting when typeing in insert mode.
+autocmd("FileType", {
+  group = augroup("DisableIndentExpr", { clear = true }),
+  pattern = "*",
+  callback = function()
+    vim.opt_local.indentexpr = ""
+  end,
+})
+
 -- When current buffer is readonly,
 -- set no modifiable and disable diagnostics.
 autocmd("BufReadPost", {
