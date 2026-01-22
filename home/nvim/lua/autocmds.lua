@@ -25,7 +25,7 @@ autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
 })
 
 -- Make generated directories and files readonly.
-autocmd({ "BufRead" }, {
+autocmd("BufRead", {
   group = augroup("DirFileReadonly", { clear = true }),
   pattern = {
     "**/.local/share/nvim/lazy/**",
@@ -43,7 +43,7 @@ autocmd({ "BufRead" }, {
 
 -- Disable indentexpr for all filetypes.
 -- This prevents auto indenting when typeing in insert mode.
-autocmd("FileType", {
+autocmd("BufRead", {
   group = augroup("DisableIndentExpr", { clear = true }),
   pattern = "*",
   callback = function()
