@@ -16,7 +16,7 @@ jobs:
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
         shell: nix shell nixpkgs#typos --quiet --command bash {0}
-        run: sh ./scripts/check-typos-in-files.sh
+        run: typos --hidden --exclude .git --format brief
 
   cocogitto:
     runs-on: ubuntu-latest
