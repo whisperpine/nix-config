@@ -1,0 +1,53 @@
+# The default stages for hooks that don't have stages configured.
+default_stages:
+  - pre-commit
+
+# This changes the behaviour when running "prek install".
+# All hook types will be installed as configured here.
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+  - post-commit
+  - pre-push
+
+repos:
+  # All prek built-in hooks:
+  # https://prek.j178.dev/builtin/
+  - repo: builtin
+    hooks:
+      # Trims trailing whitespace.
+      - id: trailing-whitespace
+      # Checks for the existence of private keys.
+      - id: detect-private-key
+      # Prevent giant files from being committed.
+      - id: check-added-large-files
+        args: ["--maxkb=256"] # default --maxkb=500
+      # Replaces or checks mixed line endings.
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+
+  # Local hooks inside this repository.
+  - repo: local
+    hooks:
+      - id: typos
+        name: check misspelling by typos
+        language: system
+        entry: typos --hidden --exclude .git --format brief
+        pass_filenames: false
+
+      - id: commit-msg
+        name: check commit message
+        language: system
+        entry: sh ./scripts/commit-msg.sh
+        stages:
+          - commit-msg
+
+      - id: cocogitto
+        name: check conventional commits
+        language: system
+        entry: cog check origin/HEAD..HEAD
+        pass_filenames: false
+        always_run: true
+        stages:
+          - post-commit
+          - pre-push

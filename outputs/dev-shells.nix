@@ -20,10 +20,11 @@ forEachSupportedSystem (
     default = pkgs.mkShellNoCC {
       # The Nix packages installed in the dev environment.
       packages = with pkgs; [
-        husky # managing git hooks
+        typos # check misspelling
         just # just a command runner
         git-cliff # changelog generator
         cocogitto # conventional commit toolkit
+        prek # better pre-commit
       ];
       # The shell script executed when the environment is activated.
       shellHook = /* sh */ ''
@@ -31,10 +32,10 @@ forEachSupportedSystem (
         git log -1 --format="%cd" --date=format:"%Y-%m-%d" -- flake.lock |
           awk '{printf "\"flake.lock\" last modified on: %s", $1}' &&
           echo " ($((($(date +%s) - $(git log -1 --format="%ct" -- flake.lock)) / 86400)) days ago)"
-        # Install git hook managed by husky.
-        if [ ! -e "./.husky/_" ]; then
-          husky install
-        fi
+        # Install git hooks managed by prek.
+        prek install --quiet
+        # Insert legacy git hooks to prek-managed ones.
+        sh ./scripts/insert-legacy-hooks.sh
       '';
     };
   }

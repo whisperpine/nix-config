@@ -1,6 +1,11 @@
 * text=auto eol=lf
 
-themes.gitconfig linguist-detectable=false
+# Remove themes.gitconfig from repo statistics.
+themes.gitconfig -linguist-detectable
+# Remove commit-msg hook from repo statistics.
+scripts/commit-msg.sh -linguist-detectable
+# Remove .envrc from repo statistics.
+.envrc -linguist-detectable
 
 ## Git LFS ##
 ## Image

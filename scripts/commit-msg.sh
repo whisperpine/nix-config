@@ -19,17 +19,14 @@ if [ -z "$commit_message" ]; then
 fi
 
 # Run typos on the commit message.
-typos_output=$(echo "$commit_message" | typos --format brief -)
-if [ -n "$typos_output" ]; then
+if ! typos_output=$(echo "$commit_message" | typos --format brief -); then
   echo "Error: Spelling issues found in the commit message."
-  echo "Please fix the typos or use 'git push --no-verify' to bypass."
   echo
   echo "Spelling issues:"
   echo "$typos_output"
   echo
-  echo "==================== Commit message ======================"
+  echo "Commit message:"
   echo "$commit_message"
-  echo "==================== Commit message ======================"
   exit 1
 fi
 
