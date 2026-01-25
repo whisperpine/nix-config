@@ -63,13 +63,10 @@
   # Disable RGB lighting.
   systemd.services.no-rgb = {
     description = "Turn off all OpenRGB-controlled lighting";
-    # Run at a crucial point in the boot sequence.
-    wantedBy = [ "basic.target" ];
+    # Run in the boot sequence.
+    wantedBy = [ "multi-user.target" ];
     # Make sure required OpenRGB services/devices are initialized.
-    after = [
-      "udev.service"
-      "systemd-modules-load.service"
-    ];
+    after = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${pkgs.openrgb}/bin/openrgb --mode static --color 000000";
