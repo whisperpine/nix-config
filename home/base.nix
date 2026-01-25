@@ -49,6 +49,7 @@
     tree # show a directory as a tree
     ouch # compression and decompression
     eza # modern alternative to ls
+    mtr # network diagnostics tool
     dig # DNS lookup utility
     jq # json processor
   ];
