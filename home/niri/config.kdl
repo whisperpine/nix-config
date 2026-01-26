@@ -25,7 +25,7 @@ prefer-no-csd
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/screenshots/%Y-%m-%dT%H:%M:%S%z.png"
+screenshot-path "~/Pictures/%Y-%m-%dT%H:%M:%S%z.png"
 // // You can also set this option to null to disable saving screenshots to disk.
 // screenshot-path null
 
