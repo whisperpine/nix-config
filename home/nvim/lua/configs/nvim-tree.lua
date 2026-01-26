@@ -81,8 +81,8 @@ M.renderer = {
       modified = "●",
       hidden = "󰜌",
       folder = {
-        --     
-        default = "",
+        --     
+        default = "",
         open = "",
         empty = "",
         empty_open = "",
