@@ -1,3 +1,6 @@
+# The default theme:
+# https://github.com/sxyazi/yazi/blob/main/yazi-config/preset/theme-dark.toml
+
 [mgr]
 border_symbol = "│"
 border_style = { fg = "#0d0d0d" } # black
@@ -14,6 +17,34 @@ unset_main = { fg = "#202020", bg = "#de935f" }  # yellow
 
 [indicator]
 padding = { open = "█", close = "█" }
+
+[icon]
+# Override the default directory icons.
+dirs = [
+  { name = ".config", text = "󱁿", fg = "#81a2be" },
+  { name = "Desktop", text = "󰉌", fg = "#81a2be" },
+  { name = "Documents", text = "󱧶", fg = "#81a2be" },
+  { name = "Downloads", text = "󰉍", fg = "#81a2be" },
+  { name = "OneDrive", text = "󰴋", fg = "#81a2be" },
+  { name = "Pictures", text = "󰉏", fg = "#81a2be" },
+  { name = "Videos", text = "󱧺", fg = "#81a2be" },
+  { name = "Music", text = "󱍙", fg = "#81a2be" },
+]
+# Override the default conditions.
+conds = [
+  # Special files.
+  { if = "orphan", text = "", fg = "#e0e0e0" },
+  { if = "link", text = "", fg = "#969896" },
+  { if = "block", text = "", fg = "#abb262" },
+  { if = "char", text = "", fg = "#abb262" },
+  { if = "fifo", text = "", fg = "#abb262" },
+  { if = "sock", text = "", fg = "#abb262" },
+  { if = "dummy", text = "", fg = "#cc6666" },
+  # Fallback.
+  { if = "dir", text = "", fg = "#81a2be" },  #  󰉋 
+  { if = "exec", text = "", fg = "#abb262" },
+  { if = "!dir", text = "", fg = "#e0e0e0" },
+]
 
 # tomorrow_night:
 #
