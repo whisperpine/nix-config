@@ -55,8 +55,8 @@ M.config = function(_, opts)
     callback = function(args)
       -- Syntax highlighting, provided by Neovim.
       vim.treesitter.start(args.buf)
-      -- -- Indentation, provided by nvim-treesitter.
-      -- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+      -- Indentation, provided by nvim-treesitter.
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
 
@@ -66,6 +66,7 @@ M.config = function(_, opts)
     pattern = { "sh", "dotenv" },
     callback = function(args)
       vim.treesitter.start(args.buf, "bash")
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
 
@@ -75,6 +76,7 @@ M.config = function(_, opts)
     pattern = { "terraform-test" },
     callback = function(args)
       vim.treesitter.start(args.buf, "terraform")
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
 
@@ -84,6 +86,7 @@ M.config = function(_, opts)
     pattern = { "qml" },
     callback = function(args)
       vim.treesitter.start(args.buf, "qmljs")
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
 
@@ -93,6 +96,7 @@ M.config = function(_, opts)
     pattern = { "javascriptreact", "typescriptreact" },
     callback = function(args)
       vim.treesitter.start(args.buf)
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
 
@@ -102,6 +106,7 @@ M.config = function(_, opts)
     pattern = { "yaml.ansible", "yaml.cloudformation" },
     callback = function(args)
       vim.treesitter.start(args.buf, "yaml")
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
 end

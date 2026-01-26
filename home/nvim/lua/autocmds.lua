@@ -41,11 +41,11 @@ autocmd("BufRead", {
   end,
 })
 
--- Disable indentexpr for all filetypes.
+-- Disable indentexpr for certain filetypes.
 -- This prevents auto indenting when typeing in insert mode.
-autocmd("BufRead", {
+autocmd("Filetype", {
   group = augroup("DisableIndentExpr", { clear = true }),
-  pattern = "*",
+  pattern = { "yaml", "yaml.ansible", "yaml.cloudformation", "sh", "bash", "zsh" },
   callback = function()
     vim.opt_local.indentexpr = ""
   end,
