@@ -31,5 +31,10 @@
       name = "yazi";
       noDisplay = true;
     };
+    # Prevent two "Google Chrome" listed by fuzzel.
+    "com.google.Chrome" = {
+      name = "Google Chrome";
+      noDisplay = true;
+    };
   };
 }
