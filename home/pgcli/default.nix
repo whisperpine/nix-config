@@ -1,7 +1,7 @@
 { ... }:
 # --- cli for postgresql --- #
 {
-  # # NOTE: pgcli should be installed in repo leval,
+  # # NOTE: pgcli should be installed in repo level,
   # # thereby the following line is commented.
   # home.packages = with pkgs; [ pgcli ];
 

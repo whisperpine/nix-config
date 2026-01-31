@@ -2,7 +2,7 @@
 extend-exclude = ["home/fcitx5/conf"]
 
 [default]
-extend-ignore-re = ["<leader>fo", 'symbol = "typ "']
+extend-ignore-re = ["<leader>fo", 'symbol = "typ "', 'substituters']
 
 [default.extend-words]
 noice = "noice"
