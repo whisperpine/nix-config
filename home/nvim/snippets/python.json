@@ -69,7 +69,8 @@
   "Dunder iter": {
     "prefix": "__iter__",
     "body": [
-      "def __iter__(self) -> $0:",
+      "from typing import Self",
+      "def __iter__(self) -> Self:",
       "\treturn self"
     ],
     "description": "Iterable"
@@ -87,7 +88,8 @@
   "Dunder aiter": {
     "prefix": "__aiter__",
     "body": [
-      "def __aiter__(self) -> $0:",
+      "from typing import Self",
+      "def __aiter__(self) -> Self:",
       "\treturn self"
     ],
     "description": "AsyncIterable"
@@ -172,7 +174,8 @@
   "Dunder enter": {
     "prefix": "__enter__",
     "body": [
-      "def __enter__(self) -> $0:",
+      "from typing import Self",
+      "def __enter__(self) -> Self:",
       "\treturn self"
     ],
     "description": "Part of the context manager pair"
@@ -181,6 +184,7 @@
   "Dunder exit": {
     "prefix": "__exit__",
     "body": [
+      "from types import TracebackType",
       "def __exit__(",
       "\tself,",
       "\texc_type: type[BaseException] | None,",
@@ -197,7 +201,8 @@
   "Dunder aenter": {
     "prefix": "__aenter__",
     "body": [
-      "async def __aenter__(self) -> $0:",
+      "from typing import Self",
+      "async def __aenter__(self) -> Self:",
       "\treturn self"
     ],
     "description": "Part of the async context manager pair"
@@ -206,6 +211,7 @@
   "Dunder aexit": {
     "prefix": "__aexit__",
     "body": [
+      "from types import TracebackType",
       "async def __aexit__(",
       "\tself,",
       "\texc_type: type[BaseException] | None,",
