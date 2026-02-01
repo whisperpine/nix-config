@@ -51,6 +51,13 @@ autocmd("Filetype", {
   end,
 })
 
+-- Use the neovim native python indentexpr for python.
+autocmd("Filetype", {
+  group = augroup("SetIndentExprPython", { clear = true }),
+  pattern = "python",
+  command = "set indentexpr=python#GetIndent(v:lnum)",
+})
+
 -- When current buffer is readonly,
 -- set no modifiable and disable diagnostics.
 autocmd("BufReadPost", {
