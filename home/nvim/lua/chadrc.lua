@@ -12,10 +12,10 @@ M.base46 = {
   -- ":redir @a | silent hi | redir END | new | put a"
   hl_override = {
     -- Include = { fg = "#679cd6" },
-    CursorLine = { bg = "#313131" },
-    NvimTreeCursorLine = { bg = "#313131" },
-    TelescopeSelection = { fg = "NONE", bg = "#3f3f3f" },
-    LspInlayHint = { fg = "#7b7b7b", bg = "#2a2a2a" },
+    CursorLine = { bg = "#383838" },
+    NvimTreeCursorLine = { link = "CursorLine" },
+    TelescopeSelection = { fg = "NONE", bg = "#383838" },
+    LspInlayHint = { fg = "#828282", bg = "#2a2a2a" },
     LspSignatureActiveParameter = { fg = "NONE", bg = "#4a4a4a" },
     TroublePreview = { fg = "NONE", bg = "#4a4a4a" },
     ["@keyword.repeat"] = { link = "@keyword" }, -- e.g. "for" and "loop" in rust
@@ -43,7 +43,7 @@ M.base46 = {
         darker_black = "#202020", -- nvimtree bg, floating term bg
         statusline_bg = "#2a2a2a",
         black2 = "#2a2a2a", -- tabufline, telescope search bg
-        grey_fg = "#717171", -- comments
+        grey_fg = "#828282", -- comments
       },
       -- https://github.com/chriskempson/base16/blob/main/styling.md
       ---@diagnostic disable-next-line: missing-fields
