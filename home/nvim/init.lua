@@ -29,5 +29,5 @@ require "autocmds"
 vim.schedule(function()
   require "highlight"
   require "mappings"
-  require "lsputil"
+  require "lsputils"
 end)
