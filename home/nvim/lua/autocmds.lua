@@ -51,6 +51,13 @@ autocmd("Filetype", {
   end,
 })
 
+-- Use the neovim's native indentexpr for rust.
+autocmd("Filetype", {
+  group = augroup("SetIndentExprRust", { clear = true }),
+  pattern = "rust",
+  command = "set indentexpr=GetRustIndent(v:lnum)",
+})
+
 -- When current buffer is readonly,
 -- set no modifiable and disable diagnostics.
 autocmd("BufReadPost", {
