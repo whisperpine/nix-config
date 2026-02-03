@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Purpose: print your github contributions today
 # Usage: sh path/to/print-github-contributions.sh
 # Dependencies: gh (github cli)
