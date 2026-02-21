@@ -5,7 +5,7 @@ include "binds.kdl"
 include "input.kdl"
 include "output.kdl"
 include "layout.kdl"
-include "window-rules.kdl"
+include "window-rule.kdl"
 include "layer-rule.kdl"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
