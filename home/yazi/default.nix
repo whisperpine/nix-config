@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs-stable, config, ... }:
 # --- terminal file manager --- #
 let
   repoDir = builtins.getEnv "PWD";
@@ -6,12 +6,8 @@ let
   mklink = config.lib.file.mkOutOfStoreSymlink;
 in
 {
-  programs.yazi = {
-    enable = true;
-    enableNushellIntegration = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-  };
-
+  # Note: switch back to the latest version after "26.1.22".
+  # Since this issue has been fixed in: https://github.com/sxyazi/yazi/pull/3678
+  home.packages = with pkgs-stable; [ yazi ];
   xdg.configFile.yazi.source = mklink yaziConfig;
 }
