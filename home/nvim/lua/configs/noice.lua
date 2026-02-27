@@ -64,8 +64,13 @@ M.routes = {
   { filter = { find = "man.lua: no manual entry for" }, opts = { skip = true } },
   -- trouble.nvim --
   { filter = { find = "No information available" }, opts = { skip = true } },
-  -- vim.lsp.buf.code_action --
+  -- vim.lsp --
   { filter = { find = "No code actions available" }, opts = { skip = true } },
+  { filter = { find = "No signature help available" }, opts = { skip = true } },
+  {
+    filter = { find = "method textDocument/signatureHelp is not supported" },
+    opts = { skip = true },
+  },
   -- telescope.nvim --
   { filter = { find = "Nothing currently selected" }, opts = { skip = true } },
   { filter = { find = "No diagnostics found" }, opts = { skip = true } },
