@@ -93,6 +93,8 @@ M.routes = {
     },
     opts = { skip = true },
   },
+  -- conform.nvim --
+  { filter = { find = "Formatter failed." }, opts = { skip = true } },
 }
 
 return M
