@@ -37,6 +37,7 @@ let
       boot.loader.efi.canTouchEfiVariables = true;
       boot.kernelModules = [
         "i2c-dev" # "ddcutil" requires this module
+        "ipvlan" # required by docker's ipvlan network driver
       ];
       # Enable in-memory compressions.
       zramSwap.enable = true;
