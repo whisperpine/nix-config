@@ -12,6 +12,10 @@
     required = true
     clean = git-lfs clean -- %f
 
+[credential]
+    # https://git-scm.com/doc/credential-helpers
+    helper = store
+
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     pushff = push --force-with-lease --force-if-includes
