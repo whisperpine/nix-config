@@ -102,7 +102,7 @@ M.routes = {
   { filter = { find = "Formatter failed." }, opts = { skip = true } },
   -- rust_analyzer --
   {
-    filter = { find = "rust_analyzer: -32801: content modified" },
+    filter = { find = "rust_analyzer: .* content modified" },
     opts = { skip = true },
   },
 }
