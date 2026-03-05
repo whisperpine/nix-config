@@ -22,10 +22,10 @@
   # Enable Hyprland as the window manager.
   programs.hyprland = {
     enable = true;
-    # Optional: Enable XWayland for compatibility.
+    # Enable XWayland for compatibility.
     xwayland.enable = true;
   };
 
-  # Optional, hint electron apps to use wayland.
+  # Hint chrome and electron apps to use wayland.
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }
