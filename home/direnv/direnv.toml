@@ -6,7 +6,9 @@
 disable_stdin = true
 # This feature is disabled if the duration is lower or equal to zero.
 warn_timeout = "0s"
-# Set to "-" to disable normal logging.
-log_format = "-"
 # Hide the diff of the environment variables when loading.
 hide_env_diff = true
+# Set to "-" to disable normal logging.
+log_format = "-"
+# A Regexp that can be used to filter out logs.
+log_filter = '(\%\!\!\(MISSING\))|(^-)'
