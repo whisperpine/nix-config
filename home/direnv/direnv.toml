@@ -8,3 +8,5 @@ disable_stdin = true
 warn_timeout = "0s"
 # Set to "-" to disable normal logging.
 log_format = "-"
+# Hide the diff of the environment variables when loading.
+hide_env_diff = true
