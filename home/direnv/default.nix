@@ -1,5 +1,9 @@
-{ ... }:
+{ config, ... }:
 # --- manage dir-based env vars --- #
+let
+  repoDir = builtins.getEnv "PWD";
+  direnvConfig = "${repoDir}/home/direnv/direnv.toml";
+in
 {
   programs.direnv = {
     enable = true;
@@ -10,7 +14,7 @@
   };
 
   xdg.configFile.direnv = {
-    source = ./direnv.toml;
+    source = config.lib.file.mkOutOfStoreSymlink direnvConfig;
     target = "./direnv/direnv.toml";
   };
 }
