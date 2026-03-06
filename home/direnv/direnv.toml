@@ -11,4 +11,4 @@ hide_env_diff = true
 # Set to "-" to disable normal logging.
 log_format = "-"
 # A Regexp that can be used to filter out logs.
-log_filter = '(\%\!\!\(MISSING\))|(^-)'
+log_filter = '(\%\!\!\(MISSING\))|(^-$)'
