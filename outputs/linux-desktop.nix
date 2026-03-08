@@ -71,9 +71,6 @@ nixpkgs.lib.nixosSystem {
     ./modules/i18n.nix
     ./modules/xdg.nix
 
-    # Install bun packages globally.
-    ./modules/services/bun-add.nix
-
     # Auto generated hardware configs (DO NOT MODIFY).
     ./modules/hardware/yunix.nix
     # Nvidia GPU configs.
