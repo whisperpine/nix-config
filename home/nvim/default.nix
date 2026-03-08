@@ -77,6 +77,7 @@ in
     vscode-langservers-extracted # json, css, html
     typescript-language-server # typescript, javascript
     tailwindcss-language-server # tailwind css
+    ansible-language-server # ansible
     svelte-language-server # svelte
     bash-language-server # bash sh shell
     yaml-language-server # yaml
