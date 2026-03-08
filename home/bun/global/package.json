@@ -1,5 +1,1 @@
-{
-  "dependencies": {
-    "@ansible/ansible-language-server": "^1.2.3"
-  }
-}
+{}

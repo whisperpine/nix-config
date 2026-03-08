@@ -16,6 +16,7 @@ scopes = [
   "b1386af",
   # packages
   "git",
+  "bun",
   "zsh",
   "bash",
   "neovim",
