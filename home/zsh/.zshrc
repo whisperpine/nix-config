@@ -4,27 +4,38 @@
 # When Loaded: Sourced for interactive shells (both login and non-login), but
 # not for non-interactive shells or scripts.
 
-# ----- Ctrl+O ----- #
+# ----------- #
+# keybindings
+# ----------- #
+
 # Ensure the edit-command-line widget is available.
 autoload -U edit-command-line
 zle -N edit-command-line
 # Bind Ctrl+O to the edit the command (which functions like Ctrl+X Ctrl+E).
 bindkey '^O' edit-command-line
 
-# ----- Ctrl+P ----- #
 # Bind Ctrl+P to the atuin widget.
 bindkey '^P' atuin-up-search
 
-# ----- atuin and autosuggestion ----- #
+# ------------------------ #
+# atuin and autosuggestion
+# ------------------------ #
+
 # Make sure it's empty to be later set by atuin.
 # shellcheck disable=SC2034
 ZSH_AUTOSUGGEST_STRATEGY=()
 
-# ----- "Tab" key completion ----- #
+# -------------------- #
+# "Tab" key completion
+# -------------------- #
+
 # Make path completion case-insensitive.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-# ----- Zellij Pane ----- #
+# ----------- #
+# zellij pane
+# ----------- #
+
 _set_zellij_pane_title() {
   # Replace $HOME with ~ in the current directory path.
   local display_path="${PWD/#$HOME/~}"
@@ -37,3 +48,9 @@ chpwd() {
 }
 # Run on shell initialization.
 _set_zellij_pane_title
+
+# ------ #
+# tirith
+# ------ #
+
+eval "$(tirith init --shell zsh)"

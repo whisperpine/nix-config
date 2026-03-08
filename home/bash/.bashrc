@@ -4,16 +4,26 @@
 # When Loaded: Sourced for interactive shells (both login and non-login), but
 # not for non-interactive shells or scripts.
 
-# Environment variable PATH.
+# -------------------- #
+# environment variable
+# -------------------- #
+
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.bun/bin"
 export PATH="$PATH:/etc/nixos/scripts/as-commands/"
+
+# ------ #
+# ble.sh
+# ------ #
 
 # # shellcheck disable=SC1094
 # source /nix/store/g4mn0iswaaf4hsyssx10n489q9whhl28-blesh-0.4.0-devel3/share/blesh/ble.sh
 # # shellcheck disable=1091
 # source "$(nix eval --raw nixpkgs#blesh)/share/blesh/ble.sh"
 
-# ----- Zellij Pane ----- #
+# ----------- #
+# zellij pane
+# ----------- #
+
 # Keep last 2 path components if path is long.
 _short_path() {
   local path="$1"
@@ -31,3 +41,9 @@ _set_zellij_pane_title() {
   echo -n -e "\033]0;${display_path}\007"
 }
 PROMPT_COMMAND="_set_zellij_pane_title${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+
+# ------ #
+# tirith
+# ------ #
+
+eval "$(tirith init --shell bash)"
