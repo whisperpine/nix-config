@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 # ---------- networking configs ---------- #
 {
   # Enable network manager.
@@ -17,6 +17,7 @@
     enable = true;
     tunMode = true;
     serviceMode = true;
+    group = username;
   };
   # This option modifies "/etc/xdg/mimeapps.list
   xdg.mime.defaultApplications = {
