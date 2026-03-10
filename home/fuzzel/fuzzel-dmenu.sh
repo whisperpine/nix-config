@@ -36,6 +36,7 @@ engines=(
   ["  Docs.rs"]="https://docs.rs/releases/search?query="
   # ["  TLDR"]="https://tldr.inbrowser.app/search?query="
   # ["  Can I use"]="https://caniuse.com/?search="
+  ["󰖬  Wikipedia"]="https://en.wikipedia.org/wiki/Special:Search?search="
 
   # --- package registry --- #
   ["  PyPI"]="https://pypi.org/search/?q="
