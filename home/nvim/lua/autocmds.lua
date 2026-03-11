@@ -45,7 +45,15 @@ autocmd("BufRead", {
 -- This prevents auto indenting when typeing in insert mode.
 autocmd("Filetype", {
   group = augroup("DisableIndentExpr", { clear = true }),
-  pattern = { "yaml", "yaml.ansible", "yaml.cloudformation", "sh", "bash", "zsh" },
+  pattern = {
+    "yaml",
+    "yaml.ansible",
+    "yaml.cloudformation",
+    "typst",
+    "bash",
+    "zsh",
+    "sh",
+  },
   callback = function()
     vim.opt_local.indentexpr = ""
   end,
