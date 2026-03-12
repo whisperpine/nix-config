@@ -72,7 +72,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^anki$"
+    match app-id="^anki$" title="User 1 - Anki"
     default-column-width {
         proportion 0.5
     }
