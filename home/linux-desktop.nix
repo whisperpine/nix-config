@@ -1,7 +1,14 @@
-{ username, pkgs, ... }:
+{
+  bookokrat,
+  username,
+  pkgs,
+  ...
+}:
 let
   # pkgs.discord is unfree.
   discord = if pkgs.stdenv.hostPlatform.system == "aarch64-linux" then pkgs.hello else pkgs.discord;
+  # bookokrat
+  brat = bookokrat.packages.${pkgs.system}.default;
 in
 {
   home.username = username;
@@ -18,7 +25,10 @@ in
       udiskie # disk automounter for udisks
       wechat # messaging and calling app
     ]
-    ++ [ discord ];
+    ++ [
+      discord
+      brat
+    ];
 
   imports = [
     # --- inherit --- #

@@ -30,7 +30,7 @@
       url = "github:Mic92/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Secrept provisioning by sops-nix
+    # Secrept provisioning by sops-nix.
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,6 +44,10 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #---------- apps ----------#
+    # Bookokrat.
+    bookokrat.url = "github:bugzmanov/bookokrat/baa2cde368ed1990dcf0e3a9364e44d47639364d";
     # Zen browser.
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
