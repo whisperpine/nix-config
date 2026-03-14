@@ -183,6 +183,15 @@ return {
   },
 
   {
+    "rareitems/anki.nvim",
+    ft = "anki",
+    opts = {
+      -- Disables the support for "tex" filetype.
+      tex_support = false,
+    },
+  },
+
+  {
     -- dir = "~/projects/whisperpine/quickfix-messages.nvim",
     "whisperpine/quickfix-messages.nvim",
     cmd = "QuickfixMessages",

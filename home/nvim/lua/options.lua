@@ -11,6 +11,7 @@ vim.filetype.add {
     timer = "systemd",
     target = "systemd",
     device = "systemd",
+    anki = "anki",
   },
   filename = {
     [".envrc"] = "sh",
