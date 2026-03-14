@@ -5,10 +5,10 @@
   ...
 }:
 let
-  # pkgs.discord is unfree.
+  # "pkgs.discord" is unfree.
   discord = if pkgs.stdenv.hostPlatform.system == "aarch64-linux" then pkgs.hello else pkgs.discord;
-  # bookokrat
-  brat = bookokrat.packages.${pkgs.system}.default;
+  # Bookokrat (from the "inputs" in flake.nix).
+  brat = bookokrat.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
   home.username = username;
