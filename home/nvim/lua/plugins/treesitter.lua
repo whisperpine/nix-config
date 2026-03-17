@@ -171,7 +171,7 @@ M.opts = {
     "yaml",
     "toml",
     "json",
-    "jsonc",
+    "json5",
     "ruby",
     "hurl",
     "helm",
