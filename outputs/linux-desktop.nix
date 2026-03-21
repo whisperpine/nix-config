@@ -39,6 +39,14 @@ let
         "i2c-dev" # "ddcutil" requires this module
         "ipvlan" # required by docker's ipvlan network driver
       ];
+      # Enable binfmt emulation for extra platforms.
+      boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+      # Explicitly register aarch64 with the 'F' (fixBinary) flag.
+      boot.binfmt.registrations.aarch64-linux = {
+        interpreter = "${pkgs.qemu}/bin/qemu-aarch64";
+        matchCredentials = true;
+        fixBinary = true;
+      };
       # Enable in-memory compressions.
       zramSwap.enable = true;
       # Enable dconf so that system preferences (e.g. dark theme) can be set.
