@@ -11,11 +11,15 @@ in
   # This is using an age key that is expected to already be in the filesystem.
   sops.age.keyFile = keyFile;
   # This is the actual specification of the secrets.
-  sops.secrets."example-key" = { };
   sops.secrets."wg0-private-key" = { };
   sops.secrets."deepseek-api-key" = {
     owner = "${username}";
   };
+  # Tokens of gitHub-runners.
+  sops.secrets."github-runner-token/everbid/org" = { };
+  sops.secrets."github-runner-token/whisperpine/notes" = { };
+  sops.secrets."github-runner-token/whisperpine/resume" = { };
+  sops.secrets."github-runner-token/whisperpine/business-email" = { };
 
   # Set system-wide environment variables.
   # Note: changes on these env vars need system reboot to take effect.
