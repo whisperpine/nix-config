@@ -4,6 +4,12 @@
 
 // Tip: to get "app-id", run `niri msg windows` when the windows are open.
 
+// Enable rounded corners for all windows.
+window-rule {
+    geometry-corner-radius 6
+    clip-to-geometry true
+}
+
 window-rule {
     match app-id="waybar"
     // This prevents Niri from trying to "animate" the bar window itself.
@@ -42,8 +48,11 @@ window-rule {
     }
 }
 
+// Chrome plugins.
 window-rule {
-    match app-id="^chrome-nngceckbapebfimnlniiiahkandclblb-Default$"
+    match app-id="^chrome-"
+    // Exclude PWAs (Progressive Web Apps).
+    exclude title="^Monkeytype"
     open-floating true
 }
 
@@ -81,10 +90,4 @@ window-rule {
 window-rule {
     match app-id="^blender$"
     open-fullscreen true
-}
-
-// Enable rounded corners for all windows.
-window-rule {
-    geometry-corner-radius 6
-    clip-to-geometry true
 }
