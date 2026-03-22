@@ -5,8 +5,8 @@
   ...
 }:
 let
-  # "pkgs.discord" is unfree.
-  discord = if pkgs.stdenv.hostPlatform.system == "aarch64-linux" then pkgs.hello else pkgs.discord;
+  # Check if the system is x86_64-linux.
+  isX86_64 = pkgs.stdenv.hostPlatform.system == "x86_64-linux";
   # Bookokrat (from the "inputs" in flake.nix).
   brat = bookokrat.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
@@ -25,10 +25,11 @@ in
       udiskie # disk automounter for udisks
       wechat # messaging and calling app
     ]
-    ++ [
+    ++ [ brat ]
+    ++ (lib.optionals isX86_64 [
+      # "discord" is unfree.
       discord
-      brat
-    ];
+    ]);
 
   imports = [
     # --- inherit --- #

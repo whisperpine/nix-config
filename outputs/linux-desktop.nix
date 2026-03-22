@@ -26,11 +26,6 @@ let
   };
   configuration =
     { pkgs, config, ... }:
-    let
-      # pkgs.google-chrome is unfree.
-      googleChrome =
-        if pkgs.stdenv.hostPlatform.system == "aarch64-linux" then pkgs.hello else pkgs.google-chrome;
-    in
     {
       # Bootloader.
       boot.loader.systemd-boot.enable = true;
@@ -48,7 +43,13 @@ let
       # Allow unfree software to be installed (e.g. google-chrome).
       nixpkgs.config.allowUnfree = true;
       # Install packages in operating system.
-      environment.systemPackages = with pkgs; [ neovim ] ++ [ googleChrome ];
+      environment.systemPackages =
+        with pkgs;
+        [ neovim ]
+        ++ (lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+          # "google-chrome" is unfree.
+          google-chrome
+        ]);
     };
 in
 nixpkgs.lib.nixosSystem {
