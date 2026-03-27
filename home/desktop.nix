@@ -9,6 +9,7 @@
     ./zellij # terminal multiplexer
     ./lazygit # tui for git
     ./bun # toolkit for js and ts
+    ./cargo # cargo configs
   ];
 
   home.packages = with pkgs; [
