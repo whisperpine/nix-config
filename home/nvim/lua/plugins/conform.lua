@@ -1,13 +1,19 @@
 local M = {}
 
-M.format_on_save = {
+M = {
+  "stevearc/conform.nvim",
+  event = "BufReadPost",
+  opts = {},
+}
+
+M.opts.format_on_save = {
   -- These options will be passed to conform.format()
   timeout_ms = 500,
   lsp_fallback = true,
 }
 
 -- https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
-M.formatters_by_ft = {
+M.opts.formatters_by_ft = {
   -- Use the "_" filetype to run formatters on filetypes that don't
   -- have other formatters configured.
   ["_"] = {},
@@ -62,7 +68,7 @@ M.formatters_by_ft = {
   css = { "deno_fmt" },
 }
 
-M.formatters = {
+M.opts.formatters = {
   ["nixfmt"] = {
     prepend_args = { "-s" },
   },

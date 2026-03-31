@@ -47,12 +47,6 @@ return {
   },
 
   {
-    "stevearc/conform.nvim",
-    event = "BufReadPost",
-    opts = require "configs.conform",
-  },
-
-  {
     "neovim/nvim-lspconfig",
     event = "User FilePost",
   },
