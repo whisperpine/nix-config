@@ -1,0 +1,9 @@
+theme = "nord-night"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.indent-guides]
+render = true
+character = "│"
+skip-levels = 1
