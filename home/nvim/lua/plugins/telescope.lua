@@ -4,6 +4,7 @@ M = {
   "nvim-telescope/telescope.nvim",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   cmd = "Telescope",
+  version = "*",
 }
 
 M.init = function()
