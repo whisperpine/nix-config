@@ -25,6 +25,7 @@
 
     # --- tui --- #
     ./nvim # my favorite text editor
+    ./helix # modal text editor
     ./btop # monitor of resources
     ./yazi # terminal file manager
 

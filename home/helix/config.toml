@@ -7,3 +7,9 @@ insert = "bar"
 render = true
 character = "│"
 skip-levels = 1
+
+[keys.normal]
+y = ["yank_to_clipboard"]
+
+[keys.select]
+y = ["yank_to_clipboard"]
