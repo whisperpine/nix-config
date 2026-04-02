@@ -53,6 +53,7 @@ window-rule {
     match app-id="^chrome-"
     // Exclude PWAs (Progressive Web Apps).
     exclude title="^Monkeytype"
+    exclude title="^Telegram"
     open-floating true
 }
 
