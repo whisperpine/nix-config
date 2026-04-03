@@ -94,6 +94,7 @@ M.capabilities.textDocument.completion.completionItem = {
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
+    ---@diagnostic disable-next-line: undefined-global
     M.on_attach(_, args.buf)
   end,
 })
