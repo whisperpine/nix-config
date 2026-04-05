@@ -105,6 +105,11 @@ M.routes = {
     filter = { find = "rust_analyzer: .* content modified" },
     opts = { skip = true },
   },
+  -- inotify --
+  {
+    filter = { find = "inotify:" },
+    opts = { skip = true },
+  },
 }
 
 return M
