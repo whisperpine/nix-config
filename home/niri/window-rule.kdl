@@ -89,6 +89,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^blender$"
-    open-fullscreen true
+    match app-id="^blender$" title="^Preferences$"
+    open-floating true
 }
