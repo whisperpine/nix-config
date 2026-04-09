@@ -9,8 +9,8 @@ on:
 
 jobs:
   typos:
-    runs-on: ubuntu-latest
     name: spell check with typos
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
@@ -19,8 +19,8 @@ jobs:
         run: typos --hidden --exclude .git --format brief
 
   cocogitto:
-    runs-on: ubuntu-latest
     name: check conventional commits
+    runs-on: ubuntu-latest
     # Only run this step in the main branch.
     if: github.ref == 'refs/heads/main'
     steps:
@@ -31,8 +31,8 @@ jobs:
         run: cog check HEAD..HEAD
 
   markdownlint:
-    runs-on: ubuntu-latest
     name: lint markdown by markdownlint
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
@@ -41,8 +41,8 @@ jobs:
         run: markdownlint .
 
   nix-flake-check:
-    runs-on: ubuntu-latest
     name: nix flake check
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
@@ -50,8 +50,8 @@ jobs:
         run: nix flake check --impure --all-systems
 
   shellcheck:
-    runs-on: ubuntu-latest
     name: lint shell scripts by shellcheck
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
