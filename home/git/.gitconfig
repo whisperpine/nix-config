@@ -13,7 +13,8 @@
     clean = git-lfs clean -- %f
 
 [credential]
-    # https://git-scm.com/doc/credential-helpers
+    # Refer to: https://git-scm.com/doc/credential-helpers
+    # The format of "~/.git-credentials": https://user:pass@example.com
     helper = store
 
 [alias]
