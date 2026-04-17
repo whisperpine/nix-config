@@ -3,10 +3,18 @@
 {
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      # Required by the "Screen Capture" source of OBS Studio.
+      xdg-desktop-portal-gnome
+    ];
     # Specify preferred portal implementations:
     # https://mynixos.com/nixpkgs/option/xdg.portal.config
-    config.common.default = [ "gtk" ];
+    config.common.default = [
+      "gtk"
+      # Required by the "Screen Capture" source of OBS Studio.
+      "gnome"
+    ];
   };
 
   # Add the xdg-desktop-portal-wlr package into the xdg.portal.extraPortals
