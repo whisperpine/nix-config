@@ -190,6 +190,10 @@ vim.lsp.config("ty", {
   },
 })
 
+-- Disable document_color globally.
+-- When enabled, "document_color" is shown as text backgrounds.
+vim.lsp.document_color.enable(false)
+
 -- Enable language servers defined under "~/.config/nvim/lsp".
 vim.lsp.enable {
   -- ### written by myself ###
