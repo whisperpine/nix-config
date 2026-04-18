@@ -193,6 +193,18 @@ vim.lsp.config("ty", {
   },
 })
 
+-- Config cssls.
+-- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/cssls.lua
+vim.lsp.config("cssls", {
+  settings = {
+    css = {
+      lint = {
+        unknownAtRules = "ignore",
+      },
+    },
+  },
+})
+
 -- Disable document_color globally.
 -- When enabled, "document_color" is shown as text backgrounds.
 vim.lsp.document_color.enable(false)
