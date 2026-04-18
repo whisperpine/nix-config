@@ -8,7 +8,7 @@ M = {
 
 M.opts = {
   -- image = { enabled = true }, -- image viewer using Kitty Graphics Protocol
-  bigfile = { enabled = true }, -- prevents LSP attaching to bigfile
+  -- bigfile = { enabled = true }, -- prevents LSP attaching to bigfile
   input = { enabled = true }, -- better `vim.ui.input` (e.g. when renaming)
   picker = { enabled = true, prompt = "" }, -- a modern fuzzy-finder akin to telescope
   scope = { enabled = true }, -- scope detection based on treesitter or indent
