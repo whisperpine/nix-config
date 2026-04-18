@@ -17,6 +17,9 @@ M.on_attach = function(_, bufnr)
   map("n", "<leader>cs", function()
     vim.lsp.buf.signature_help { border = "single" }
   end, opts "show signature help")
+  map("n", "<leader>cc", function()
+    vim.lsp.document_color.enable(not vim.lsp.document_color.is_enabled())
+  end, opts "toggle document color")
   map("i", "<C-s>", function()
     vim.lsp.buf.signature_help { border = "single" }
   end, opts "show signature help")
