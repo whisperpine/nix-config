@@ -109,6 +109,16 @@ M.config = function(_, opts)
       vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
     end,
   })
+
+  -- Add autocmd to start treesitter (for "jsonc" filetype).
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("TreesitterStartAnsible", { clear = true }),
+    pattern = { "jsonc" },
+    callback = function(args)
+      vim.treesitter.start(args.buf, "json")
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
 end
 
 M.opts = {
