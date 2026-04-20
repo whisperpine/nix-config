@@ -1,7 +1,7 @@
 {
   "doctype": {
     "prefix": "doctype",
-    "body": ["<!DOCTYPE>", "$1"],
+    "body": ["<!DOCTYPE html>"],
     "description": "HTML - Defines the document type",
     "scope": "text.html"
   },
@@ -770,6 +770,18 @@
     "prefix": "ol.#",
     "body": ["<ol class=\"$1\" id=\"$2\">", "\t$3", "</ol>"],
     "description": "HTML - Defines an ordered list",
+    "scope": "text.html"
+  },
+  "template": {
+    "prefix": "template",
+    "body": ["<template>", "\t$1", "</template>"],
+    "description": "HTML - Defines an template",
+    "scope": "text.html"
+  },
+  "slot": {
+    "prefix": "slot",
+    "body": ["<slot name=\"$1\">$2</slot>"],
+    "description": "HTML - Defines an slot",
     "scope": "text.html"
   }
 }
