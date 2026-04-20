@@ -39,6 +39,7 @@ hl(0, "@lsp.type.class.typescript", { link = "" })
 hl(0, "@lsp.type.variable.typescript", { link = "" })
 hl(0, "@lsp.typemod.property.static.typescript", { link = "@constant" })
 hl(0, "@lsp.typemod.variable.defaultLibrary.typescript", { link = "@function.builtin" })
+hl(0, "@lsp.mod.local.typescript", { link = "@variable" })
 
 ----- JavaScript ------
 hl(0, "@lsp.type.class.javascript", { link = "" })
