@@ -8,54 +8,69 @@
 # Refer to the following NixOS options:
 # https://search.nixos.org/options?channel=unstable&query=github-runner
 let
-  everbidOrg = index: {
-    services.github-runners."everbid-${index}" = {
-      enable = true;
-      replace = true;
-      ephemeral = true;
-      name = "nixos-${hostname}-${index}";
-      tokenFile = config.sops.secrets."github-runner-token/everbid/org".path;
-      url = "https://github.com/everbid";
+  organization =
+    { org, index }:
+    {
+      services.github-runners."${org}-${index}" = {
+        enable = true;
+        replace = true;
+        ephemeral = true;
+        name = "nixos-${hostname}-${index}";
+        tokenFile = config.sops.secrets."github-runner-token/${org}/org".path;
+        url = "https://github.com/${org}";
+      };
     };
-  };
-  whisperpineNotes = index: {
-    services.github-runners."whisperpine-notes-${index}" = {
-      enable = true;
-      replace = true;
-      ephemeral = true;
-      name = "nixos-${hostname}-${index}";
-      tokenFile = config.sops.secrets."github-runner-token/whisperpine/notes".path;
-      url = "https://github.com/whisperpine/notes";
+  whisperpine =
+    { repo, index }:
+    {
+      services.github-runners."whisperpine-${repo}-${index}" = {
+        enable = true;
+        replace = true;
+        ephemeral = true;
+        name = "nixos-${hostname}-${index}";
+        tokenFile = config.sops.secrets."github-runner-token/whisperpine/${repo}".path;
+        url = "https://github.com/whisperpine/${repo}";
+      };
     };
-  };
-  whisperpineResume = index: {
-    services.github-runners."whisperpine-resume-${index}" = {
-      enable = true;
-      replace = true;
-      ephemeral = true;
-      name = "nixos-${hostname}-${index}";
-      tokenFile = config.sops.secrets."github-runner-token/whisperpine/resume".path;
-      url = "https://github.com/whisperpine/resume";
-    };
-  };
-  whisperpineBusinessEmail = index: {
-    services.github-runners."whisperpine-business-email-${index}" = {
-      enable = true;
-      replace = true;
-      ephemeral = true;
-      name = "nixos-${hostname}-${index}";
-      tokenFile = config.sops.secrets."github-runner-token/whisperpine/business-email".path;
-      url = "https://github.com/whisperpine/business-email";
-    };
-  };
 in
 {
   config = lib.mkMerge [
-    (everbidOrg "0")
-    (everbidOrg "1")
-    (everbidOrg "2")
-    (whisperpineNotes "0")
-    (whisperpineResume "0")
-    (whisperpineBusinessEmail "0")
+    # ---------------------- #
+    # organization "everbid"
+    # ---------------------- #
+
+    (organization {
+      org = "everbid";
+      index = "0";
+    })
+    (organization {
+      org = "everbid";
+      index = "1";
+    })
+    (organization {
+      org = "everbid";
+      index = "2";
+    })
+    (organization {
+      org = "everbid";
+      index = "3";
+    })
+
+    # --------------------- #
+    # personal repositories
+    # --------------------- #
+
+    (whisperpine {
+      repo = "notes";
+      index = "0";
+    })
+    # (whisperpine {
+    #   repo = "resume";
+    #   index = "0";
+    # })
+    # (whisperpine {
+    #   repo = "business-email";
+    #   index = "0";
+    # })
   ];
 }
