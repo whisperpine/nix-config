@@ -28,8 +28,19 @@ M.init = function()
 end
 
 M.opts = {
-  selection = { enabled = false },
+  ---@alias Provider "claude" | "openai" | "gemini" | "copilot" | string
+  ---@type Provider
   provider = "deepseek",
+  -- The default mode for interaction.
+  -- "agentic" uses tools to automatically generate code.
+  -- "legacy" uses the old planning method to generate code.
+  ---@type "agentic" | "legacy"
+  mode = "legacy",
+  selection = {
+    enabled = true,
+    ---@type "delayed" | "immediate" | "none"
+    hint_display = "none",
+  },
   windows = {
     width = 50, -- default % based on available width
     sidebar_header = {
@@ -61,18 +72,14 @@ M.opts.providers = {
     timeout = 30000, -- timeout in milliseconds, increase this for reasoning models
     extra_request_body = {
       temperature = 0,
-      max_completion_tokens = 8192, -- increase this to include reasoning tokens (for reasoning models)
-      reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+      max_tokens = 8192, -- increase this to include reasoning tokens (for reasoning models)
     },
-  },
-  ollama = {
-    endpoint = "http://127.0.0.1:11434", -- note that there is no /v1 at the end
-    model = "qwq:32b",
   },
   deepseek = {
     __inherited_from = "openai",
     api_key_name = "AVANTE_DEEPSEEK_API_KEY",
     endpoint = "https://api.deepseek.com",
+    ---@type "deepseek-chat" | "deepseek-reasoner"
     model = "deepseek-chat",
   },
 }
