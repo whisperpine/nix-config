@@ -4,6 +4,7 @@
 local hl = vim.api.nvim_set_hl
 
 ----- Common -----
+hl(0, "SnippetTabstop", { link = "" })
 hl(0, "DiagnosticUnnecessary", { link = "" })
 hl(0, "DiagnosticUnderlineHint", { underdotted = true })
 hl(0, "DiagnosticUnderlineInfo", { underdotted = true })
