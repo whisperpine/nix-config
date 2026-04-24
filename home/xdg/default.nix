@@ -10,6 +10,7 @@
     "x-scheme-handler/http" = "google-chrome.desktop";
     "x-scheme-handler/https" = "google-chrome.desktop";
     "x-scheme-handler/about" = "google-chrome.desktop";
+    "x-scheme-handler/mailto" = "google-chrome.desktop";
   };
 
   # This modifies files under:
