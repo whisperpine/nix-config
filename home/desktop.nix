@@ -7,6 +7,7 @@
     ./erdtree # file-tree visualizer
     ./direnv # manage dir-based env vars
     ./zellij # terminal multiplexer
+    ./opencode # ai coding agent
     ./lazygit # tui for git
     ./bun # toolkit for js and ts
     ./cargo # cargo configs
