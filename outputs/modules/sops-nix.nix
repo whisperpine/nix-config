@@ -15,6 +15,9 @@ in
   sops.secrets."deepseek-api-key" = {
     owner = "${username}";
   };
+  sops.secrets."tavily-api-key" = {
+    owner = "${username}";
+  };
   # Tokens of gitHub-runners.
   sops.secrets."github-runner-token/everbid/org" = { };
   sops.secrets."github-runner-token/whisperpine/notes" = { };
@@ -31,7 +34,12 @@ in
     # This is used by avante.nvim, a neovim plugin. This makes nix "impure".
     AVANTE_DEEPSEEK_API_KEY =
       if builtins.pathExists config.sops.secrets."deepseek-api-key".path then
-        "${builtins.readFile config.sops.secrets."deepseek-api-key".path}"
+        builtins.readFile config.sops.secrets."deepseek-api-key".path
+      else
+        "";
+    TAVILY_API_KEY =
+      if builtins.pathExists config.sops.secrets."tavily-api-key".path then
+        builtins.readFile config.sops.secrets."tavily-api-key".path
       else
         "";
   };
