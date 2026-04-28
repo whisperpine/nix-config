@@ -72,15 +72,22 @@ M.opts.providers = {
     timeout = 30000, -- timeout in milliseconds, increase this for reasoning models
     extra_request_body = {
       temperature = 0,
-      max_tokens = 8192, -- increase this to include reasoning tokens (for reasoning models)
+      max_tokens = 16384,
     },
   },
   deepseek = {
     __inherited_from = "openai",
     api_key_name = "AVANTE_DEEPSEEK_API_KEY",
     endpoint = "https://api.deepseek.com",
-    ---@type "deepseek-chat" | "deepseek-reasoner"
-    model = "deepseek-chat",
+    ---@type "deepseek-v4-flash" | "deepseek-v4-pro"
+    model = "deepseek-v4-flash",
+    extra_request_body = {
+      -- https://api-docs.deepseek.com/guides/thinking_mode
+      thinking = {
+        ---@type "enabled" | "disabled"
+        type = "disabled",
+      },
+    },
   },
 }
 
