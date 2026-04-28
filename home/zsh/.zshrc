@@ -36,18 +36,17 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # zellij pane
 # ----------- #
 
-_set_zellij_pane_title() {
+set_zellij_pane_title() {
   # Replace $HOME with ~ in the current directory path.
   local display_path="${PWD/#$HOME/~}"
   # Set terminal title to the directory name.
   echo -n -e "\033]0;${display_path}\007"
 }
-# `chpwd` is a zsh hook that triggers whenever the working directory changes.
-chpwd() {
-  _set_zellij_pane_title
-}
-# Run on shell initialization.
-_set_zellij_pane_title
+
+# `chpwd` is a zsh hook that triggered whenever the working directory changes.
+add-zsh-hook chpwd set_zellij_pane_title
+# `precmd` is a zsh hook that triggered before each prompt is displayed.
+add-zsh-hook precmd set_zellij_pane_title
 
 # ------ #
 # tirith
