@@ -31,16 +31,24 @@ M.opts = {
   ---@alias Provider "claude" | "openai" | "gemini" | "copilot" | string
   ---@type Provider
   provider = "deepseek",
-  -- The default mode for interaction.
+
   -- "agentic" uses tools to automatically generate code.
   -- "legacy" uses the old planning method to generate code.
   ---@type "agentic" | "legacy"
   mode = "legacy",
+
+  -- https://github.com/yetone/avante.nvim#web-search-engines
+  web_search_engine = {
+    ---@type "tavily" | "serpapi" | "google" | "kagi" | "brave" | "searxng"
+    provider = "tavily", -- "tavily" requires TAVILY_API_KEY
+  },
+
   selection = {
     enabled = true,
     ---@type "delayed" | "immediate" | "none"
     hint_display = "none",
   },
+
   windows = {
     width = 50, -- default % based on available width
     sidebar_header = {
@@ -55,11 +63,13 @@ M.opts = {
       border = "single",
     },
   },
+
   mappings = {
     sidebar = {
       close_from_input = { normal = "<Esc>", insert = "<C-c>" },
     },
   },
+
   behaviour = {
     enable_token_counting = false,
   },
@@ -82,6 +92,7 @@ M.opts.providers = {
     ---@type "deepseek-v4-flash" | "deepseek-v4-pro"
     model = "deepseek-v4-flash",
     extra_request_body = {
+      max_tokens = 16384,
       -- https://api-docs.deepseek.com/guides/thinking_mode
       thinking = {
         ---@type "enabled" | "disabled"
