@@ -1,5 +1,6 @@
 {
   self,
+  pkgs,
   system,
   username,
   ...
@@ -44,6 +45,10 @@
     EDITOR = "nvim";
     PYTHON_HISTORY = "/dev/null"; # disable ~/.python_history
     ZK_SHELL = "bash"; # used by the `zk` command
+    # Tells the dynamic link loader where to search for shared libraries (".so" files):
+    # - Some developer tools or libs require "${pkgs.stdenv.cc.cc.lib}/lib".
+    # - Pytorch requires "/run/opengl-driver/lib" to make cuda available.
+    LD_LIBRARY_PATH = "/run/opengl-driver/lib:${pkgs.stdenv.cc.cc.lib}/lib";
     # SHELL = "/etc/profiles/per-user/${username}/bin/nu";
     SHELL = "/etc/profiles/per-user/${username}/bin/zsh";
     # SHELL = "/sbin/bash";
