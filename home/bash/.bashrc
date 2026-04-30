@@ -41,9 +41,3 @@ _set_zellij_pane_title() {
   echo -n -e "\033]0;${display_path}\007"
 }
 PROMPT_COMMAND="_set_zellij_pane_title${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
-
-# ------ #
-# tirith
-# ------ #
-
-eval "$(tirith init --shell bash)"
