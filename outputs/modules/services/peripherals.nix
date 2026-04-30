@@ -91,8 +91,10 @@
     alsa.support32Bit = true;
     # Enable support for older PulseAudio clients (most desktop apps).
     pulse.enable = true;
-    # If you need low-latency Pro Audio (like Ardour, Jack).
-    jack.enable = true;
+    # # Note: LD_LIBRARY_PATH will be set if jack is enabled, which conflicts
+    # # with other configs that also set LD_LIBRARY_PATH. Hence jack is commented.
+    # # If you need low-latency Pro Audio (like Ardour, Jack).
+    # jack.enable = true;
   };
 
   # Recommended to allow PipeWire to run with real-time scheduling for
