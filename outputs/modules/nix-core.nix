@@ -14,20 +14,31 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11";
 
-  # Set "Configuration Revision" with git sha when building.
+  # Sets "Configuration Revision" with git sha when building.
   # To see the "Configuration Revision", run `nixos-rebuild list-generations`.
   system.configurationRevision = self.rev or self.dirtyRev or null;
 
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = system;
 
-  # Enable experimental features.
+  # Enables experimental features.
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
 
-  # Set system-wide environment variables.
+  # Sets up binary cache.
+  nix.settings = {
+    substituters = [
+      # The official cache server of nixpkgs.
+      "https://cache.nixos.org"
+      # For cuda packages (e.g. cudaPackages.cudatoolkit).
+      "https://cache.nixos-cuda.org"
+    ];
+    trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+  };
+
+  # Sets system-wide environment variables.
   # Note: changes on these env vars need system reboot to take effect.
   environment.variables = {
     EDITOR = "nvim";
@@ -38,7 +49,7 @@
     # SHELL = "/sbin/bash";
   };
 
-  # Optimize storage.
+  # Optimizes storage.
   nix.optimise.automatic = true;
 
   time.timeZone = "Asia/Shanghai";
