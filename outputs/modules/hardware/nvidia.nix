@@ -1,6 +1,10 @@
 { config, ... }:
 # ----------  nvidia configs ---------- #
 {
+  # Enables builds with CUDA support with a nixpkgs wide configuration.
+  nixpkgs.config.cudaSupport = true;
+
+  # Nvidia GPU configs.
   hardware.nvidia = {
     # Enable experimental power management through systemd.
     powerManagement.enable = true;
