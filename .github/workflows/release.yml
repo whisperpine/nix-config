@@ -16,7 +16,6 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0 # Fetch all history.
-          filter: blob:none
           fetch-tags: true
       - uses: cachix/install-nix-action@v31
       - name: Run git cliff command
