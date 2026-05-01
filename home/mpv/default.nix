@@ -1,6 +1,15 @@
-{ ... }:
+{ config, ... }:
+let
+  repoDir = builtins.getEnv "PWD";
+  mpvConfig = "${repoDir}/home/mpv/mpv.conf";
+in
 {
   programs.mpv.enable = true;
+
+  xdg.configFile.mpv = {
+    source = config.lib.file.mkOutOfStoreSymlink mpvConfig;
+    target = "./mpv/mpv.conf";
+  };
 
   xdg.mimeApps.associations.added = {
     # Video types.
