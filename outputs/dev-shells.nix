@@ -34,8 +34,6 @@ forEachSupportedSystem (
           echo " ($((($(date +%s) - $(git log -1 --format="%ct" -- flake.lock)) / 86400)) days ago)"
         # Install git hooks managed by prek.
         prek install --quiet
-        # Insert legacy git hooks to prek-managed ones.
-        sh ./scripts/insert-legacy-hooks.sh
       '';
     };
   }
