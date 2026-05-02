@@ -18,6 +18,12 @@ unset_main = { fg = "#202020", bg = "#de935f" }  # yellow
 [indicator]
 padding = { open = "█", close = "█" }
 
+[tabs]
+active = { fg = "#202020", bg = "#81a2be", underline = true }
+inactive = { fg = "#202020", bg = "#81a2be", reversed = true }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "[", close = "]" }
+
 [icon]
 # Override the default directory icons.
 dirs = [
