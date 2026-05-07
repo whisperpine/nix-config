@@ -1,4 +1,8 @@
 {
   "$schema": "https://opencode.ai/tui.json",
-  "theme": "system"
+  "theme": "system",
+  "keybinds": {
+    "leader": "ctrl+space",
+    "app_exit": "ctrl+d"
+  }
 }
