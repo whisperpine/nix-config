@@ -40,6 +40,8 @@ let
       programs.dconf.enable = true;
       # Install firefox.
       programs.firefox.enable = true;
+      # Install localsend.
+      programs.localsend.enable = true;
       # Allow unfree software to be installed (e.g. google-chrome).
       nixpkgs.config.allowUnfree = true;
       # Install packages in operating system.
