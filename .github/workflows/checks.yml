@@ -49,6 +49,16 @@ jobs:
       - name: Run nix command
         run: nix flake check --impure --all-systems
 
+  nixfmt-check:
+    name: nixfmt check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: cachix/install-nix-action@v31
+      - name: Run nix command
+        shell: nix shell nixpkgs#nixfmt-rs --quiet --command bash {0}
+        run: nixfmt --check .
+
   shellcheck:
     name: lint shell scripts by shellcheck
     runs-on: ubuntu-latest
