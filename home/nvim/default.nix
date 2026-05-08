@@ -58,7 +58,7 @@ in
     rustfmt # rust
     tflint # terraform
     sqlfluff # sql
-    nixfmt # nix
+    nixfmt-rs # nix
     stylua # lua
     kdlfmt # kdl
     shfmt # shell
