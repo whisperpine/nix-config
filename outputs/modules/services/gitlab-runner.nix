@@ -21,8 +21,8 @@
         # A list of all supported environment variables can be found with:
         # gitlab-runner register --help
         registrationFlags = [
-          ''--url ${builtins.getEnv "CI_SERVER_URL"}''
-          ''--token ${builtins.getEnv "CI_SERVER_TOKEN"}''
+          "--url ${builtins.getEnv "CI_SERVER_URL"}"
+          "--token ${builtins.getEnv "CI_SERVER_TOKEN"}"
         ];
         # NOTE: use either `registrationFlags` or `authenticationTokenConfigFile`.
         # authenticationTokenConfigFile = toString ./gitlab-runner.env;
