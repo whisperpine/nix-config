@@ -37,6 +37,13 @@ entry = "typos --hidden --exclude .git --format brief"
 pass_filenames = false
 
 [[repos.hooks]]
+id = "markdownlint"
+name = "lint markdown files"
+language = "system"
+entry = "markdownlint . --ignore **/node_modules/**"
+pass_filenames = false
+
+[[repos.hooks]]
 id = "commit-msg"
 name = "check commit message"
 language = "system"
