@@ -10,3 +10,6 @@
 
 # Shell script playground
 /scripts/playground.sh
+
+# rumdl cache directory
+.rumdl_cache

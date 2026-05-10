@@ -244,6 +244,7 @@ vim.lsp.enable {
   "clangd",
   "hyprls",
   "gopls",
+  "rumdl",
   "taplo",
   "qmlls",
   "biome",

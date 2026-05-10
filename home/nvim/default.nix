@@ -44,7 +44,6 @@ in
     # Find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
     python313Packages.cfn-lint # cloudformation
-    markdownlint-cli # markdown
     ansible-lint # ansible
     shellcheck # shell linter
     actionlint # github actions
@@ -63,6 +62,7 @@ in
     kdlfmt # kdl
     shfmt # shell
     typos # spell checker
+    rumdl # markdown
     biome # ts, js, css, json, graphql
     deno # ts, js, json, yaml, css, html
     ruff # python

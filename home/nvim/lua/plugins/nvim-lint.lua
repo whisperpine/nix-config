@@ -10,7 +10,6 @@ M.config = function()
     html = { "htmlhint" },
     terraform = { "tflint" },
     sql = { "sqlfluff" },
-    markdown = { "markdownlint" },
     json = { "redocly" },
     yaml = { "redocly" },
     go = { "golangcilint" },
