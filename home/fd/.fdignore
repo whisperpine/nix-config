@@ -22,6 +22,9 @@ __pycache__
 # pixi
 .pixi
 
+# rumdl
+.rumdl_cache
+
 # others
 cache
 dist
