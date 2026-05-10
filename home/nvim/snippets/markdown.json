@@ -116,10 +116,10 @@
   },
   "lint": {
     "prefix": "lint",
-    "description": "Disable a markdownlint rule",
+    "description": "Disable a rumdl rule",
     "body": [
-      "<!-- markdownlint-disable MD$1 -->",
-      "<!-- markdownlint-enable MD$1 -->"
+      "<!-- rumdl-disable MD$1 -->",
+      "<!-- rumdl-enable MD$1 -->"
     ]
   }
 }
