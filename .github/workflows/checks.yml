@@ -30,15 +30,15 @@ jobs:
         shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
         run: cog check HEAD..HEAD
 
-  markdownlint:
-    name: lint markdown by markdownlint
+  rumdl:
+    name: lint markdown by rumdl
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
-      - name: Run markdownlint command
-        shell: nix shell nixpkgs#markdownlint-cli --quiet --command bash {0}
-        run: markdownlint .
+      - name: Run rumdl command
+        shell: nix shell nixpkgs#rumdl --quiet --command bash {0}
+        run: rumdl check .
 
   nix-flake-check:
     name: nix flake check
