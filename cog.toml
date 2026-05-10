@@ -1,5 +1,7 @@
 tag_prefix = "v"
 
+ignore_fixup_commits = true
+
 scopes = [
   # general
   "pkgs",
