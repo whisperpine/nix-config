@@ -37,10 +37,10 @@ entry = "typos --hidden --exclude .git --format brief"
 pass_filenames = false
 
 [[repos.hooks]]
-id = "markdownlint"
+id = "rumdl"
 name = "lint markdown files"
 language = "system"
-entry = "markdownlint . --ignore **/node_modules/**"
+entry = "rumdl check ."
 pass_filenames = false
 
 [[repos.hooks]]
