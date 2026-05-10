@@ -26,5 +26,3 @@ Scripts:
 
 - [auto-commit-push.sh](./auto-commit-push.sh):
   git commit all changes and push.
-- [check-typos-in-files.sh](./check-typos-in-files.sh):
-  check typos in pre-commit hook and CI.
