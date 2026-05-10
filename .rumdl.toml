@@ -1,13 +1,9 @@
-# -------------- #
-# global configs
-# -------------- #
-
 [global]
-# List of rules to disable (uncomment and modify as needed).
+# List of rules to disable.
 disable = ["MD033"]
-# Additional rules to enable on top of defaults (additive, does not replace).
+# Additional rules to enable on top of defaults (additive).
 extend-enable = ["ALL"]
-# Additional rules to disable on top of the disable list (additive)
+# Additional rules to disable on top of the disable list (additive).
 extend-disable = []
 # List of file/directory patterns to exclude from linting.
 exclude = ["**/node_modules/**"]
