@@ -68,6 +68,10 @@ M.routes = {
   { filter = { find = "No code actions available" }, opts = { skip = true } },
   { filter = { find = "No signature help available" }, opts = { skip = true } },
   {
+    filter = { find = 'method "textDocument/signatureHelp" is not supported' },
+    opts = { skip = true },
+  },
+  {
     filter = { find = "method textDocument/signatureHelp is not supported" },
     opts = { skip = true },
   },
