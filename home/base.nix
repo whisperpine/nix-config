@@ -53,6 +53,7 @@
     eza # modern alternative to ls
     mtr # network diagnostics tool
     dig # DNS lookup utility
+    yq-go # yaml processor
     jq # json processor
   ];
 }
