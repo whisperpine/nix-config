@@ -40,6 +40,19 @@ jobs:
         shell: nix shell nixpkgs#rumdl --quiet --command bash {0}
         run: rumdl check .
 
+  validate-skills:
+    name: validate skills
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: home/skills
+    steps:
+      - uses: actions/checkout@v6
+      - uses: cachix/install-nix-action@v31
+      - name: Run the script to validate skills
+        shell: nix shell nixpkgs#yq-go --quiet --command bash {0}
+        run: sh validate_skills.sh .
+
   nix-flake-check:
     name: nix flake check
     runs-on: ubuntu-latest
