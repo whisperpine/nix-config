@@ -76,9 +76,8 @@ must be the same as the dirname ('$dir_name')."
   fi
 }
 
-# Loops over all "SKILL.md" files under the give directory.
-for filename in "${1%/}"/*/SKILL.md; do
-  [ -e "$filename" ] || continue
+# Loops over all "SKILL.md" files under the given directory.
+find "$1" -name "SKILL.md" -type f | while IFS= read -r filename; do
   validate "$filename"
 done
 
