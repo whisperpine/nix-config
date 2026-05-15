@@ -29,7 +29,7 @@ validate() {
 
   # Checks if the frontmatter contains the "description" attribute.
   if ! yq --front-matter=extract \
-    eval ".description // error(\"The 'description' attribute is missing in '$filename'.\")" \
+    ".description // error(\"The 'description' attribute is missing in '$filename'.\")" \
     "$filename" >/dev/null; then
     exit_code=1
   fi
@@ -37,7 +37,7 @@ validate() {
   # Checks if the frontmatter contains the "name" attribute.
   # Assigns the value of the "name" attribute to a variable.
   if ! name_attribute=$(yq --front-matter=extract \
-    eval ".name // error(\"The 'name' attribute is missing in '$filename'.\")" \
+    ".name // error(\"The 'name' attribute is missing in '$filename'.\")" \
     "$filename"); then
     exit_code=1
   fi
@@ -57,6 +57,21 @@ must be the same as the dirname ('$dir_name')."
   #   - Not start or end with `-`.
   if ! echo "$name_attribute" | grep -E "^[a-z0-9]+(-[a-z0-9]+)*$" >/dev/null 2>&1; then
     echo "Error: Invalid 'name' attribute ('$name_attribute') in the frontmatter of '$filename'."
+    exit_code=1
+  fi
+
+  # Only certain attributes are used by coding agents.
+  extra_keys=$(yq 'keys | .[] | select(
+    . != "name"
+    and . != "description"
+    and . != "license"
+    and . != "metadata"
+    and . != "compatibility"
+    )' \
+    --front-matter=extract "$filename")
+  if [ -n "$extra_keys" ]; then
+    extra_keys=$(echo "$extra_keys" | paste -sd "," | sed "s/,/, /g")
+    echo "Error: Unexpected attribute(s) found ('$extra_keys') in '$filename'."
     exit_code=1
   fi
 }
