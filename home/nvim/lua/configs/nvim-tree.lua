@@ -20,7 +20,7 @@ M = {
   },
 
   filters = {
-    custom = { "^\\.git$", "^\\.direnv$" },
+    custom = { "^\\.git$", "^\\.direnv$", "^\\.rumdl_cache$" },
     git_ignored = false,
   },
 
