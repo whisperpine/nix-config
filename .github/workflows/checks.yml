@@ -41,7 +41,7 @@ jobs:
         run: rumdl check .
 
   validate-skills:
-    name: validate skills
+    name: validate skills frontmatter
     runs-on: ubuntu-latest
     defaults:
       run:
