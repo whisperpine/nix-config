@@ -8,6 +8,7 @@ scopes = [
   "deps",
   "dir",
   "nixos",
+  "skills",
   # platforms
   "wsl",
   "darwin",

@@ -3,6 +3,7 @@
   imports = [
     ./base.nix
 
+    ./skills # skills for coding agents
     ./tealdeer # fast tldr implementation
     ./erdtree # file-tree visualizer
     ./direnv # manage dir-based env vars
