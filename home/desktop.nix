@@ -4,6 +4,7 @@
     ./base.nix
 
     ./skills # skills for coding agents
+    ./duckdb # OLAP embedded database
     ./tealdeer # fast tldr implementation
     ./erdtree # file-tree visualizer
     ./direnv # manage dir-based env vars

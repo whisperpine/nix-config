@@ -1,0 +1,8 @@
+.highlight_mode dark
+.highlight_colors keyword magenta
+.highlight_colors string_constant yellow
+.highlight_colors schema_name blue
+.highlight_colors comment grey46
+.highlight_colors startup_text grey46
+.highlight_colors column_type grey46
+.highlight_colors suggestion_function_name blue
