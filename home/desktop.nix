@@ -4,6 +4,7 @@
     ./base.nix
 
     ./skills # skills for coding agents
+    ./vercel-skills # manage agent skills
     ./duckdb # OLAP embedded database
     ./tealdeer # fast tldr implementation
     ./erdtree # file-tree visualizer

@@ -8,7 +8,7 @@ enable = ["ALL"]
 # Additional rules to disable on top of the disable list (additive)
 extend-disable = ["MD033"]
 # List of file/directory patterns to exclude from linting.
-exclude = ["**/node_modules/**"]
+exclude = ["home/skills/find-skills/**"]
 
 # ------------------ #
 # rule level configs
