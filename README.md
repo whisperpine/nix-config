@@ -10,24 +10,25 @@
 
 </div>
 
-This repository contains all my Nix configurations for desktops (NixOS and
-macOS) and homelab servers.
+This repository contains all my Nix configurations for desktops
+(NixOS and macOS) and homelab servers.
 
 Nix declaratively defines: operating system, software and their configurations.
 This ensures consistency, reproducibility and hassle-free rolling back, which is
 impossible to achieve just with dotfiles. Nix is also a good approach to manage
-development environments.
-See [whisperpine/dev-templates](https://github.com/whisperpine/dev-templates) to
-learn more.
+development environments. Learn more in [whisperpine/dev-templates](https://github.com/whisperpine/dev-templates).
 
 ## Screenshots
 
-[Neovim](https://github.com/neovim/neovim)
-(based on [NvChad](https://github.com/NvChad/NvChad))
+Neovim (based on [NvChad](https://github.com/NvChad/NvChad))
 running inside [Zellij](https://github.com/zellij-org/zellij)
-in [WezTerm](https://github.com/wezterm/wezterm):
+in [Ghostty](https://ghostty.org/):
 
 ![neovim-zellij](./assets/neovim-zellij.webp)
+
+[Yazi](https://github.com/sxyazi/yazi) with configs under [./home/yazi/](./home/yazi/):
+
+![yazi](./assets/yazi.webp)
 
 ## Get Started
 
