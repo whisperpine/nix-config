@@ -18,18 +18,19 @@
   home.packages = with pkgs; [
     # --- cloud --- #
     kubectl # kubernetes cli
+    fluxcd # gitops for kubernetes
 
     # --- dev tools --- #
     python313 # python 13
     uv # python package manager
+    kondo # clean unneeded files from projects
+    hyperfine # command-line benchmarking tool
+    onefetch # git repository summary
 
     # --- utilities --- #
     translate-shell # command-line translator
-    hyperfine # command-line benchmarking tool
-    onefetch # git repository summary
     pastel # play with colors in the terminal
     ffmpeg # process audio, image and video
-    kondo # clean unneeded files from projects
     tokei # count code lines quickly
   ];
 }
