@@ -16,7 +16,6 @@ These override rumdl defaults where they conflict:
 
 - Use `-` for unordered lists.
 - Never use bold (`**text**` or `__text__`).
-- No trailing newlines at end of file.
 - Never use em dash `—`, replace it with hyphen `-`.
 - APA-style heading capitalization: Title Case for all major words.
 - All list items end with `.`, except standalone terms or bare links.
