@@ -47,6 +47,7 @@
     age # a modern encryption tool
     sops # secrets operations
 
+    sqlite # embedded OLTP database
     difftastic # ergonomic alternative to diff
     tree # show a directory as a tree
     ouch # compression and decompression
