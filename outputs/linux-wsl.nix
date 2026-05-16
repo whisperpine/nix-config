@@ -23,7 +23,7 @@ let
     inherit username;
   };
   configuration =
-    { pkgs, config, ... }:
+    { pkgs, ... }:
     {
       # Install packages in operating system.
       environment.systemPackages = with pkgs; [
