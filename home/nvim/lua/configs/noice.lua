@@ -75,6 +75,10 @@ M.routes = {
     filter = { find = "method textDocument/signatureHelp is not supported" },
     opts = { skip = true },
   },
+  {
+    filter = { find = "Client marksman quit with exit code 1 and signal 0" },
+    opts = { skip = true },
+  },
   -- telescope.nvim --
   { filter = { find = "Nothing currently selected" }, opts = { skip = true } },
   { filter = { find = "No diagnostics found" }, opts = { skip = true } },
