@@ -31,6 +31,42 @@ in [WezTerm](https://github.com/wezterm/wezterm):
 
 ## Get Started
 
+### NixOS Desktop
+
+Download the official ISO image on [nixos.org/download](https://nixos.org/download/),
+and install it in you desktop.
+
+<details><summary>Install NixOS in a desktop environment.</summary>
+
+```sh
+# Clone this repo under user home directory.
+cd ~ && git clone git@github.com:whisperpine/nix-config.git
+
+# Create ".env" file from template.
+cd ~/.config/nix-config && cp example.env .env
+# Edit .env (follow the comment inside).
+vim .env
+
+# Back up the original "/etc/nixos".
+sudo mv /etc/nixos /etc/nixos.bak
+# Create a symlink to "/etc/nixos".
+# This symlink is used by neovim configs and `PATH` env var.
+sudo ln -s ~/nix-config /etc/nixos
+
+# Create the file contain age private key (don't forget to modify it).
+touch ~/.config/sops/age/keys.txt
+chmod 600 ~/.config/sops/age/keys.txt
+
+# Here we go.
+nix --extra-experimental-features "nix-command flakes" \
+  run nixos-rebuild -- switch --sudo --impure --flake ~/nix-config
+
+# Use this simplified command to make changes to NixOS hereafter.
+just deploy
+```
+
+</details>
+
 ### NixOS-WSL
 
 Download `nixos-wsl.tar.gz` from the [latest release](https://github.com/nix-community/NixOS-WSL/releases).
