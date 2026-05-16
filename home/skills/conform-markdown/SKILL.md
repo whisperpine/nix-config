@@ -40,7 +40,7 @@ When creating or editing a markdown file:
 
 1. Check whether the file is already excluded in `.rumdl.toml` under `exclude`.
    If so, skip linting entirely.
-2. Run `rumdl fmt <file>` to auto-format.
+2. Run `rumdl fmt --config 'MD013.reflow=true' <file>` to auto-format.
 3. Run `rumdl check --fix <file>` to auto-fix linting warnings.
 4. Run `rumdl check <file>` again to verify no warnings remain.
 5. If warnings persist, fix them manually and re-run step 4.
