@@ -50,6 +50,7 @@ hl(0, "@lsp.typemod.variable.defaultLibrary.javascript", { link = "@function.bui
 
 ----- Markdown ------
 hl(0, "@lsp.type.class.markdown", { link = "" })
+hl(0, "@spell.markdown", { link = "@operator" })
 
 ----- Terraform ------
 hl(0, "@none.hcl", { link = "@operator" })
