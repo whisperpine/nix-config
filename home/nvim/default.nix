@@ -95,8 +95,8 @@ in
     texlab # latex
     taplo # toml
     gopls # go
+    nixd # nix
     zls # zig
-    nil # nix
     ty # python
 
     # Including lsp "clangd" and formatter "clang-format".
