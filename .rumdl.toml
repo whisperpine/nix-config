@@ -8,7 +8,11 @@ enable = ["ALL"]
 # Additional rules to disable on top of the disable list (additive)
 extend-disable = ["MD033"]
 # List of file/directory patterns to exclude from linting.
-exclude = ["home/skills/find-skills/**"]
+exclude = [
+  "home/skills/find-skills/**",
+  "home/skills/write-a-skill/**",
+  "home/skills/grill-me/**",
+]
 
 # ------------------ #
 # rule level configs
