@@ -2,5 +2,13 @@
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": false,
   "default_agent": "plan",
-  "share": "disabled"
+  // Disables the "/share" command to make a session publicly available.
+  "share": "disabled",
+  // keeps built-ins enabled while configuring overrides or custom servers.
+  "lsp": {
+    "marksman": {
+      "command": ["marksman", "server"],
+      "extensions": [".md"]
+    }
+  }
 }
