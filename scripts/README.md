@@ -2,8 +2,8 @@
 
 This directory contains shell scripts:
 
-- Some of them are meant to be executed as commands, see [#scripts-as-commands](#scripts-as-commands).
-- Some of them are meant to be copied and executed elsewhere, see [#copy-and-run](#copy-and-run).
+- Some of them are meant to be executed as commands, see [Scripts as Commands](#scripts-as-commands).
+- Some of them are meant to be copied and executed elsewhere, see [Copy and Run](#copy-and-run).
 
 ## Scripts as Commands
 
