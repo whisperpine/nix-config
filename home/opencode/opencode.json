@@ -10,5 +10,12 @@
       "command": ["marksman", "server"],
       "extensions": [".md"]
     }
+  },
+  // Keeps built-ins enabled while configuring overrides or custom formatters.
+  "formatter": {
+    "rumdl": {
+      "command": ["rumdl", "fmt", "$FILE"],
+      "extensions": [".md"]
+    }
   }
 }
