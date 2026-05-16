@@ -1,35 +1,6 @@
 {
   "version": 3,
   "skills": {
-    "find-skills": {
-      "source": "vercel-labs/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/vercel-labs/skills.git",
-      "skillPath": "skills/find-skills/SKILL.md",
-      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
-      "installedAt": "2026-05-16T08:44:42.315Z",
-      "updatedAt": "2026-05-16T08:44:42.315Z"
-    },
-    "grill-me": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/productivity/grill-me/SKILL.md",
-      "skillFolderHash": "2a1ad17028306ebe45f0e49703fa28b9b2e7f499",
-      "pluginName": "mattpocock-skills",
-      "installedAt": "2026-05-16T10:33:19.994Z",
-      "updatedAt": "2026-05-16T10:33:19.994Z"
-    },
-    "write-a-skill": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/productivity/write-a-skill/SKILL.md",
-      "skillFolderHash": "2f252b35aa238879afc5a230ac30343708dee0b3",
-      "pluginName": "mattpocock-skills",
-      "installedAt": "2026-05-16T10:33:20.817Z",
-      "updatedAt": "2026-05-16T10:33:20.817Z"
-    }
   },
   "dismissed": {
     "findSkillsPrompt": true
