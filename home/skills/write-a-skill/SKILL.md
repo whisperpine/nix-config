@@ -41,13 +41,13 @@ skill-name/
 
 ```markdown
 ---
-name: skill-name
 description: Brief description of capability. Use when [specific triggers].
+name: skill-name
 ---
 
 # Skill Name
 
-## Quick start
+## Quick Start
 
 [Minimal working example]
 
@@ -55,7 +55,7 @@ description: Brief description of capability. Use when [specific triggers].
 
 [Step-by-step processes with checklists for complex tasks]
 
-## Advanced features
+## Advanced Features
 
 [Link to separate files: See [REFERENCE.md](REFERENCE.md)]
 ```
