@@ -1,0 +1,74 @@
+# vi: ft=dosini
+# https://litecli.com/config/
+
+[main]
+
+# Multi-line mode allows breaking up the sql statements into multiple lines. If
+# this is set to True, then the end of the statements must have a semi-colon.
+# If this is set to False then sql statements can't be split into multiple
+# lines. End of line (return) is considered as the end of the statement.
+multi_line = False
+
+# Destructive warning mode will alert you before executing a sql statement
+# that may cause harm to the database such as "drop table", "drop database"
+# or "shutdown".
+destructive_warning = True
+
+# Syntax coloring style. Possible values (many support the "-dark" suffix):
+# manni, igor, xcode, vim, autumn, vs, rrt, native, perldoc, borland, tango,
+# emacs, friendly, monokai, paraiso, colorful, murphy, bw, pastie, trac,
+# default, fruity.
+# Screenshots at http://mycli.net/syntax
+syntax_style = ""
+
+# Enabling this option will show the suggestions in a wider menu. Thus more items are suggested.
+wider_completion_menu = False
+
+# Litecli prompt.
+# \D - The full current date
+# \d - Database name
+# \m - Minutes of the current time
+# \n - Newline
+# \P - AM/PM
+# \R - The current time, in 24-hour military time (0-23)
+# \r - The current time, standard 12-hour time (1-12)
+# \s - Seconds of the current time
+prompt = '\d> '
+prompt_continuation = '-> '
+
+# Skip intro info on startup and outro info on exit.
+less_chatty = False
+
+# Keyword casing preference. Possible values "lower", "upper", "auto".
+keyword_casing = upper
+
+# Disabled pager on startup.
+enable_pager = True
+
+# Custom colors for the completion menu, toolbar, etc.
+[colors]
+completion-menu.completion.current = 'bg:#363636 #bdbdbd'
+completion-menu.completion = 'bg:#363636 #bdbdbd'
+completion-menu.meta.completion.current = 'bg:#bdbdbd #202020'
+completion-menu.meta.completion = 'bg:#202020 #bdbdbd'
+completion-menu.multi-column-meta = 'bg:#bdbdbd #202020'
+scrollbar.arrow = 'bg:#202020'
+scrollbar = 'bg:#363636'
+selected = '#bdbdbd bg:#6666aa'
+search = '#bdbdbd bg:#4444aa'
+search.current = '#bdbdbd bg:#879c54'
+bottom-toolbar = 'bg:#222222 #aaaaaa'
+bottom-toolbar.off = 'bg:#222222 #666666'
+bottom-toolbar.on = 'bg:#222222 #bdbdbd'
+search-toolbar = 'noinherit bold'
+search-toolbar.text = 'nobold'
+system-toolbar = 'noinherit bold'
+arg-toolbar = 'noinherit bold'
+arg-toolbar.text = 'nobold'
+bottom-toolbar.transaction.valid = 'bg:#222222 #879c54 bold'
+bottom-toolbar.transaction.failed = 'bg:#222222 #cc6666 bold'
+
+# Style classes for colored table output.
+output.header = "#879c54 bold"
+output.odd-row = ""
+output.even-row = ""

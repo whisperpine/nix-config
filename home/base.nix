@@ -33,6 +33,7 @@
     ./zoxide # history-aware cd command
     ./bat # "cat" with syntax highlighting
     ./pgcli # cli for postgresql
+    ./litecli # cli for sqlite
   ];
 
   home.packages = with pkgs; [
