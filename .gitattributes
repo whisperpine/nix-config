@@ -8,6 +8,10 @@ scripts/commit-msg.sh -linguist-detectable
 .envrc -linguist-detectable
 # Remove justfile from repo statistics.
 justfile -linguist-detectable
+# Remove all .css files from repo statistics.
+**/*.css -linguist-detectable
+# Remove all .nu files from repo statistics.
+**/*.nu -linguist-detectable
 
 ## Git LFS ##
 ## Image
