@@ -24,12 +24,6 @@ M.init = function()
     "BufReadPost",
     "InsertLeave",
   }
-  -- Customize built-in linter: sqlfluff.
-  local sqlfluff = require("lint").linters.sqlfluff
-  sqlfluff.args = {
-    "lint",
-    "--format=json",
-  }
   vim.api.nvim_create_autocmd(lint_events, {
     callback = function()
       -- Try_lint without arguments runs the linters defined
