@@ -30,6 +30,11 @@ in [Ghostty](https://ghostty.org/):
 
 ![yazi](./assets/yazi.webp)
 
+[Waybar](https://github.com/Alexays/Waybar) as the status bar,
+[Fuzzel](https://codeberg.org/dnkl/fuzzel) as the app launcher and fuzzy finder:
+
+![waybar-fuzzel.webp](./assets/waybar-fuzzel.webp)
+
 ## Get Started
 
 ### NixOS Desktop
@@ -216,13 +221,6 @@ flowchart LR
     h_darwin_desktop --> h_desktop
   end
 ```
-
-## Contributing
-
-As this repository is for personal use, Pull Requests regarding new features or
-refactor will *not* be accepted.
-If you have any questions, recommendations or related things to share,
-feel free to [open a discussion](https://github.com/whisperpine/nix-config/discussions).
 
 ## References
 
