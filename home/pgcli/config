@@ -26,9 +26,9 @@ multi_line = False
 # a command.
 multi_line_mode = psql
 
-# Destructive warning will alert you before executing a sql statement
-# that may cause harm to the database such as "drop table", "drop database",
-# "shutdown", "delete", or "update".
+# Destructive warning will alert you before executing a sql statement that may
+# cause harm to the database such as "drop table", "drop database", "shutdown",
+# "delete", or "update".
 # You can pass a list of destructive commands or leave it empty if you want to skip all warnings.
 # "unconditional_update" will warn you of update statements that don't have a where clause
 destructive_warning = drop, shutdown, delete, truncate, alter, update, unconditional_update
@@ -54,11 +54,12 @@ auto_expand = False
 # False, will prompt to rerun the failed query instead of auto-retrying.
 auto_retry_closed_connection = True
 
-# If set to True, table suggestions will include a table alias
+# If set to True, table suggestions will include a table alias.
 generate_aliases = False
 
-# Path to a json file that specifies specific table aliases to use when generate_aliases is set to True
-# the format for this file should be:
+# Path to a json file that specifies specific table aliases to use when
+# generate_aliases is set to True.
+# The format for this file should be:
 # {
 #     "some_table_name": "desired_alias",
 #     "some_other_table_name": "another_alias"
@@ -66,31 +67,31 @@ generate_aliases = False
 alias_map_file =
 
 # "log_file" location.
-# In Unix/Linux: ~/.config/pgcli/log
-# In Windows: %USERPROFILE%\AppData\Local\dbcli\pgcli\log
-# %USERPROFILE% is typically C:\Users\{username}
+# In Unix/Linux: "~/.config/pgcli/log".
+# In Windows: "%USERPROFILE%\AppData\Local\dbcli\pgcli\log".
+# %USERPROFILE% is typically "C:\Users\{username}".
 log_file = default
 
-# Keyword casing preference. Possible values: "lower", "upper", "auto"
+# Keyword casing preference. Possible values: "lower", "upper", "auto".
 keyword_casing = auto
 
 # "casing_file" location.
-# In Unix/Linux: ~/.config/pgcli/casing
-# In Windows: %USERPROFILE%\AppData\Local\dbcli\pgcli\casing
-# %USERPROFILE% is typically C:\Users\{username}
+# In Unix/Linux: "~/.config/pgcli/casing"
+# In Windows: "%USERPROFILE%\AppData\Local\dbcli\pgcli\casing"
+# %USERPROFILE% is typically "C:\Users\{username}"
 casing_file = default
 
 # If generate_casing_file is set to True and there is no file in the above
 # location, one will be generated based on usage in SQL/PLPGSQL functions.
 generate_casing_file = False
 
-# Casing of column headers based on the casing_file described above
+# Casing of column headers based on the casing_file described above.
 case_column_headers = True
 
 # "history_file" location.
-# In Unix/Linux: ~/.config/pgcli/history
-# In Windows: %USERPROFILE%\AppData\Local\dbcli\pgcli\history
-# %USERPROFILE% is typically C:\Users\{username}
+# In Unix/Linux: "~/.config/pgcli/history"
+# In Windows: "%USERPROFILE%\AppData\Local\dbcli\pgcli\history".
+# %USERPROFILE% is typically "C:\Users\{username}".
 history_file = default
 
 # Default log level. Possible values: "CRITICAL", "ERROR", "WARNING", "INFO"
@@ -98,14 +99,14 @@ history_file = default
 log_level = INFO
 
 # Order of columns when expanding * to column list
-# Possible values: "table_order" and "alphabetic"
+# Possible values: "table_order" and "alphabetic".
 asterisk_column_order = table_order
 
-# Whether to qualify with table alias/name when suggesting columns
-# Possible values: "always", "never" and "if_more_than_one_table"
+# Whether to qualify with table alias/name when suggesting columns.
+# Possible values: "always", "never" and "if_more_than_one_table".
 qualify_columns = if_more_than_one_table
 
-# When no schema is entered, only suggest objects in search_path
+# When no schema is entered, only suggest objects in search_path.
 search_path_filter = False
 
 # Default pager. See https://www.pgcli.com/pager for more information on settings.
@@ -138,22 +139,22 @@ syntax_style = ""
 # for end are available in the REPL.
 vi = False
 
-# Error handling
+# Error handling.
 # When one of multiple SQL statements causes an error, choose to either
-# continue executing the remaining statements, or stopping
-# Possible values "STOP" or "RESUME"
+# continue executing the remaining statements, or stopping.
+# Possible values "STOP" or "RESUME".
 on_error = STOP
 
 # Set threshold for row limit. Use 0 to disable limiting.
 row_limit = 1000
 
 # Truncate long text fields to this value for tabular display (does not apply to csv).
-# Leave unset to disable truncation. Example: "max_field_width = "
+# Leave unset to disable truncation. Example: "max_field_width = ".
 # Be aware that formatting might get slow with values larger than 500 and tables with
 # lots of records.
 max_field_width = 500
 
-# Skip intro on startup and goodbye on exit
+# Skip intro on startup and goodbye on exit.
 less_chatty = False
 
 # Show all Postgres error fields (as listed in
@@ -161,7 +162,7 @@ less_chatty = False
 # Can be toggled with \v.
 verbose_errors = False
 
-# Postgres prompt
+# Postgres prompt.
 # \t - Current date and time
 # \u - Username
 # \h - Short hostname of the server (up to first '.')
@@ -188,7 +189,7 @@ null_string = '<null>'
 # Manage pager on startup.
 enable_pager = True
 
-# Do not use keyring to automatically save and load password in a secure manner
+# Do not use keyring to automatically save and load password in a secure manner.
 keyring = False
 
 # Custom colors for the completion menu, toolbar, etc.
@@ -230,11 +231,11 @@ output.null = "#666666"
 [named queries]
 
 # Here's where you can provide a list of connection string aliases.
-# You can use it by passing the -D option. `pgcli -D example_dsn`
+# You can use it by passing the -D option. `pgcli -D example_dsn`.
 [alias_dsn]
 # example_dsn = postgresql://[user[:password]@][netloc][:port][/dbname]
 
-# Format for number representation
+# Format for number representation.
 # for decimal "d" - 12345678, ",d" - 12,345,678
 # for float "g" - 123456.78, ",g" - 123,456.78
 [data_formats]
