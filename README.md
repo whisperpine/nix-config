@@ -222,6 +222,15 @@ flowchart LR
   end
 ```
 
+## Skills for Agents
+
+Skills for coding agents are located under [./home/skills/](./home/skills/),
+which can be installed by running:
+
+```sh
+npx skills add whisperpine/nix-config
+```
+
 ## References
 
 - Learn Nix as a beginner: [An unofficial book for beginners](https://nixos-and-flakes.thiscute.world/).
