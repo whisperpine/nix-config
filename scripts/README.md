@@ -21,6 +21,10 @@ Scripts:
   batch-convert PNG and JPG files to WebP.
 - [punctuation-cjk-to-ascii.sh](./as-commands/punctuation-cjk-to-ascii.sh):
   convert CJK punctuations to ASCII ones.
+- [print-github-contributions.sh](./as-commands/print-github-contributions.sh):
+  print your github contributions today.
+- [validate_skills.sh](./as-commands/validate_skills.sh):
+  validate all skills under the give directory.
 
 ## Copy and Run
 
