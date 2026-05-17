@@ -12,6 +12,8 @@ justfile -linguist-detectable
 **/*.css -linguist-detectable
 # Remove all .nu files from repo statistics.
 **/*.nu -linguist-detectable
+# Remove all .scm files from repo statistics.
+**/*.scm -linguist-detectable
 
 ## Git LFS ##
 ## Image
