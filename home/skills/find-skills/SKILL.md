@@ -26,16 +26,16 @@ Use this skill when the user:
 
 ## What Is the Skills CLI?
 
-The Skills CLI (`npx skills`) is the package manager for the open agent skills
+The Skills CLI (`bunx skills`) is the package manager for the open agent skills
 ecosystem. Skills are modular packages that extend agent capabilities with
 specialized knowledge, workflows, and tools.
 
 Key commands:
 
-- `npx skills find [query]` - Search for skills interactively or by keyword.
-- `npx skills add <package>` - Install a skill from GitHub or other sources.
-- `npx skills check` - Check for skill updates.
-- `npx skills update` - Update all installed skills.
+- `bunx skills find [query]` - Search for skills interactively or by keyword.
+- `bunx skills add <package>` - Install a skill from GitHub or other sources.
+- `bunx skills check` - Check for skill updates.
+- `bunx skills update` - Update all installed skills.
 
 Browse skills at: <https://skills.sh/>
 
@@ -58,32 +58,32 @@ options.
 
 For example, top skills for web development include:
 
-- `vercel-labs/agent-skills` — React, Next.js, web design (100K+ installs each).
-- `anthropics/skills` — Frontend design, document processing (100K+ installs).
+- `vercel-labs/agent-skills` - React, Next.js, web design (100K+ installs each).
+- `anthropics/skills` - Frontend design, document processing (100K+ installs).
 
 ### Step 3: Search for Skills
 
 If the leaderboard doesn't cover the user's need, run the find command:
 
 ```bash
-npx skills find [query]
+bunx skills find [query]
 ```
 
 For example:
 
-- User asks "how do I make my React app faster?" → `npx skills find react performance`.
-- User asks "can you help me with PR reviews?" → `npx skills find pr review`.
-- User asks "I need to create a changelog" → `npx skills find changelog`.
+- User asks "how do I make my React app faster?" - `bunx skills find react performance`.
+- User asks "can you help me with PR reviews?" - `bunx skills find pr review`.
+- User asks "I need to create a changelog" - `bunx skills find changelog`.
 
 ### Step 4: Verify Quality Before Recommending
 
 *Do not recommend a skill based solely on search results.* Always verify:
 
-1. Install count — Prefer skills with 1K+ installs.
+1. Install count - Prefer skills with 1K+ installs.
    Be cautious with anything under 100.
-2. Source reputation — Official sources (`vercel-labs`, `anthropics`, `microsoft`)
+2. Source reputation - Official sources (`vercel-labs`, `anthropics`, `microsoft`)
    are more trustworthy than unknown authors.
-3. GitHub stars — Check the source repository.
+3. GitHub stars - Check the source repository.
    A skill from a repo with <100 stars should be treated with skepticism.
 
 ### Step 5: Present Options to the User
@@ -103,7 +103,7 @@ React and Next.js performance optimization guidelines from Vercel Engineering.
 (185K installs)
 
 To install it:
-npx skills add vercel-labs/agent-skills@react-best-practices
+bunx skills add vercel-labs/agent-skills@react-best-practices
 
 Learn more: https://skills.sh/vercel-labs/agent-skills/react-best-practices
 ```
@@ -113,7 +113,7 @@ Learn more: https://skills.sh/vercel-labs/agent-skills/react-best-practices
 If the user wants to proceed, you can install the skill for them:
 
 ```bash
-npx skills add <owner/repo@skill> -g -y
+bunx skills add <owner/repo@skill> -g -y
 ```
 
 The `-g` flag installs globally (user-level) and `-y` skips confirmation prompts.
@@ -145,7 +145,7 @@ If no relevant skills exist:
 
 1. Acknowledge that no existing skill was found.
 2. Offer to help with the task directly using your general capabilities.
-3. Suggest the user could create their own skill with `npx skills init`.
+3. Suggest the user could create their own skill with `bunx skills init`.
 
 Example:
 
@@ -154,5 +154,5 @@ I searched for skills related to "xyz" but didn't find any matches.
 I can still help you with this task directly! Would you like me to proceed?
 
 If this is something you do often, you could create your own skill:
-npx skills init my-xyz-skill
+bunx skills init my-xyz-skill
 ```
