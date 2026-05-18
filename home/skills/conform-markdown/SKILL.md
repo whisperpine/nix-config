@@ -14,10 +14,8 @@ Ensure markdown files comply with rumdl linting rules and personal preferences.
 
 These override rumdl defaults where they conflict:
 
-- Use `-` for unordered lists.
 - Never use bold (`**text**` or `__text__`).
 - Never use em dash `—`, replace it with hyphen `-`.
-- APA-style heading capitalization: Title Case for all major words.
 - All list items end with `.`, except standalone terms or bare links.
 - For list items spanning multiple lines, indent continuation lines with spaces
   so that these lines start from the same column. For example:
