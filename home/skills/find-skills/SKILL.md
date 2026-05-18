@@ -7,7 +7,6 @@ description: >
 name: find-skills
 ---
 
-<!-- https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md -->
 # Find Skills
 
 This skill helps you discover and install skills from the open agent skills ecosystem.

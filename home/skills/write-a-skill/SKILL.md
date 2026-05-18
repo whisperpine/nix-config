@@ -5,7 +5,6 @@ description: >
 name: write-a-skill
 ---
 
-<!-- https://github.com/mattpocock/skills/blob/main/skills/productivity/write-a-skill/SKILL.md -->
 # Writing a Skill
 
 ## Process

@@ -6,7 +6,6 @@ description: >
 name: grill-me
 ---
 
-<!-- https://github.com/mattpocock/skills/tree/main/skills/personal -->
 # Grill Me
 
 Interview me relentlessly about every aspect of this plan until we reach a
