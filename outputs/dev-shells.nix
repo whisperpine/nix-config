@@ -34,6 +34,8 @@ forEachSupportedSystem (
           echo " ($((($(date +%s) - $(git log -1 --format="%ct" -- flake.lock)) / 86400)) days ago)"
         # Install git hooks managed by prek.
         prek install --quiet
+        # Install packages required by opencode plugins.
+        bun install --silent --cwd home/opencode/plugins
       '';
     };
   }
