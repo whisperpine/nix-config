@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Environment and Output */
+    "target": "ES2023",
+    "types": [],
+    "lib": ["ES2023"],
+    "useDefineForClassFields": true,
+    "noEmit": true,
+
+    /* Module Resolution */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    /* Type Checking and Linting */
+    "strict": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  },
+
+  /* File Management */
+  "include": ["src", "*.ts"]
+}

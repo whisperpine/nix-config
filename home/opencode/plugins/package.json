@@ -1,0 +1,9 @@
+{
+  "name": "@yusong/opencode-plugins",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {},
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.15.4"
+  }
+}

@@ -7,6 +7,7 @@ let
   agentsDir = "${repoDir}/home/opencode/agents";
   commandsDir = "${repoDir}/home/opencode/commands";
   toolsDir = "${repoDir}/home/opencode/tools";
+  pluginsDir = "${repoDir}/home/opencode/plugins";
 in
 {
   home.packages = with pkgs; [ opencode ];
@@ -34,5 +35,10 @@ in
   xdg.configFile.toolsDir = {
     source = config.lib.file.mkOutOfStoreSymlink toolsDir;
     target = "./opencode/tools";
+  };
+
+  xdg.configFile.pluginsDir = {
+    source = config.lib.file.mkOutOfStoreSymlink pluginsDir;
+    target = "./opencode/plugins";
   };
 }
