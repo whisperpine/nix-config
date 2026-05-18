@@ -44,6 +44,17 @@ entry = "rumdl check ."
 pass_filenames = false
 
 [[repos.hooks]]
+id = "biome-check"
+name = "run biome check"
+language = "system"
+entry = """
+biome check \
+--error-on-warnings --no-errors-on-unmatched \
+home/opencode/plugins
+"""
+pass_filenames = false
+
+[[repos.hooks]]
 id = "commit-msg"
 name = "check commit message"
 language = "system"

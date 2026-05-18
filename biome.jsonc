@@ -1,0 +1,36 @@
+{
+  "$schema": "https://biomejs.dev/schemas/latest/schema.json",
+  "files": {
+    "includes": [
+      "./home/opencode/plugins/*.ts",
+      "!./**/node_modules",
+      "!./**/biome.jsonc"
+    ]
+  },
+  "formatter": { "indentStyle": "space" },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "linter": {
+    "rules": {
+      "style": {
+        "useNamingConvention": {
+          "level": "warn",
+          "options": {
+            "strictCase": true,
+            "conventions": [
+              {
+                "selector": { "kind": "function" },
+                "formats": ["camelCase"]
+              }
+            ]
+          }
+        },
+        "useGraphqlNamingConvention": "warn",
+        "useFilenamingConvention": "error"
+      }
+    }
+  }
+}
