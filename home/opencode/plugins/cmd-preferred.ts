@@ -6,8 +6,10 @@ export const cmdPreferredPlugin: Plugin = async () => {
     "tool.execute.before": async (input, output) => {
       if (input.tool === "bash") {
         const command: string = output.args.command as string;
-        const violation: CommandPreference | null =
-          detectPreferenceViolation(command);
+        const violation: CmdPreference | null = detectCmdViolation(
+          command,
+          preferences,
+        );
 
         if (violation) {
           const alt: string = violation.alternatives.join(", ");
@@ -22,7 +24,10 @@ export const cmdPreferredPlugin: Plugin = async () => {
   };
 };
 
-function detectPreferenceViolation(command: string): CommandPreference | null {
+function detectCmdViolation(
+  command: string,
+  preferences: CmdPreference[],
+): CmdPreference | null {
   const words: string[] = command.trim().split(/\s+/);
   const first: string = words[0];
 
@@ -34,13 +39,13 @@ function detectPreferenceViolation(command: string): CommandPreference | null {
   return null;
 }
 
-interface CommandPreference {
+interface CmdPreference {
   preferred: string;
   alternatives: string[];
   reason?: string;
 }
 
-const preferences: CommandPreference[] = [
+const preferences: CmdPreference[] = [
   {
     preferred: "bun",
     alternatives: ["npm", "pnpm", "yarn"],
@@ -51,7 +56,7 @@ const preferences: CommandPreference[] = [
   },
   {
     preferred: "uv",
-    alternatives: ["pip"],
+    alternatives: ["pip", "pip3"],
   },
   {
     preferred: "uvx",
