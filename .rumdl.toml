@@ -10,6 +10,14 @@ extend-disable = ["MD033"]
 # List of file/directory patterns to exclude from linting.
 exclude = []
 
+# ---------------- #
+# per file ignores
+# ---------------- #
+
+[per-file-ignores]
+"home/opencode/agents/**" = ["MD041"]
+"home/opencode/commands/**" = ["MD041"]
+
 # ------------------ #
 # rule level configs
 # ------------------ #
