@@ -15,6 +15,7 @@ These skills are copied from somewhere else, and modified for my use cases.
 
 - [grill-me](./grill-me/) originates from [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/personal).
 - [write-a-skill](./write-a-skill/) originates from [mattpocock/skills](https://github.com/mattpocock/skills/blob/main/skills/productivity/write-a-skill/SKILL.md).
+- [handoff](./handoff/) originates from [mattpocock/skills](https://github.com/mattpocock/skills/blob/main/skills/productivity/write-a-skill/SKILL.md).
 - [find-skills](./find-skills/) originates from [vercel-labs/skills](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md).
 
 ## Installed Skills
