@@ -1,6 +1,6 @@
 {
   "anki.nvim": { "branch": "master", "commit": "2a30bb4307000ff1be542906292418c50d3e7261" },
-  "avante.nvim": { "branch": "main", "commit": "ae96612074b94001562dbc572c97b0f53364c71b" },
+  "avante.nvim": { "branch": "main", "commit": "362b94fcbd1869cb254288fcff7818326d8e664a" },
   "base46": { "branch": "v3.0", "commit": "884b990dcdbe07520a0892da6ba3e8d202b46337" },
   "blink.cmp": { "branch": "main", "commit": "78336bc89ee5365633bcf754d93df01678b5c08f" },
   "conform.nvim": { "branch": "master", "commit": "18aeab3d63d350dcf44d64c462cc489a3412af40" },

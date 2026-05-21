@@ -96,7 +96,7 @@ M.opts.providers = {
       -- https://api-docs.deepseek.com/guides/thinking_mode
       thinking = {
         ---@type "enabled" | "disabled"
-        type = "disabled",
+        type = "enabled",
       },
     },
   },
