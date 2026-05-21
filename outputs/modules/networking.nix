@@ -28,6 +28,6 @@
   networking.firewall = {
     # Trust the TUN interface so reverse path filter & input don't drop packets.
     # IMPORTANT: it's required to configure this to use the TUN mode of clash-verge.
-    trustedInterfaces = [ "Meta" ]; # "Mihomo" or "Meta" — check `ip link` after start
+    trustedInterfaces = [ "Meta" ]; # "Mihomo" or "Meta" - check `ip link` after start
   };
 }
