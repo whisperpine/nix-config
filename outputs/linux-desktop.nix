@@ -1,7 +1,6 @@
 input@{
   nixpkgs,
   nixpkgs-stable,
-  nixpkgs-blender,
   home-manager,
   sops-nix,
   nix-ld,
@@ -14,10 +13,6 @@ let
   # Caution: DO NOT rename `specialArgs`.
   specialArgs = input // {
     pkgs-stable = import nixpkgs-stable {
-      inherit system;
-      config.allowUnfree = true;
-    };
-    pkgs-blender = import nixpkgs-blender {
       inherit system;
       config.allowUnfree = true;
     };
