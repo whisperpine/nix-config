@@ -45,7 +45,7 @@
 
     #---------- apps ----------#
     # Bookokrat.
-    bookokrat.url = "github:bugzmanov/bookokrat/baa2cde368ed1990dcf0e3a9364e44d47639364d";
+    bookokrat.url = "github:bugzmanov/bookokrat/34547a04836812991b48919dd76a3f57cd06de02";
     # Zen browser.
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
