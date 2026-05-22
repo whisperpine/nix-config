@@ -15,8 +15,8 @@
       },
       "original": {
         "owner": "bugzmanov",
+        "ref": "v0.3.11",
         "repo": "bookokrat",
-        "rev": "34547a04836812991b48919dd76a3f57cd06de02",
         "type": "github"
       }
     },
