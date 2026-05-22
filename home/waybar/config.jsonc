@@ -11,7 +11,8 @@
   "modules-left": ["niri/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
-    "keyboard-state",
+    "custom/voxtype",
+    // "keyboard-state",
     // "bluetooth",
     "network",
     // "upower",
@@ -123,5 +124,13 @@
     "icon-size": 17,
     "spacing": 6,
     "reverse-direction": true
+  },
+
+  "custom/voxtype": {
+    "exec": "voxtype status --follow --format json",
+    "return-type": "json",
+    "format": "<span font='15'></span>",
+    "tooltip": true,
+    "on-click": "systemctl --user restart voxtype"
   }
 }

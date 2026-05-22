@@ -213,3 +213,42 @@ button {
 #wireplumber:hover {
   color: #6c95b8;
 }
+
+/* ------- */
+/* voxtype */
+/* ------- */
+
+#custom-voxtype {
+  padding-top: 6px;
+  padding-bottom: 2px;
+  margin-left: 2px;
+}
+
+/* #custom-voxtype.idle { */
+/*   color: #dddddd; */
+/* } */
+
+#custom-voxtype.transcribing {
+  color: #e6be6f;
+}
+
+#custom-voxtype.stopped {
+  color: #888888;
+}
+
+#custom-voxtype.recording {
+  color: #cc6666;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
