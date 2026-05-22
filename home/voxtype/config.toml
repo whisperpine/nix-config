@@ -1,0 +1,40 @@
+engine = "whisper"
+
+[hotkey]
+key = "RIGHTALT"
+modifiers = []
+mode = "push_to_talk"
+
+[audio]
+device = "default"
+sample_rate = 16000
+max_duration_secs = 60
+
+[audio.feedback]
+enabled = false
+theme = "default"
+volume = 0.7
+
+[whisper]
+model = "base.en"
+language = "en"
+translate = false
+
+[output]
+mode = "type"
+fallback_to_clipboard = true
+type_delay_ms = 0
+pre_type_delay_ms = 0
+restore_clipboard = false
+restore_clipboard_delay_ms = 200
+
+[output.notification]
+on_recording_start = false
+on_recording_stop = false
+on_transcription = false
+
+[status]
+icon_theme = "nerd-font"
+
+[integration]
+state_file = "auto"

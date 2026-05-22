@@ -51,6 +51,7 @@ in
     ./blender # the freedom to create
     ./otd # OpenTabletDriver's icon
     ./fcitx5 # i18n input method
+    ./voxtype # voice-to-text
     ./imv # image previewer
     ./mpv # video player
   ];
