@@ -152,6 +152,7 @@ button {
 
 #wireplumber {
   margin: 2px 0;
+  font-size: 12px;
   background-color: transparent;
   /* background-color: #3a3a3a; */
 }
@@ -210,6 +211,7 @@ button {
 #clock:hover,
 #bluetooth:hover,
 #network:hover,
+#custom-voxtype:hover,
 #wireplumber:hover {
   color: #6c95b8;
 }
@@ -220,7 +222,7 @@ button {
 
 #custom-voxtype {
   padding-top: 6px;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   margin-left: 2px;
 }
 

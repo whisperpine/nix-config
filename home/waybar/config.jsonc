@@ -98,7 +98,7 @@
     "align": 0.5,
     "justify": "center",
     // "format": "{volume}\n<span font='14'>{icon}</span>",
-    "format": "<span font='14'>{icon}</span>\n{volume}",
+    "format": "<span font='13.5'>{icon}</span>\n{volume}",
     "format-muted": "<span font='13'>󰟎</span>\n{volume}",
     "format-icons": ["󰎆"], // 󰎄 , 󰎆 ,  , ,  ,  ,  ,  ,  , 󰋋 , 󰟎
     // "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -131,6 +131,7 @@
     "return-type": "json",
     "format": "<span font='15'></span>",
     "tooltip": true,
-    "on-click": "systemctl --user restart voxtype"
+    "on-click": "systemctl --user restart voxtype",
+    "cursor": false
   }
 }
