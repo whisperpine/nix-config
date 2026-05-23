@@ -28,6 +28,10 @@
     "rumdl": {
       "command": ["rumdl", "fmt", "$FILE"],
       "extensions": [".md"]
+    },
+    "opentofu": {
+      "command": ["tofu", "fmt", "$FILE"],
+      "extensions": [".tf", ".tfvars"]
     }
   }
 }
