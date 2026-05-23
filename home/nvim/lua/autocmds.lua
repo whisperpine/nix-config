@@ -43,7 +43,7 @@ autocmd("BufRead", {
 
 -- Disable indentexpr for certain filetypes.
 -- This prevents auto indenting when typeing in insert mode.
-autocmd("Filetype", {
+autocmd("FileType", {
   group = augroup("DisableIndentExpr", { clear = true }),
   pattern = {
     "yaml",
@@ -60,7 +60,7 @@ autocmd("Filetype", {
 })
 
 -- Use the neovim's native indentexpr for rust.
-autocmd("Filetype", {
+autocmd("FileType", {
   group = augroup("SetIndentExprRust", { clear = true }),
   pattern = "rust",
   command = "set indentexpr=GetRustIndent(v:lnum)",
@@ -77,7 +77,7 @@ autocmd("BufReadPost", {
 })
 
 -- Set indent size by filetype.
-autocmd("Filetype", {
+autocmd("FileType", {
   group = augroup("SetIndentSizeByFiletype", { clear = true }),
   command = "setlocal shiftwidth=2 softtabstop=2",
   pattern = {
@@ -131,7 +131,7 @@ autocmd("BufReadPost", {
 })
 
 -- Set the formatter for "yaml.ansible" and "yaml.cloudformation".
-autocmd("Filetype", {
+autocmd("FileType", {
   group = augroup("SetYamlFormatter", { clear = true }),
   pattern = { "yaml.ansible", "yaml.cloudformation" },
   callback = function()
@@ -155,7 +155,7 @@ autocmd("Filetype", {
 -- })
 
 -- Modify formatoptions for all filetypes.
-autocmd("Filetype", {
+autocmd("FileType", {
   group = augroup("SetFormatOptionsForAll", { clear = true }),
   command = "set formatoptions-=ro",
   pattern = "*",
