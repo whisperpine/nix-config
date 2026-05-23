@@ -9,6 +9,18 @@
     "marksman": {
       "command": ["marksman", "server"],
       "extensions": [".md"]
+    },
+    "biome": {
+      "command": ["biome", "lsp-proxy"],
+      "extensions": [".ts", ".js"]
+    },
+    "ty": {
+      "command": ["ty", "server"],
+      "extensions": [".py"]
+    },
+    "ruff": {
+      "command": ["ruff", "server"],
+      "extensions": [".py"]
     }
   },
   // Keeps built-ins enabled while configuring overrides or custom formatters.
