@@ -81,8 +81,8 @@ nixpkgs.lib.nixosSystem {
     # The windowing system.
     ./modules/services/xserver.nix
 
-    # Self-hosted github-runners.
-    ./modules/services/github-runner.nix
+    # # Self-hosted github-runners.
+    # ./modules/services/github-runner.nix
 
     # Only use this module in conjunction with a proxy.
     ./modules/networking.nix
