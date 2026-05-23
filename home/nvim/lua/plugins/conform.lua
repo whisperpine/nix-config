@@ -66,6 +66,7 @@ M.opts.formatters_by_ft = {
   jsonc = { "deno_fmt" },
   json = { "deno_fmt" },
   css = { "deno_fmt" },
+  go = { "gofmt" },
 }
 
 M.opts.formatters = {
