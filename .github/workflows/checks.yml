@@ -51,7 +51,7 @@ jobs:
       - uses: cachix/install-nix-action@v31
       - name: Run the script to validate skills
         shell: nix shell nixpkgs#yq-go --quiet --command bash {0}
-        run: sh validate_skills.sh .
+        run: sh validate-skills.sh .
 
   nix-flake-check:
     name: nix flake check

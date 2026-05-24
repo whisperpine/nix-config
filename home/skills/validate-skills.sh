@@ -1,0 +1,1 @@
+../../scripts/as-commands/validate-skills.sh

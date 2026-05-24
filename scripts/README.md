@@ -25,7 +25,7 @@ Scripts:
   convert CJK punctuations to ASCII ones.
 - [print-github-contributions.sh](./as-commands/print-github-contributions.sh):
   print your github contributions today.
-- [validate_skills.sh](./as-commands/validate_skills.sh):
+- [validate-skills.sh](./as-commands/validate-skills.sh):
   validate all skills under the give directory.
 
 ## Copy and Run

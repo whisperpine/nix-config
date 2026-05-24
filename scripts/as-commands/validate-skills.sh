@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Purpose: validate all skills under the give directory.
-# Usage: sh path/to/validate_skills.sh DIRECTORY
+# Usage: sh path/to/validate-skills.sh DIRECTORY
 # Dependencies: yq
 # Date: 2026-05-15
 # Author: Yusong
