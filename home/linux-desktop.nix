@@ -15,12 +15,15 @@ in
   home.packages =
     with pkgs;
     [
+      # --- peripherals --- #
       ddcutil # manage monitors (e.g. brightness)
-      hyprpicker # color picker (used by e.g. pastel)
       usbutils # tools for working with usb devices
       alsa-utils # audio utilities (e.g. alsamixer)
-      obs-studio # video recording and live streaming
       udiskie # disk automounter for udisks
+
+      # --- applications --- #
+      hyprpicker # color picker (used by e.g. pastel)
+      obs-studio # video recording and live streaming
       wechat # messaging and calling app
     ]
     ++ [ brat ];
