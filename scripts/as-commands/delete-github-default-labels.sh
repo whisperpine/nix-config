@@ -2,9 +2,11 @@
 
 # Purpose: delete all default labels of github issues
 # Usage: bash path/to/delete-github-default-labels.sh
-# Dependencies: gh
+# Dependencies: gh (github cli)
 # Date: 2026-05-24
 # Author: Yusong
+
+set -e
 
 if ! command -v gh >/dev/null 2>&1; then
   echo "Error: Cannot find 'gh' command. Please install it first."

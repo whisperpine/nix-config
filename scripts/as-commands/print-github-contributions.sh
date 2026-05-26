@@ -6,6 +6,8 @@
 # Date: 2026-01-14
 # Author: Yusong
 
+set -e
+
 if ! command -v gh >/dev/null 2>&1; then
   echo "Error: Cannot find 'gh' command. Please install it first."
   exit 1
