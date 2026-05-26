@@ -54,11 +54,9 @@ differently). Then show the choices and the default.
 > Pick the place you actually track work for this repo.
 
 Default posture: these skills were designed for GitHub. If a `git remote` points
-at GitHub, propose that. If a `git remote` points at GitLab (`gitlab.com` or a
-self-hosted host), propose GitLab. Otherwise (or if the user prefers), offer:
+at GitHub, propose that. Otherwise (or if the user prefers), offer:
 
 - GitHub - issues live in the repo's GitHub Issues (uses the `gh` CLI).
-- GitLab - issues live in the repo's GitLab Issues (uses the `glab` CLI).
 - Other (Jira, Linear, etc.) - ask the user to describe the workflow in one
   paragraph; the skill will record it as freeform prose.
 
@@ -146,7 +144,6 @@ Then write the three docs files using the seed templates in this skill folder as
 a starting point:
 
 - [issue-tracker-github.md](./issue-tracker-github.md) - GitHub issue tracker.
-- [issue-tracker-gitlab.md](./issue-tracker-gitlab.md) - GitLab issue tracker.
 - [triage-labels.md](./triage-labels.md) - label mapping.
 - [domain.md](./domain.md) - domain doc consumer rules + layout.
 
