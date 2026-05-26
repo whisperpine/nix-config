@@ -275,3 +275,9 @@ records = true
 ## The "workspace" mode is skipped when not in a workspace or workspaces = false.
 ## Default filter mode can be overridden with the filter_mode setting.
 # filters = [ "global", "host", "session", "workspace", "directory" ]
+
+[ai]
+# Whether or not the AI feature are enabled. When set to false, the question
+# mark keybinding will output a message with instructions to run atuin setup to
+# enable the feature.
+enabled = false
