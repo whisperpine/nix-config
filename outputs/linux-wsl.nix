@@ -63,7 +63,7 @@ nixpkgs.lib.nixosSystem {
     {
       wsl.enable = true;
       wsl.defaultUser = username;
-      system.stateVersion = "25.11";
+      system.stateVersion = "26.05";
     }
 
     # Home Manager as a module.

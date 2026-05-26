@@ -13,11 +13,6 @@ let
   nvimPath = "${repoDir}/home/nvim";
 in
 {
-  programs.neovim = {
-    enable = true;
-    # package = neovim-nightly-overlay.packages.${pkgs.system}.default;
-  };
-
   xdg.configFile.nvim = {
     source = config.lib.file.mkOutOfStoreSymlink nvimPath;
   };
@@ -29,6 +24,11 @@ in
   ];
 
   home.packages = with pkgs; [
+    # Neovim in the stable channel.
+    neovim
+    # # Neovim in the nightly channel.
+    # neovim-nightly-overlay.packages.${pkgs.system}.default
+
     # --- required by neovim plugins --- #
     lua5_1 # lazy.nvim
     luajitPackages.luarocks # lazy.nvim

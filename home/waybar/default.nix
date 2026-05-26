@@ -9,7 +9,7 @@ in
     enable = true;
     systemd.enable = true;
     # Ensures it starts after niri session.
-    systemd.target = "niri.service";
+    systemd.targets = [ "niri.service" ];
   };
 
   xdg.configFile.waybar = {
