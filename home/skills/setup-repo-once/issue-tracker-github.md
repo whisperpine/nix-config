@@ -31,7 +31,7 @@ gh issue edit NUMBER --remove-label "..."
 gh issue close NUMBER --comment "..."
 ```
 
-Infer the repo from `git remote -v` —
+Infer the repo from `git remote -v` -
 `gh` does this automatically when run inside a clone.
 
 ## When a Skill Says "`publish to the issue tracker`"
