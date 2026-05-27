@@ -15,6 +15,7 @@ let
         enable = true;
         replace = true;
         ephemeral = true;
+        nodeRuntimes = [ "node24" ];
         name = "nixos-${hostname}-${index}";
         tokenFile = config.sops.secrets."github-runner-token/${org}/org".path;
         url = "https://github.com/${org}";
@@ -27,6 +28,7 @@ let
         enable = true;
         replace = true;
         ephemeral = true;
+        nodeRuntimes = [ "node24" ];
         name = "nixos-${hostname}-${index}";
         tokenFile = config.sops.secrets."github-runner-token/whisperpine/${repo}".path;
         url = "https://github.com/whisperpine/${repo}";
