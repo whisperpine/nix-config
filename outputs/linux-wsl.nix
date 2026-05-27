@@ -1,6 +1,7 @@
 input@{
   nixpkgs,
   nixpkgs-stable,
+  nixpkgs-zellij,
   home-manager,
   nixos-wsl,
   sops-nix,
@@ -17,6 +18,7 @@ let
       inherit system;
       config.allowUnfree = true;
     };
+    pkgs-zellij = import nixpkgs-zellij { inherit system; };
     # Allow unfree software to be installed.
     nixpkgs.config.allowUnfree = true;
     # Inhereit variables define above.
