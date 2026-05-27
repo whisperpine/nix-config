@@ -217,7 +217,6 @@ vim.lsp.enable {
   -- "harper_ls",
   -- "kdl_ls",
   "lua_ls",
-  "ts_ls",
 
   -- ### written by lspconfig ###
   "terraformls",
@@ -247,6 +246,7 @@ vim.lsp.enable {
   "taplo",
   "qmlls",
   "biome",
+  "tsgo",
   "html",
   "nixd",
   "zls",
