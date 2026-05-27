@@ -17,6 +17,7 @@ Originated from [mattpocock/skills](https://github.com/mattpocock/skills):
 
 - [tdd](./tdd/SKILL.md)
 - [to-prd](./to-prd/SKILL.md)
+- [to-issues](./to-issues/SKILL.md)
 - [handoff](./handoff/SKILL.md)
 - [grill-me](./grill-me/SKILL.md)
 - [grill-with-docs](./grill-with-docs/SKILL.md)
