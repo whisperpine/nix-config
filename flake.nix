@@ -21,6 +21,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # The latest stable branch which can be used as a fallback.
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
+    # This is dedicated to install zellij "0.43.1".
+    nixpkgs-zellij.url = "github:NixOS/nixpkgs/09061f748ee21f68a089cd5d91ec1859cd93d0be";
     # To install the nightly version of Neovim.
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     # Run unpatched dynamic binaries.

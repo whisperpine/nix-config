@@ -1,6 +1,7 @@
 input@{
   nixpkgs,
   nixpkgs-stable,
+  nixpkgs-zellij,
   home-manager,
   sops-nix,
   nix-ld,
@@ -16,6 +17,7 @@ let
       inherit system;
       config.allowUnfree = true;
     };
+    pkgs-zellij = import nixpkgs-zellij { inherit system; };
     # Inhereit variables define above.
     inherit username;
   };
