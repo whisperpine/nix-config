@@ -7,7 +7,7 @@ description: >
   `improve-codebase-architecture`, or `zoom-out` - or if those skills appear to
   be missing context about the issue tracker, triage labels, or domain docs.
 disable-model-invocation: true
-name: setup-matt-pocock-skills
+name: setup-repo-once
 ---
 
 # Setup Repo Once
