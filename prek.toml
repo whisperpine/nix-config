@@ -56,6 +56,14 @@ pass_filenames = false
 stages = ["pre-push", "manual"]
 
 [[repos.hooks]]
+id = "tsgo-type-checking"
+name = "check typescript by tsgo"
+language = "system"
+entry = "tsgo --noEmit -p home/opencode/plugins"
+pass_filenames = false
+stages = ["pre-push", "manual"]
+
+[[repos.hooks]]
 id = "commit-msg"
 name = "check commit message"
 language = "system"
