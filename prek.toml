@@ -1,5 +1,5 @@
 # The default stages for hooks that don't have stages configured.
-default_stages = ["pre-commit"]
+default_stages = ["pre-commit", "manual"]
 
 # This changes the behaviour when running "prek install".
 # All hook types will be installed as configured here.
@@ -53,6 +53,7 @@ biome check \
 home/opencode/plugins
 """
 pass_filenames = false
+stages = ["pre-push", "manual"]
 
 [[repos.hooks]]
 id = "commit-msg"
@@ -68,4 +69,4 @@ language = "system"
 entry = "cog check origin/HEAD..HEAD"
 pass_filenames = false
 always_run = true
-stages = ["post-commit", "pre-push"]
+stages = ["post-commit", "pre-push", "manual"]
