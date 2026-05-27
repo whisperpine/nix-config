@@ -21,6 +21,10 @@
     "ruff": {
       "command": ["ruff", "server"],
       "extensions": [".py"]
+    },
+    "tsgo": {
+      "command": ["tsgo", "--lsp", "--stdio"],
+      "extensions": [".ts", ".js", ".tsx", ".jsx"]
     }
   },
   // Keeps built-ins enabled while configuring overrides or custom formatters.
