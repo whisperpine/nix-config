@@ -11,15 +11,15 @@
 
 Order:
 {A one or two sentence description of the term}
-*Avoid*: Purchase, transaction
+*Avoid*: Purchase, Transaction.
 
 Invoice:
 A request for payment sent to a customer after delivery.
-*Avoid*: Bill, payment request
+*Avoid*: Bill, Payment Request.
 
 Customer:
 A person or organization that places orders.
-*Avoid*: Client, buyer, account
+*Avoid*: Client, Buyer, Account.
 ```
 
 ## Rules
@@ -44,7 +44,9 @@ A person or organization that places orders.
 
 ## Single Vs Multi-Context Repos
 
-Single context (most repos): One `CONTEXT.md` at the repo root.
+Single context (most repos): One `CONTEXT.md` at the repo root. If there's only
+one `CONTEXT.md` and located at the root of the codebase, just use `# CONTEXT`
+as the title instead of `# {Context Name}`.
 
 Multiple contexts: A `CONTEXT-MAP.md` at the repo root lists the contexts, where
 they live, and how they relate to each other:
