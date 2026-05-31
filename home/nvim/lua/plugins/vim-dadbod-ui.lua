@@ -12,18 +12,6 @@ M.dependencies = {
     ft = { "sql", "mysql", "plsql" },
     lazy = true,
     init = function()
-      -- -- setup auto-completion for nvim-cmp
-      -- vim.api.nvim_create_autocmd("FileType", {
-      --   pattern = { "sql", "mysql", "plsql" },
-      --   callback = function()
-      --     require("cmp").setup.buffer {
-      --       sources = {
-      --         { name = "vim-dadbod-completion" },
-      --       },
-      --     }
-      --   end,
-      -- })
-
       local wk = require "which-key"
       wk.add {
         { "<leader>db", icon = { icon = "󰆼 ", color = "yellow" } },
