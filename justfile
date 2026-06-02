@@ -41,9 +41,10 @@ clean:
 
 # garbage collect all unused nix store entries
 gc:
-  sudo nix store gc --debug
-  # also removes old profile generations
+  # clean up nix store and remove old profile generations
   sudo nix-collect-garbage --delete-old
   # clean up user profiles in XDG directories:
   # https://github.com/NixOS/nix/issues/8508
   nix-collect-garbage --delete-old
+  # replace identical files in the store by hard links
+  nix store optimise
