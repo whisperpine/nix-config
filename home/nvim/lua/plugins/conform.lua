@@ -47,6 +47,7 @@ M.opts.formatters_by_ft = {
   bash = { "shfmt" },
   zsh = { "shfmt" },
   sh = { "shfmt" },
+  go = { "gofmt" },
 
   -- clang-format
   cs = { "clang-format" },
@@ -56,17 +57,16 @@ M.opts.formatters_by_ft = {
   c = { "clang-format" },
 
   -- biome, deno_fmt, rustywind
-  graphql = { "biome" },
+  graphql = { "biome-check" },
   javascriptreact = { "biome-check", "rustywind" },
   typescriptreact = { "biome-check", "rustywind" },
   javascript = { "biome-check", "rustywind" },
   typescript = { "biome-check", "rustywind" },
-  html = { "deno_fmt", "rustywind" },
-  yaml = { "deno_fmt" },
+  html = { "biome-check", "rustywind" },
   jsonc = { "deno_fmt" },
   json = { "deno_fmt" },
+  yaml = { "deno_fmt" },
   css = { "deno_fmt" },
-  go = { "gofmt" },
 }
 
 M.opts.formatters = {
