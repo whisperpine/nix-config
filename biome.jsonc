@@ -2,15 +2,30 @@
   "$schema": "https://biomejs.dev/schemas/latest/schema.json",
   "files": {
     "includes": [
-      "./home/opencode/plugins/*.ts",
-      "!./**/node_modules",
-      "!./**/biome.jsonc"
+      "./**/*.ts",
+      "./**/*.js",
+      "./**/*.html",
+      "!!/nix/store",
+      "!!**/node_modules",
+      "!!**/dist"
     ]
   },
-  "formatter": { "indentStyle": "space" },
+  "formatter": {
+    "indentStyle": "space"
+  },
   "css": {
     "parser": {
       "tailwindDirectives": true
+    }
+  },
+  "html": {
+    "parser": {
+      "interpolation": true
+    },
+    "formatter": {
+      "enabled": true,
+      "selfCloseVoidElements": "always",
+      "whitespaceSensitivity": "ignore"
     }
   },
   "linter": {
