@@ -45,7 +45,8 @@ engines=(
   ["󰡨  Docker Hub"]="https://hub.docker.com/search?q="
   ["  Lib.rs"]="https://lib.rs/search?q="
   ["  Crates.io"]="https://crates.io/search?q="
-  ["  Npm"]="https://www.npmjs.com/search?q="
+  # ["  Npm"]="https://www.npmjs.com/search?q="
+  ["  Npmx"]="https://npmx.dev/search?q="
 
   # --- code bases --- #
   ["  GitHub"]="https://github.com/search?q="
