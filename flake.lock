@@ -6,16 +6,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1779184311,
-        "narHash": "sha256-WZuMv4jQmf1FVm0i11rbnXs3WSmtSceJswsoae2LJ0k=",
+        "lastModified": 1780768999,
+        "narHash": "sha256-OefSWMUtZdkXnebP2InvzmMCiSpLtN6ewsnzotQiOxY=",
         "owner": "bugzmanov",
         "repo": "bookokrat",
-        "rev": "34547a04836812991b48919dd76a3f57cd06de02",
+        "rev": "081bfe317057dc2f1403baefc2c4303dba46fce5",
         "type": "github"
       },
       "original": {
         "owner": "bugzmanov",
-        "ref": "v0.3.11",
+        "ref": "v0.3.12",
         "repo": "bookokrat",
         "type": "github"
       }
