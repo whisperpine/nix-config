@@ -4,6 +4,13 @@
   "default_agent": "plan",
   // Disables the "/share" command to make a session publicly available.
   "share": "disabled",
+  // Controls which actions require approval to run.
+  "permission": {
+    "external_directory": {
+      "~/.cargo/registry/**": "allow",
+      "~/.agents/skills/**": "allow"
+    }
+  },
   // keeps built-ins enabled while configuring overrides or custom servers.
   "lsp": {
     "marksman": {
