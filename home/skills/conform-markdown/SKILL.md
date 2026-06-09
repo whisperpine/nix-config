@@ -16,6 +16,7 @@ These override rumdl defaults where they conflict:
 
 - Never use bold (`**text**` or `__text__`).
 - Never use em dash `—`, replace it with hyphen `-`.
+- AGAIN: NEVER USE EM DASH `—`, replace it with hyphen `-`.
 - All list items end with `.`, except standalone terms or bare links.
 - For list items spanning multiple lines, indent continuation lines with spaces
   so that these lines start from the same column. For example:
