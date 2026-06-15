@@ -26,9 +26,13 @@ Originated from [mattpocock/skills](https://github.com/mattpocock/skills):
 - [to-prd](./to-prd/SKILL.md)
 - [write-a-skill](./write-a-skill/SKILL.md)
 
-Originated from [vercel-labs/skills](https://github.com/vercel-labs/skills).
+Originated from [vercel-labs/skills](https://github.com/vercel-labs/skills):
 
 - [find-skills](./find-skills/SKILL.md)
+
+Originated from [cli/cli](https://github.com/cli/cli):
+
+- [gh](./gh/SKILL.md)
 
 ## Installed Skills
 
