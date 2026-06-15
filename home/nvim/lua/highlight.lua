@@ -87,6 +87,7 @@ hl(0, "@lsp.typemod.typeAlias.associated.rust", { link = "@variable.builtin" })
 hl(0, "@lsp.type.lifetime.rust", { link = "Special" })
 hl(0, "@lsp.type.selfKeyword.rust", { link = "@variable.builtin" }) -- self
 hl(0, "@lsp.type.selfTypeKeyword.rust", { link = "@type" }) -- Self
+hl(0, "@lsp.typemod.procMacro.macro.rust", { link = "@function.macro" }) -- Self
 -- Rust injected semantic tokens (in code blocks of docstring).
 hl(0, "@lsp.typemod.keyword.injected.rust", { link = "@keyword" }) -- keyword in comments
 hl(0, "@lsp.typemod.const.injected.rust", { link = "@variable" }) -- code blocks in comments
