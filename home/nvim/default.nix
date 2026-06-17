@@ -74,7 +74,7 @@ in
     # https://github.com/neovim/nvim-lspconfig
     dockerfile-language-server # dockerfile
     graphql-language-service-cli # graphql
-    vscode-langservers-extracted # json, css, html
+    # vscode-langservers-extracted # json, css, html
     typescript-go # typescript, javascript
     tailwindcss-language-server # tailwind css
     ansible-language-server # ansible

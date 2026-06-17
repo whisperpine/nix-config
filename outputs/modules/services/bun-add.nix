@@ -7,6 +7,7 @@
     serviceConfig.Type = "oneshot";
     script = ''
       # ${pkgs.bun}/bin/bun add -g @ansible/ansible-language-server
+      ${pkgs.bun}/bin/bun add -g vscode-langservers-extracted
       ${pkgs.bun}/bin/bun pm cache rm --global
     '';
   };
