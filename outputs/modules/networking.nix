@@ -1,4 +1,4 @@
-{ username, ... }:
+{ username, pkgs-stable, ... }:
 # ---------- networking configs ---------- #
 {
   # Enable network manager.
@@ -18,6 +18,7 @@
     tunMode = true;
     serviceMode = true;
     group = username;
+    package = pkgs-stable.clash-verge-rev;
   };
   # This option modifies "/etc/xdg/mimeapps.list
   xdg.mime.defaultApplications = {
