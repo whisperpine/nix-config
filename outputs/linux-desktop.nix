@@ -2,6 +2,7 @@ input@{
   nixpkgs,
   nixpkgs-stable,
   nixpkgs-zellij,
+  nixpkgs-chrome,
   home-manager,
   sops-nix,
   nix-ld,
@@ -18,11 +19,15 @@ let
       config.allowUnfree = true;
     };
     pkgs-zellij = import nixpkgs-zellij { inherit system; };
+    pkgs-chrome = import nixpkgs-chrome {
+      inherit system;
+      config.allowUnfree = true;
+    };
     # Inhereit variables define above.
     inherit username;
   };
   configuration =
-    { pkgs, ... }:
+    { pkgs, pkgs-chrome, ... }:
     {
       # Bootloader.
       boot.loader.systemd-boot.enable = true;
@@ -42,13 +47,13 @@ let
       # Allow unfree software to be installed (e.g. google-chrome).
       nixpkgs.config.allowUnfree = true;
       # Install packages in operating system.
-      environment.systemPackages =
-        with pkgs;
-        [ neovim ]
-        ++ (lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
-          # "google-chrome" is unfree.
-          google-chrome
-        ]);
+      environment.systemPackages = [
+        pkgs.neovim
+      ]
+      ++ (pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+        # "google-chrome" is unfree.
+        pkgs-chrome.google-chrome
+      ]);
     };
 in
 nixpkgs.lib.nixosSystem {
