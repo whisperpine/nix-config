@@ -19,6 +19,7 @@ Originated from [mattpocock/skills](https://github.com/mattpocock/skills):
 
 - [grill-me](./grill-me/SKILL.md)
 - [grill-with-docs](./grill-with-docs/SKILL.md)
+- [grilling](./grilling/SKILL.md)
 - [handoff](./handoff/SKILL.md)
 - [setup-repo-once](./setup-repo-once/SKILL.md)
 - [tdd](./tdd/SKILL.md)
