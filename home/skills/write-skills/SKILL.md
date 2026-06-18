@@ -3,10 +3,10 @@ description: >
   Reference for writing and editing skills well - the vocabulary and principles
   that make a skill predictable.
 disable-model-invocation: true
-name: writing-great-skills
+name: write-skills
 ---
 
-# Writing Great Skills
+# Write Skills
 
 A skill exists to wrangle determinism out of a stochastic system.
 **Predictability** - the agent taking the same _process_ every run, not

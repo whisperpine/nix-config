@@ -26,7 +26,7 @@ Originated from [mattpocock/skills](https://github.com/mattpocock/skills):
 - [tdd](./tdd/SKILL.md)
 - [to-issues](./to-issues/SKILL.md)
 - [to-prd](./to-prd/SKILL.md)
-- [writing-great-skills](./writing-great-skills/SKILL.md)
+- [write-skills](./write-skills/SKILL.md)
 
 Originated from [vercel-labs/skills](https://github.com/vercel-labs/skills):
 
