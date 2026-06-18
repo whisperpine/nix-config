@@ -17,6 +17,7 @@ These skills are copied from somewhere else, and modified for my use cases.
 
 Originated from [mattpocock/skills](https://github.com/mattpocock/skills):
 
+- [codebase-design](./codebase-design/SKILL.md)
 - [domain-modeling](./domain-modeling/SKILL.md)
 - [grill-me](./grill-me/SKILL.md)
 - [grill-with-docs](./grill-with-docs/SKILL.md)
