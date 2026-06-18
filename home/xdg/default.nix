@@ -32,6 +32,14 @@
       name = "yazi";
       noDisplay = true;
     };
+    Helix = {
+      name = "Helix";
+      noDisplay = true;
+    };
+    kbd-layout-viewer5 = {
+      name = "Keyboard Layout Viewer";
+      icon = "fcitx";
+    };
     # Prevent two "Google Chrome" listed by fuzzel.
     "com.google.Chrome" = {
       name = "Google Chrome";
