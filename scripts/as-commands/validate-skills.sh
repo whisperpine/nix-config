@@ -67,6 +67,7 @@ must be the same as the dirname ('$dir_name')."
     and . != "license"
     and . != "metadata"
     and . != "compatibility"
+    and . != "disable-model-invocation"
     )' \
     --front-matter=extract "$filename")
   if [ -n "$extra_keys" ]; then
