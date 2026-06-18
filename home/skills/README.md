@@ -34,7 +34,7 @@ Originated from [vercel-labs/skills](https://github.com/vercel-labs/skills):
 
 Originated from [cli/cli](https://github.com/cli/cli):
 
-- [gh](./gh/SKILL.md)
+- [gh-cli](./gh-cli/SKILL.md)
 
 ## Installed Skills
 

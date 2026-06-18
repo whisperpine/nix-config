@@ -3,10 +3,10 @@ description: >
   Patterns for invoking the GitHub CLI (gh) from agents. Covers structured
   output, pagination, repo targeting, search vs list, gh api fallback. Use when
   calling GitHub CLI, namely the `gh` command.
-name: gh
+name: gh-cli
 ---
 
-# Reference
+# `gh` CLI
 
 ## Interactivity Policy
 
