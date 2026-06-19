@@ -74,6 +74,8 @@ For each approved slice, publish a new issue to the issue tracker. Use the issue
 body template below. These issues are considered ready for AFK agents, so
 publish them with the correct triage label unless instructed otherwise.
 
+Issue titles must conform to the `/conform-issue-title` skill.
+
 Publish issues in dependency order (blockers first) so you can reference real
 issue identifiers in the "Blocked by" field.
 

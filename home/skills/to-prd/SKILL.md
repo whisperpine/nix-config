@@ -36,7 +36,10 @@ Check with the user that these modules match their expectations. Check with the
 user which modules they want tests written for.
 
 3. Write the PRD using the template below, then publish it to the project issue
-   tracker. Apply the `s-needs-triage` triage label - no need for additional triage.
+   tracker. The issue title must start with `[PRD]` followed by a lowercase
+   description (acronyms and proper terms keep their casing). Example:
+   `[PRD] forex cash balances as positions`.
+   Apply the `s-needs-triage` triage label - no need for additional triage.
 
 <prd-template>
 

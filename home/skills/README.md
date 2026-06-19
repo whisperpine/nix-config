@@ -5,7 +5,9 @@
 These skills are written from scratch.
 
 - [conform-frontmatter](./conform-frontmatter/SKILL.md)
+- [conform-issue-title](./conform-issue-title/SKILL.md)
 - [conform-markdown](./conform-markdown/SKILL.md)
+- [conform-pr-title](./conform-pr-title/SKILL.md)
 - [conventional-commits](./conventional-commits/SKILL.md)
 - [respect-formatter](./respect-formatter/SKILL.md)
 - [respect-lsp](./respect-lsp/SKILL.md)
