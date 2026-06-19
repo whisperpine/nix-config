@@ -7,6 +7,7 @@
   // Controls which actions require approval to run.
   "permission": {
     "external_directory": {
+      "~/.config/opencode/skills/**": "allow",
       "~/.cargo/registry/**": "allow",
       "~/.agents/skills/**": "allow"
     }
