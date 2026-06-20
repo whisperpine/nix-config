@@ -57,6 +57,10 @@ in
       org = "everbid";
       index = "3";
     })
+    (organization {
+      org = "everbid";
+      index = "4";
+    })
 
     # --------------------- #
     # personal repositories
