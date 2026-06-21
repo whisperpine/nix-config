@@ -10,7 +10,7 @@ set -e
 
 # Check if ffmpeg is installed.
 if ! command -v ffmpeg >/dev/null 2>&1; then
-  echo "ffmpeg is not installed. Please install it first."
+  echo "Error: ffmpeg is not installed. Please install it first."
   exit 1
 fi
 
