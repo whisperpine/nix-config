@@ -25,7 +25,7 @@ Originated from [mattpocock/skills](https://github.com/mattpocock/skills):
 - [grill-with-docs](./grill-with-docs/SKILL.md) (user-invoked)
 - [grilling](./grilling/SKILL.md)
 - [handoff](./handoff/SKILL.md) (user-invoked)
-- [implement](./implement/SkILL.md) (user-invoked)
+- [implement](./implement/SKILL.md) (user-invoked)
 - [setup-repo-once](./setup-repo-once/SKILL.md) (user-invoked)
 - [tdd](./tdd/SKILL.md)
 - [to-issues](./to-issues/SKILL.md) (user-invoked)

@@ -11,20 +11,20 @@ them by their heading.
 
 ### Predictability
 
-The degree to which a skill makes the agent behave the same _way_ on every run -
+The degree to which a skill makes the agent behave the same *way* on every run -
 the same process, not the same output (a brainstorming skill should
-_predictably_ diverge; its tokens vary, its behaviour doesn't). The root virtue
+*predictably* diverge; its tokens vary, its behaviour doesn't). The root virtue
 every other term serves - cost and maintainability are symptoms of it, not
 rivals.
 
-_Avoid_: consistency, reliability, robustness, output-determinism
+*Avoid*: consistency, reliability, robustness, output-determinism
 
 ### Model-Invoked
 
 A skill that keeps its **description** field, so the agent can see it and fire
 it autonomously - and the human can still type its name, so model-invocation
-always _includes_ user reach. There is no model-only state: a description only
-ever _adds_ agent discovery, never removes the human's. Pays a permanent
+always *includes* user reach. There is no model-only state: a description only
+ever *adds* agent discovery, never removes the human's. Pays a permanent
 **context load** on every turn in exchange for that discoverability. Reachable
 by other skills, because the description that makes it agent-discoverable makes
 it invocable. A model-invoked skill whose content is all **reference** is also
@@ -33,7 +33,7 @@ by several skills lives in one place. Pick model-invocation only when the agent
 must reach the skill on its own; if it never fires except by hand, drop the
 description and pay no context load.
 
-_Avoid_: ability, tool, capability
+*Avoid*: ability, tool, capability
 
 ### User-Invoked
 
@@ -43,29 +43,29 @@ user-*and-agent*). Trades agent-discoverability for zero **context load**.
 Because it has no description, nothing but the human can reach it: no other
 skill can fire it.
 
-_Avoid_: procedure, workflow, command
+*Avoid*: procedure, workflow, command
 
 ### Description
 
 The skill's machine-readable trigger, and the one **context pointer** a
 **model-invoked** skill is forced to keep loaded at all times. Its mere presence
-_is_ the invocation axis: keep it and the skill is model-invoked (and reachable
+*is* the invocation axis: keep it and the skill is model-invoked (and reachable
 by other skills); delete it and the skill is **user-invoked**, reachable only by
 the human. The source of a model-invoked skill's **context load**.
 
-_Avoid_: frontmatter, summary
+*Avoid*: frontmatter, summary
 
 ### Context Pointer
 
 A reference held in the agent's context that names some out-of-context material
 and encodes the condition for reaching it. The **description** is the top-level
 context pointer (context window → skill); pointers to disclosed files are the
-same object one level down. Its wording, not the target, decides _when_ the
-agent reaches - and _how reliably_. A must-have target behind a weakly worded
+same object one level down. Its wording, not the target, decides *when* the
+agent reaches - and *how reliably*. A must-have target behind a weakly worded
 pointer is a variance bug: fix the wording first, and inline the material only
 if sharpening fails.
 
-_Avoid_: link, reference, import
+*Avoid*: link, reference, import
 
 ### Context Load
 
@@ -74,7 +74,7 @@ The cost a **model-invoked** skill imposes on the agent's context window - its
 **user-invoked** skills escape by having no description, and the brake on
 splitting into more model-invoked skills.
 
-_Avoid_: token cost, context bloat
+*Avoid*: token cost, context bloat
 
 ### Cognitive Load
 
@@ -85,7 +85,7 @@ brake on splitting into more user-invoked skills. Not a cost to minimise: it is
 the price of human agency, the reason some skills stay user-invoked. Spend it
 where human judgement matters; remove it where it does not.
 
-_Avoid_: human index, burden, overhead
+*Avoid*: human index, burden, overhead
 
 ### Granularity
 
@@ -100,7 +100,7 @@ in your prompts. By **sequence**, split a run of **steps** where a step's
 clears what follows. Beware the reverse: merging sequences exposes each step's
 post-completion steps to what follows, inviting premature completion.
 
-_Avoid_: chunking, modularity
+*Avoid*: chunking, modularity
 
 ### Router Skill
 
@@ -110,7 +110,7 @@ instead of many. It can only hint, never fire them: user-invoked skills have no
 **description**, so nothing but the human can reach them. The cure for
 **cognitive load** when user-invoked skills multiply.
 
-_Avoid_: dispatcher, menu, registry, index, router procedure
+*Avoid*: dispatcher, menu, registry, index, router procedure
 
 ### Information Hierarchy
 
@@ -131,22 +131,22 @@ and turns attending to them into a coin-flip - a variance lever, not just a
 legibility one. Keep the top of the ladder legible; push down it whatever you
 can.
 
-_Avoid_: structure, organization, layout
+*Avoid*: structure, organization, layout
 
 ### Co-Location
 
 Keeping the material an agent needs at once in one place - a concept's
 definition, rules, and caveats under a single heading, not scattered across the
 file - so reading one part brings its neighbours with it. The within-file
-companion to the **Information Hierarchy**: the hierarchy ranks _how far down_ a
-piece sits; co-location decides _what sits beside it_ once there. There is no
+companion to the **Information Hierarchy**: the hierarchy ranks *how far down* a
+piece sits; co-location decides *what sits beside it* once there. There is no
 formula for the right format of a body of **reference**; the test is that a
 skill should read like documentation written for the agent, and grouped material
 reads that way where scattered material does not. Distinct from **Duplication**:
 that repeats one meaning in two places, where scattering fragments a single
 meaning across many.
 
-_Avoid_: grouping, clustering, cohesion
+*Avoid*: grouping, clustering, cohesion
 
 ### Branch
 
@@ -154,7 +154,7 @@ A distinct way a skill can be invoked - a case the skill handles - so different
 runs take different paths through it. A skill with many steps may carry many
 branches; a linear one has none.
 
-_Avoid_: path, case, fork
+*Avoid*: path, case, fork
 
 ### Progressive Disclosure
 
@@ -165,7 +165,7 @@ disclose what only some branches need, inline what every path needs, and if a
 pointer fires unreliably on must-have material, sharpen its wording, and pull it
 back inline only if that fails.
 
-_Avoid_: lazy loading, chunking
+*Avoid*: lazy loading, chunking
 
 ### Steps
 
@@ -175,7 +175,7 @@ has steps: a skill can be all steps (`tdd`), all **reference** (a review), or
 both, independent of invocation. Every step ends on a **completion criterion**,
 clear or vague.
 
-_Avoid_: workflow, instructions, choreography
+*Avoid*: workflow, instructions, choreography
 
 ### Completion Criterion
 
@@ -183,15 +183,15 @@ The condition that tells the agent a unit of work is done - the target it judges
 against. Two properties make it a lever, not just a quality. Its **clarity**
 (can the agent tell done from not-done?) resists **premature completion** - a
 vague bound ("understanding reached") lets the agent declare done and slip to
-the next step; this axis needs _steps_ to bite, since premature completion is a
+the next step; this axis needs *steps* to bite, since premature completion is a
 between-steps failure. Its **demand** (how much it requires) sets **legwork** -
 "every modified model accounted for" forces thorough work where "produce a
-change list" does not - and this axis is _not_ step-bound: it can bind a body of
+change list" does not - and this axis is *not* step-bound: it can bind a body of
 flat reference too, which is how a skill with no steps still carries an
 exhaustiveness bar ("every rule applied"). The strongest criteria are both
 checkable and exhaustive.
 
-_Avoid_: done condition, exit condition, stopping rule
+*Avoid*: done condition, exit condition, stopping rule
 
 ### Post-Completion Steps
 
@@ -199,7 +199,7 @@ The **steps** that follow the current step. Visible, they pull the agent forward
 into **premature completion** - the more it sees, the stronger the tug; the
 defence is to hide them by splitting the sequence of steps into two.
 
-_Avoid_: horizon, fog of war, lookahead
+*Avoid*: horizon, fog of war, lookahead
 
 ### Legwork
 
@@ -208,13 +208,13 @@ exploring the codebase, making changes, digging up what it needs rather than
 offloading to the user. It lives below the step structure: never written as its
 own step, latent in the wording, controlled by the agent rather than the skill.
 The within-step counterpart to **post-completion steps**' across-step pull.
-Raised by a **leading word** (_comprehensive_, _thorough_) or a **completion
+Raised by a **leading word** (*comprehensive*, *thorough*) or a **completion
 criterion** that demands the work be exhaustive - including the demand axis
 applied to flat reference, which is what drives a skill of flat reference to
 cover all its rungs. Goes thin either when that demand is missing or when
 **premature completion** cuts the step short.
 
-_Avoid_: scope, effort, diligence, coverage
+*Avoid*: scope, effort, diligence, coverage
 
 ### Reference
 
@@ -224,7 +224,7 @@ to them; when a skill has none it is the entire content; or it lives outside any
 skill entirely - see **External Reference**. Reached via **context pointers**,
 and the prime candidate for **progressive disclosure**.
 
-_Avoid_: supporting material, docs, background
+*Avoid*: supporting material, docs, background
 
 ### External Reference
 
@@ -234,15 +234,15 @@ home for shared reference that needn't fire on its own, and the only shared home
 two **user-invoked** skills can use, since neither has a description and so
 neither can fire the other.
 
-_Avoid_: doc, resource, knowledge base
+*Avoid*: doc, resource, knowledge base
 
 ### Leading Word
 
-A compact concept - also called a _Leitwort_ - already living in the model's
+A compact concept - also called a *Leitwort* - already living in the model's
 pretraining, that the agent thinks with while running the skill. It encodes a
 behavioural principle in the fewest possible tokens by invoking priors the model
-already holds (e.g. _lesson_, _proximal zone of development_, _fog of war_,
-_tracer bullets_). Repeated as a token, never as a sentence, it accumulates a
+already holds (e.g. *lesson*, *proximal zone of development*, *fog of war*,
+*tracer bullets*). Repeated as a token, never as a sentence, it accumulates a
 distributed definition across the skill and anchors a whole region of behaviour.
 Coining your own works if you define it clearly, but a made-up word recruits no
 priors - you pay in definition tokens what a pretrained word gives free. Reach
@@ -257,7 +257,7 @@ in your prompts, your docs, and your codebase, the agent links that shared
 language to the skill and fires it more reliably. Word a description with the
 leading words you actually use when you want the skill.
 
-_Avoid_: keyword, term, motif
+*Avoid*: keyword, term, motif
 
 ### Single Source of Truth
 
@@ -265,7 +265,7 @@ The desired state where each meaning lives in exactly one authoritative place,
 so a change to the skill's behaviour is a change in one place. **Duplication**
 is its violation.
 
-_Avoid_: home, canonical location
+*Avoid*: home, canonical location
 
 ### Relevance
 
@@ -277,7 +277,7 @@ relevant, because each line is cheaper to check. Distinct from **no-op**:
 relevance asks whether a line bears on the task, not whether it changes
 behaviour.
 
-_Avoid_: load-bearing, staleness, freshness
+*Avoid*: load-bearing, staleness, freshness
 
 ## Failure Modes
 
@@ -293,14 +293,14 @@ holds; a vague one gives way). Fuzziness is the necessary condition: a sharp
 bound resists the pull no matter how many later steps are visible, so a step
 that never rushes needs no defending. Two levers hold a step that does, but
 reach for them in order: **sharpen the bound first** - it is local and cheap.
-Only when the criterion is irreducibly fuzzy _and_ you actually observe the rush
+Only when the criterion is irreducibly fuzzy *and* you actually observe the rush
 do you **hide the later steps** - and hiding only works across a real context
 boundary (a user-invoked hand-off or a subagent dispatch; an inline
 model-invoked call leaves the later steps in context and clears nothing). One
 cause of thin legwork, but distinct from it: legwork can be thin even when a
 step runs to full completion.
 
-_Avoid_: premature closure, the rush, rushing, shortcutting
+*Avoid*: premature closure, the rush, rushing, shortcutting
 
 ### Duplication
 
@@ -310,7 +310,7 @@ inflates prominence - repeating a meaning weights it on the ladder past its real
 rank. The accidental inverse of a **leading word**, which raises attention on
 purpose by repeating a token, never the meaning.
 
-_Avoid_: repetition, redundancy
+*Avoid*: repetition, redundancy
 
 ### Sediment
 
@@ -320,7 +320,7 @@ accumulate and you must core down through them to find what is still live. The
 default fate of any skill without a pruning discipline; the slow erosion of
 **relevance**, as opposed to **duplication**'s repeated meaning.
 
-_Avoid_: accretion, bloat, cruft, rot
+*Avoid*: accretion, bloat, cruft, rot
 
 ### Sprawl
 
@@ -334,7 +334,7 @@ hierarchy**: push **reference** down behind **context pointers**, and split by
 **sediment** (length from stale accumulation) and **duplication** (length from
 repeated meaning) - sprawl is length itself, whatever its cause.
 
-_Avoid_: bloat, length, size, verbosity
+*Avoid*: bloat, length, size, verbosity
 
 ### No-Op
 
@@ -344,13 +344,13 @@ a line change behaviour versus the default? A line can be perfectly **relevant**
 and still be a no-op. The same priors that make a **leading word** free make a
 no-op worthless.
 
-A leading word is a _technique_; No-Op is a _verdict_ on a line - and they
-cross. A leading word too weak to beat the default is a no-op (_be thorough_
+A leading word is a *technique*; No-Op is a *verdict* on a line - and they
+cross. A leading word too weak to beat the default is a no-op (*be thorough*
 when the agent is already thorough-ish), and the fix is a stronger word that
-passes the verdict (_relentless_), not a different technique. So the No-Op test,
+passes the verdict (*relentless*), not a different technique. So the No-Op test,
 does it change behaviour versus the default? - is also how you grade whether a
 leading word is earning its repetitions. This is model-relative, not
 reader-relative: two people disagreeing over whether a line is a no-op disagree
 about the default, and settle it by running the skill, not by debate.
 
-_Avoid_: redundant instruction, restating the obvious, belaboring
+*Avoid*: redundant instruction, restating the obvious, belaboring

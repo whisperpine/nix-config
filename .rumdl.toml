@@ -27,3 +27,9 @@ code-blocks = false
 
 [MD060]
 style = "compact"
+
+[MD049]
+style = "asterisk"
+
+[MD050]
+style = "asterisk"

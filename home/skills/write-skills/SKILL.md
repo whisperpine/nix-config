@@ -9,7 +9,7 @@ name: write-skills
 # Write Skills
 
 A skill exists to wrangle determinism out of a stochastic system.
-**Predictability** - the agent taking the same _process_ every run, not
+**Predictability** - the agent taking the same *process* every run, not
 producing the same output - is the root virtue; every lever below serves it.
 
 **Bold terms** are defined in [GLOSSARY.md](./GLOSSARY.md);
@@ -20,13 +20,13 @@ look them up there for the full meaning.
 Two choices, trading different costs:
 
 - A **model-invoked** skill keeps a **description**, so the agent can fire it
-  autonomously _and_ other skills can reach it (you can still type its name too).
+  autonomously *and* other skills can reach it (you can still type its name too).
   It contributes to **context load** - the description sits in the window every
   turn. Mechanics: omit `disable-model-invocation`, and write a model-facing
   description with rich trigger phrasing ("Use when the user wants…, mentions…").
 - A **user-invoked** skill strips the description from the agent's reach: only
   you, typing its name, can invoke it - and no other skill can. Zero context load,
-  but it spends **cognitive load**: _you_ are the index that must remember it
+  but it spends **cognitive load**: *you* are the index that must remember it
   exists. Mechanics: set `disable-model-invocation: true`; the `description`
   becomes human-facing - a one-line summary, trigger lists stripped.
 
@@ -62,16 +62,16 @@ ranked by how immediately the agent needs the material:
 
 1. **In-skill step**: An ordered action in `SKILL.md`, the primary tier: what
    the agent does, in order. Each step ends on a **completion criterion**, the
-   condition that tells the agent the work is done. Make it _checkable_ (can the
-   agent tell done from not-done?) and, where it matters, _exhaustive_ ("every
+   condition that tells the agent the work is done. Make it *checkable* (can the
+   agent tell done from not-done?) and, where it matters, *exhaustive* ("every
    modified model accounted for", not "produce a change list") - a vague criterion
    invites **premature completion**.
 2. **In-skill reference**: A definition, rule, or fact in `SKILL.md`, consulted
    on demand. Often a legitimately flat peer-set (every rule of a review on one
-   rung) - a fine arrangement, not a smell. _This skill is all reference._
+   rung) - a fine arrangement, not a smell. *This skill is all reference.*
 3. **External reference**: reference pushed out of `SKILL.md` into a separate
    file, reached by a **context pointer**, loaded only when the pointer fires.
-   (Spans _disclosed_ reference - a sibling file like `GLOSSARY.md`, still part
+   (Spans *disclosed* reference - a sibling file like `GLOSSARY.md`, still part
    of the skill - through fully **external reference** that lives outside the
    skill system and any skill can point at.)
 
@@ -89,11 +89,11 @@ to `GLOSSARY.md`). Some skills are used in more than one way, and each distinct
 way is a **branch** - different runs taking different paths through the skill.
 Branching is the cleanest disclosure test: inline what every branch needs, and
 push behind a pointer what only some branches reach. A **context pointer**'s
-_wording_, not its target, decides when and how reliably the agent reaches the
+*wording*, not its target, decides when and how reliably the agent reaches the
 material.
 
-Where the ladder decides _how far down_ a piece sits, **co-location** decides
-_what sits beside it_ once there: keep a concept's definition, rules, and
+Where the ladder decides *how far down* a piece sits, **co-location** decides
+*what sits beside it* once there: keep a concept's definition, rules, and
 caveats under one heading rather than scattered, so reading one part brings its
 neighbours with it.
 
@@ -126,15 +126,15 @@ should go, not be rewritten.
 ## Leading Words
 
 A **leading word** is a compact concept already living in the model's
-pretraining that the agent thinks with while running the skill (e.g. _lesson_,
-_fog of war_, _tracer bullets_). Repeated throughout the text (though not
+pretraining that the agent thinks with while running the skill (e.g. *lesson*,
+*fog of war*, *tracer bullets*). Repeated throughout the text (though not
 necessarily - a strong leading word might only be needed once), it accumulates a
 distributed definition and anchors a whole region of behaviour in the fewest
 tokens, by recruiting priors the model already holds.
 
-It serves predictability twice. In the body it anchors _execution_: the agent
+It serves predictability twice. In the body it anchors *execution*: the agent
 reaches for the same behaviour every time the word appears. In the description
-it anchors _invocation_: when the same word lives in your prompts, docs, and
+it anchors *invocation*: when the same word lives in your prompts, docs, and
 code, the agent links that shared language to the skill and fires it more
 reliably.
 
@@ -143,12 +143,12 @@ out at three sites (**duplication**), a description spending a sentence to
 gesture at one idea - each is a passage begging to **collapse** into a single
 token. Examples include:
 
-- "fast, deterministic, low-overhead" -> _tight_ - one quality restated across a
-  phase - into a single pretrained word (a _tight_ loop).
-- "a loop you believe in" -> _red_ - converts a fuzzy gate into a binary
-  observable state (the loop goes _red_ on the bug, or it doesn't).
+- "fast, deterministic, low-overhead" -> *tight* - one quality restated across a
+  phase - into a single pretrained word (a *tight* loop).
+- "a loop you believe in" -> *red* - converts a fuzzy gate into a binary
+  observable state (the loop goes *red* on the bug, or it doesn't).
 
-You win twice over: fewer tokens, _and_ a sharper hook for the agent to hang its
+You win twice over: fewer tokens, *and* a sharper hook for the agent to hang its
 thinking on. Assume every skill is carrying restatements that leading words
 retire - go find them.
 
@@ -157,8 +157,8 @@ retire - go find them.
 Use these to diagnose issues the user may be having with the skill.
 
 - **Premature completion**: Ending a step before it's genuinely done, attention
-  slipping to _being done_. Defence, in order: sharpen the completion criterion
-  first (cheap, local); only if it is irreducibly fuzzy _and_ you observe the
+  slipping to *being done*. Defence, in order: sharpen the completion criterion
+  first (cheap, local); only if it is irreducibly fuzzy *and* you observe the
   rush, hide the post-completion steps by splitting (the sequence cut).
 - **Duplication**: The same meaning in more than one place. Costs maintenance
   and tokens, and inflates a meaning's prominence on the ladder past its real rank.
@@ -170,5 +170,5 @@ Use these to diagnose issues the user may be having with the skill.
   each path carries only what it needs.
 - **No-op**: A line the model already obeys by default, so you pay load to say
   nothing. The test: does it change behaviour versus the default? A weak leading
-  word (_be thorough_ when the agent is already thorough-ish) is a no-op; the fix
-  is a stronger word (_relentless_), not a different technique.
+  word (*be thorough* when the agent is already thorough-ish) is a no-op; the fix
+  is a stronger word (*relentless*), not a different technique.

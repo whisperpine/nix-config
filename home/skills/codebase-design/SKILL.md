@@ -21,12 +21,12 @@ Use these terms exactly - don't substitute "component," "service," "API," or
 
 **Module** - anything with an interface and an implementation. Deliberately
 scale-agnostic: a function, class, package, or tier-spanning slice.
-_Avoid_: unit, component, service.
+*Avoid*: unit, component, service.
 
 **Interface** - everything a caller must know to use the module correctly: the
 type signature, but also invariants, ordering constraints, error modes, required
 configuration, and performance characteristics.
-_Avoid_: API, signature (too narrow - they refer only to the type-level surface).
+*Avoid*: API, signature (too narrow - they refer only to the type-level surface).
 
 **Implementation** - what's inside a module, its body of code. Distinct from
 **Adapter**: a thing can be a small adapter with a large implementation (a
@@ -39,13 +39,13 @@ test) can exercise per unit of interface they have to learn. A module is
 **deep** when a large amount of behaviour sits behind a small interface,
 **shallow** when the interface is nearly as complex as the implementation.
 
-**Seam** _(Michael Feathers)_ - a place where you can alter behaviour without
-editing in that place; the _location_ at which a module's interface lives. Where
+**Seam** *(Michael Feathers)* - a place where you can alter behaviour without
+editing in that place; the *location* at which a module's interface lives. Where
 to put the seam is its own design decision, distinct from what goes behind it.
-_Avoid_: boundary (overloaded with DDD's bounded context).
+*Avoid*: boundary (overloaded with DDD's bounded context).
 
 **Adapter** - a concrete thing that satisfies an interface at a seam. Describes
-_role_ (what slot it fills), not substance (what's inside).
+*role* (what slot it fills), not substance (what's inside).
 
 **Leverage** - what callers get from depth: more capability per unit of
 interface they learn. One implementation pays back across N call sites and M
@@ -87,18 +87,18 @@ When designing an interface, ask:
 
 ## Principles
 
-- _Depth is a property of the interface, not the implementation._
+- *Depth is a property of the interface, not the implementation.*
   A deep module can be internally composed of small, mockable, swappable parts -
   they just aren't part of the interface. A module can have **internal seams**
   (private to its implementation, used by its own tests) as well as the **external
   seam** at its interface.
-- _The deletion test._
+- *The deletion test.*
   Imagine deleting the module. If complexity vanishes, it was a pass-through. If
   complexity reappears across N callers, it was earning its keep.
-- _The interface is the test surface._
-  Callers and tests cross the same seam. If you want to test _past_ the
+- *The interface is the test surface.*
+  Callers and tests cross the same seam. If you want to test *past* the
   interface, the module is probably the wrong shape.
-- _One adapter means a hypothetical seam. Two adapters means a real one._
+- *One adapter means a hypothetical seam. Two adapters means a real one.*
   Don't introduce a seam unless something actually varies across it.
 
 ## Designing for Testability
@@ -144,18 +144,18 @@ function applyDiscount(cart): void {
 
 ## Rejected Framings
 
-- _Depth as ratio of implementation-lines to interface-lines_
+- *Depth as ratio of implementation-lines to interface-lines*
   (Ousterhout): rewards padding the implementation. We use depth-as-leverage instead.
-- _"Interface" as the TypeScript `interface` keyword or a class's public methods_:
+- *"Interface" as the TypeScript `interface` keyword or a class's public methods*:
   too narrow - interface here includes every fact a caller must know.
-- _"Boundary"_: overloaded with DDD's bounded context. Say **seam** or **interface**.
+- *"Boundary"*: overloaded with DDD's bounded context. Say **seam** or **interface**.
 
 ## Going Deeper
 
-- _Deepening a cluster given its dependencies_.
+- *Deepening a cluster given its dependencies*.
   See [DEEPENING.md](./DEEPENING.md): dependency categories, seam discipline,
   and replace-don't-layer testing.
-- _Exploring alternative interfaces_.
+- *Exploring alternative interfaces*.
   See [DESIGN-IT-TWICE.md](./DESIGN-IT-TWICE.md): spin up parallel sub-agents to
   design the interface several radically different ways, then compare on depth,
   locality, and seam placement.
