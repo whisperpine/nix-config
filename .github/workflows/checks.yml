@@ -12,7 +12,7 @@ jobs:
     name: spell check with typos
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
         shell: nix shell nixpkgs#typos --quiet --command bash {0}
@@ -24,7 +24,7 @@ jobs:
     # Only run this step in the main branch.
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Check the latest commit message
         shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
@@ -34,7 +34,7 @@ jobs:
     name: lint markdown by rumdl
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run rumdl command
         shell: nix shell nixpkgs#rumdl --quiet --command bash {0}
@@ -47,7 +47,7 @@ jobs:
       run:
         working-directory: home/skills
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run the script to validate skills
         shell: nix shell nixpkgs#yq-go --quiet --command bash {0}
@@ -57,7 +57,7 @@ jobs:
     name: nix flake check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run nix command
         run: nix flake check --impure --all-systems
@@ -66,7 +66,7 @@ jobs:
     name: nixfmt check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run nix command
         shell: nix shell nixpkgs#nixfmt-rs --quiet --command bash {0}
@@ -76,7 +76,7 @@ jobs:
     name: lint shell scripts by shellcheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: cachix/install-nix-action@v31
       - name: Run shellcheck command
         shell: nix shell nixpkgs#shellcheck --quiet --command bash {0}
