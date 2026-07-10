@@ -6,7 +6,7 @@ git_protocol: ssh
 # Toggle interactive prompting in the terminal.
 prompt: enabled
 # Toggle preference for editor-based interactive prompting in the terminal.
-prefer_editor_prompt: enabled
+prefer_editor_prompt: disabled
 # The terminal pager program to send standard output to.
 pager: less
 # Whether to display labels using their RGB hex color codes
