@@ -49,3 +49,20 @@ When creating or editing a markdown file:
 
 Respect `.rumdl.toml` at the repo root if present.
 It may configure enabled/disabled rules, exclusions, and rule-level settings.
+
+## GitHub Issue and PR
+
+GitHub's Markdown renderer diverges from CommonMark on line breaks: consecutive
+lines without a blank line between them are rendered as separate lines (unlike
+standard Markdown where they are joined). Therefore, do NOT hard-wrap long lines
+in issue/PR descriptions or comments. Let each paragraph stay a single long line.
+
+```text
+// Standard CommonMark: renders as one joined line
+This is the first line.
+This is the second line.
+
+// GitHub: renders as two separate lines
+This is the first line.
+This is the second line.
+```
