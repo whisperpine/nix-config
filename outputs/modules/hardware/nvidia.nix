@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 # ----------  nvidia configs ---------- #
 {
   # Enables builds with CUDA support with a nixpkgs wide configuration.
@@ -13,7 +13,8 @@
     # Making sure to use the proprietary drivers until the following issue is fixed:
     # https://github.com/NVIDIA/open-gpu-kernel-modules/issues/472
     open = true;
-    # Specify a the driver version.
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+    # Specify a the driver branch. Options:
+    # production, new_feature, beta, stable, latest, bleeding_edge, legacy_580, vulkan_beta
+    branch = "production";
   };
 }
