@@ -3,6 +3,7 @@ input@{
   nixpkgs-stable,
   nixpkgs-zellij,
   nixpkgs-chrome,
+  nixpkgs-anki,
   home-manager,
   sops-nix,
   nix-ld,
@@ -23,6 +24,7 @@ let
       inherit system;
       config.allowUnfree = true;
     };
+    pkgs-anki = import nixpkgs-anki { inherit system; };
     # Inhereit variables define above.
     inherit username;
   };

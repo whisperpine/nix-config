@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs-anki, ... }:
 # --- spaced repetition flashcard --- #
 {
-  home.packages = with pkgs; [ anki ];
+  home.packages = with pkgs-anki; [ anki ];
 
   # Force Anki to use Wayland.
   # https://docs.ankiweb.net/platform/linux/wayland.html
