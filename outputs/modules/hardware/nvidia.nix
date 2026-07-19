@@ -17,4 +17,31 @@
     # production, new_feature, beta, stable, latest, bleeding_edge, legacy_580, vulkan_beta
     branch = "production";
   };
+
+  # Force NVIDIA to immediately reuse VRAM buffers freed by niri.
+  # https://niri-wm.github.io/niri/Nvidia.html
+  environment.etc."nvidia/nvidia-application-profiles-rc.d/50-niri-limit-free-buffer-pool.json" = {
+    text = builtins.toJSON {
+      rules = [
+        {
+          pattern = {
+            feature = "procname";
+            matches = "niri";
+          };
+          profile = "Limit Free Buffer Pool On Wayland Compositors";
+        }
+      ];
+      profiles = [
+        {
+          name = "Limit Free Buffer Pool On Wayland Compositors";
+          settings = [
+            {
+              key = "GLVidHeapReuseRatio";
+              value = 0;
+            }
+          ];
+        }
+      ];
+    };
+  };
 }
