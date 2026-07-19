@@ -23,8 +23,6 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     # This is dedicated to install zellij "0.43.1".
     nixpkgs-zellij.url = "github:NixOS/nixpkgs/09061f748ee21f68a089cd5d91ec1859cd93d0be";
-    # This is dedicated to install anki "25.09.3".
-    nixpkgs-anki.url = "github:NixOS/nixpkgs/eef00dfd8a712b34af845f9350bac681b1228bd1";
     # To install the nightly version of Neovim.
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     # Run unpatched dynamic binaries.

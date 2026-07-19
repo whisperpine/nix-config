@@ -2,7 +2,6 @@ input@{
   nixpkgs,
   nixpkgs-stable,
   nixpkgs-zellij,
-  nixpkgs-anki,
   home-manager,
   sops-nix,
   nix-ld,
@@ -19,7 +18,6 @@ let
       config.allowUnfree = true;
     };
     pkgs-zellij = import nixpkgs-zellij { inherit system; };
-    pkgs-anki = import nixpkgs-anki { inherit system; };
     # Inhereit variables define above.
     inherit username;
   };
