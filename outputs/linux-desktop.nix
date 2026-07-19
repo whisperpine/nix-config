@@ -2,7 +2,6 @@ input@{
   nixpkgs,
   nixpkgs-stable,
   nixpkgs-zellij,
-  nixpkgs-chrome,
   nixpkgs-anki,
   home-manager,
   sops-nix,
@@ -20,16 +19,12 @@ let
       config.allowUnfree = true;
     };
     pkgs-zellij = import nixpkgs-zellij { inherit system; };
-    pkgs-chrome = import nixpkgs-chrome {
-      inherit system;
-      config.allowUnfree = true;
-    };
     pkgs-anki = import nixpkgs-anki { inherit system; };
     # Inhereit variables define above.
     inherit username;
   };
   configuration =
-    { pkgs, pkgs-chrome, ... }:
+    { pkgs, ... }:
     {
       # Bootloader.
       boot.loader.systemd-boot.enable = true;
@@ -54,7 +49,7 @@ let
       ]
       ++ (pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
         # "google-chrome" is unfree.
-        pkgs-chrome.google-chrome
+        pkgs.google-chrome
       ]);
     };
 in
