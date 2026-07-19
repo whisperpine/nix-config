@@ -31,6 +31,7 @@
     # --- utilities --- #
     translate-shell # command-line translator
     pastel # play with colors in the terminal
+    termdown # command-line timer
     ffmpeg # process audio, image and video
     tokei # count code lines quickly
   ];
