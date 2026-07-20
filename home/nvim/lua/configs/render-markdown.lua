@@ -161,4 +161,29 @@ M.callout = {
   important = { highlight = "Keyword" },
 }
 
+M.html = {
+  comment = {
+    -- Turn on / off HTML comment concealing.
+    conceal = false,
+    -- Text to inline before the concealed comment.
+    -- Output is evaluated depending on the type.
+    -- | function | `value(context)` |
+    -- | string   | `value`          |
+    -- | nil      | nothing          |
+    text = nil,
+    -- Highlight for the inlined text.
+    highlight = "RenderMarkdownHtmlComment",
+  },
+  tag = {
+    h1 = {
+      icon = "# ",
+      highlight = "RenderMarkdownH2Bg",
+      scope_highlight = "RenderMarkdownH2Bg",
+    },
+    code = { scope_highlight = "@markup.raw" },
+    strong = { scope_highlight = "@markup.italic" },
+    b = { scope_highlight = "@markup.italic" },
+  },
+}
+
 return M
