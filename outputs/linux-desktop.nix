@@ -42,13 +42,7 @@ let
       # Allow unfree software to be installed (e.g. google-chrome).
       nixpkgs.config.allowUnfree = true;
       # Install packages in operating system.
-      environment.systemPackages = [
-        pkgs.neovim
-      ]
-      ++ (pkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
-        # "google-chrome" is unfree.
-        pkgs.google-chrome
-      ]);
+      environment.systemPackages = [ pkgs.neovim ];
     };
 in
 nixpkgs.lib.nixosSystem {
@@ -62,6 +56,7 @@ nixpkgs.lib.nixosSystem {
 
     ./modules/nix-core.nix
     ./modules/host-users.nix
+    ./modules/google-chrome.nix
     ./modules/services/journald.nix
     ./modules/services/k3s.nix
     ./modules/wireguard.nix
