@@ -205,6 +205,14 @@ vim.lsp.config("cssls", {
   },
 })
 
+-- Config rumdl.
+vim.lsp.config("rumdl", {
+  on_attach = function(client, _)
+    -- Disable document symbols from rumdl (keep marksman's).
+    client.server_capabilities.documentSymbolProvider = false
+  end,
+})
+
 -- Disable document_color globally.
 -- When enabled, "document_color" is shown as text backgrounds.
 vim.lsp.document_color.enable(false)
