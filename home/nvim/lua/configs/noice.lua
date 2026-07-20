@@ -65,6 +65,7 @@ M.routes = {
   { filter = { find = "No information available" }, opts = { skip = true } },
   -- vim.lsp --
   { filter = { find = "No code actions available" }, opts = { skip = true } },
+  { filter = { find = "Empty hover response" }, opts = { skip = true } },
   { filter = { find = "No signature help available" }, opts = { skip = true } },
   {
     filter = { find = 'method "textDocument/signatureHelp" is not supported' },
