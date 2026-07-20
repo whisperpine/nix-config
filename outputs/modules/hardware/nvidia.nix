@@ -15,7 +15,7 @@
     open = true;
     # Specify a the driver branch. Options:
     # production, new_feature, beta, stable, latest, bleeding_edge, legacy_580, vulkan_beta
-    branch = "production";
+    branch = "latest";
   };
 
   # Force NVIDIA to immediately reuse VRAM buffers freed by niri.
