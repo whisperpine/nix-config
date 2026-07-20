@@ -40,10 +40,5 @@
       name = "Keyboard Layout Viewer";
       icon = "fcitx";
     };
-    # Prevent two "Google Chrome" listed by fuzzel.
-    "com.google.Chrome" = {
-      name = "Google Chrome";
-      noDisplay = true;
-    };
   };
 }
