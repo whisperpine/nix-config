@@ -16,6 +16,7 @@ M = {
     -- Replaces ">" of "block_quote".
     icon = "▎", -- ▏▎▍▌▋
   },
+  win_options = { conceallevel = { rendered = 2 } },
 }
 
 M.bullet = {
