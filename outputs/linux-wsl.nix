@@ -33,6 +33,8 @@ let
         xdg-utils # wsl specific
         wslu # wsl specific
       ];
+      # Provide libraries for unpatched dynamic binaries via nix-ld.
+      programs.nix-ld.libraries = with pkgs; [ stdenv.cc.cc.lib ];
     };
 in
 nixpkgs.lib.nixosSystem {

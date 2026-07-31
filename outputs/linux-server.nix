@@ -26,6 +26,8 @@ let
     {
       # Install packages in operating system.
       environment.systemPackages = with pkgs; [ neovim ];
+      # Provide libraries for unpatched dynamic binaries via nix-ld.
+      programs.nix-ld.libraries = with pkgs; [ stdenv.cc.cc.lib ];
     };
 in
 nixpkgs.lib.nixosSystem {

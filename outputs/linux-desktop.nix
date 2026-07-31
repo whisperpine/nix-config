@@ -37,6 +37,8 @@ let
       programs.dconf.enable = true;
       # Install localsend.
       programs.localsend.enable = true;
+      # Provide libraries for unpatched dynamic binaries via nix-ld.
+      programs.nix-ld.libraries = with pkgs; [ stdenv.cc.cc.lib ];
       # Allow unfree software to be installed (e.g. google-chrome).
       nixpkgs.config.allowUnfree = true;
       # Install packages in operating system.
