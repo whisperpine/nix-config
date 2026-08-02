@@ -35,6 +35,8 @@ let
       zramSwap.enable = true;
       # Enable dconf so that system preferences (e.g. dark theme) can be set.
       programs.dconf.enable = true;
+      # Install firefox.
+      programs.firefox.enable = true;
       # Install localsend.
       programs.localsend.enable = true;
       # Provide libraries for unpatched dynamic binaries via nix-ld.
