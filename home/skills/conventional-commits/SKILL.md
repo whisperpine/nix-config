@@ -20,14 +20,14 @@ name: conventional-commits
 
 ## Rules
 
-- Consider only what's currently *staged*.
-  If there isn't a staged file, stop here with an error to inform humans.
+- Only take what's currently *staged* into consideration.
+  If there isn't a staged file, stop with an error to inform humans.
 
 ## Workflow
 
 1. Check for cocogitto: If the repository has a `cog.toml` at the root,
    read it to determine allowed commit types and scopes.
-2. Pick a type from `cog.toml` (or standard types if no `cog.toml`).
+2. Pick a type from `cog.toml` (or standard types if there's no `cog.toml`).
 3. Pick a scope (optional): Use a scope from `cog.toml` if one applies.
    If no scope in `cog.toml` is appropriate, omit the scope entirely.
 4. Write the description: Imperative mood, lowercase, no period at end.
@@ -35,7 +35,7 @@ name: conventional-commits
 5. Add body (optional): Explain what and why, not how.
    Wrap at 72 characters.
 6. Add footer (optional): Reference issues with `Closes #123`, `Fixes
-   #456`, or note breaking changes with `BREAKING CHANGE:`.
+   #456`, or note breaking changes with `BREAKING CHANGE: xxx.`.
 
 ## Cocogitto
 

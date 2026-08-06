@@ -1,7 +1,7 @@
 ---
 description: >
-  Validates edited files have no LSP errors or warnings, auto-fixes them if
-  possible. Use after editing any source code file when an LSP is available.
+  Verifies edited files have no LSP errors or warnings, auto-fixes them when
+  possible. Use after editing any source code file where an LSP is available.
 name: respect-lsp
 ---
 

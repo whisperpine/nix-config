@@ -7,9 +7,8 @@ name: conform-frontmatter
 
 # Conform Frontmatter
 
-- Try to recognize the markdown file. If it's a well-known type (e.g.
-  `SKILL.md`, agents or commands definition for coding agents), validate the
-  frontmatter attributes.
+- Recognize the markdown file. If it's a well-known type (e.g. `SKILL.md`,
+  definition for coding agents), validate the frontmatter attributes.
 - For lines in the frontmatter exceeding 80 characters, use the `>` yaml syntax
   to keep lines under 80. For example:
 

@@ -1,7 +1,7 @@
 ---
 description: >
-  Ensures PR (Pull Request) titles conform with a specific style. Use when
-  creating or editing a PR.
+  Ensures PR or MR titles conform with a specific style. Use when creating or
+  editing a PR (Pull Request) or MR (Merge Request).
 name: conform-pr-title
 ---
 
