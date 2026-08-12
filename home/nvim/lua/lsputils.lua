@@ -254,7 +254,7 @@ vim.lsp.enable {
   "taplo",
   "qmlls",
   "biome",
-  "tsgo",
+  "tsc",
   "html",
   "nixd",
   "zls",
