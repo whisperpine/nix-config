@@ -30,8 +30,8 @@
       "command": ["ruff", "server"],
       "extensions": [".py"]
     },
-    "tsgo": {
-      "command": ["tsgo", "--lsp", "--stdio"],
+    "tsc": {
+      "command": ["tsc", "--lsp", "--stdio"],
       "extensions": [".ts", ".js", ".tsx", ".jsx"]
     }
   },
