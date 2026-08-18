@@ -1,7 +1,7 @@
 {
   "doctype": {
     "prefix": "doctype",
-    "body": ["<!DOCTYPE html>"],
+    "body": ["<!doctype html>"],
     "description": "HTML - Defines the document type",
     "scope": "text.html"
   },
@@ -308,7 +308,7 @@
   "html5": {
     "prefix": "html5",
     "body": [
-      "<!DOCTYPE html>",
+      "<!doctype html>",
       "<html lang=\"$1en\">",
       "\t<head>",
       "\t\t<meta charset=\"UTF-8\" />",
