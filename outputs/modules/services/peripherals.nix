@@ -46,8 +46,10 @@
   # Temperature management
   # ---------------------- #
 
-  services.thermald.enable =
-    if (lib.meta.availableOn pkgs.stdenv.hostPlatform pkgs.thermald) then true else false;
+  # thermald 2.5.12+ refuses to start on non-mobile platforms (pm_profile != 2/8),
+  # which fatally aborts on this desktop. Upstream only validates tables for
+  # mobile/tablet anyway; kernel thermal management still applies.
+  services.thermald.enable = false;
 
   # ---------------- #
   # Lighting configs
