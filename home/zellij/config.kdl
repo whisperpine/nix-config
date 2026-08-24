@@ -2,6 +2,14 @@
 // eg. when terminal window with an active zellij session is closed.
 on_force_close "detach"
 
+// The style of the pane frames when pane_frames is enabled.
+pane_frame_style "full"
+
+// Whether stacked panes are rendered as a list of one-line titles with the
+// expanded pane pinned to the bottom of the stack. When false, the expanded
+// pane is rendered in place inside the stack (the pre-0.45.0 behavior).
+stacked_pane_list false
+
 // Disable tips on Zellij startup.
 show_startup_tips false
 
