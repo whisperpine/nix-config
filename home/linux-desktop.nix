@@ -25,7 +25,6 @@ in
       hyprpicker # color picker (used by e.g. pastel)
       obs-studio # video recording and live streaming
       wechat # messaging and calling app
-      eduvpn-client # linux client for eduVPN
     ]
     ++ [ brat ];
 
