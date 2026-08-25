@@ -1,8 +1,16 @@
-{ username, pkgs-stable, ... }:
+{
+  username,
+  pkgs,
+  pkgs-stable,
+  ...
+}:
 # ---------- networking configs ---------- #
 {
   # Enable network manager.
   networking.networkmanager.enable = true;
+
+  # Install VPN plugins (e.g. required by the eduVPN client).
+  networking.networkmanager.plugins = [ pkgs.networkmanager-openvpn ];
 
   # Enable The AmneziaVPN client.
   # It also changes the DNS server in "/etc/resolv.conf".
@@ -20,6 +28,7 @@
     group = username;
     package = pkgs-stable.clash-verge-rev;
   };
+
   # This option modifies "/etc/xdg/mimeapps.list
   xdg.mime.defaultApplications = {
     "x-scheme-handler/clash" = "clash-verge.desktop";
