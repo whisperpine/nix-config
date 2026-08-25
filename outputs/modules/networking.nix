@@ -1,4 +1,4 @@
-{ username, pkgs-stable, ... }:
+{ username, pkgs, ... }:
 # ---------- networking configs ---------- #
 {
   # Enable network manager.
@@ -18,7 +18,7 @@
     tunMode = true;
     serviceMode = true;
     group = username;
-    package = pkgs-stable.clash-verge-rev;
+    package = pkgs.clash-verge-rev;
   };
 
   # This option modifies "/etc/xdg/mimeapps.list
