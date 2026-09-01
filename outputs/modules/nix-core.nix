@@ -55,5 +55,5 @@
   # Optimizes storage.
   nix.optimise.automatic = true;
 
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "Europe/Helsinki";
 }
