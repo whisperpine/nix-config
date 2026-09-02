@@ -79,7 +79,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/services/xserver.nix
 
     # # Self-hosted github-runners.
-    # ./modules/services/github-runner.nix
+    ./modules/services/github-runner.nix
 
     # Only use this module in conjunction with a proxy.
     ./modules/networking.nix
