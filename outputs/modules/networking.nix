@@ -1,8 +1,11 @@
-{ ... }:
+{ pkgs, ... }:
 # ---------- networking configs ---------- #
 {
   # Enable network manager.
   networking.networkmanager.enable = true;
+
+  # Install VPN plugins (e.g. required by the eduVPN client).
+  networking.networkmanager.plugins = [ pkgs.networkmanager-openvpn ];
 
   # # Enable The AmneziaVPN client.
   # # It also changes the DNS server in "/etc/resolv.conf".
