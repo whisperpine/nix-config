@@ -2,6 +2,7 @@ local M = {}
 
 M = {
   "yetone/avante.nvim",
+  enabled = false, -- Note: Temporarily disable this plugin.
   build = "make", -- gnumake should be installed in your OS
   cmd = "AvanteAsk",
   dependencies = {
