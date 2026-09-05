@@ -54,6 +54,7 @@ window-rule {
     // Exclude PWAs (Progressive Web Apps).
     exclude title="^Monkeytype"
     exclude title="^Telegram"
+    exclude title="^WhatsApp"
     open-floating true
 }
 
