@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   hostname,
   ...
 }:
@@ -8,29 +9,47 @@
 # Refer to the following NixOS options:
 # https://search.nixos.org/options?channel=unstable&query=github-runner
 let
+  workDir = runner: "/var/lib/github-runner-work/${runner}";
+  chownWorkDir =
+    runner:
+    pkgs.writeShellScript "github-runner-${runner}-chown-workdir.sh" ''
+      chown --reference="$STATE_DIRECTORY" "$HOME"
+    '';
   organization =
     { org, index }:
+    let
+      runner = "${org}-${index}";
+    in
     {
-      services.github-runners."${org}-${index}" = {
+      services.github-runners."${runner}" = {
         enable = true;
         replace = true;
         ephemeral = true;
         name = "nixos-${hostname}-${index}";
         tokenFile = config.sops.secrets."github-runner-token/${org}/org".path;
         url = "https://github.com/${org}";
+        workDir = workDir runner;
+        serviceOverrides.ExecStartPre = [ "+${chownWorkDir runner}" ];
       };
+      systemd.tmpfiles.rules = [ "d ${workDir runner} 0777 root root -" ];
     };
   whisperpine =
     { repo, index }:
+    let
+      runner = "whisperpine-${repo}-${index}";
+    in
     {
-      services.github-runners."whisperpine-${repo}-${index}" = {
+      services.github-runners."${runner}" = {
         enable = true;
         replace = true;
         ephemeral = true;
         name = "nixos-${hostname}-${index}";
         tokenFile = config.sops.secrets."github-runner-token/whisperpine/${repo}".path;
         url = "https://github.com/whisperpine/${repo}";
+        workDir = workDir runner;
+        serviceOverrides.ExecStartPre = [ "+${chownWorkDir runner}" ];
       };
+      systemd.tmpfiles.rules = [ "d ${workDir runner} 0777 root root -" ];
     };
 in
 {
