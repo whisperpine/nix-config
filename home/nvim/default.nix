@@ -75,7 +75,7 @@ in
     dockerfile-language-server # dockerfile
     graphql-language-service-cli # graphql
     # vscode-langservers-extracted # json, css, html
-    typescript-go # typescript, javascript
+    typescript # typescript, javascript
     tailwindcss-language-server # tailwind css
     ansible-language-server # ansible
     svelte-language-server # svelte
