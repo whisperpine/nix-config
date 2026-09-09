@@ -17,7 +17,6 @@
     ./bash # bash configs
     ./starship # prompt for shells
     ./atuin # better shell history
-    ./tirith # shell security guard
 
     # --- git --- #
     ./gh # github cli tool
