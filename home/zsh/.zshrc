@@ -47,9 +47,3 @@ set_zellij_pane_title() {
 add-zsh-hook chpwd set_zellij_pane_title
 # `precmd` is a zsh hook that triggered before each prompt is displayed.
 add-zsh-hook precmd set_zellij_pane_title
-
-# ------ #
-# tirith
-# ------ #
-
-eval "$(tirith init --shell zsh)"
