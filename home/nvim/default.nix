@@ -56,7 +56,7 @@ in
     redocly # openapi
     rustfmt # rust
     tflint # terraform
-    sqlfluff # sql
+    sqruff # sql
     nixfmt-rs # nix
     stylua # lua
     kdlfmt # kdl

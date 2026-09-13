@@ -15,7 +15,7 @@ vim.filetype.add {
   },
   filename = {
     [".envrc"] = "sh",
-    [".sqlfluff"] = "ini",
+    [".sqruff"] = "ini",
     ["terraform.tfstate"] = "json",
     ["terraform.tfstate.backup"] = "json",
     ["helmfile.yaml"] = "helm",

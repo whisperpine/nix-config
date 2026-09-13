@@ -240,6 +240,7 @@ vim.lsp.enable {
   "lemminx",
   "graphql",
   "nushell",
+  "sqruff",
   "jsonls",
   "cssls",
   "yamlls",

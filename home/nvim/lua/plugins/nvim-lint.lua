@@ -9,7 +9,6 @@ M.config = function()
   require("lint").linters_by_ft = {
     html = { "htmlhint" },
     terraform = { "tflint" },
-    sql = { "sqlfluff" },
     json = { "redocly" },
     yaml = { "redocly" },
     go = { "golangcilint" },
