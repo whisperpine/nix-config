@@ -64,6 +64,10 @@ M.routes = {
   -- trouble.nvim --
   { filter = { find = "No information available" }, opts = { skip = true } },
   -- vim.lsp --
+  {
+    filter = { find = 'method "textDocument/hover" is not supported' },
+    opts = { skip = true },
+  },
   { filter = { find = "No code actions available" }, opts = { skip = true } },
   { filter = { find = "Empty hover response" }, opts = { skip = true } },
   { filter = { find = "No signature help available" }, opts = { skip = true } },
