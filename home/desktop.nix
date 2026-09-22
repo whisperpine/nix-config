@@ -34,7 +34,11 @@
     termdown # command-line timer
     ffmpeg # process audio, image and video
     tokei # count code lines quickly
-    ghostscript # # manipulate pdf files
+
+    # --- documents --- #
+    pandoc # convert markup files
+    texliveSmall # tools like pdflatex
+    ghostscript # manipulate pdf files
     qpdf # manipulate pdf files
   ];
 }
