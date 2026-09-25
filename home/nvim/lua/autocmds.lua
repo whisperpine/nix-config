@@ -160,3 +160,26 @@ autocmd("FileType", {
   command = "set formatoptions-=ro",
   pattern = "*",
 })
+
+-- Work around a blink.cmp bug: it can keep a stale internal `last_char` when an
+-- `InsertCharPre` is swallowed (e.g. a completion accept-char) or when insert
+-- mode is left and re-entered quickly. The next buffer-changing insert command,
+-- like `o`, then pops the completion menu with that phantom character even
+-- though nothing was typed.
+--
+-- Reset it whenever a real insert session ends, since blink's own cleanup is
+-- deferred and can be skipped. See Saghen/blink.cmp#2323.
+autocmd({ "InsertLeave", "BufLeave" }, {
+  group = augroup("BlinkClearStaleChar", { clear = true }),
+  callback = function()
+    for _, module in ipairs {
+      "blink.cmp.completion.trigger",
+      "blink.cmp.signature.trigger",
+    } do
+      local trigger = package.loaded[module]
+      if trigger and trigger.buffer_events then
+        trigger.buffer_events.last_char = ""
+      end
+    end
+  end,
+})
