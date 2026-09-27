@@ -6,6 +6,8 @@ description: >
 name: gh-cli
 ---
 
+<!-- rumdl-disable MD093 -->
+
 # `gh` CLI
 
 ## Interactivity Policy

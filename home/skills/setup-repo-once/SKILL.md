@@ -43,7 +43,7 @@ Assume the user does not know what these terms mean. Each section starts with a
 short explainer (what it is, why these skills need it, what changes if they pick
 differently). Then show the choices and the default.
 
-### Section `A` - Issue Tracker
+### Section "A" - Issue Tracker
 
 > Explainer: The "issue tracker" is where issues live for this repo. Skills like
 > `to-issues`, `triage`, `to-prd` read from and write to it - they need to know
@@ -57,7 +57,7 @@ at GitHub, propose that. Otherwise (or if the user prefers), offer:
 - Other (Jira, Linear, etc.) - ask the user to describe the workflow in one
   paragraph; the skill will record it as freeform prose.
 
-### Section `B` - Triage Label Vocabulary
+### Section "B" - Triage Label Vocabulary
 
 > Explainer: When the `triage` skill processes an incoming issue, it moves it
 > through a state machine - needs triage, needs info, ready for an agent to pick
@@ -77,7 +77,7 @@ The five canonical roles:
 Default: Each role's string equals its name.
 Ask the user if they want to override any.
 
-### Section `C` - Domain Docs
+### Section "C" - Domain Docs
 
 > Explainer: Some skills (`tdd`) read a `CONTEXT.md` file to learn the project's
 > domain language, and `docs/adr/` for past architectural decisions. They need
