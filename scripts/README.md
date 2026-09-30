@@ -21,6 +21,10 @@ Scripts:
   batch-convert PNG and JPG files to WebP.
 - [delete-github-default-labels.sh](./as-commands/delete-github-default-labels.sh):
   delete all default labels of github issues.
+- [markdown-to-pdf.sh](./as-commands/markdown-to-pdf.sh):
+  convert single file markdown to PDF.
+- [merge-pdf-files.sh](./as-commands/merge-pdf-files.sh):
+  merge PDF files into one with normalized width.
 - [punctuation-cjk-to-ascii.sh](./as-commands/punctuation-cjk-to-ascii.sh):
   convert CJK punctuations to ASCII ones.
 - [print-github-contributions.sh](./as-commands/print-github-contributions.sh):
