@@ -37,6 +37,8 @@
 
     # --- documents --- #
     pandoc # convert markup files
+    pandoc-ext-diagram # generate diagrams
+    mermaid-cli # the `mmdc` command
     texliveSmall # tools like pdflatex
     ghostscript # manipulate pdf files
     qpdf # manipulate pdf files
