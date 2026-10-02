@@ -1,28 +1,27 @@
-import type { Plugin } from "@opencode-ai/plugin";
+import { Plugin } from "@opencode/plugin";
 
 /** An opencode plugin that bans certain commands. */
-export const cmdBannedPlugin: Plugin = async () => {
-  return {
-    "tool.execute.before": async (input, output) => {
-      if (input.tool === "bash") {
-        if (input.tool === "bash") {
-          const command: string = output.args.command as string;
-          const violation: string | null = detectCmdViolation(
-            command,
-            bannedCmds,
-          );
+export default Plugin.define({
+  id: "yusong.cmd-banned",
+  async setup(ctx): Promise<void> {
+    await ctx.tool.hook("execute.before", (event) => {
+      if (event.tool === "bash") {
+        const command = (event.input as { command: string }).command;
+        const violation: string | null = detectCmdViolation(
+          command,
+          bannedCmds,
+        );
 
-          if (violation) {
-            throw new Error(
-              `Blocked: '${violation}' is banned. DO NOT try to workaround. ` +
-                `Stop here and wait for human's instruction.`,
-            );
-          }
+        if (violation) {
+          throw new Error(
+            `Blocked: '${violation}' is banned. DO NOT try to workaround. ` +
+              `Stop here and wait for human's instruction.`,
+          );
         }
       }
-    },
-  };
-};
+    });
+  },
+});
 
 function detectCmdViolation(
   command: string,

@@ -1,11 +1,12 @@
-import type { Plugin } from "@opencode-ai/plugin";
+import { Plugin } from "@opencode/plugin";
 
 /** An opencode plugin that forces choosing the preferred command. */
-export const cmdPreferredPlugin: Plugin = async () => {
-  return {
-    "tool.execute.before": async (input, output) => {
-      if (input.tool === "bash") {
-        const command: string = output.args.command as string;
+export default Plugin.define({
+  id: "yusong.cmd-preferred",
+  async setup(ctx): Promise<void> {
+    await ctx.tool.hook("execute.before", (event) => {
+      if (event.tool === "bash") {
+        const command = (event.input as { command: string }).command;
         const violation: CmdPreference | null = detectCmdViolation(
           command,
           preferences,
@@ -20,9 +21,9 @@ export const cmdPreferredPlugin: Plugin = async () => {
           );
         }
       }
-    },
-  };
-};
+    });
+  },
+});
 
 function detectCmdViolation(
   command: string,
