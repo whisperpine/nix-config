@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ config, ... }:
 # --- ai coding agent --- #
 let
   repoDir = builtins.getEnv "PWD";
@@ -10,7 +10,8 @@ let
   pluginsDir = "${repoDir}/home/opencode/plugins";
 in
 {
-  home.packages = with pkgs; [ opencode ];
+  # Note: opencode is installed globally by bun for the latest version.
+  # home.packages = with pkgs; [ opencode ];
 
   xdg.configFile.opencode = {
     source = config.lib.file.mkOutOfStoreSymlink opencodeConfig;
