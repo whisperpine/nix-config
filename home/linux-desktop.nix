@@ -19,7 +19,6 @@ in
       ddcutil # manage monitors (e.g. brightness)
       usbutils # tools for working with usb devices
       alsa-utils # audio utilities (e.g. alsamixer)
-      udiskie # disk automounter for udisks
 
       # --- applications --- #
       hyprpicker # color picker (used by e.g. pastel)

@@ -7,7 +7,6 @@
     ./vercel-skills # manage agent skills
     ./duckdb # OLAP embedded database
     ./tealdeer # fast tldr implementation
-    ./erdtree # file-tree visualizer
     ./direnv # manage dir-based env vars
     ./zellij # terminal multiplexer
     ./opencode # ai coding agent
@@ -31,7 +30,6 @@
     # --- utilities --- #
     translate-shell # command-line translator
     pastel # play with colors in the terminal
-    termdown # command-line timer
     ffmpeg # process audio, image and video
     tokei # count code lines quickly
 

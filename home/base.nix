@@ -24,13 +24,11 @@
 
     # --- tui --- #
     ./nvim # my favorite text editor
-    ./helix # modal text editor
     ./btop # monitor of resources
     ./yazi # terminal file manager
 
     # --- utilities --- #
     ./zoxide # history-aware cd command
-    ./bat # "cat" with syntax highlighting
     ./pgcli # cli for postgresql
     ./litecli # cli for sqlite
   ];
@@ -48,7 +46,6 @@
     sops # secrets operations
 
     sqlite # embedded OLTP database
-    difftastic # ergonomic alternative to diff
     tree # show a directory as a tree
     ouch # compression and decompression
     eza # modern alternative to ls
