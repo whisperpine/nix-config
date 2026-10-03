@@ -16,7 +16,7 @@ theme = "default"
 volume = 0.7
 
 [whisper]
-model = "base.en"
+model = "large-v3-turbo"
 language = "en"
 translate = false
 
