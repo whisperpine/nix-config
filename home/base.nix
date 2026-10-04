@@ -31,6 +31,7 @@
     ./zoxide # history-aware cd command
     ./pgcli # cli for postgresql
     ./litecli # cli for sqlite
+    ./azure # azure cli configs
   ];
 
   home.packages = with pkgs; [
