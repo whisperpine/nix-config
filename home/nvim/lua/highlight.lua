@@ -91,7 +91,7 @@ hl(0, "@lsp.typemod.procMacro.macro.rust", { link = "@function.macro" })
 hl(0, "@lsp.typemod.procMacro.library.rust", { link = "@function.macro" })
 -- Rust injected semantic tokens (in code blocks of docstring).
 hl(0, "@lsp.typemod.keyword.injected.rust", { link = "@keyword" }) -- keyword in comments
-hl(0, "@lsp.typemod.const.injected.rust", { link = "@variable" }) -- code blocks in comments
+hl(0, "@lsp.typemod.const.injected.rust", { link = "@constant" }) -- code blocks in comments
 hl(0, "@lsp.typemod.generic.injected.rust", { link = "@variable" })
 hl(0, "@lsp.typemod.attributeBracket.injected.rust", { link = "@punctuation" })
 hl(0, "@lsp.typemod.typeAlias.injected.rust", { link = "@type" })
