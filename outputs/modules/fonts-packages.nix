@@ -6,6 +6,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.symbols-only
     sarasa-gothic
+    libertinus
     cascadia-code
     noto-fonts-cjk-sans
     noto-fonts
