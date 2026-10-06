@@ -37,6 +37,7 @@
     pandoc # convert markup files
     pandoc-ext-diagram # generate diagrams
     mermaid-cli # the `mmdc` command
+    librsvg # the `rsvg-convert` command to embed svg
     texliveSmall # tools like pdflatex
     ghostscript # manipulate pdf files
     qpdf # manipulate pdf files
