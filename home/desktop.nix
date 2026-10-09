@@ -21,7 +21,7 @@
     fluxcd # gitops for kubernetes
 
     # --- dev tools --- #
-    python313 # python 13
+    python314 # python 13
     uv # python package manager
     kondo # clean unneeded files from projects
     hyperfine # command-line benchmarking tool

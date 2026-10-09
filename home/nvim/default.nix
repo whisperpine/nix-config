@@ -43,7 +43,7 @@ in
     # --- formatters and linters --- #
     # Find all formatters here:
     # https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
-    python313Packages.cfn-lint # cloudformation
+    python314Packages.cfn-lint # cloudformation
     ansible-lint # ansible
     shellcheck # shell linter
     actionlint # github actions
