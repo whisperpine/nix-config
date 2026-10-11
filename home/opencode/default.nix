@@ -3,7 +3,7 @@
 let
   repoDir = builtins.getEnv "PWD";
   opencodeConfig = "${repoDir}/home/opencode/opencode.jsonc";
-  tuiConfig = "${repoDir}/home/opencode/tui.json";
+  cliConfig = "${repoDir}/home/opencode/cli.json";
   agentsDir = "${repoDir}/home/opencode/agents";
   commandsDir = "${repoDir}/home/opencode/commands";
   toolsDir = "${repoDir}/home/opencode/tools";
@@ -18,9 +18,9 @@ in
     target = "./opencode/opencode.jsonc";
   };
 
-  xdg.configFile.opencodeTui = {
-    source = config.lib.file.mkOutOfStoreSymlink tuiConfig;
-    target = "./opencode/tui.json";
+  xdg.configFile.opencodeCli = {
+    source = config.lib.file.mkOutOfStoreSymlink cliConfig;
+    target = "./opencode/cli.json";
   };
 
   xdg.configFile.agentsDir = {

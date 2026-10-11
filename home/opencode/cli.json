@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "system"
+  },
+  "keybinds": {
+    "app.exit": "ctrl+d"
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "hide",
+    "thinking": "hide"
+  }
+}
