@@ -12,5 +12,11 @@
   "session": {
     "sidebar": "hide",
     "thinking": "hide"
+  },
+  "cursor": {
+    "blinking": false
+  },
+  "tabs": {
+    "mode": "off"
   }
 }
