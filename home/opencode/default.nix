@@ -2,7 +2,7 @@
 # --- ai coding agent --- #
 let
   repoDir = builtins.getEnv "PWD";
-  opencodeConfig = "${repoDir}/home/opencode/opencode.json";
+  opencodeConfig = "${repoDir}/home/opencode/opencode.jsonc";
   tuiConfig = "${repoDir}/home/opencode/tui.json";
   agentsDir = "${repoDir}/home/opencode/agents";
   commandsDir = "${repoDir}/home/opencode/commands";
@@ -15,7 +15,7 @@ in
 
   xdg.configFile.opencode = {
     source = config.lib.file.mkOutOfStoreSymlink opencodeConfig;
-    target = "./opencode/opencode.json";
+    target = "./opencode/opencode.jsonc";
   };
 
   xdg.configFile.opencodeTui = {
