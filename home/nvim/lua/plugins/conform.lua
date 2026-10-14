@@ -36,7 +36,6 @@ M.opts.formatters_by_ft = {
   rust = { "rustfmt" },
   lua = { "stylua" },
   nix = { "nixfmt" },
-  proto = { "buf" },
   sql = { "sqruff" },
   typst = { "typstyle" },
   hurl = { "hurlfmt" },
