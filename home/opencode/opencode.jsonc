@@ -1,17 +1,26 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "autoupdate": false,
   "default_agent": "plan",
   // Disables the "/share" command to make a session publicly available.
   "share": "disabled",
   // Controls which actions require approval to run.
-  "permission": {
-    "external_directory": {
-      "~/.config/opencode/skills/**": "allow",
-      "~/.cargo/registry/**": "allow",
-      "~/.agents/skills/**": "allow"
+  "permissions": [
+    {
+      "action": "external_directory",
+      "resource": "~/.config/opencode/skills/*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "~/.agents/skills/**",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "~/.cargo/registry/*",
+      "effect": "allow"
     }
-  },
+  ],
   // keeps built-ins enabled while configuring overrides or custom servers.
   "lsp": {
     "marksman": {

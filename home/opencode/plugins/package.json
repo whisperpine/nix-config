@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "type": "module",
   "devDependencies": {
-    "@opencode/plugin": "^2.0.22"
+    "@opencode/plugin": "^2.0.30"
   }
 }
