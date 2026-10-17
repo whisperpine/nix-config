@@ -6,7 +6,20 @@ set dotenv-required := true
 _default:
   @just --list
 
-# build and switch (manually set HOSTNAME in .env)
+# ----- #
+# build
+# ----- #
+
+# build nixos and switch after reboot (manually set HOSTNAME in .env)
+[group("build")]
+boot:
+  echo ${HOSTNAME}
+  nixos-rebuild boot --sudo \
+    --flake .#$HOSTNAME \
+    --impure
+
+# build and switch nixos (manually set HOSTNAME in .env)
+[group("build")]
 deploy:
   echo ${HOSTNAME}
   nixos-rebuild switch --sudo \
@@ -14,13 +27,19 @@ deploy:
     --impure
 
 # build and switch on darwin (manually set HOSTNAME in .env)
+[group("build")]
 darwin:
   echo ${HOSTNAME}
   sudo darwin-rebuild switch \
     --flake .#$HOSTNAME \
     --impure
 
+# -----
+# debug
+# -----
+
 # build and show trace in verbose level
+[group("debug")]
 debug:
   echo ${HOSTNAME}
   nixos-rebuild build --sudo \
@@ -28,18 +47,18 @@ debug:
     --flake .#$HOSTNAME \
     --impure
 
-# show profile history
+# list generations and show profile history
+[group("debug")]
 history:
+  nixos-rebuild list-generations
   nix profile history --profile /nix/var/nix/profiles/system
 
-# remove all generations older than 7 days
-
-# For non-home-manager profiles
-clean:
-  sudo nix profile wipe-history \
-    --profile /nix/var/nix/profiles/system --older-than 7d
+# -------- #
+# maintain
+# -------- #
 
 # garbage collect all unused nix store entries
+[group("maintain")]
 gc:
   # clean up nix store and remove old profile generations
   sudo nix-collect-garbage --delete-old
