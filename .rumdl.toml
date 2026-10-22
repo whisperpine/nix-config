@@ -3,6 +3,8 @@
 # -------------- #
 
 [global]
+# Disable caching.
+cache = false
 # List of rules to enable exclusively (replaces defaults).
 enable = ["ALL"]
 # Additional rules to disable on top of the disable list (additive)
