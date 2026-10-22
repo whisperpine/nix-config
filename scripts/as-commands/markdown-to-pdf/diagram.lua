@@ -83,16 +83,20 @@ end
 --- Reads the contents of a file.
 local function read_file(filepath)
   local fh = io.open(filepath, "rb")
+  ---@diagnostic disable: need-check-nil
   local contents = fh:read "a"
   fh:close()
+  ---@diagnostic enable: need-check-nil
   return contents
 end
 
 --- Writes the contents into a file at the given path.
 local function write_file(filepath, content)
   local fh = io.open(filepath, "wb")
+  ---@diagnostic disable: need-check-nil
   fh:write(content)
   fh:close()
+  ---@diagnostic enable: need-check-nil
 end
 
 --- Like `pandoc.pipe`, but allows "multi word" paths:
@@ -301,11 +305,8 @@ local d2 = {
         local infile = "diagram.d2"
         local outfile = "diagram." .. file_extension
 
-        args = { "--bundle", "--pad=0", "--scale=1" }
-
-        d2_user_opts = {
-          "layout",
-        }
+        local args = { "--bundle", "--pad=0", "--scale=1" }
+        local d2_user_opts = { "layout" }
         for _, d2_user_opt in pairs(d2_user_opts) do
           if user_opts[d2_user_opt] then
             table.insert(args, "--" .. d2_user_opt .. "=" .. user_opts[d2_user_opt])
@@ -606,7 +607,7 @@ local function code_to_figure(conf)
 
     -- Use the block's filename attribute or create a new name by hashing the
     -- image content.
-    local basename, _extension =
+    local basename, _ =
       pandoc.path.split_extension(dgr_opt.filename or pandoc.sha1(imgdata))
     local fname = basename .. "." .. extension_for_mimetype[imgtype]
 

@@ -45,7 +45,7 @@ check_if_installed "$pdf_engine"
 
 # Ensures that there's exactly one positional parameter.
 if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 FILE.md"
+  echo "Usage: $(readlink -f "$0") FILE.md"
   exit 1
 fi
 
@@ -57,40 +57,20 @@ fi
 input_dir=$(dirname "$1")
 input_file=$(basename "$1")
 output="${input_file%.md}.pdf"
+script_dir="$(dirname "$(readlink -f "$0")")"
+
+echo "Generating a PDF file from '$input_dir/$input_file'..."
 
 # LaTeX cannot embed WebP images, so convert them to PNG on the fly.
 tmpdir=$(mktemp -d)
 trap 'rm -rf "$tmpdir"' EXIT
 
-cat >"$tmpdir/webp-to-png.lua" <<'LUA'
-local tmpdir = assert(os.getenv("WEBP_TO_PNG_TMPDIR"))
-local counter = 0
-
-local function to_png(src)
-  if not src:lower():match("%.webp$") then
-    return nil
-  end
-  counter = counter + 1
-  local out = string.format("%s/%d.png", tmpdir, counter)
-  pandoc.pipe("ffmpeg", { "-y", "-loglevel", "error", "-i", src, out }, "")
-  return out
-end
-
-function Image(img)
-  local out = to_png(img.src)
-  if out then
-    img.src = out
-    return img
-  end
-end
-LUA
-
-echo "Generating a PDF file from '$input_dir/$input_file'..."
-
 cd "$input_dir"
+
+# Note: WEBP_TO_PNG_TMPDIR is used by "webp-to-png.lua".
 WEBP_TO_PNG_TMPDIR="$tmpdir" pandoc \
-  -L "$tmpdir/webp-to-png.lua" \
-  -L "$(dirname "$(readlink -f "$0")")/pandoc-ext/diagram.lua" \
+  -L "$script_dir/markdown-to-pdf/webp-to-png.lua" \
+  -L "$script_dir/markdown-to-pdf/diagram.lua" \
   -V geometry:a4paper,margin=1in \
   --pdf-engine "$pdf_engine" \
   -V "mainfont=$main_font" \

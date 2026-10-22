@@ -1,0 +1,11 @@
+{
+  "diagnostics": {
+    "globals": [
+      "PANDOC_VERSION",
+      "PANDOC_SCRIPT_FILE",
+      "FORMAT",
+      "pandoc",
+      "quarto"
+    ]
+  }
+}
