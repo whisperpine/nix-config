@@ -2,7 +2,7 @@
 
 # Purpose: convert single file markdown to PDF
 # Usage: sh path/to/markdown-to-pdf.sh FILE.md
-# Dependencies: pandoc, pandoc-ext-diagram, mermaid-cli, ffmpeg, librsvg, texlive
+# Dependencies: pandoc, mermaid-cli, ffmpeg, librsvg, texlive
 # Date: 2026-10-01
 # Author: Yusong
 
@@ -90,7 +90,7 @@ echo "Generating a PDF file from '$input_dir/$input_file'..."
 cd "$input_dir"
 WEBP_TO_PNG_TMPDIR="$tmpdir" pandoc \
   -L "$tmpdir/webp-to-png.lua" \
-  -L "$(nix build nixpkgs#pandoc-ext-diagram --no-link --print-out-paths)/diagram.lua" \
+  -L "$(dirname "$(readlink -f "$0")")/pandoc-ext/diagram.lua" \
   -V geometry:a4paper,margin=1in \
   --pdf-engine "$pdf_engine" \
   -V "mainfont=$main_font" \
