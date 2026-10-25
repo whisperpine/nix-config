@@ -16,12 +16,46 @@ window-rule {
     geometry-corner-radius 0
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+// Open as a full-width window.
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id="^firefox$"
+    match app-id="^google-chrome$"
+    match app-id="^steam$"
+    default-column-width {
+        proportion 1.0
+    }
+}
+
+// Open as a half-width window.
+window-rule {
+    match app-id="^org.pwmt.zathura$"
+    match app-id="^anki$" title="^user-1 - Anki"
+    default-column-width {
+        proportion 0.5
+    }
+}
+
+// Open as a floating window.
+window-rule {
+    match app-id="^imv$"
+    match app-id="^anki$" title="^Add$"
+    match app-id="^blender$" title="^Preferences$"
     match app-id="firefox$" title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Open in fullscreen.
+window-rule {
+    match app-id=r#"steam_app_\d+"#
+    open-fullscreen true
+}
+
+// Chrome plugins.
+window-rule {
+    match app-id="^chrome-"
+    exclude title="^Monkeytype"
+    exclude title="^Telegram"
+    exclude title="^WhatsApp"
     open-floating true
 }
 
@@ -32,64 +66,4 @@ window-rule {
     block-out-from "screen-capture"
     // // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
-}
-
-window-rule {
-    match app-id="^firefox$"
-    default-column-width {
-        proportion 1.0
-    }
-}
-
-window-rule {
-    match app-id="^google-chrome$"
-    default-column-width {
-        proportion 1.0
-    }
-}
-
-// Chrome plugins.
-window-rule {
-    match app-id="^chrome-"
-    // Exclude PWAs (Progressive Web Apps).
-    exclude title="^Monkeytype"
-    exclude title="^Telegram"
-    exclude title="^WhatsApp"
-    open-floating true
-}
-
-window-rule {
-    match app-id="^steam$"
-    default-column-width {
-        proportion 1.0
-    }
-}
-
-window-rule {
-    match app-id=r#"steam_app_\d+"#
-    open-fullscreen true
-}
-
-window-rule {
-    match app-id="^imv$"
-    open-floating true
-}
-
-window-rule {
-    match app-id="^org.pwmt.zathura$"
-    default-column-width {
-        proportion 0.5
-    }
-}
-
-window-rule {
-    match app-id="^anki$" title="user-1 - Anki"
-    default-column-width {
-        proportion 0.5
-    }
-}
-
-window-rule {
-    match app-id="^blender$" title="^Preferences$"
-    open-floating true
 }
