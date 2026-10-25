@@ -27,10 +27,10 @@ return {
       require("ibl").setup(opts)
     end,
     opts = {
-      indent = { char = "│", highlight = "IblChar" },
+      indent = { char = "│", highlight = "IblIndent" },
       scope = {
         char = "│",
-        highlight = "IblScopeChar",
+        highlight = "IblScope",
         show_start = false,
         show_end = false,
       },
