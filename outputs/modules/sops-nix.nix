@@ -21,7 +21,7 @@ in
   # Tokens of gitHub-runners.
   sops.secrets."github-runner-token/everbid/org" = { };
   sops.secrets."github-runner-token/whisperpine/notes" = { };
-  sops.secrets."github-runner-token/whisperpine/resume" = { };
+  sops.secrets."github-runner-token/whisperpine/typ" = { };
   sops.secrets."github-runner-token/whisperpine/business-email" = { };
 
   # Set system-wide environment variables.
