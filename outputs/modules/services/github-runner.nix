@@ -88,7 +88,7 @@ in
       index = "0";
     })
     # (whisperpine {
-    #   repo = "resume";
+    #   repo = "typ";
     #   index = "0";
     # })
     # (whisperpine {
