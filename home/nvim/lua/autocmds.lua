@@ -106,6 +106,7 @@ autocmd("FileType", {
     "nix",
     "lua",
     "hcl",
+    "bib",
     "just",
     "bash",
     "zsh",

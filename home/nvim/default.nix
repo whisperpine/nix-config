@@ -51,6 +51,7 @@ in
     xmlstarlet # xml
     opentofu # terraform, opentofu
     rustywind # tailwind
+    bibtex-tidy # bib
     typstyle # typst
     htmlhint # html
     redocly # openapi
