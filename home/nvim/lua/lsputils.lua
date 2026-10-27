@@ -107,7 +107,7 @@ vim.lsp.config("*", {
   capabilities = M.capabilities,
 })
 
--- Config yamlls.
+-- Configure yamlls.
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/yamlls.lua
 vim.lsp.config("yamlls", {
   filetypes = {
@@ -134,7 +134,7 @@ vim.lsp.config("yamlls", {
   },
 })
 
--- Config jsonls.
+-- Configure jsonls.
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/jsonls.lua
 vim.lsp.config("jsonls", {
   settings = {
@@ -145,19 +145,19 @@ vim.lsp.config("jsonls", {
   },
 })
 
--- Config bashls.
+-- Configure bashls.
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/bashls.lua
 vim.lsp.config("bashls", {
   filetypes = { "bash", "zsh", "sh" },
 })
 
--- Config terraformls.
+-- Configure terraformls.
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/terraformls.lua
 vim.lsp.config("terraformls", {
   filetypes = { "terraform", "terraform-vars", "terraform-test" },
 })
 
--- Config lemminx.
+-- Configure lemminx.
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/lemminx.lua
 vim.lsp.config("lemminx", {
   settings = {
@@ -170,7 +170,7 @@ vim.lsp.config("lemminx", {
   },
 })
 
--- Config ansiblels.
+-- Configure ansiblels.
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/ansiblels.lua
 vim.lsp.config("ansiblels", {
   settings = {
@@ -183,7 +183,7 @@ vim.lsp.config("ansiblels", {
   },
 })
 
--- Config ty.
+-- Configure ty.
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/ty.lua
 vim.lsp.config("ty", {
   settings = {
@@ -193,7 +193,7 @@ vim.lsp.config("ty", {
   },
 })
 
--- Config cssls.
+-- Configure cssls.
 -- https://github.com/neovim/nvim-lspconfig/blob/master/lsp/cssls.lua
 vim.lsp.config("cssls", {
   settings = {
@@ -205,12 +205,23 @@ vim.lsp.config("cssls", {
   },
 })
 
--- Config rumdl.
+-- Configure rumdl.
 vim.lsp.config("rumdl", {
   on_attach = function(client, _)
     -- Disable document symbols from rumdl (keep marksman's).
     client.server_capabilities.documentSymbolProvider = false
   end,
+})
+
+-- Configure texlab.
+vim.lsp.config("texlab", {
+  settings = {
+    texlab = {
+      diagnostics = {
+        ignoredPatterns = { "Unused entry" },
+      },
+    },
+  },
 })
 
 -- Disable document_color globally.
