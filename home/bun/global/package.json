@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@opencode/cli": "^2.1.4",
+    "@opencode/cli": "^2.2.4",
     "vscode-langservers-extracted": "^4.10.0"
   },
   "trustedDependencies": [
