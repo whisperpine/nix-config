@@ -18,6 +18,42 @@ M.config = function()
 end
 
 M.init = function()
+  -- Custom linter named "jactionlint".
+  require("lint").linters.jactionlint = {
+    cmd = "jactionlint",
+    stdin = true,
+    args = {
+      "--format",
+      "{{json .}}",
+      "--stdin-filename",
+      vim.api.nvim_buf_get_name(0),
+      "-",
+    },
+    ignore_exitcode = true,
+    parser = function(output)
+      if output == "" then
+        return {}
+      end
+      local decoded = vim.json.decode(output)
+      if decoded == nil then
+        return {}
+      end
+      local diagnostics = {}
+      for _, item in ipairs(decoded) do
+        table.insert(diagnostics, {
+          lnum = item.line - 1,
+          end_lnum = item.line - 1,
+          col = item.column - 1,
+          end_col = item.end_column,
+          severity = vim.diagnostic.severity.WARN,
+          source = "jactionlint: " .. item.kind,
+          message = item.message,
+        })
+      end
+      return diagnostics
+    end,
+  }
+
   local lint_events = {
     "BufWritePost",
     "BufReadPost",
@@ -35,7 +71,7 @@ M.init = function()
       -- Pattern match filepath to lint github actions.
       local filepath = vim.fn.expand "%:p"
       if filepath:match "^.*/.github/workflows/.*%.y(a?)ml$" then
-        require("lint").try_lint "actionlint"
+        require("lint").try_lint "jactionlint"
       end
     end,
   })
