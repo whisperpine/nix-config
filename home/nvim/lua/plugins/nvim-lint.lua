@@ -19,40 +19,46 @@ end
 
 M.init = function()
   -- Custom linter named "jactionlint".
-  require("lint").linters.jactionlint = {
-    cmd = "jactionlint",
-    stdin = true,
-    args = {
+  require("lint").linters.jactionlint = function()
+    local args = {
       "--format",
       "{{json .}}",
       "--stdin-filename",
       vim.api.nvim_buf_get_name(0),
       "-",
-    },
-    ignore_exitcode = true,
-    parser = function(output)
-      if output == "" then
-        return {}
-      end
-      local decoded = vim.json.decode(output)
-      if decoded == nil then
-        return {}
-      end
-      local diagnostics = {}
-      for _, item in ipairs(decoded) do
-        table.insert(diagnostics, {
-          lnum = item.line - 1,
-          end_lnum = item.line - 1,
-          col = item.column - 1,
-          end_col = item.end_column,
-          severity = vim.diagnostic.severity.WARN,
-          source = "jactionlint: " .. item.kind,
-          message = item.message,
-        })
-      end
-      return diagnostics
-    end,
-  }
+    }
+    if vim.fn.filereadable ".github/jactionlint.yaml" == 1 then
+      args = vim.list_extend({ "--config-file", ".github/jactionlint.yaml" }, args)
+    end
+    return {
+      cmd = "jactionlint",
+      stdin = true,
+      args = args,
+      ignore_exitcode = true,
+      parser = function(output)
+        if output == "" then
+          return {}
+        end
+        local decoded = vim.json.decode(output)
+        if decoded == nil then
+          return {}
+        end
+        local diagnostics = {}
+        for _, item in ipairs(decoded) do
+          table.insert(diagnostics, {
+            lnum = item.line - 1,
+            end_lnum = item.line - 1,
+            col = item.column - 1,
+            end_col = item.end_column,
+            severity = vim.diagnostic.severity.WARN,
+            source = "jactionlint: " .. item.kind,
+            message = item.message,
+          })
+        end
+        return diagnostics
+      end,
+    }
+  end
 
   local lint_events = {
     "BufWritePost",
