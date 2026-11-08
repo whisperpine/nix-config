@@ -65,7 +65,6 @@ in
     typos # spell checker
     rumdl # markdown
     biome # ts, js, css, json, graphql
-    deno # ts, js, json, yaml, css, html
     ruff # python
     buf # protobuf
     zig # zig

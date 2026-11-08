@@ -131,17 +131,6 @@ autocmd("BufReadPost", {
   end,
 })
 
--- Set the formatter for "yaml.ansible" and "yaml.cloudformation".
-autocmd("FileType", {
-  group = augroup("SetYamlFormatter", { clear = true }),
-  pattern = { "yaml.ansible", "yaml.cloudformation" },
-  callback = function()
-    require("conform").formatters.deno_fmt = {
-      args = { "fmt", "-", "--ext", "yaml" },
-    }
-  end,
-})
-
 -- -- Disable vim.diagnostic in floating windows.
 -- autocmd("BufWinEnter", {
 --   group = augroup("NoDiagnosticInFloatingWindow", { clear = true }),
