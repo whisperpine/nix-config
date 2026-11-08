@@ -55,11 +55,11 @@ M.opts.formatters_by_ft = {
   cpp = { "clang-format" },
   c = { "clang-format" },
 
-  -- biome, bun_fmt, rustywind
-  javascriptreact = { "biome-check", "rustywind" },
-  typescriptreact = { "biome-check", "rustywind" },
-  javascript = { "biome-check", "rustywind" },
-  typescript = { "biome-check", "rustywind" },
+  -- biome, bun_fmt
+  javascriptreact = { "bun_fmt", "biome-check" },
+  typescriptreact = { "bun_fmt", "biome-check" },
+  javascript = { "bun_fmt", "biome-check" },
+  typescript = { "bun_fmt", "biome-check" },
   graphql = { "bun_fmt" },
   html = { "bun_fmt" },
   jsonc = { "bun_fmt" },
@@ -77,7 +77,7 @@ M.opts.formatters = {
   },
 }
 
--- A custom formatter "final_new_line".
+-- Adds the custom formatter "final_new_line".
 M.opts.formatters.final_new_line = {
   meta = { description = "Insert a new line at the end of the file." },
   format = function(_, _, lines, callback)
@@ -90,7 +90,7 @@ M.opts.formatters.final_new_line = {
   end,
 }
 
--- A custom formatter "bun_fmt".
+-- Adds the custom formatter "bun_fmt".
 M.opts.formatters.bun_fmt = {
   meta = { description = "Format with Bun's built-in formatter (bun fmt)." },
   command = "bun",

@@ -50,7 +50,6 @@ in
     golangci-lint # go
     xmlstarlet # xml
     opentofu # terraform, opentofu
-    rustywind # tailwind
     bibtex-tidy # bib
     typstyle # typst
     htmlhint # html
