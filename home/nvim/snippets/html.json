@@ -686,11 +686,7 @@
   },
   "video": {
     "prefix": "video",
-    "body": [
-      "<video width=\"$1\" height=\"$2\" controls>",
-      "\t$3",
-      "</video>"
-    ],
+    "body": ["<video width=\"$1\" height=\"$2\" controls>", "\t$3", "</video>"],
     "description": "HTML - Defines a video",
     "scope": "text.html"
   },

@@ -1,8 +1,6 @@
 {
   "shellcheck disable": {
-    "body": [
-      "# shellcheck disable=SC${1:1111}"
-    ],
+    "body": ["# shellcheck disable=SC${1:1111}"],
     "description": "Disable certain diagnostics of shellcheck",
     "prefix": "sc disable"
   }

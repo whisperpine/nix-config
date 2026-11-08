@@ -2,16 +2,12 @@
   "<br /> html tag": {
     "prefix": "br",
     "description": "<br /> html tag",
-    "body": [
-      "<br />"
-    ]
+    "body": ["<br />"]
   },
   "<img /> html tag": {
     "prefix": "img",
     "description": "<img /> html tag",
-    "body": [
-      "<img src=\"${1}\" width=\"${2:50%}\" />"
-    ]
+    "body": ["<img src=\"${1}\" width=\"${2:50%}\" />"]
   },
   "two images aligned by width": {
     "prefix": "equal width",
@@ -38,23 +34,17 @@
   "<u></u> html tag": {
     "prefix": "underline",
     "description": "<u></u> html tag",
-    "body": [
-      "<u>$1</u>"
-    ]
+    "body": ["<u>$1</u>"]
   },
   "gitlab table of contents": {
     "prefix": "toc",
     "description": "gitlab table of contents",
-    "body": [
-      "[[_TOC_]]"
-    ]
+    "body": ["[[_TOC_]]"]
   },
   "vitepress component <Badge />": {
     "prefix": "badge",
     "description": "<Badge />",
-    "body": [
-      "<Badge type=\"${1:warning}\" text=\"${2:todo}\" />"
-    ]
+    "body": ["<Badge type=\"${1:warning}\" text=\"${2:todo}\" />"]
   },
   "details": {
     "prefix": "details",
@@ -68,58 +58,36 @@
   "vale": {
     "prefix": "vale",
     "description": "vale pairs",
-    "body": [
-      "<!-- vale off -->",
-      "$0",
-      "<!-- vale on -->"
-    ]
+    "body": ["<!-- vale off -->", "$0", "<!-- vale on -->"]
   },
   "note": {
     "prefix": "> note",
     "description": "GitHub flavored alerts: NOTE",
-    "body": [
-      " [!NOTE]",
-      "> $0"
-    ]
+    "body": [" [!NOTE]", "> $0"]
   },
   "tip": {
     "prefix": "> tip",
     "description": "GitHub flavored alerts: TIP",
-    "body": [
-      " [!TIP]",
-      "> $0"
-    ]
+    "body": [" [!TIP]", "> $0"]
   },
   "important": {
     "prefix": "> important",
     "description": "GitHub flavored alerts: IMPORTANT",
-    "body": [
-      " [!IMPORTANT]",
-      "> $0"
-    ]
+    "body": [" [!IMPORTANT]", "> $0"]
   },
   "warning": {
     "prefix": "> warning",
     "description": "GitHub flavored alerts: WARNING",
-    "body": [
-      " [!WARNING]",
-      "> $0"
-    ]
+    "body": [" [!WARNING]", "> $0"]
   },
   "caution": {
     "prefix": "> caution",
     "description": "GitHub flavored alerts: CAUTION",
-    "body": [
-      " [!CAUTION]",
-      "> $0"
-    ]
+    "body": [" [!CAUTION]", "> $0"]
   },
   "lint": {
     "prefix": "lint",
     "description": "Disable a rumdl rule",
-    "body": [
-      "<!-- rumdl-disable MD$1 -->",
-      "<!-- rumdl-enable MD$1 -->"
-    ]
+    "body": ["<!-- rumdl-disable MD$1 -->", "<!-- rumdl-enable MD$1 -->"]
   }
 }

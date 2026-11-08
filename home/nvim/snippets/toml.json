@@ -1,9 +1,7 @@
 {
   "authors yusong": {
     "prefix": "authors yusong",
-    "body": [
-      "authors = [\"Yusong Lai <yusong.lai@icloud.com>\"]"
-    ],
+    "body": ["authors = [\"Yusong Lai <yusong.lai@icloud.com>\"]"],
     "description": "authors in Cargo.toml"
   }
 }

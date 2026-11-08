@@ -31,11 +31,20 @@
         "path": "./html.json"
       },
       {
-        "language": ["bash", "zsh", "sh"],
+        "language": [
+          "bash",
+          "zsh",
+          "sh"
+        ],
         "path": "./bash.json"
       },
       {
-        "language": ["typescript", "javascript", "tsx", "jsx"],
+        "language": [
+          "typescript",
+          "javascript",
+          "tsx",
+          "jsx"
+        ],
         "path": "./typescript.json"
       },
       {

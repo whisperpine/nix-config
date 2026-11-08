@@ -14,28 +14,19 @@
 
   "Dunder slots": {
     "prefix": "__slots__",
-    "body": [
-      "__slots__: tuple[str, ...] = (\"$0\",)"
-    ],
+    "body": ["__slots__: tuple[str, ...] = (\"$0\",)"],
     "description": "The __slots__ class field"
   },
 
   "Dunder init": {
     "prefix": "__init__",
-    "body": [
-      "def __init__(self) -> None:",
-      "\tsuper().__init__()",
-      "\t$0"
-    ],
+    "body": ["def __init__(self) -> None:", "\tsuper().__init__()", "\t$0"],
     "description": "The __init__ method"
   },
 
   "Dunder new": {
     "prefix": "__new__",
-    "body": [
-      "def __new__(cls) -> $0:",
-      "\treturn super().__new__(cls)"
-    ],
+    "body": ["def __new__(cls) -> $0:", "\treturn super().__new__(cls)"],
     "description": "The __new__ method"
   },
 
@@ -50,19 +41,13 @@
 
   "Dunder str": {
     "prefix": "__str__",
-    "body": [
-      "def __str__(self) -> str:",
-      "\treturn \"${0}\""
-    ],
+    "body": ["def __str__(self) -> str:", "\treturn \"${0}\""],
     "description": "User-friendly __str__"
   },
 
   "Dunder call": {
     "prefix": "__call__",
-    "body": [
-      "def __call__(self) -> $0:",
-      "\t..."
-    ],
+    "body": ["def __call__(self) -> $0:", "\t..."],
     "description": "Make the instance Callable"
   },
 
@@ -78,10 +63,7 @@
 
   "Dunder next": {
     "prefix": "__next__",
-    "body": [
-      "def __next__(self) -> $0:",
-      "\t..."
-    ],
+    "body": ["def __next__(self) -> $0:", "\t..."],
     "description": "Iterator"
   },
 
@@ -97,19 +79,13 @@
 
   "Dunder anext": {
     "prefix": "__anext__",
-    "body": [
-      "async def __anext__(self) -> $0:",
-      "\t..."
-    ],
+    "body": ["async def __anext__(self) -> $0:", "\t..."],
     "description": "AsyncIterator"
   },
 
   "Dunder hash": {
     "prefix": "__hash__",
-    "body": [
-      "def __hash__(self) -> int:",
-      "\treturn hash($0)"
-    ],
+    "body": ["def __hash__(self) -> int:", "\treturn hash($0)"],
     "description": "Hash"
   },
 
@@ -137,10 +113,7 @@
 
   "Dunder missing": {
     "prefix": "__missing__",
-    "body": [
-      "def __missing__(self, key: T) -> None:",
-      "\traise KeyError(key)"
-    ],
+    "body": ["def __missing__(self, key: T) -> None:", "\traise KeyError(key)"],
     "description": "Missing key"
   },
 
@@ -227,46 +200,31 @@
 
   "Dunder getitem": {
     "prefix": "__getitem__",
-    "body": [
-      "def __getitem__(self, index: int) -> $0:",
-      "\t..."
-    ],
+    "body": ["def __getitem__(self, index: int) -> $0:", "\t..."],
     "description": "Read by index"
   },
 
   "Dunder setitem": {
     "prefix": "__setitem__",
-    "body": [
-      "def __setitem__(self, index: int, value: $0) -> None:",
-      "\t..."
-    ],
+    "body": ["def __setitem__(self, index: int, value: $0) -> None:", "\t..."],
     "description": "Write by index"
   },
 
   "Dunder delitem": {
     "prefix": "__delitem__",
-    "body": [
-      "def __delitem__(self, index: int) -> None:",
-      "\t$0"
-    ],
+    "body": ["def __delitem__(self, index: int) -> None:", "\t$0"],
     "description": "Delete by index"
   },
 
   "Dunder contains": {
     "prefix": "__contains__",
-    "body": [
-      "def __contains__(self, value: $0) -> bool:",
-      "\t..."
-    ],
+    "body": ["def __contains__(self, value: $0) -> bool:", "\t..."],
     "description": "Check existence"
   },
 
   "Dunder len": {
     "prefix": "__len__",
-    "body": [
-      "def __len__(self) -> int:",
-      "\t$0"
-    ],
+    "body": ["def __len__(self) -> int:", "\t$0"],
     "description": "Get length"
   }
 }
