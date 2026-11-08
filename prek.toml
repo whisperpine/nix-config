@@ -55,6 +55,13 @@ home/opencode/plugins
 pass_filenames = false
 
 [[repos.hooks]]
+id = "bun-fmt"
+name = "check formatting by bun fmt"
+language = "system"
+entry = "bun fmt --check"
+pass_filenames = false
+
+[[repos.hooks]]
 id = "tsc-type-checking"
 name = "check typescript by tsc"
 language = "system"
