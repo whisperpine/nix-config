@@ -23,6 +23,7 @@
     # --- dev tools --- #
     python314 # python 13
     uv # python package manager
+    mise # dev environment management
     kondo # clean unneeded files from projects
     hyperfine # command-line benchmarking tool
     onefetch # git repository summary
