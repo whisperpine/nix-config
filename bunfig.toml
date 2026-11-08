@@ -1,0 +1,9 @@
+[fmt]
+jsdoc = true
+sortTailwindcss = true
+sortPackageJson = true
+ignorePatterns = ["*.md", "*.toml", "lazy-lock.json"]
+
+[[fmt.overrides]]
+files = ["*.jsonc"]
+options = { trailingComma = "none" }
