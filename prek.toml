@@ -53,7 +53,6 @@ biome check \
 home/opencode/plugins
 """
 pass_filenames = false
-stages = ["pre-push", "manual"]
 
 [[repos.hooks]]
 id = "tsc-type-checking"

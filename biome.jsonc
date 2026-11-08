@@ -1,35 +1,21 @@
 {
   "$schema": "https://biomejs.dev/schemas/latest/schema.json",
   "files": {
-    "includes": [
-      "./**/*.ts",
-      "./**/*.js",
-      "./**/*.html",
-      "!!/nix/store",
-      "!!**/node_modules",
-      "!!**/dist"
-    ]
+    "includes": ["./**/*.ts", "./**/*.js", "./**/*.html"]
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
   },
   "formatter": {
-    "indentStyle": "space"
-  },
-  "css": {
-    "parser": {
-      "tailwindDirectives": true
-    }
-  },
-  "html": {
-    "parser": {
-      "interpolation": true
-    },
-    "formatter": {
-      "enabled": true,
-      "selfCloseVoidElements": "always",
-      "whitespaceSensitivity": "ignore"
-    }
+    "enabled": false
   },
   "linter": {
     "rules": {
+      "correctness": {
+        "useSingleJsDocAsterisk": "warn"
+      },
       "style": {
         "useNamingConvention": {
           "level": "warn",
@@ -46,6 +32,16 @@
         "useGraphqlNamingConvention": "warn",
         "useFilenamingConvention": "error"
       }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "html": {
+    "parser": {
+      "interpolation": true
     }
   }
 }
