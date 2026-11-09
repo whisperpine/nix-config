@@ -171,13 +171,23 @@ symbol = "opa "
 format = "[$symbol]($style)"
 
 [os.symbols]
+AIX = "aix "
+AlmaLinux = "alma "
+Alpaquita = "alpa "
 Alpine = "alp "
+ALTLinux = "alt "
 Amazon = "amz "
 Android = "andr "
+AOSC = "aosc "
 Arch = "rch "
+Artix = "artix "
+Bazzite = "bazz "
+Bluefin = "blue "
+CachyOS = "cachy "
 CentOS = "cent "
 Debian = "deb "
 DragonFly = "dfbsd "
+Elementary = "elem "
 Emscripten = "emsc "
 EndeavourOS = "ndev "
 Fedora = "fed "
@@ -185,8 +195,14 @@ FreeBSD = "fbsd "
 Garuda = "garu "
 Gentoo = "gent "
 HardenedBSD = "hbsd "
+Hurd = "hurd "
 Illumos = "lum "
+InstantOS = "inst "
+Ios = "ios "
+Kali = "kali "
+KDENeon = "kde "
 Linux = "lnx "
+Mabox = "mabox "
 Macos = "mac "
 Manjaro = "mjo "
 Mariner = "mrn "
@@ -194,21 +210,28 @@ MidnightBSD = "mid "
 Mint = "mint "
 NetBSD = "nbsd "
 NixOS = "nix "
+Nobara = "nobara "
 OpenBSD = "obsd "
 OpenCloudOS = "ocos "
 openEuler = "oeul "
 openSUSE = "osuse "
 OracleLinux = "orac "
+PikaOS = "pika "
 Pop = "pop "
 Raspbian = "rasp "
 Redhat = "rhl "
 RedHatEnterprise = "rhel "
 Redox = "redox "
+RockyLinux = "rocky "
 Solus = "sol "
 SUSE = "suse "
 Ubuntu = "ubnt "
+Ultramarine = "ultra "
 Unknown = "unk "
+Uos = "uos "
+Void = "void "
 Windows = "win "
+Zorin = "zorin "
 
 [package]
 symbol = "pkg "
@@ -301,6 +324,104 @@ format = "[$symbol]($style)"
 
 [typst]
 symbol = "typ "
+format = "[$symbol]($style)"
+
+[cpp]
+symbol = "C++ "
+format = "[$symbol]($style)"
+
+[fortran]
+symbol = "ftn "
+format = "[$symbol]($style)"
+
+[gleam]
+symbol = "gleam "
+format = "[$symbol]($style)"
+
+[haskell]
+symbol = "hs "
+format = "[$symbol]($style)"
+
+[haxe]
+symbol = "hx "
+format = "[$symbol]($style)"
+
+[maven]
+symbol = "mvn "
+format = "[$symbol]($style)"
+
+[mojo]
+symbol = "mojo "
+format = "[$symbol]($style)"
+
+[odin]
+symbol = "odin "
+format = "[$symbol]($style)"
+
+[quarto]
+symbol = "qmd "
+format = "[$symbol]($style)"
+
+[rlang]
+symbol = "R "
+format = "[$symbol]($style)"
+
+[red]
+symbol = "red "
+format = "[$symbol]($style)"
+
+[solidity]
+symbol = "sol "
+format = "[$symbol]($style)"
+
+[vlang]
+symbol = "v "
+format = "[$symbol]($style)"
+
+[vagrant]
+symbol = "vagrant "
+format = "[$symbol]($style)"
+
+[xmake]
+symbol = "xmake "
+format = "[$symbol]($style)"
+
+[gcloud]
+symbol = "gcloud "
+format = "[$symbol]($style)"
+
+[openstack]
+symbol = "openstack "
+format = "[$symbol]($style)"
+
+[mise]
+symbol = "mise "
+format = "[$symbol]($style)"
+style = "bold blue"
+disabled = false
+
+[direnv]
+symbol = "direnv "
+format = "[$symbol]($style)"
+
+[nats]
+symbol = "nats "
+format = "[$symbol]($style)"
+
+[jj_bookmark]
+symbol = "jj "
+format = "[$symbol]($style)"
+
+[vcsh]
+symbol = "vcsh "
+format = "[$symbol]($style)"
+
+[container]
+symbol = "container "
+format = "[$symbol]($style)"
+
+[netns]
+symbol = "netns "
 format = "[$symbol]($style)"
 
 [jobs]
