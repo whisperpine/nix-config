@@ -8,6 +8,7 @@
     ./duckdb # OLAP embedded database
     ./tealdeer # fast tldr implementation
     ./direnv # manage dir-based env vars
+    ./mise # dev environment management
     ./zellij # terminal multiplexer
     ./opencode # ai coding agent
     ./lazygit # tui for git
@@ -23,7 +24,6 @@
     # --- dev tools --- #
     python314 # python 13
     uv # python package manager
-    mise # dev environment management
     kondo # clean unneeded files from projects
     hyperfine # command-line benchmarking tool
     onefetch # git repository summary
