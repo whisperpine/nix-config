@@ -93,6 +93,7 @@ M.routes = {
     opts = { skip = true },
   },
   -- nvim-tree.lua --
+  { filter = { find = "cut to clipboard" }, opts = { skip = true } },
   { filter = { find = "added to clipboard" }, view = "mini" },
   { filter = { find = "removed from clipboard" }, view = "mini" },
   { filter = { find = "to system clipboard" }, view = "mini" },
