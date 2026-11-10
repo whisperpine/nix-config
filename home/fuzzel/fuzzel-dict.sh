@@ -13,4 +13,4 @@ query=$(fuzzel --dmenu --width 50 --lines 0 --prompt "󰺄  Collins Dictionary: 
 [ -z "$query" ] && exit
 
 # Open the browser.
-xdg-open "https://www.collinsdictionary.com/search/?dictCode=english&q=$query"
+xdg-open "https://www.collinsdictionary.com/dictionary/english/$query"

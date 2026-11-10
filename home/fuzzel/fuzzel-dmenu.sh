@@ -24,7 +24,7 @@ engines=(
   ["  Twitter X"]="https://x.com/search?q="
 
   # --- dictionary --- #
-  ["󰺄  Collins Dictionary"]="https://www.collinsdictionary.com/search/?dictCode=english&q="
+  ["󰺄  Collins Dictionary"]="https://www.collinsdictionary.com/dictionary/english/"
   ["󰊿  Google Translate"]="https://translate.google.com/?source=osdd&sl=auto&tl=auto&op=translate&text="
   ["󰺄  Urban Dictionary"]="https://www.urbandictionary.com/define.php?term="
   ["󰺄  Sanakirja"]="https://www.kielitoimistonsanakirja.fi/#/"
