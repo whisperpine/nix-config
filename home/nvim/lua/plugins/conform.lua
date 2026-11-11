@@ -66,6 +66,8 @@ M.opts.formatters_by_ft = {
   json = { "bun_fmt" },
   yaml = { "bun_fmt" },
   css = { "bun_fmt" },
+  svelte = { "bun_fmt" },
+  vue = { "bun_fmt" },
 }
 
 M.opts.formatters = {
