@@ -59,18 +59,35 @@
   services.hardware.openrgb.enable = true;
   # Add OpenRGB udev rules to allow access without running as root.
   services.udev.extraRules = lib.readFile "${pkgs.openrgb}/lib/udev/rules.d/60-openrgb.rules";
-  # Disable RGB lighting.
+  # Disable RGB lighting. The D_LED headers default to 0 LEDs, so they must
+  # be resized before any color/mode command has an effect. OpenRGB has no
+  # "Off" mode for the motherboard or GPU; Direct black is their off state.
   systemd.services.no-rgb = {
     description = "Turn off all OpenRGB-controlled lighting";
     # Run in the boot sequence.
     wantedBy = [ "multi-user.target" ];
-    # Make sure required OpenRGB services/devices are initialized.
-    after = [ "multi-user.target" ];
+    # Make sure the OpenRGB server and its devices are initialized first.
+    after = [ "openrgb.service" ];
+    wants = [ "openrgb.service" ];
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.openrgb}/bin/openrgb --mode static --color 000000";
+      RemainAfterExit = true;
+      ExecStartPre = [
+        # Give the OpenRGB server time to finish detecting devices.
+        "${pkgs.coreutils}/bin/sleep 10"
+        "${lib.getExe pkgs.openrgb} -d B760M -m direct -c 000000 -z 0 -sz 64 -z 1 -sz 64"
+        "${lib.getExe pkgs.openrgb} -d B760M -m direct -c 000000"
+        "${lib.getExe pkgs.openrgb} -d ENE -m off"
+      ];
+      ExecStart = "${lib.getExe pkgs.openrgb} -d RTX -m direct -c 000000";
     };
   };
+  # Re-apply the off state after suspend/resume; firmware often restores
+  # lighting during resume. Restart the server so it re-detects the devices.
+  powerManagement.resumeCommands = ''
+    systemctl restart openrgb.service || true
+    systemctl restart no-rgb.service || true
+  '';
   # Clean up old files under "/var/lib/OpenRGB/logs".
   systemd.tmpfiles.rules = [
     # Type Path Mode UID GID Age Argument.
