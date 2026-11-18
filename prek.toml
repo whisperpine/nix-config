@@ -44,6 +44,13 @@ entry = "rumdl check ."
 pass_filenames = false
 
 [[repos.hooks]]
+id = "zizmor"
+name = "lint github actions by zizmor"
+language = "system"
+entry = "zizmor --persona=pedantic .github"
+pass_filenames = false
+
+[[repos.hooks]]
 id = "biome-check"
 name = "run biome check"
 language = "system"
