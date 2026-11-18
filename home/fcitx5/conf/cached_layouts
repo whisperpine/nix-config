@@ -1079,9 +1079,14 @@ Language=ar
 Label="ar (ara)"
 
 [keyboard-pk-snd]
-Description="Keyboard - Urdu (Pakistan) - Sindhi"
+Description="Keyboard - Urdu (Pakistan) - Sindhi (M.B. Sindhi)"
 Language=sd
 Label="sd (snd)"
+
+[keyboard-pk-brahui]
+Description="Keyboard - Urdu (Pakistan) - Brahui (Pakistan)"
+Language=brh
+Label="brh (brahui)"
 
 [keyboard-pk-urd-navees]
 Description="Keyboard - Urdu (Pakistan) - Urdu (Pakistan, Navees)"
@@ -1593,6 +1598,11 @@ Description="Keyboard - Belarusian - Belarusian (phonetic)"
 Language=be
 Label="by (phonetic)"
 
+[keyboard-by-typographic]
+Description="Keyboard - Belarusian - Belarusian (typo.)"
+Language=be
+Label="by (typographic)"
+
 [keyboard-by-ru]
 Description="Keyboard - Belarusian - Russian (Belarus)"
 Language=ru
@@ -1837,6 +1847,16 @@ Label="hr (unicodeus)"
 Description="Keyboard - Croatian - Croatian (US)"
 Language=hr
 Label="hr (us)"
+
+[keyboard-hr-glag]
+Description="Keyboard - Croatian - Croatian (Glagolitic)"
+Language=hr
+Label="hr (glag)"
+
+[keyboard-hr-glagyz]
+Description="Keyboard - Croatian - Croatian (Glagolitic, Zemlja and Jeru swapped)"
+Language=hr
+Label="hr (glagyz)"
 
 [keyboard-ma]
 Description="Keyboard - Arabic (Morocco)"
@@ -3252,6 +3272,11 @@ Label=az
 Description="Keyboard - Azerbaijani - Azerbaijani (Cyrillic)"
 Language=az
 Label="az (cyrillic)"
+
+[keyboard-az-standard]
+Description="Keyboard - Azerbaijani - Azerbaijani (standard)"
+Language=az
+Label="az (standard)"
 
 [keyboard-kh]
 Description="Keyboard - Khmer (Cambodia)"
