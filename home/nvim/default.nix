@@ -46,7 +46,6 @@ in
     python314Packages.cfn-lint # cloudformation
     ansible-lint # ansible
     shellcheck # shell linter
-    jactionlint # github actions
     golangci-lint # go
     xmlstarlet # xml
     opentofu # terraform, opentofu
