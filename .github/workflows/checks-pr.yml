@@ -4,17 +4,26 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, edited]
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   cocogitto-pr:
     name: check conventional commits
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Check the Pull Request title
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
-        shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
+        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#cocogitto --quiet --command bash {0}
         run: |
           git config user.name "github-actions-workflow"
           git config user.email "temp@users.noreply.github.com"

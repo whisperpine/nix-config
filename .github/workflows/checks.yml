@@ -7,15 +7,24 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   typos:
     name: spell check with typos
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
-        shell: nix shell nixpkgs#typos --quiet --command bash {0}
+        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#typos --quiet --command bash {0}
         run: typos --hidden --exclude .git --format brief
 
   cocogitto:
@@ -25,9 +34,11 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Check the latest commit message
-        shell: nix shell nixpkgs#cocogitto --quiet --command bash {0}
+        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#cocogitto --quiet --command bash {0}
         run: cog check HEAD..HEAD
 
   rumdl:
@@ -35,9 +46,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run rumdl command
-        shell: nix shell nixpkgs#rumdl --quiet --command bash {0}
+        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#rumdl --quiet --command bash {0}
         run: rumdl check .
 
   validate-skills:
@@ -48,9 +61,11 @@ jobs:
         working-directory: home/skills
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run the script to validate skills
-        shell: nix shell nixpkgs#yq-go --quiet --command bash {0}
+        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#yq-go --quiet --command bash {0}
         run: sh validate-skills.sh .
 
   nix-flake-check:
@@ -58,6 +73,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run nix command
         run: nix flake check --impure --all-systems
@@ -67,9 +84,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run nix command
-        shell: nix shell nixpkgs#nixfmt-rs --quiet --command bash {0}
+        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#nixfmt-rs --quiet --command bash {0}
         run: nixfmt --check .
 
   shellcheck:
@@ -77,7 +96,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run shellcheck command
-        shell: nix shell nixpkgs#shellcheck --quiet --command bash {0}
+        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#shellcheck --quiet --command bash {0}
         run: shellcheck ./scripts/*.sh
+
+  zizmor:
+    name: lint github actions by zizmor
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: cachix/install-nix-action@v31
+      - name: Run zizmor command
+        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#zizmor --quiet --command bash {0}
+        run: zizmor --persona=pedantic .github
