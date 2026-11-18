@@ -24,7 +24,7 @@ jobs:
           persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run typos command
-        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#typos --quiet --command bash {0}
+        shell: nix shell --inputs-from . nixpkgs#typos --quiet --command bash {0}
         run: typos --hidden --exclude .git --format brief
 
   cocogitto:
@@ -38,7 +38,7 @@ jobs:
           persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Check the latest commit message
-        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#cocogitto --quiet --command bash {0}
+        shell: nix shell --inputs-from . nixpkgs#cocogitto --quiet --command bash {0}
         run: cog check HEAD..HEAD
 
   rumdl:
@@ -50,7 +50,7 @@ jobs:
           persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run rumdl command
-        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#rumdl --quiet --command bash {0}
+        shell: nix shell --inputs-from . nixpkgs#rumdl --quiet --command bash {0}
         run: rumdl check .
 
   validate-skills:
@@ -65,7 +65,7 @@ jobs:
           persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run the script to validate skills
-        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#yq-go --quiet --command bash {0}
+        shell: nix shell --inputs-from . nixpkgs#yq-go --quiet --command bash {0}
         run: sh validate-skills.sh .
 
   nix-flake-check:
@@ -88,7 +88,7 @@ jobs:
           persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run nix command
-        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#nixfmt-rs --quiet --command bash {0}
+        shell: nix shell --inputs-from . nixpkgs#nixfmt-rs --quiet --command bash {0}
         run: nixfmt --check .
 
   shellcheck:
@@ -100,7 +100,7 @@ jobs:
           persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run shellcheck command
-        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#shellcheck --quiet --command bash {0}
+        shell: nix shell --inputs-from . nixpkgs#shellcheck --quiet --command bash {0}
         run: shellcheck ./scripts/*.sh
 
   zizmor:
@@ -112,5 +112,5 @@ jobs:
           persist-credentials: false
       - uses: cachix/install-nix-action@v31
       - name: Run zizmor command
-        shell: nix shell --inputs-from "$GITHUB_WORKSPACE" nixpkgs#zizmor --quiet --command bash {0}
+        shell: nix shell --inputs-from . nixpkgs#zizmor --quiet --command bash {0}
         run: zizmor --persona=pedantic .github
