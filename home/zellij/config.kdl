@@ -25,6 +25,10 @@ ui {
     }
 }
 
+attention {
+    tab_markers false
+}
+
 theme "custom"
 
 themes {
