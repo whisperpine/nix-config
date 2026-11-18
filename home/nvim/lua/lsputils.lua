@@ -255,6 +255,7 @@ vim.lsp.enable {
   "jsonls",
   "cssls",
   "yamlls",
+  "zizmor",
   "bashls",
   "texlab",
   "svelte",

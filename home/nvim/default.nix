@@ -57,6 +57,7 @@ in
     tflint # terraform
     sqruff # sql
     nixfmt-rs # nix
+    zizmor # github actions
     stylua # lua
     kdlfmt # kdl
     shfmt # shell
