@@ -29,6 +29,8 @@ attention {
     tab_markers false
 }
 
+on_quit "quit"
+
 theme "custom"
 
 themes {
