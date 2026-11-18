@@ -50,6 +50,7 @@ in
     xmlstarlet # xml
     opentofu # terraform, opentofu
     bibtex-tidy # bib
+    actionlint # github actions
     typstyle # typst
     htmlhint # html
     redocly # openapi
@@ -57,7 +58,6 @@ in
     tflint # terraform
     sqruff # sql
     nixfmt-rs # nix
-    zizmor # github actions
     stylua # lua
     kdlfmt # kdl
     shfmt # shell
@@ -88,6 +88,7 @@ in
     tinymist # typst
     lemminx # xml, svg
     helm-ls # helm
+    zizmor # github actions
     hyprls # hyprlang
     jinja-lsp # jinja
     vale # English
