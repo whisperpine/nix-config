@@ -19,9 +19,7 @@ forEachSupportedSystem (
     default = pkgs.mkShellNoCC {
       # The Nix packages installed in the dev environment.
       packages = with pkgs; [
-        typos # check misspelling
         just # just a command runner
-        git-cliff # changelog generator
         cocogitto # conventional commit toolkit
         prek # better pre-commit
       ];

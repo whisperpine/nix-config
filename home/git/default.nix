@@ -11,6 +11,7 @@ in
   home.packages = with pkgs; [
     git
     git-lfs # large file storage
+    git-cliff # changelog generator
     delta # syntax-highlighting pager
     mergiraf # syntax-aware git merge driver
   ];
