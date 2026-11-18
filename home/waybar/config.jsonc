@@ -129,9 +129,6 @@
   "custom/voxtype": {
     "exec": "voxtype status --follow --format json",
     "return-type": "json",
-    "format": "<span font='15'></span>",
-    "tooltip": true,
-    "on-click": "systemctl --user restart voxtype",
-    "cursor": false
+    "format": "<span font='15'></span>"
   }
 }
