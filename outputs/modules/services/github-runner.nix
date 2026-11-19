@@ -84,13 +84,9 @@ in
     # --------------------- #
 
     (whisperpine {
-      repo = "notes";
+      repo = "typ";
       index = "0";
     })
-    # (whisperpine {
-    #   repo = "typ";
-    #   index = "0";
-    # })
     # (whisperpine {
     #   repo = "business-email";
     #   index = "0";
