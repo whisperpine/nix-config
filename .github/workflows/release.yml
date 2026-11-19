@@ -43,6 +43,7 @@ jobs:
           TAG: ${{ github.ref_name }}
         run: |
           gh release create "$TAG" \
+            --title "$TAG" \
             --notes-file CHANGELOG.md \
             --prerelease \
             --latest=false
