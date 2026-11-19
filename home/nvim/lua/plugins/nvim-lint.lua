@@ -32,11 +32,11 @@ M.init = function()
       -- run specific linters, independent of the `linters_by_ft` configuration.
       require("lint").try_lint "typos"
 
-      -- Pattern match filepath to lint github actions.
-      local filepath = vim.fn.expand "%:p"
-      if filepath:match "^.*/.github/workflows/.*%.y(a?)ml$" then
-        require("lint").try_lint "actionlint"
-      end
+      -- -- Pattern match filepath to lint github actions.
+      -- local filepath = vim.fn.expand "%:p"
+      -- if filepath:match "^.*/.github/workflows/.*%.y(a?)ml$" then
+      --   require("lint").try_lint "actionlint"
+      -- end
     end,
   })
 end
