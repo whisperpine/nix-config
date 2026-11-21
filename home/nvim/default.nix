@@ -50,7 +50,6 @@ in
     xmlstarlet # xml
     opentofu # terraform, opentofu
     bibtex-tidy # bib
-    actionlint # github actions
     typstyle # typst
     htmlhint # html
     redocly # openapi
