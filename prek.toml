@@ -10,6 +10,16 @@ default_install_hook_types = [
   "pre-push",
 ]
 
+[exclude]
+glob = ["home/fcitx5/**"]
+
+# Concurrency convention:
+# File-modifying hooks omit `priority`, so they keep their implicit priority
+# (their config index) and run sequentially, each exclusively. All read-only
+# hooks set `priority = 100`, so they run concurrently after the writers.
+# Keep the total number of hooks in this file below 100 so implicit priorities
+# never collide with the reader band.
+
 # All prek built-in hooks:
 # https://prek.j178.dev/builtin/
 [[repos]]
@@ -17,10 +27,14 @@ repo = "builtin"
 hooks = [
   # Trims trailing whitespace.
   { id = "trailing-whitespace" },
+  # Ensures that a file is either empty, or ends with one newline.
+  { id = "end-of-file-fixer" },
   # Checks for the existence of private keys.
-  { id = "detect-private-key" },
+  { id = "detect-private-key", priority = 100 },
   # Prevents giant files from being committed.
-  { id = "check-added-large-files", args = ["--maxkb=256"] },
+  { id = "check-added-large-files", args = ["--maxkb=256"], priority = 100 },
+  # Checks for files that contain merge conflict strings.
+  { id = "check-merge-conflict", priority = 100 },
   # Replaces or checks mixed line endings.
   { id = "mixed-line-ending", args = ["--fix=lf"] },
 ]
@@ -35,6 +49,7 @@ name = "check misspelling by typos"
 language = "system"
 entry = "typos --hidden --exclude .git --format brief"
 pass_filenames = false
+priority = 100
 
 [[repos.hooks]]
 id = "rumdl"
@@ -42,6 +57,7 @@ name = "lint markdown files"
 language = "system"
 entry = "rumdl check ."
 pass_filenames = false
+priority = 100
 
 [[repos.hooks]]
 id = "zizmor"
@@ -49,6 +65,7 @@ name = "lint github actions by zizmor"
 language = "system"
 entry = "zizmor --persona=pedantic .github"
 pass_filenames = false
+priority = 100
 
 [[repos.hooks]]
 id = "biome-check"
@@ -60,6 +77,7 @@ biome check \
 home/opencode/plugins
 """
 pass_filenames = false
+priority = 100
 
 [[repos.hooks]]
 id = "bun-fmt"
@@ -67,6 +85,7 @@ name = "check formatting by bun fmt"
 language = "system"
 entry = "bun fmt --check"
 pass_filenames = false
+priority = 100
 
 [[repos.hooks]]
 id = "tsc-type-checking"
@@ -75,6 +94,7 @@ language = "system"
 entry = "tsc --noEmit -p home/opencode/plugins"
 pass_filenames = false
 stages = ["pre-push", "manual"]
+priority = 100
 
 [[repos.hooks]]
 id = "commit-msg"
@@ -82,6 +102,7 @@ name = "check commit message"
 language = "system"
 entry = "sh ./scripts/commit-msg.sh"
 stages = ["commit-msg"]
+priority = 100
 
 [[repos.hooks]]
 id = "cocogitto"
@@ -91,3 +112,4 @@ entry = "cog check origin/HEAD..HEAD"
 pass_filenames = false
 always_run = true
 stages = ["post-commit", "pre-push", "manual"]
+priority = 100
