@@ -4,7 +4,8 @@
     "name": "system"
   },
   "keybinds": {
-    "app.exit": "ctrl+d"
+    "app.exit": "ctrl+d",
+    "input.undo": "ctrl+shift+z"
   },
   "diffs": {
     "wrap": "word"
