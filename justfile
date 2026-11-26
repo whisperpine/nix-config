@@ -51,7 +51,14 @@ debug:
 [group("debug")]
 history:
   nixos-rebuild list-generations
+  @echo
   nix profile history --profile /nix/var/nix/profiles/system
+
+# switch to the given nixos generation
+[group("debug")]
+switch GEN:
+  sudo nix-env --profile /nix/var/nix/profiles/system --switch-generation {{GEN}}
+  sudo /nix/var/nix/profiles/system/bin/switch-to-configuration switch
 
 # -------- #
 # maintain
