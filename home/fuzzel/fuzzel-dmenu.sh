@@ -35,6 +35,7 @@ engines=(
   ["󱄅  NixOS Packages"]="https://search.nixos.org/packages?channel=unstable&query="
   ["󱉟  MDN"]="https://developer.mozilla.org/en-US/search?q="
   ["  Docs.rs"]="https://docs.rs/releases/search?query="
+  ["  Rust Std Lib"]="https://doc.rust-lang.org/std/?search="
   # ["  TLDR"]="https://tldr.inbrowser.app/search?query="
   # ["  Can I use"]="https://caniuse.com/?search="
   ["󰖬  Wikipedia"]="https://en.wikipedia.org/wiki/Special:Search?search="
