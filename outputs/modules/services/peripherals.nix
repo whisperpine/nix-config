@@ -75,11 +75,14 @@
       ExecStartPre = [
         # Give the OpenRGB server time to finish detecting devices.
         "${pkgs.coreutils}/bin/sleep 10"
-        "${lib.getExe pkgs.openrgb} -d B760M -m direct -c 000000 -z 0 -sz 64 -z 1 -sz 64"
-        "${lib.getExe pkgs.openrgb} -d B760M -m direct -c 000000"
-        "${lib.getExe pkgs.openrgb} -d ENE -m off"
+        # The ITE USB controller can fail to enumerate at boot. Run each
+        # device independently so a missing one neither fails the unit nor
+        # skips the remaining devices.
+        "-${lib.getExe pkgs.openrgb} -d B760M -m direct -c 000000 -z 0 -sz 64 -z 1 -sz 64"
+        "-${lib.getExe pkgs.openrgb} -d B760M -m direct -c 000000"
+        "-${lib.getExe pkgs.openrgb} -d ENE -m off"
       ];
-      ExecStart = "${lib.getExe pkgs.openrgb} -d RTX -m direct -c 000000";
+      ExecStart = "-${lib.getExe pkgs.openrgb} -d RTX -m direct -c 000000";
     };
   };
   # Re-apply the off state after suspend/resume; firmware often restores
